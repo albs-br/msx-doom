@@ -36,20 +36,76 @@ UpdateObjectsDistance:
 
 
 
-    ; Divide distance Y by distance X
-    ld      hl, (Object_0.distance_Y)
-    ld      e, h                ; get only high byte
-    ld      hl, (Object_0.distance_X)
-    ld      c, h                ; get only high byte
-
+    ; ; Divide distance Y by distance X (8 bits)
+    ; ld      hl, (Object_0.distance_Y)
+    ; ld      e, h                ; get only high byte
+    ; ld      hl, (Object_0.distance_X)
+    ; ld      c, h                ; get only high byte
     
-    call    Div8
-    ld      hl, 0
-    ld      l, a
-    ld      (Object_0.angleToPlayer), hl
+    ; call    Div8
+    ; ld      hl, 0
+    ; ld      l, a
+    ; ld      (Object_0.angleToPlayer), hl
 
+
+
+    ; ; Divide distance Y by distance X (16 bits)
+    ; ld      bc, (Object_0.distance_Y)
+    ; ld      de, (Object_0.distance_X)
+    
+    ; call    Div16
+    ; ld      (Object_0.angleToPlayer), bc
+
+
+    ; Divide distance Y by distance X (16 bits)
+    ld      de, (Object_0.distance_Y)
+    ld      bc, (Object_0.distance_X)
+    di
+        call    FPDE_Div_BC88 ; DE divided by BC (both 8.8 fixed point), result in ADE (16.8)
+    ei
+    ; ld      (Object_0.angleToPlayer + 1), a     ; high byte
+    ; ld      a, d
+    ; ld      (Object_0.angleToPlayer), a         ; low byte
+    
+    ;ld      (Object_0.angleToPlayer), de       ; get two lowest bytes
+
+    ld      b, d ; BC = DE
+    ld      c, e
+
+
+    ld      hl, LUT_Atan2
+
+.loop:
+    ld      e, (hl)
+    inc     hl
+    ld      d, (hl)
+
+
+    ; BC=256 / DE=0
+
+    ; if (BC > DE) next else getAngle
+    call    Comp_BC_DE         ; Compare Contents Of BC & DE, Set Z-Flag IF (BC == DE), Set CY-Flag IF (BC < DE)
+    jp      z, .getAngle ; if (BC == DE) getAngle
+    jp      nc, .next ; if (BC >= DE) next
+
+.getAngle:
+    inc     hl
+
+    ld      e, (hl)
+    inc     hl
+    ld      d, (hl)
+    ld      (Object_0.angleToPlayer), de       ; save angle
 
     ret
+
+.next:
+    inc     hl
+    inc     hl
+    inc     hl
+    jp      .loop
+
+
+
 
 .calcAbsoluteDistance:
     ; --- if (HL > DE) HL = HL - DE else HL = DE - HL
@@ -88,3 +144,125 @@ Div8_NoAdd:
     rla
     cpl
     ret
+
+;
+; Divide 16-bit values (with 16-bit result)
+; In: Divide BC by divider DE
+; Out: BC = result, HL = rest
+;
+Div16:
+    ld hl,0
+    ld a,b
+    ld b,8
+Div16_Loop1:
+    rla
+    adc hl,hl
+    sbc hl,de
+    jr nc,Div16_NoAdd1
+    add hl,de
+Div16_NoAdd1:
+    djnz Div16_Loop1
+    rla
+    cpl
+    ld b,a
+    ld a,c
+    ld c,b
+    ld b,8
+Div16_Loop2:
+    rla
+    adc hl,hl
+    sbc hl,de
+    jr nc,Div16_NoAdd2
+    add hl,de
+Div16_NoAdd2:
+    djnz Div16_Loop2
+    rla
+    cpl
+    ld b,c
+    ld c,a
+    ret
+
+;
+; Multiply 8-bit values
+; In:  Multiply H with E
+; Out: HL = result
+;
+Mult8:
+    ld d,0
+    ld l,d
+    ld b,8
+Mult8_Loop:
+    add hl,hl
+    jr nc,Mult8_NoAdd
+    add hl,de
+Mult8_NoAdd:
+    djnz Mult8_Loop
+    ret
+
+
+FPDE_Div_BC88:
+;Inputs:
+;     DE,BC are 8.8 Fixed Point numbers
+;Outputs:
+;     ADE is the 16.8 Fixed Point result (rounded to the least significant bit)
+    ;  di
+     ld a,16
+     ld hl,0
+Loop1:
+     sla e
+     rl d
+     adc hl,hl
+     jr nc,$+8
+     or a
+     sbc hl,bc
+     jp incE
+     sbc hl,bc
+     jr c,$+5
+incE:
+     inc e
+     jr $+3
+     add hl,bc
+     dec a
+     jr nz,Loop1
+     ex af,af'
+     ld a,8
+Loop2:
+     ex af,af'
+     sla e
+     rl d
+     rla
+     ex af,af'
+     add hl,hl
+     jr nc,$+8
+     or a
+     sbc hl,bc
+     jp incE_2
+     sbc hl,bc
+     jr c,$+5
+incE_2:
+     inc e
+     jr $+3
+     add hl,bc
+     dec a
+     jr nz,Loop2
+;round
+     ex af,af'
+     add hl,hl
+     jr c,$+5
+     sbc hl,de
+     ret c
+     inc e
+     ret nz
+     inc d
+     ret nz
+     inc a
+     ret
+
+
+Comp_BC_DE:
+    LD      A, b
+    SUB     D
+    RET     NZ
+    LD      A, c
+    SUB     E
+    RET

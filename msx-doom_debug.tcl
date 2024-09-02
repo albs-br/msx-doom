@@ -11,7 +11,6 @@ ram_watch   add     0xc093      -type word       -desc Obj_0.angle             -
 
 
 
-Object_0.angleToPlayer: equ 0C093h ; last def. pass 3
 
 
 # Player.angle: equ 0C085h ; last def. pass 3

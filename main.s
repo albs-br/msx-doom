@@ -13,8 +13,12 @@ Seg_P8000_SW:	equ	0x7000	        ; Segment switch for page 0x8000-BFFFh (ASCII 1
 
     
     
+    INCLUDE "LookUpTables/LUT_Cos_Sin.s"
+    INCLUDE "LookUpTables/LUT_Atan2.s"
     
     
+    INCLUDE "UpdateSPRATR.s"
+    INCLUDE "UpdateSPRATR_Buffer.s"
     INCLUDE "UpdateObjectsDistance.s"
 
 
@@ -126,14 +130,8 @@ Execute:
 
     call    Wait_Vblank
 
-    ; --- Update SPRATR from buffer
-    ld      a, 0000 0000 b
-    ld      hl, SPRATR
-    call    SetVdp_Write
-    ld      hl, SPRATR_Buffer
-    ld      c, PORT_0
-    outi outi outi outi
-    outi outi outi outi ; update 2 sprites
+
+    call    UpdateSPRATR
 
     ; --- Read input
     ld      a, 8                    ; 8th line
@@ -163,45 +161,8 @@ Execute:
 
     call    UpdateObjectsDistance
 
-    ; --------------------- Update SPRATR buffer
-    
-    ; --- Player (map)
-    ld      hl, SPRATR_Buffer
 
-    ; convert from 16 bits to 6 bits (0-63)
-    ld      a, (Player.Y + 1) ; high byte
-    srl     a               ; shift right register
-    srl     a
-    add     128
-    ld      (hl), a
-
-    inc     hl
-    ; convert from 16 bits to 6 bits (0-63)
-    ld      a, (Player.X + 1) ; high byte
-    srl     a               ; shift right register
-    srl     a
-    ld      (hl), a
-
-
-
-    ; --- Object 0 (map)
-    ld      hl, SPRATR_Buffer + 4
-
-    ; convert from 16 bits to 6 bits (0-63)
-    ld      a, (Object_0.Y + 1) ; high byte
-    srl     a               ; shift right register
-    srl     a
-    add     128
-    ld      (hl), a
-
-    inc     hl
-    ; convert from 16 bits to 6 bits (0-63)
-    ld      a, (Object_0.X + 1) ; high byte
-    srl     a               ; shift right register
-    srl     a
-    ld      (hl), a
-
-
+    call    UpdateSPRATR_Buffer
 
 
     jp      .loop
@@ -377,10 +338,7 @@ SPRATR_Data:
     db      0, 0, 0, 0
 .size:  equ $ - SPRATR_Data
 
-; ----------------------------------------
-
-    INCLUDE "LookUpTables/LUT_Cos_Sin.s"
-    
+   
 ; ----------------------------------------
 
     db      "End ROM started at 0x4000"

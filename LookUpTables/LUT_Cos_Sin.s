@@ -1,3 +1,4 @@
+; 8.8 fixed point
 LUT_cos:
         dw 100000000 b  ; cos of 0 degrees = 1
         dw 100000000 b  ; cos of 1 degrees = 0,9998476951563913
