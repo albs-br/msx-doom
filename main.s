@@ -11,6 +11,13 @@ Seg_P8000_SW:	equ	0x7000	        ; Segment switch for page 0x8000-BFFFh (ASCII 1
     INCLUDE "Include/MsxConstants.s"
     INCLUDE "Include/CommonRoutines.s"
 
+    
+    
+    
+    
+    INCLUDE "UpdateObjectsDistance.s"
+
+
 ; Default VRAM tables for Screen 4
 NAMTBL:     equ 0x1800  ; to 0x1aff (768 bytes)
 PATTBL:     equ 0x0000  ; to 0x17ff (6144 bytes)
@@ -30,6 +37,13 @@ Execute:
     ld      hl, RamStart        ; RAM start address
     ld      de, RamEnd + 1      ; RAM end address
     call    ClearRam_WithParameters
+
+
+
+    ; disable keyboard click
+    xor     a
+    ld 		(BIOS_CLIKSW), a     ; Key Press Click Switch 0:Off 1:On (1B/RW)
+
 
 
     call    EnableRomPage2
@@ -98,6 +112,14 @@ Execute:
 
     call    Update_walkDXandDY
 
+
+
+    ld      hl, 32768 + 16384
+    ld      (Object_0.X), hl
+    ld      hl, 32768 - 16384
+    ld      (Object_0.Y), hl
+
+
 ; ------------------------------------
 
 .loop:
@@ -110,7 +132,8 @@ Execute:
     call    SetVdp_Write
     ld      hl, SPRATR_Buffer
     ld      c, PORT_0
-    outi outi outi outi ; update 1 sprite
+    outi outi outi outi
+    outi outi outi outi ; update 2 sprites
 
     ; --- Read input
     ld      a, 8                    ; 8th line
@@ -136,19 +159,44 @@ Execute:
     ;     call   	z, .walkBackwards
     ; pop     af
 
-    ; --- Update SPRATR buffer
+
+
+    call    UpdateObjectsDistance
+
+    ; --------------------- Update SPRATR buffer
+    
+    ; --- Player (map)
     ld      hl, SPRATR_Buffer
 
-    ld      a, (Player.Y + 1) ; high byte
     ; convert from 16 bits to 6 bits (0-63)
+    ld      a, (Player.Y + 1) ; high byte
     srl     a               ; shift right register
     srl     a
     add     128
     ld      (hl), a
 
     inc     hl
-    ld      a, (Player.X + 1) ; high byte
     ; convert from 16 bits to 6 bits (0-63)
+    ld      a, (Player.X + 1) ; high byte
+    srl     a               ; shift right register
+    srl     a
+    ld      (hl), a
+
+
+
+    ; --- Object 0 (map)
+    ld      hl, SPRATR_Buffer + 4
+
+    ; convert from 16 bits to 6 bits (0-63)
+    ld      a, (Object_0.Y + 1) ; high byte
+    srl     a               ; shift right register
+    srl     a
+    add     128
+    ld      (hl), a
+
+    inc     hl
+    ; convert from 16 bits to 6 bits (0-63)
+    ld      a, (Object_0.X + 1) ; high byte
     srl     a               ; shift right register
     srl     a
     ld      (hl), a
@@ -244,6 +292,26 @@ Update_walkDXandDY:
     inc     hl
     ld      d, (hl)
 
+    ld      (Player.walk_DX), de
+    
+
+
+
+    ; --- Update .walk_DY based on angle
+    ld      hl, (Player.angle)
+    
+    add     hl, hl          ; HL = HL * 2
+
+    ld      d, h            ; DE = HL
+    ld      e, l
+
+    ld      hl, LUT_sin     ; HL = LUT_sin + DE
+    add     hl, de
+
+    ld      e, (hl)         ; DE = (HL)
+    inc     hl
+    ld      d, (hl)
+
     ; ; for angles 0-89 invert signal (invert all bits, then add 1, ignoring overflow)
     ; ld      a, e
     ; xor     1111 1111 b
@@ -255,11 +323,8 @@ Update_walkDXandDY:
 
     ; inc     de
 
-    ld      (Player.walk_DX), de
-    
+    ld      (Player.walk_DY), de
 
-
-    
     ret
 
 
@@ -312,6 +377,12 @@ SPRATR_Data:
     db      0, 0, 0, 0
 .size:  equ $ - SPRATR_Data
 
+; ----------------------------------------
+
+    INCLUDE "LookUpTables/LUT_Cos_Sin.s"
+    
+; ----------------------------------------
+
     db      "End ROM started at 0x4000"
 
 	ds PageSize - ($ - 0x4000), 255	; Fill the unused area with 0xFF
@@ -326,9 +397,6 @@ SPRATR_Data:
 ; 	ds PageSize - ($ - 0x8000), 255
 
 
-; ----------------------------------------
-
-    INCLUDE "LookUpTables/LUT_Cos.s"
 
 ; ----------------------------------------
 
@@ -351,5 +419,8 @@ Player:
 Object_0:
 .X:             rw 1 ; 0-65535
 .Y:             rw 1 ; 0-65535
+.distance_X:    rw 1 ; distance X to player
+.distance_Y:    rw 1 ; distance Y to player
+.angleToPlayer: rw 1 ; 
 
 RamEnd:
