@@ -58,8 +58,15 @@ UpdateObjectsDistance:
 
 
     ; Divide distance Y by distance X (16 bits)
-    ld      de, (Object_0.distance_Y)
     ld      bc, (Object_0.distance_X)
+    
+    ; avoid division by zero
+    ld      de, 0
+    call    Comp_BC_DE
+    jp      z, .ret90degrees
+    
+    ld      de, (Object_0.distance_Y)
+
     di
         call    FPDE_Div_BC88 ; DE divided by BC (both 8.8 fixed point), result in ADE (16.8)
     ei
@@ -68,10 +75,9 @@ UpdateObjectsDistance:
     ; ld      (Object_0.angleToPlayer), a         ; low byte
     
     ;ld      (Object_0.angleToPlayer), de       ; get two lowest bytes
-
+    
     ld      b, d ; BC = DE
     ld      c, e
-
 
     ld      hl, LUT_Atan2
 
@@ -80,8 +86,11 @@ UpdateObjectsDistance:
     inc     hl
     ld      d, (hl)
 
+    ; DE: value from look up table
+    ; BC: value we are looking for
 
-    ; BC=256 / DE=0
+    ; debug: BC=256 / DE=0
+    ; debug: BC=5000 / DE=4096
 
     ; if (BC > DE) next else getAngle
     call    Comp_BC_DE         ; Compare Contents Of BC & DE, Set Z-Flag IF (BC == DE), Set CY-Flag IF (BC < DE)
@@ -94,6 +103,13 @@ UpdateObjectsDistance:
     ld      e, (hl)
     inc     hl
     ld      d, (hl)
+
+    jp      .cont
+
+.ret90degrees:
+    ld      de, 90
+
+.cont:
     ld      (Object_0.angleToPlayer), de       ; save angle
 
     ret
@@ -102,7 +118,13 @@ UpdateObjectsDistance:
     inc     hl
     inc     hl
     inc     hl
-    jp      .loop
+
+    ld      de, LUT_Atan2.end
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    
+    ; if (HL >= LUT_Atan2.end) ret90degrees else loop
+    jp      c, .loop
+    jp      .ret90degrees
 
 
 
