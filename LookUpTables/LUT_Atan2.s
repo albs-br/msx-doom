@@ -1,3 +1,4 @@
+; TODO: angle can be byte here
 LUT_Atan2:
     dw 0, 0
     dw 16, 4

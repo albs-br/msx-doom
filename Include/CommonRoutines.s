@@ -1202,3 +1202,12 @@ SNSMAT_NO_DI_EI:
 	out	(PPI.C), a
 	in	a, (PPI.B)
 	ret
+
+
+Comp_BC_DE:
+    ld      a, b
+    sub     d
+    ret     nz
+    ld      a, c
+    sub     e
+    ret

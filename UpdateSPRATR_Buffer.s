@@ -24,16 +24,16 @@ UpdateSPRATR_Buffer:
     ld      hl, SPRATR_Buffer + 4
 
     ; convert from 16 bits to 6 bits (0-63)
-    ld      a, (Object_0.Y + 1) ; high byte
-    srl     a               ; shift right register
+    ld      a, (Object_0 + 3)   ; Y - high byte
+    srl     a                   ; shift right register
     srl     a
     add     128
     ld      (hl), a
 
     inc     hl
     ; convert from 16 bits to 6 bits (0-63)
-    ld      a, (Object_0.X + 1) ; high byte
-    srl     a               ; shift right register
+    ld      a, (Object_0 + 1)   ; X - high byte
+    srl     a                   ; shift right register
     srl     a
     ld      (hl), a
 

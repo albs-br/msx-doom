@@ -3,6 +3,9 @@ FNAME "msx-doom.rom"      ; output file
 PageSize:	    equ	0x4000	        ; 16kB
 Seg_P8000_SW:	equ	0x7000	        ; Segment switch for page 0x8000-BFFFh (ASCII 16k Mapper)
 
+DEBUG:          equ 255             ; defines debug mode, value is irrelevant (comment it out for production version)
+
+
 ; Compilation address
     org 0x4000, 0xbeff	                    ; 0x8000 can be also used here if Rom size is 16kB or less.
 
@@ -10,6 +13,8 @@ Seg_P8000_SW:	equ	0x7000	        ; Segment switch for page 0x8000-BFFFh (ASCII 1
     INCLUDE "Include/MsxBios.s"
     INCLUDE "Include/MsxConstants.s"
     INCLUDE "Include/CommonRoutines.s"
+    
+    INCLUDE "Include/Math.s"
 
     
     
@@ -18,9 +23,9 @@ Seg_P8000_SW:	equ	0x7000	        ; Segment switch for page 0x8000-BFFFh (ASCII 1
     
     
     INCLUDE "ReadInput.s"
+    INCLUDE "GameLogic/ObjectLogic.s"
     INCLUDE "UpdateSPRATR.s"
     INCLUDE "UpdateSPRATR_Buffer.s"
-    INCLUDE "UpdateObjectsDistance.s"
 
 
 ; Default VRAM tables for Screen 4
@@ -56,6 +61,15 @@ Execute:
 	; enable page 1
     ld	    a, 1
 	ld	    (Seg_P8000_SW), a
+
+    ; define screen colors
+    ld 		a, 1      	            ; Foreground color
+    ld 		(BIOS_FORCLR), a    
+    ld 		a, 1  		            ; Background color
+    ld 		(BIOS_BAKCLR), a     
+    ld 		a, 1      	            ; Border color
+    ld 		(BIOS_BDRCLR), a    
+    call 	BIOS_CHGCLR        		; Change Screen Color
 
     ; change to screen 4
     ld      a, 4
@@ -120,31 +134,71 @@ Execute:
 
 
     ld      hl, 32768 + 16384
-    ld      (Object_0.X), hl
+    ld      (Object_0), hl ; X
     ld      hl, 32768 - 16384
-    ld      (Object_0.Y), hl
+    ld      (Object_0 + 2), hl ; Y
 
 
 ; ------------------------------------
 
-.loop:
+; --- Main game loop
+
+.mainLoop:
 
     call    Wait_Vblank
 
 
+
+    IFDEF DEBUG
+        ld 		a, 4       	            ; Border color
+        ld 		(BIOS_BDRCLR), a
+        call 	BIOS_CHGCLR        		; Change Screen Color
+    ENDIF
+
     call    UpdateSPRATR
 
+    ; ---------------------------------
+
+    IFDEF DEBUG
+        ld 		a, 7       	            ; Border color
+        ld 		(BIOS_BDRCLR), a
+        call 	BIOS_CHGCLR        		; Change Screen Color
+    ENDIF
     
     call    ReadInput
 
+    ; ---------------------------------
 
-    call    UpdateObjectsDistance
+    IFDEF DEBUG
+        ld 		a, 8       	            ; Border color
+        ld 		(BIOS_BDRCLR), a
+        call 	BIOS_CHGCLR        		; Change Screen Color
+    ENDIF
+    
+    ld      hl, Object_0
+    call    ObjectLogic
 
+    ; ---------------------------------
+
+    IFDEF DEBUG
+        ld 		a, 12       	            ; Border color
+        ld 		(BIOS_BDRCLR), a
+        call 	BIOS_CHGCLR        		; Change Screen Color
+    ENDIF
 
     call    UpdateSPRATR_Buffer
 
+    ; ---------------------------------
 
-    jp      .loop
+    IFDEF DEBUG
+        ld 		a, 1       	            ; Border color
+        ld 		(BIOS_BDRCLR), a
+        call 	BIOS_CHGCLR        		; Change Screen Color
+    ENDIF
+
+
+
+    jp      .mainLoop
 
 
 End:
@@ -232,11 +286,16 @@ Player:
 .walk_DX:       rw 1 ; 8.8 fixed point
 .walk_DY:       rw 1 ; 8.8 fixed point
 
-Object_0:
+Object_0:       rb Object_Temp.size
+
+Object_Temp:
 .X:             rw 1 ; 0-65535
 .Y:             rw 1 ; 0-65535
 .distance_X:    rw 1 ; distance X to player
 .distance_Y:    rw 1 ; distance Y to player
-.angleToPlayer: rw 1 ; 
+.angleToPlayer: rw 1 ; angle between player and this object (0-359)
+.size:          equ $ - Object_Temp
+
+ObjectAddress:  rw 1
 
 RamEnd:
