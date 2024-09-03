@@ -137,7 +137,13 @@ Execute:
     ld      (Object_0), hl ; X
     ld      hl, 32768 - 16384
     ld      (Object_0 + 2), hl ; Y
-
+    ld      hl, 0
+    ld      (Object_0 + 4), hl ; distance X
+    ld      (Object_0 + 6), hl ; distance Y
+    ld      (Object_0 + 8), hl ; angle to player
+    xor     a
+    ld      (Object_0 + 10), a ; is visible
+    ;ld      (Object_0 + 11), a ;
 
 ; ------------------------------------
 
@@ -275,27 +281,6 @@ SPRATR_Data:
 
 RamStart:
 
-SavedJiffy:     rb 1
-
-SPRATR_Buffer:  rb 128
-
-Player:
-.X:             rw 1 ; 0-65535
-.Y:             rw 1 ; 0-65535
-.angle:         rw 1 ; 0-359 degrees, 0 is left (east), increments counter-clockwise
-.walk_DX:       rw 1 ; 8.8 fixed point
-.walk_DY:       rw 1 ; 8.8 fixed point
-
-Object_0:       rb Object_Temp.size
-
-Object_Temp:
-.X:             rw 1 ; 0-65535
-.Y:             rw 1 ; 0-65535
-.distance_X:    rw 1 ; distance X to player
-.distance_Y:    rw 1 ; distance Y to player
-.angleToPlayer: rw 1 ; angle between player and this object (0-359)
-.size:          equ $ - Object_Temp
-
-ObjectAddress:  rw 1
+    INCLUDE "Variables.s"
 
 RamEnd:

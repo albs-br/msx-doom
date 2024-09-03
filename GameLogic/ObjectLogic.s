@@ -81,6 +81,10 @@ ObjectLogic:
     
     ;ld      (Object_0.angleToPlayer), de       ; get two lowest bytes
     
+    ; TODO: (not sure if the bad performance on results close to 90 degrees is due to LUT or division time)
+    ; if (D != 0) divResultLargerThan256 else divResultSmallerThan256
+
+; .divResultLargerThan256:
     ld      b, d ; BC = DE
     ld      c, e
 
@@ -109,13 +113,51 @@ ObjectLogic:
     inc     hl
     ld      d, (hl)
 
-    jp      .return
+    jp      .updateObjectVisibility
 
 .ret90degrees:
     ld      de, 90
 
-.return:
+.updateObjectVisibility:
+
     ld      (Object_Temp.angleToPlayer), de       ; save angle
+
+    ; ---- if (Object.angleToPlayer > (Player.angle - 32) && Object.angleToPlayer < (Player.angle + 32)) isVisible = true; else isVisible = false;
+    
+    ; TODO:
+    ; working only when player is below and left of object
+    ; AND
+    ; player angle > 32
+
+    ld      de, (Object_Temp.angleToPlayer)
+    ld      hl, (Player.angle)
+    ld      bc, 32
+    xor     a
+    sbc     hl, bc
+    ; if (DE < HL) outOfView; else do other check
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    jp      nc, .outOfView
+
+    ld      de, (Object_Temp.angleToPlayer)
+    ld      hl, (Player.angle)
+    ld      bc, 32
+    add     hl, bc
+    ; if (DE < HL) isVisible; else outOfView;
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    jp      nc, .isVisible
+
+.outOfView:
+    xor     a
+    ld      (Object_Temp.isVisible), a
+    jp      .cont_100
+
+.isVisible:
+    ld      a, 1
+    ld      (Object_Temp.isVisible), a
+
+.cont_100:
+
+.return:
 
     ; Copy work area back to object
     ld      hl, Object_Temp

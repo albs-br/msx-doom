@@ -8,6 +8,7 @@ ram_watch   add     0xc08d      -type word       -desc Obj_0.Y             -form
 ram_watch   add     0xc08f      -type word       -desc Obj_0.dis_X             -format dec
 ram_watch   add     0xc091      -type word       -desc Obj_0.dis_Y             -format dec
 ram_watch   add     0xc093      -type word       -desc Obj_0.angle             -format dec
+ram_watch   add     0xc095      -type word       -desc Obj_0.isVis             -format dec
 
 
 
