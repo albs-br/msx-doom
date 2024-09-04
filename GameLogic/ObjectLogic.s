@@ -165,6 +165,10 @@ ObjectLogic:
     ld      bc, PLAYER_FIELD_OF_VIEW / 2        ; 32
     xor     a
     sbc     hl, bc
+
+    ; TODO:
+    ; test if result is < 0
+
     ; if (DE < HL) outOfView; else do other check
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .outOfView

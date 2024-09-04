@@ -6,8 +6,12 @@ Player:
 .X:             rw 1 ; 0-65535
 .Y:             rw 1 ; 0-65535
 .angle:         rw 1 ; 0-359 degrees, 0 is left (east), increments counter-clockwise
+.FoV_start:     rw 1 ; 0-359 degrees
+.FoV_end:       rw 1 ; 0-359 degrees
 .walk_DX:       rw 1 ; 8.8 fixed point
 .walk_DY:       rw 1 ; 8.8 fixed point
+
+
 
 Object_0:       rb Object_Temp.size
 

@@ -59,6 +59,8 @@ ReadInput:
 .rotate_return:
     ld      (Player.angle), hl
 
+    call    Update_FoV
+
     call    Update_walkDXandDY
 
     ret
@@ -170,3 +172,36 @@ Update_walkDXandDY:
 
     ret
 
+
+
+Update_FoV:
+    ld      hl, (Player.angle)
+
+    ; ---- if (angle >= 32) FoV_start = angle - 32; else FoV_start = 360 - (32 - angle)
+    ld      de, PLAYER_FIELD_OF_VIEW / 2
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    jp      nc, .set_FoV_start_angle_minus_32
+
+    ; FoV_start = 360 - (32 - angle)
+    ; FoV_start = 360 - 32 + angle); 
+    ld      bc, 360 - (PLAYER_FIELD_OF_VIEW / 2)
+    ld      hl, (Player.angle)
+    add     hl, bc
+    ld      (Player.FoV_start), hl
+    
+    jp      .cont
+
+.set_FoV_start_angle_minus_32:
+    ld      hl, (Player.angle)
+    ld      bc, PLAYER_FIELD_OF_VIEW / 2
+    xor     a
+    sbc     hl, bc
+    ld      (Player.FoV_start), hl
+
+
+.cont:
+
+    ; TODO
+    ; ---- if (angle < (360-32)) FoV_end = angle + 32; else FoV_end 
+
+    ret

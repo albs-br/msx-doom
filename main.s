@@ -129,6 +129,7 @@ Execute:
     ld      hl, 0
     ld      (Player.angle), hl
 
+    call    Update_FoV
     call    Update_walkDXandDY
 
 
