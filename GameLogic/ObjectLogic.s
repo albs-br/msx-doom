@@ -1,3 +1,5 @@
+PLAYER_FIELD_OF_VIEW: equ 64 ; it's important to be a power of two to make it easier to convert to screen width coordinate (0-255)
+
 ObjectLogic:
 
     ld      (ObjectAddress), hl ; save address to return later
@@ -67,7 +69,7 @@ ObjectLogic:
     
     ; avoid division by zero
     ld      de, 0
-    call    Comp_BC_DE
+    call    Comp_BC_DE         ; Compare Contents Of BC & DE, Set Z-Flag IF (BC == DE), Set CY-Flag IF (BC < DE)
     jp      z, .ret90degrees
     
     ld      de, (Object_Temp.distance_Y)
@@ -113,25 +115,54 @@ ObjectLogic:
     inc     hl
     ld      d, (hl)
 
-    jp      .updateObjectVisibility
+    jp      .cont_1
 
 .ret90degrees:
     ld      de, 90
 
-.updateObjectVisibility:
+.cont_1:
 
     ld      (Object_Temp.angleToPlayer), de       ; save angle
+
+    ; ------------ Update object angle based on which quadrant the object is in relation to player
+
+    ; if (Player.Y > Object.Y)
+    ld      hl, (Player.Y)
+    ld      de, (Object_Temp.Y)
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    jp      c, .player_Y_isLessThan_object_Y
+    
+    ;       if (Player.X > Object.X) angle2ndQuadrant; else angle1stQuadrant (do nothing)
+    ld      hl, (Player.X)
+    ld      de, (Object_Temp.X)
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    jp      nc, .angle2ndQuadrant
+
+    jp      .cont_2
+
+.player_Y_isLessThan_object_Y:
+
+    ;       if (Player.X > Object.X) angle3rdQuadrant; else angle4thQuadrant;
+    ld      hl, (Player.X)
+    ld      de, (Object_Temp.X)
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    jp      nc, .angle3rdQuadrant
+    jp      .angle4thQuadrant
+
+
+.cont_2:
+
+    ; ------------- Update object visibility (check if object is inside player's field of view)
 
     ; ---- if (Object.angleToPlayer > (Player.angle - 32) && Object.angleToPlayer < (Player.angle + 32)) isVisible = true; else isVisible = false;
     
     ; TODO:
-    ; working only when player is below and left of object
-    ; AND
+    ; working only when
     ; player angle > 32
 
     ld      de, (Object_Temp.angleToPlayer)
     ld      hl, (Player.angle)
-    ld      bc, 32
+    ld      bc, PLAYER_FIELD_OF_VIEW / 2        ; 32
     xor     a
     sbc     hl, bc
     ; if (DE < HL) outOfView; else do other check
@@ -140,7 +171,7 @@ ObjectLogic:
 
     ld      de, (Object_Temp.angleToPlayer)
     ld      hl, (Player.angle)
-    ld      bc, 32
+    ld      bc, PLAYER_FIELD_OF_VIEW / 2        ; 32
     add     hl, bc
     ; if (DE < HL) isVisible; else outOfView;
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
@@ -196,3 +227,35 @@ ObjectLogic:
 
     ret
 
+; Calc object angle for 2nd quadrant (object is above and left of player; 90-180 range)
+.angle2ndQuadrant:
+    ; angle = 180 - angle
+    ld      hl, 180
+    ld      bc, (Object_Temp.angleToPlayer) ; must be on (0-90 range)
+    xor     a
+    sbc     hl, bc
+    ld      (Object_Temp.angleToPlayer), hl
+
+    jp      .cont_2
+
+; Calc object angle for 4th quadrant (object is below and left of player; 270-359 range)
+.angle4thQuadrant:
+    ; angle = 360 - angle
+    ld      hl, 360
+    ld      bc, (Object_Temp.angleToPlayer) ; must be on (0-90 range)
+    xor     a
+    sbc     hl, bc
+    ld      (Object_Temp.angleToPlayer), hl
+
+    jp      .cont_2
+
+; Calc object angle for 3rd quadrant (object is below and left of player; 180-270 range)
+.angle3rdQuadrant:
+    ; angle = 270 - angle
+    ld      hl, 270
+    ld      bc, (Object_Temp.angleToPlayer) ; must be on (0-90 range)
+    xor     a
+    sbc     hl, bc
+    ld      (Object_Temp.angleToPlayer), hl
+
+    jp      .cont_2
