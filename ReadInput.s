@@ -46,7 +46,7 @@ ReadInput:
 .rotateLeft:
     ; if (Player.angle == 360) Player.angle = 0; else Player.angle++;
     ld      hl, (Player.angle)
-    ld      de, 360
+    ld      de, 360-1
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jr      z, .rotateLeft_set0
 
@@ -183,7 +183,7 @@ Update_FoV:
     jp      nc, .set_FoV_start_angle_minus_32
 
     ; FoV_start = 360 - (32 - angle)
-    ; FoV_start = 360 - 32 + angle); 
+    ; FoV_start = 360 - 32 + angle)
     ld      bc, 360 - (PLAYER_FIELD_OF_VIEW / 2)
     ld      hl, (Player.angle)
     add     hl, bc
@@ -192,6 +192,7 @@ Update_FoV:
     jp      .cont
 
 .set_FoV_start_angle_minus_32:
+    ; FoV_start = angle - 32
     ld      hl, (Player.angle)
     ld      bc, PLAYER_FIELD_OF_VIEW / 2
     xor     a
@@ -201,7 +202,29 @@ Update_FoV:
 
 .cont:
 
-    ; TODO
-    ; ---- if (angle < (360-32)) FoV_end = angle + 32; else FoV_end 
+    ld      hl, (Player.angle)
+
+    ; ---- if (angle < (360-32)) FoV_end = angle + 32; else FoV_end = 32 - (360 - angle);
+    ld      de, 360 - (PLAYER_FIELD_OF_VIEW / 2)
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    jp      c, .set_FoV_end_angle_plus_32
+
+
+    ; FoV_end = 32 - (360 - angle)
+    ; FoV_end = 32 - 360 + angle
+    ld      bc, - 360 + (PLAYER_FIELD_OF_VIEW / 2)
+    ld      hl, (Player.angle)
+    add     hl, bc
+    ld      (Player.FoV_end), hl
+
+    ret
+
+.set_FoV_end_angle_plus_32:
+    ; FoV_end = angle + 32
+    ld      hl, (Player.angle)
+    ld      bc, PLAYER_FIELD_OF_VIEW / 2
+    add     hl, bc
+    ld      (Player.FoV_end), hl
+
 
     ret

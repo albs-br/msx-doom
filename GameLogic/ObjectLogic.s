@@ -156,9 +156,6 @@ ObjectLogic:
 
     ; ---- if (Object.angleToPlayer > (Player.angle - 32) && Object.angleToPlayer < (Player.angle + 32)) isVisible = true; else isVisible = false;
     
-    ; TODO:
-    ; working only when
-    ; player angle > 32
 
     ld      de, (Object_Temp.angleToPlayer)
     ld      hl, (Player.angle)
@@ -167,7 +164,7 @@ ObjectLogic:
     sbc     hl, bc
 
     ; TODO:
-    ; test if result is < 0
+    ; test if result is < 0 (use FoV_start and end)
 
     ; if (DE < HL) outOfView; else do other check
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)

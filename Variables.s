@@ -13,6 +13,8 @@ Player:
 
 
 
+    org     0xc100
+
 Object_0:       rb Object_Temp.size
 
 Object_Temp:
