@@ -1211,3 +1211,13 @@ Comp_BC_DE:
     ld      a, c
     sub     e
     ret
+
+; Input: 
+;   HL: addr of zero-terminated string
+PrintString:
+    ld      a, (hl)
+    or      a ; cp      0
+    ret     z
+    call    BIOS_CHPUT
+    inc     hl
+    jr      PrintString

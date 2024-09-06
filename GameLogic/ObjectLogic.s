@@ -158,22 +158,24 @@ ObjectLogic:
     
 
     ld      de, (Object_Temp.angleToPlayer)
+    ;ld      hl, (Player.FoV_start) ; FoV_start = Player.angle - 32
+
     ld      hl, (Player.angle)
     ld      bc, PLAYER_FIELD_OF_VIEW / 2        ; 32
     xor     a
     sbc     hl, bc
-
-    ; TODO:
-    ; test if result is < 0 (use FoV_start and end)
 
     ; if (DE < HL) outOfView; else do other check
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .outOfView
 
     ld      de, (Object_Temp.angleToPlayer)
+    ; ld      hl, (Player.FoV_end)
+
     ld      hl, (Player.angle)
     ld      bc, PLAYER_FIELD_OF_VIEW / 2        ; 32
     add     hl, bc
+
     ; if (DE < HL) isVisible; else outOfView;
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .isVisible

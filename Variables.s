@@ -1,6 +1,6 @@
 SavedJiffy:     rb 1
 
-SPRATR_Buffer:  rb 128
+SPRATR_Buffer:  rb 128 ; TODO: table align it to use INC L instead of INC HL
 
 Player:
 .X:             rw 1 ; 0-65535

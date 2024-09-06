@@ -21,11 +21,12 @@ DEBUG:          equ 255             ; defines debug mode, value is irrelevant (c
     INCLUDE "LookUpTables/LUT_Cos_Sin.s"
     INCLUDE "LookUpTables/LUT_Atan2.s"
     
-    
     INCLUDE "ReadInput.s"
     INCLUDE "GameLogic/ObjectLogic.s"
     INCLUDE "UpdateSPRATR.s"
     INCLUDE "UpdateSPRATR_Buffer.s"
+    
+    INCLUDE "UnitTests/ObjectLogic_Tests.s"
 
 
 ; Default VRAM tables for Screen 4
@@ -41,6 +42,17 @@ Execute:
 	di                          ; disable interrupts
 	im      1                   ; interrupt mode 1
     ld      sp, (BIOS_HIMEM)    ; init SP
+
+
+; ------------------------------------
+
+    IFDEF DEBUG
+        ;call 	RunUnitTests
+        call 	ObjectLogic_Tests
+    ENDIF
+
+; ------------------------------------
+
 
     call    BIOS_DISSCR
 
