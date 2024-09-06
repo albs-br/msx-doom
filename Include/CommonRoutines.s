@@ -1221,3 +1221,13 @@ PrintString:
     call    BIOS_CHPUT
     inc     hl
     jr      PrintString
+
+; Input: 
+;   HL: addr of zero-terminated string
+PrintString_CrLf:
+    call    PrintString
+    ld      a, 13
+    call    BIOS_CHPUT
+    ld      a, 10
+    call    BIOS_CHPUT
+    ret

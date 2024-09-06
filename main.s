@@ -22,10 +22,12 @@ DEBUG:          equ 255             ; defines debug mode, value is irrelevant (c
     INCLUDE "LookUpTables/LUT_Atan2.s"
     
     INCLUDE "ReadInput.s"
+    INCLUDE "GameLogic/PlayerInit.s"
     INCLUDE "GameLogic/ObjectLogic.s"
     INCLUDE "UpdateSPRATR.s"
     INCLUDE "UpdateSPRATR_Buffer.s"
     
+    INCLUDE "UnitTests/RunUnitTests.s"
     INCLUDE "UnitTests/ObjectLogic_Tests.s"
 
 
@@ -44,11 +46,14 @@ Execute:
     ld      sp, (BIOS_HIMEM)    ; init SP
 
 
+    ld      hl, RamStart        ; RAM start address
+    ld      de, RamEnd + 1      ; RAM end address
+    call    ClearRam_WithParameters
+
 ; ------------------------------------
 
     IFDEF DEBUG
-        ;call 	RunUnitTests
-        call 	ObjectLogic_Tests
+        call 	RunUnitTests
     ENDIF
 
 ; ------------------------------------
@@ -56,9 +61,6 @@ Execute:
 
     call    BIOS_DISSCR
 
-    ld      hl, RamStart        ; RAM start address
-    ld      de, RamEnd + 1      ; RAM end address
-    call    ClearRam_WithParameters
 
 
 
@@ -135,15 +137,7 @@ Execute:
 ; ------------------------------------
 
     ; Init vars
-    ld      hl, 32768 ; center of map
-    ld      (Player.X), hl
-    ld      (Player.Y), hl
-    ld      hl, 0
-    ld      (Player.angle), hl
-
-    call    Update_FoV
-    call    Update_walkDXandDY
-
+    call    PlayerInit
 
 
     ld      hl, 32768 + 16384
