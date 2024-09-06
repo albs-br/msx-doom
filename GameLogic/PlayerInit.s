@@ -6,6 +6,7 @@ PlayerInit:
     ld      hl, 0
     ld      (Player.angle), hl
 
+.updateCalcFields:
     call    Update_FoV
     call    Update_walkDXandDY
 
