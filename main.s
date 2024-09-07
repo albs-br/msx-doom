@@ -29,6 +29,7 @@ DEBUG:          equ 255             ; defines debug mode, value is irrelevant (c
     
     INCLUDE "UnitTests/UnitTests.s"
     INCLUDE "UnitTests/PlayerLogic_Tests.s"
+    INCLUDE "UnitTests/ObjectLogic_Tests.s"
 
 
 ; Default VRAM tables for Screen 4

@@ -154,31 +154,50 @@ ObjectLogic:
 
     ; ------------- Update object visibility (check if object is inside player's field of view)
 
-    ; ---- if (Object.angleToPlayer > (Player.angle - 32) && Object.angleToPlayer < (Player.angle + 32)) isVisible = true; else isVisible = false;
-    
+    ; if (FoV_start < FoV_end) {
+    ;   if (Object.angleToPlayer > FoV_start && Object.angleToPlayer < FoV_end) isVisible = true; else isVisible = false;
+    ; }
+    ; else {
+    ;   if (Object.angleToPlayer > FoV_start || Object.angleToPlayer < FoV_end) isVisible = true; else isVisible = false;
+    ; }
+    ld      hl, (Player.FoV_start)
+    ld      de, (Player.FoV_end)
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    jp      nc, .FoVstart_isBigger
 
-    ld      de, (Object_Temp.angleToPlayer)
-    ;ld      hl, (Player.FoV_start) ; FoV_start = Player.angle - 32
+;FoVstart_isSmaller
 
-    ld      hl, (Player.angle)
-    ld      bc, PLAYER_FIELD_OF_VIEW / 2        ; 32
-    xor     a
-    sbc     hl, bc
+    ; if (Object.angleToPlayer > FoV_start && Object.angleToPlayer < FoV_end) isVisible = true; else isVisible = false;
 
     ; if (DE < HL) outOfView; else do other check
+    ld      de, (Object_Temp.angleToPlayer)
+    ld      hl, (Player.FoV_start) ; FoV_start = Player.angle - 32
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .outOfView
 
-    ld      de, (Object_Temp.angleToPlayer)
-    ; ld      hl, (Player.FoV_end)
-
-    ld      hl, (Player.angle)
-    ld      bc, PLAYER_FIELD_OF_VIEW / 2        ; 32
-    add     hl, bc
-
     ; if (DE < HL) isVisible; else outOfView;
+    ld      de, (Object_Temp.angleToPlayer)
+    ld      hl, (Player.FoV_end) ; FoV_end = Player.angle + 32
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .isVisible
+    jp      .outOfView
+
+.FoVstart_isBigger:
+
+    ; if (Object.angleToPlayer > FoV_start || Object.angleToPlayer < FoV_end) isVisible = true; else isVisible = false;
+
+    ; if (DE > HL) isVisible; else do other check
+    ld      de, (Object_Temp.angleToPlayer)
+    ld      hl, (Player.FoV_start) ; FoV_start = Player.angle - 32
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    jp      c, .isVisible
+
+    ; if (DE < HL) isVisible; else outOfView;
+    ld      de, (Object_Temp.angleToPlayer)
+    ld      hl, (Player.FoV_end) ; FoV_end = Player.angle + 32
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    jp      nc, .isVisible
+    ; jp      .outOfView
 
 .outOfView:
     xor     a

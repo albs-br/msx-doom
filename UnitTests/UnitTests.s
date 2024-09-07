@@ -13,10 +13,10 @@ UnitTests:
     call    BIOS_INITXT     ; initialize screen 0
 
 
-    ; ld      hl, TEST_STRING
-    ; call    PrintString
 
     call 	PlayerLogic_Tests
+    call 	ObjectLogic_Tests
+
 
     ; wait some seconds
     ld      b, 180
@@ -24,8 +24,6 @@ UnitTests:
 
     ret
 
-
-; TEST_STRING: db 'Test String', 0
 
 ; ---------------------------
 
