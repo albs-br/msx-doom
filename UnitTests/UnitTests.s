@@ -59,5 +59,5 @@ UnitTests:
 
 ; ---------------------------
 
-TEST_PASSED_STRING: db 'Test passed', 0
-TEST_FAILED_STRING: db 'TEST FAILED !', 0
+TEST_PASSED_STRING: db '  Test passed', 0
+TEST_FAILED_STRING: db '  TEST FAILED !', 0
