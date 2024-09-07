@@ -1,5 +1,7 @@
 PLAYER_FIELD_OF_VIEW: equ 64 ; it's important to be a power of two to make it easier to convert to screen width coordinate (0-255)
 
+; Input:
+;   HL: object addr in RAM
 ObjectLogic:
 
     ld      (ObjectAddress), hl ; save address to return later
@@ -8,6 +10,8 @@ ObjectLogic:
     ld      de, Object_Temp
     ld      bc, Object_Temp.size
     ldir
+
+    ; ----------------------------------
 
     
     ; --- Calc distance X

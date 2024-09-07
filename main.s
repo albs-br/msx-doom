@@ -22,8 +22,9 @@ DEBUG:          equ 255             ; defines debug mode, value is irrelevant (c
     INCLUDE "LookUpTables/LUT_Atan2.s"
     
     INCLUDE "ReadInput.s"
-    INCLUDE "GameLogic/PlayerInit.s"
-    INCLUDE "GameLogic/ObjectLogic.s"
+    INCLUDE "GameLogic/PlayerLogic/PlayerInit.s"
+    INCLUDE "GameLogic/ObjectLogic/ObjectInit.s"
+    INCLUDE "GameLogic/ObjectLogic/ObjectLogic.s"
     INCLUDE "UpdateSPRATR.s"
     INCLUDE "UpdateSPRATR_Buffer.s"
     
@@ -140,18 +141,8 @@ Execute:
     ; Init vars
     call    PlayerInit
 
-
-    ld      hl, 32768 + 16384
-    ld      (Object_0), hl ; X
-    ld      hl, 32768 - 16384
-    ld      (Object_0 + 2), hl ; Y
-    ld      hl, 0
-    ld      (Object_0 + 4), hl ; distance X
-    ld      (Object_0 + 6), hl ; distance Y
-    ld      (Object_0 + 8), hl ; angle to player
-    xor     a
-    ld      (Object_0 + 10), a ; is visible
-    ;ld      (Object_0 + 11), a ;
+    ld      hl, Object_0
+    call    ObjectInit
 
 ; ------------------------------------
 
