@@ -10,16 +10,13 @@ ram_watch   add     0xc102      -type word       -desc Obj_0.Y             -form
 ram_watch   add     0xc104      -type word       -desc Obj_0.dis_X             -format dec
 ram_watch   add     0xc106      -type word       -desc Obj_0.dis_Y             -format dec
 ram_watch   add     0xc108      -type word       -desc Obj_0.angle             -format dec
-ram_watch   add     0xc10a      -type word       -desc Obj_0.isVis             -format dec
+ram_watch   add     0xc10a      -type byte       -desc Obj_0.isVis             -format dec
+ram_watch   add     0xc10b      -type byte       -desc Obj_0.scrX             -format dec
 
 
-# Player.FoV_start: equ 0C087h ; last def. pass 3
 
 
 
-# Player.angle: equ 0C085h ; last def. pass 3
-
-# ram_watch   add     0xc00f      -type byte       -desc Player_Lives      -format dec
 # ram_watch   add     0xc002      -type byte       -desc Player_Status     -format dec
 # 
 # ram_watch   add     0xFC4A      -type word       -desc HIMEM             -format hex

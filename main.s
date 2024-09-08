@@ -23,6 +23,7 @@ DEBUG:          equ 255             ; defines debug mode, value is irrelevant (c
     
     INCLUDE "ReadInput.s"
     INCLUDE "GameLogic/PlayerLogic/PlayerInit.s"
+    INCLUDE "GameLogic/PlayerLogic/PlayerLogic.s"
     INCLUDE "GameLogic/ObjectLogic/ObjectInit.s"
     INCLUDE "GameLogic/ObjectLogic/ObjectLogic.s"
     INCLUDE "UpdateSPRATR.s"

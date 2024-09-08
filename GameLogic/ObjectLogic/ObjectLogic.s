@@ -212,6 +212,19 @@ ObjectLogic:
     ld      a, 1
     ld      (Object_Temp.isVisible), a
 
+
+    ; calc X coord of the object center on screen
+    ; scr_X = (Player.FoV_end - Object.angleToPlayer) * 4
+    ld      hl, (Player.FoV_end)
+    ld      de, (Object_Temp.angleToPlayer)
+    xor     a
+    sbc     hl, de
+    add     hl, hl ; HL = HL * 2
+    add     hl, hl ; HL = HL * 2
+    ld      a, l
+    ld      (Object_Temp.scrX), a
+
+
 .cont_100:
 
 .return:

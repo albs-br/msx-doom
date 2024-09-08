@@ -39,6 +39,11 @@ UnitTests:
     jp      z, .testFailed
     jp      .testPassed
 
+.check_A_equals_B:
+    cp      b
+    jp      nz, .testFailed
+    jp      .testPassed
+
 .check_HL_equals_0:
     ld      de, 0
     call    BIOS_DCOMPR
