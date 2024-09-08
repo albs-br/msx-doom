@@ -221,6 +221,15 @@ ObjectLogic:
     sbc     hl, de
     add     hl, hl ; HL = HL * 2
     add     hl, hl ; HL = HL * 2
+    ; if (HL < 0) HL += 64
+    push    hl
+        ld      de, 0
+        call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    pop     hl
+    jp      nc, .notAdd360
+    ld      de, 360
+    add     hl, de
+.notAdd360:
     ld      a, l
     ld      (Object_Temp.scrX), a
 

@@ -14,6 +14,7 @@ UnitTests:
 
 
 
+    call 	Math_Tests
     call 	PlayerLogic_Tests
     call 	ObjectLogic_Tests
 
@@ -78,6 +79,11 @@ UnitTests:
 
     ld      hl, TEST_FAILED_STRING
     call    PrintString_CrLf
+
+    ; wait some seconds
+    ld      b, 120
+    call    Wait_B_Vblanks
+
     ret
 
 ; ---------------------------

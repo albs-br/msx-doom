@@ -75,12 +75,22 @@ Mult8_NoAdd:
     ret
 
 
+; DE divided by BC (both 8.8 fixed point), result in ADE (16.8)
 FPDE_Div_BC88:
 ;Inputs:
 ;     DE,BC are 8.8 Fixed Point numbers
 ;Outputs:
 ;     ADE is the 16.8 Fixed Point result (rounded to the least significant bit)
     ;  di
+
+    ; bug fix by Andre (sep 9th, 2024)
+    ; if (DE == 0) ADE = 0;
+    xor     a
+    or      d
+    or      e
+    ret     z
+
+
      ld a,16
      ld hl,0
 Loop1:
