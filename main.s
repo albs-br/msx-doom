@@ -55,7 +55,7 @@ Execute:
 ; ------------------------------------
 
     IFDEF DEBUG
-        call 	UnitTests.Run
+        call 	UnitTests.RunAll
     ENDIF
 
 ; ------------------------------------

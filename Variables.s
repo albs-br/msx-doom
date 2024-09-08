@@ -20,7 +20,7 @@ Object_0:       ;rb Object_Temp.size
     .distance_X:    rw 1 ; distance X to player
     .distance_Y:    rw 1 ; distance Y to player
     .angleToPlayer: rw 1 ; angle between player and this object (0-359)
-    .isVisible:     rb 1 ; indicates if object is inside player field of view (0: not visible, 1: visible)
+    .isVisible:     rb 1 ; indicates if object is inside player field of view (0: not visible, not 0: visible)
 
 ;     org     0xc200
 ; Object_1:       rb Object_Temp.size
@@ -31,7 +31,7 @@ Object_Temp:
     .distance_X:    rw 1 ; distance X to player
     .distance_Y:    rw 1 ; distance Y to player
     .angleToPlayer: rw 1 ; angle between player and this object (0-359)
-    .isVisible:     rb 1 ; indicates if object is inside player field of view (0: not visible, 1: visible)
+    .isVisible:     rb 1 ; indicates if object is inside player field of view (0: not visible, not 0: visible)
     .size:          equ $ - Object_Temp
 
 ObjectAddress:  rw 1

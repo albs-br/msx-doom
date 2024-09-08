@@ -1,6 +1,6 @@
 UnitTests:
 
-.Run:
+.RunAll:
     ; define screen colors
     ld 		a, 15      	            ; Foreground color
     ld 		(BIOS_FORCLR), a    
@@ -19,13 +19,25 @@ UnitTests:
 
 
     ; wait some seconds
-    ld      b, 180
+    ld      b, 120
     call    Wait_B_Vblanks
 
     ret
 
 
 ; ---------------------------
+
+.check_A_is_false:
+.check_A_equals_0:
+    or      a
+    jp      nz, .testFailed
+    jp      .testPassed
+
+.check_A_is_true:
+.check_A_not_equals_0:
+    or      a
+    jp      z, .testFailed
+    jp      .testPassed
 
 .check_HL_equals_0:
     ld      de, 0
