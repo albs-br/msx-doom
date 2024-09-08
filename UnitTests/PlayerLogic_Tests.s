@@ -28,11 +28,11 @@ PlayerLogic_Tests:
     call    UnitTests.check_HL_equals_0
 
     ld      hl, (Player.FoV_start)
-    ld      de, 360-32
+    ld      de, 32
     call    UnitTests.check_HL_equals_DE
 
     ld      hl, (Player.FoV_end)
-    ld      de, 32
+    ld      de, 360-32
     call    UnitTests.check_HL_equals_DE
 
     ret
@@ -54,11 +54,11 @@ PlayerLogic_Tests:
     call    UnitTests.check_HL_equals_DE
 
     ld      hl, (Player.FoV_start)
-    ld      de, 360-(32-15)
+    ld      de, 32+15
     call    UnitTests.check_HL_equals_DE
 
     ld      hl, (Player.FoV_end)
-    ld      de, 32+15
+    ld      de, 360-(32-15)
     call    UnitTests.check_HL_equals_DE
 
     ret
@@ -80,11 +80,11 @@ PlayerLogic_Tests:
     call    UnitTests.check_HL_equals_DE
 
     ld      hl, (Player.FoV_start)
-    ld      de, 32-32
+    ld      de, 32+32
     call    UnitTests.check_HL_equals_DE
 
     ld      hl, (Player.FoV_end)
-    ld      de, 32+32
+    ld      de, 32-32
     call    UnitTests.check_HL_equals_DE
 
     ret
@@ -106,11 +106,11 @@ PlayerLogic_Tests:
     call    UnitTests.check_HL_equals_DE
 
     ld      hl, (Player.FoV_start)
-    ld      de, 90-32
+    ld      de, 90+32
     call    UnitTests.check_HL_equals_DE
 
     ld      hl, (Player.FoV_end)
-    ld      de, 90+32
+    ld      de, 90-32
     call    UnitTests.check_HL_equals_DE
 
     ret
@@ -132,11 +132,11 @@ PlayerLogic_Tests:
     call    UnitTests.check_HL_equals_DE
 
     ld      hl, (Player.FoV_start)
-    ld      de, 227-32
+    ld      de, 227+32
     call    UnitTests.check_HL_equals_DE
 
     ld      hl, (Player.FoV_end)
-    ld      de, 227+32
+    ld      de, 227-32
     call    UnitTests.check_HL_equals_DE
 
     ret
@@ -158,11 +158,11 @@ PlayerLogic_Tests:
     call    UnitTests.check_HL_equals_DE
 
     ld      hl, (Player.FoV_start)
-    ld      de, 275-32
+    ld      de, 275+32
     call    UnitTests.check_HL_equals_DE
 
     ld      hl, (Player.FoV_end)
-    ld      de, 275+32
+    ld      de, 275-32
     call    UnitTests.check_HL_equals_DE
 
     ret
@@ -184,11 +184,11 @@ PlayerLogic_Tests:
     call    UnitTests.check_HL_equals_DE
 
     ld      hl, (Player.FoV_start)
-    ld      de, 355-32
+    ld      de,  32 - (360 - 355)
     call    UnitTests.check_HL_equals_DE
 
     ld      hl, (Player.FoV_end)
-    ld      de,  32 - (360 - 355)
+    ld      de, 355-32
     call    UnitTests.check_HL_equals_DE
 
     ret

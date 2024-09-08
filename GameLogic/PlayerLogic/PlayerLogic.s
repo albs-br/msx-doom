@@ -54,54 +54,54 @@ Update_walkDXandDY:
 Update_FoV:
     ld      hl, (Player.angle)
 
-    ; ---- if (angle >= 32) FoV_start = angle - 32; else FoV_start = 360 - (32 - angle)
+    ; ---- if (angle >= 32) FoV_end = angle - 32; else FoV_end = 360 - (32 - angle)
     ld      de, PLAYER_FIELD_OF_VIEW / 2
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    jp      nc, .set_FoV_start_angle_minus_32
+    jp      nc, .set_FoV_end_angle_minus_32
 
-    ; FoV_start = 360 - (32 - angle)
-    ; FoV_start = 360 - 32 + angle)
+    ; FoV_end = 360 - (32 - angle)
+    ; FoV_end = 360 - 32 + angle)
     ld      bc, 360 - (PLAYER_FIELD_OF_VIEW / 2)
     ld      hl, (Player.angle)
     add     hl, bc
-    ld      (Player.FoV_start), hl
+    ld      (Player.FoV_end), hl
     
     jp      .cont
 
-.set_FoV_start_angle_minus_32:
-    ; FoV_start = angle - 32
+.set_FoV_end_angle_minus_32:
+    ; FoV_end = angle - 32
     ld      hl, (Player.angle)
     ld      bc, PLAYER_FIELD_OF_VIEW / 2
     xor     a
     sbc     hl, bc
-    ld      (Player.FoV_start), hl
+    ld      (Player.FoV_end), hl
 
 
 .cont:
 
     ld      hl, (Player.angle)
 
-    ; ---- if (angle < (360-32)) FoV_end = angle + 32; else FoV_end = 32 - (360 - angle);
+    ; ---- if (angle < (360-32)) FoV_start = angle + 32; else FoV_start = 32 - (360 - angle);
     ld      de, 360 - (PLAYER_FIELD_OF_VIEW / 2)
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    jp      c, .set_FoV_end_angle_plus_32
+    jp      c, .set_FoV_start_angle_plus_32
 
 
-    ; FoV_end = 32 - (360 - angle)
-    ; FoV_end = 32 - 360 + angle
+    ; FoV_start = 32 - (360 - angle)
+    ; FoV_start = 32 - 360 + angle
     ld      bc, - 360 + (PLAYER_FIELD_OF_VIEW / 2)
     ld      hl, (Player.angle)
     add     hl, bc
-    ld      (Player.FoV_end), hl
+    ld      (Player.FoV_start), hl
 
     ret
 
-.set_FoV_end_angle_plus_32:
-    ; FoV_end = angle + 32
+.set_FoV_start_angle_plus_32:
+    ; FoV_start = angle + 32
     ld      hl, (Player.angle)
     ld      bc, PLAYER_FIELD_OF_VIEW / 2
     add     hl, bc
-    ld      (Player.FoV_end), hl
+    ld      (Player.FoV_start), hl
 
 
     ret

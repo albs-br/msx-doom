@@ -45,29 +45,6 @@ ObjectLogic:
     ld      (Object_Temp.distance_Y), hl
 
 
-
-
-    ; ; Divide distance Y by distance X (8 bits)
-    ; ld      hl, (Object_0.distance_Y)
-    ; ld      e, h                ; get only high byte
-    ; ld      hl, (Object_0.distance_X)
-    ; ld      c, h                ; get only high byte
-    
-    ; call    Div8
-    ; ld      hl, 0
-    ; ld      l, a
-    ; ld      (Object_0.angleToPlayer), hl
-
-
-
-    ; ; Divide distance Y by distance X (16 bits)
-    ; ld      bc, (Object_0.distance_Y)
-    ; ld      de, (Object_0.distance_X)
-    
-    ; call    Div16
-    ; ld      (Object_0.angleToPlayer), bc
-
-
     ; Divide distance Y by distance X (16 bits)
     ld      bc, (Object_Temp.distance_X)
     
@@ -81,14 +58,9 @@ ObjectLogic:
     di
         call    FPDE_Div_BC88 ; DE divided by BC (both 8.8 fixed point), result in ADE (16.8)
     ei
-    ; ld      (Object_0.angleToPlayer + 1), a     ; high byte
-    ; ld      a, d
-    ; ld      (Object_0.angleToPlayer), a         ; low byte
-    
-    ;ld      (Object_0.angleToPlayer), de       ; get two lowest bytes
     
     ; TODO: (not sure if the bad performance on results close to 90 degrees is due to LUT or division time)
-    ; if (D != 0) divResultLargerThan256 else divResultSmallerThan256
+    ; if (D != 0) divResultLargerThan256 else divResultSmallerThan256 ; Not sure if necessary
 
 ; .divResultLargerThan256:
     ld      b, d ; BC = DE
@@ -158,49 +130,50 @@ ObjectLogic:
 
     ; ------------- Update object visibility (check if object is inside player's field of view)
 
-    ; if (FoV_start < FoV_end) {
-    ;   if (Object.angleToPlayer > FoV_start && Object.angleToPlayer < FoV_end) isVisible = true; else isVisible = false;
+    ; if (FoV_start > FoV_end) {
+    ;   if (Object.angleToPlayer <= FoV_start && Object.angleToPlayer > FoV_end) isVisible = true; else isVisible = false;
     ; }
     ; else {
-    ;   if (Object.angleToPlayer > FoV_start || Object.angleToPlayer < FoV_end) isVisible = true; else isVisible = false;
+    ;   if (Object.angleToPlayer > FoV_end || Object.angleToPlayer < FoV_start) isVisible = true; else isVisible = false;
     ; }
     ld      hl, (Player.FoV_start)
     ld      de, (Player.FoV_end)
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    jp      nc, .FoVstart_isBigger
+    jp      c, .FoVstart_isSmaller
 
-;FoVstart_isSmaller
+;FoVstart_isBigger
 
-    ; if (Object.angleToPlayer > FoV_start && Object.angleToPlayer < FoV_end) isVisible = true; else isVisible = false;
+    ; if (Object.angleToPlayer <= FoV_start && Object.angleToPlayer > FoV_end) isVisible = true; else isVisible = false;
 
     ; if (DE < HL) outOfView; else do other check
-    ld      de, (Object_Temp.angleToPlayer)
-    ld      hl, (Player.FoV_start) ; FoV_start = Player.angle - 32
+    ld      hl, (Object_Temp.angleToPlayer)
+    ld      de, (Player.FoV_start)
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    jp      z, .FoVstart_isSmaller_isVisible
     jp      nc, .outOfView
 
     ; if (DE < HL) isVisible; else outOfView;
-    ld      de, (Object_Temp.angleToPlayer)
-    ld      hl, (Player.FoV_end) ; FoV_end = Player.angle + 32
+    ld      hl, (Object_Temp.angleToPlayer)
+    ld      de, (Player.FoV_end)
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    jp      nc, .isVisible
+    jp      nc, .FoVstart_isSmaller_isVisible
     jp      .outOfView
 
-.FoVstart_isBigger:
+.FoVstart_isSmaller:
 
-    ; if (Object.angleToPlayer > FoV_start || Object.angleToPlayer < FoV_end) isVisible = true; else isVisible = false;
+    ; if (Object.angleToPlayer > FoV_end || Object.angleToPlayer < FoV_start) isVisible = true; else isVisible = false;
 
     ; if (DE > HL) isVisible; else do other check
     ld      de, (Object_Temp.angleToPlayer)
-    ld      hl, (Player.FoV_start) ; FoV_start = Player.angle - 32
+    ld      hl, (Player.FoV_end)
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    jp      c, .isVisible
+    jp      c, .FoVstart_isBigger_isVisible
 
     ; if (DE < HL) isVisible; else outOfView;
     ld      de, (Object_Temp.angleToPlayer)
-    ld      hl, (Player.FoV_end) ; FoV_end = Player.angle + 32
+    ld      hl, (Player.FoV_start)
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    jp      nc, .isVisible
+    jp      nc, .FoVstart_isBigger_isVisible
     ; jp      .outOfView
 
 .outOfView:
@@ -208,31 +181,71 @@ ObjectLogic:
     ld      (Object_Temp.isVisible), a
     jp      .cont_100
 
-.isVisible:
+.FoVstart_isSmaller_isVisible:
     ld      a, 1
     ld      (Object_Temp.isVisible), a
 
 
-    ; calc X coord of the object center on screen
-    ; scr_X = (Player.FoV_end - Object.angleToPlayer) * 4
-    ld      hl, (Player.FoV_end)
-    ld      de, (Object_Temp.angleToPlayer)
-    xor     a
-    sbc     hl, de
-    add     hl, hl ; HL = HL * 2
-    add     hl, hl ; HL = HL * 2
-    ; if (HL < 0) HL += 64
-    push    hl
-        ld      de, 0
-        call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    pop     hl
-    jp      nc, .notAdd360
-    ld      de, 360
-    add     hl, de
-.notAdd360:
-    ld      a, l
-    ld      (Object_Temp.scrX), a
+    ; TODO: scrX calc not working
+    ; ; calc X coord of the object center on screen
+    ; ; scr_X = (Player.FoV_end - Object.angleToPlayer) * 4
+    ; ld      hl, (Player.FoV_end)
+    ; ld      de, (Object_Temp.angleToPlayer)
+    ; xor     a
+    ; sbc     hl, de
+    ; add     hl, hl ; HL = HL * 2
+    ; add     hl, hl ; HL = HL * 2
+    ; ld      a, l
+    ; ld      (Object_Temp.scrX), a
 
+    jp      .cont_100
+
+.FoVstart_isBigger_isVisible:
+    ld      a, 1
+    ld      (Object_Temp.isVisible), a
+
+    ; TODO: scrX calc not working
+;     ; normalize to FoV_start to FoV_end to be 0-63:
+;     ; if (obj.angle < FoV_end) { obj.angle = FoV_end - obj.angle; }
+;     ; else { obj.angle = 360 - obj.angle + FoV_end; }
+;     ld      hl, (Object_Temp.angleToPlayer)
+;     ld      de, (Player.FoV_end)
+;     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+;     jp      c, .angle_is_less_than_fov_end
+
+; ; angle_is_more_than_fov_end
+;     ; HL: obj.angle = 360 - obj.angle + FoV_end
+;     ld      hl, 360
+;     ld      de, (Object_Temp.angleToPlayer)
+;     xor     a
+;     sbc     hl, de
+;     ld      de, (Player.FoV_end)
+;     add     hl, de
+
+;     jp      .cont_4
+
+; .angle_is_less_than_fov_end:
+;     ; HL: obj.angle = FoV_end - obj.angle
+;     ld      hl, (Player.FoV_end)
+;     ld      de, (Object_Temp.angleToPlayer)
+;     xor     a
+;     sbc     hl, de
+
+
+; .cont_4:
+
+;     ; calc X coord of the object center on screen
+;     ; scr_X = (64 - Object.angleToPlayer) * 4
+;     ex      de, hl ; DE = HL
+;     ld      hl, 64
+;     xor     a
+;     sbc     hl, de
+;     add     hl, hl ; HL = HL * 2
+;     add     hl, hl ; HL = HL * 2
+;     ld      a, l
+;     ld      (Object_Temp.scrX), a
+
+    jp      .cont_100
 
 .cont_100:
 
