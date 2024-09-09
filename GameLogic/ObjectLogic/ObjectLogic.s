@@ -149,14 +149,14 @@ ObjectLogic:
     ld      hl, (Object_Temp.angleToPlayer)
     ld      de, (Player.FoV_start)
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    jp      z, .FoVstart_isSmaller_isVisible
+    jp      z, .FoVstart_isBigger_isVisible
     jp      nc, .outOfView
 
     ; if (DE < HL) isVisible; else outOfView;
     ld      hl, (Object_Temp.angleToPlayer)
     ld      de, (Player.FoV_end)
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    jp      nc, .FoVstart_isSmaller_isVisible
+    jp      nc, .FoVstart_isBigger_isVisible
     jp      .outOfView
 
 .FoVstart_isSmaller:
@@ -167,13 +167,13 @@ ObjectLogic:
     ld      de, (Object_Temp.angleToPlayer)
     ld      hl, (Player.FoV_end)
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    jp      c, .FoVstart_isBigger_isVisible
+    jp      c, .FoVstart_isSmaller_isVisible
 
     ; if (DE < HL) isVisible; else outOfView;
     ld      de, (Object_Temp.angleToPlayer)
     ld      hl, (Player.FoV_start)
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    jp      nc, .FoVstart_isBigger_isVisible
+    jp      nc, .FoVstart_isSmaller_isVisible
     ; jp      .outOfView
 
 .outOfView:
@@ -185,18 +185,35 @@ ObjectLogic:
     ld      a, 1
     ld      (Object_Temp.isVisible), a
 
+    ; calc position of object center within player FoV
 
-    ; TODO: scrX calc not working
-    ; ; calc X coord of the object center on screen
-    ; ; scr_X = (Player.FoV_end - Object.angleToPlayer) * 4
-    ; ld      hl, (Player.FoV_end)
-    ; ld      de, (Object_Temp.angleToPlayer)
-    ; xor     a
-    ; sbc     hl, de
-    ; add     hl, hl ; HL = HL * 2
-    ; add     hl, hl ; HL = HL * 2
-    ; ld      a, l
-    ; ld      (Object_Temp.scrX), a
+    ; if (obj.angle <= FoV_start) scrX = FoV_start - obj.angle;
+    ld      hl, (Object_Temp.angleToPlayer)
+    ld      de, (Player.FoV_start)
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    jp      z, .less_than_FoV_start
+    jp      c, .less_than_FoV_start
+
+    ; else scrX = 360 - obj.angle + FoV_start;
+    ld      hl, 360
+    ld      de, (Object_Temp.angleToPlayer)
+    xor     a
+    sbc     hl, de
+    ld      de, (Player.FoV_start)
+    add     hl, de
+    ld      a, l
+    ld      (Object_Temp.scrX), a
+
+    jp      .cont_100
+
+.less_than_FoV_start:
+    ; scrX = FoV_start - obj.angle;
+    ld      hl, (Player.FoV_start)
+    ld      de, (Object_Temp.angleToPlayer)
+    xor     a
+    sbc     hl, de
+    ld      a, l
+    ld      (Object_Temp.scrX), a
 
     jp      .cont_100
 
@@ -204,46 +221,20 @@ ObjectLogic:
     ld      a, 1
     ld      (Object_Temp.isVisible), a
 
-    ; TODO: scrX calc not working
-;     ; normalize to FoV_start to FoV_end to be 0-63:
-;     ; if (obj.angle < FoV_end) { obj.angle = FoV_end - obj.angle; }
-;     ; else { obj.angle = 360 - obj.angle + FoV_end; }
-;     ld      hl, (Object_Temp.angleToPlayer)
-;     ld      de, (Player.FoV_end)
-;     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-;     jp      c, .angle_is_less_than_fov_end
 
-; ; angle_is_more_than_fov_end
-;     ; HL: obj.angle = 360 - obj.angle + FoV_end
-;     ld      hl, 360
-;     ld      de, (Object_Temp.angleToPlayer)
-;     xor     a
-;     sbc     hl, de
-;     ld      de, (Player.FoV_end)
-;     add     hl, de
+    ; calc position of object center within player FoV
+    ; scr_X = 64 - (Object.angleToPlayer - Player.FoV_end)
+    ld      hl, (Object_Temp.angleToPlayer)
+    ld      de, (Player.FoV_end)
+    xor     a
+    sbc     hl, de
+    ex      de, hl ; DE = HL
+    ld      hl, 64
+    xor     a
+    sbc     hl, de
+    ld      a, l
+    ld      (Object_Temp.scrX), a
 
-;     jp      .cont_4
-
-; .angle_is_less_than_fov_end:
-;     ; HL: obj.angle = FoV_end - obj.angle
-;     ld      hl, (Player.FoV_end)
-;     ld      de, (Object_Temp.angleToPlayer)
-;     xor     a
-;     sbc     hl, de
-
-
-; .cont_4:
-
-;     ; calc X coord of the object center on screen
-;     ; scr_X = (64 - Object.angleToPlayer) * 4
-;     ex      de, hl ; DE = HL
-;     ld      hl, 64
-;     xor     a
-;     sbc     hl, de
-;     add     hl, hl ; HL = HL * 2
-;     add     hl, hl ; HL = HL * 2
-;     ld      a, l
-;     ld      (Object_Temp.scrX), a
 
     jp      .cont_100
 

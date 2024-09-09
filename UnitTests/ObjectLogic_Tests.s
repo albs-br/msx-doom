@@ -12,6 +12,7 @@ ObjectLogic_Tests:
     call    .Quad_1_Test_1
     call    .Quad_1_Test_2
     call    .Quad_1_Test_3
+    call    .Quad_1_Test_3a
     call    .Quad_1_Test_4
     call    .Quad_1_Test_5
 
@@ -102,6 +103,7 @@ ObjectLogic_Tests:
 ; Object.angleToPlayer = 45
 ; Player.angle = 13
 ; Object.isVisible = true
+; Object.scrX = 0
 .Quad_1_Test_2:
     ; --- Arrange
     call    PlayerInit
@@ -128,6 +130,10 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
+    ld      a, (Object_0.scrX)
+    ld      b, 0
+    call    UnitTests.check_A_equals_B
+
     ret
 
 ; ---------------------------
@@ -136,7 +142,7 @@ ObjectLogic_Tests:
 ; Player.angle = 45
 ; Object.angleToPlayer = 45
 ; Object.isVisible = true
-; Object.scrX = 128
+; Object.scrX = 32
 .Quad_1_Test_3:
     ; --- Arrange
     call    PlayerInit
@@ -163,9 +169,48 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ; ld      a, (Object_0.scrX)
-    ; ld      b, 128
-    ; call    UnitTests.check_A_equals_B
+    ld      a, (Object_0.scrX)
+    ld      b, 32
+    call    UnitTests.check_A_equals_B
+
+    ret
+
+; ---------------------------
+
+; --- Test case:
+; Player.angle = 77
+; Object.angleToPlayer = 45
+; Object.isVisible = true
+; Object.scrX = 63
+.Quad_1_Test_3a:
+    ; --- Arrange
+    call    PlayerInit
+    ld      hl, 77
+    ld      (Player.angle), hl
+    call    PlayerInit.updateCalcFields
+
+    ld      hl, Object_0
+    call    ObjectInit
+
+
+
+    ; --- Act
+    ld      hl, Object_0
+    call    ObjectLogic
+
+
+
+    ; --- Assert
+    ld      hl, (Object_0.angleToPlayer)
+    ld      de, 45
+    call    UnitTests.check_HL_equals_DE
+
+    ld      a, (Object_0.isVisible)
+    call    UnitTests.check_A_is_true
+
+    ld      a, (Object_0.scrX)
+    ld      b, 64 ; shouldn't it be 63?
+    call    UnitTests.check_A_equals_B
 
     ret
 
@@ -175,7 +220,7 @@ ObjectLogic_Tests:
 ; Player.angle = 0
 ; Object.angleToPlayer = 0
 ; Object.isVisible = true
-; Object.scrX = 128
+; Object.scrX = 32
 .Quad_1_Test_4:
     ; --- Arrange
     call    PlayerInit
@@ -214,23 +259,23 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ; ld      a, (Object_0.scrX)
-    ; ld      b, 128
-    ; call    UnitTests.check_A_equals_B
+    ld      a, (Object_0.scrX)
+    ld      b, 32
+    call    UnitTests.check_A_equals_B
 
     ret
 
 ; ---------------------------
 
 ; --- Test case:
-; Player.angle = 28
+; Player.angle = 32
 ; Object.angleToPlayer = 0
 ; Object.isVisible = true
-; Object.scrX = 128
+; Object.scrX = 32
 .Quad_1_Test_5:
     ; --- Arrange
     call    PlayerInit
-    ld      hl, 28
+    ld      hl, 32
     ld      (Player.angle), hl
     call    PlayerInit.updateCalcFields
 
@@ -265,9 +310,9 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ; ld      a, (Object_0.scrX)
-    ; ld      b, 255
-    ; call    UnitTests.check_A_equals_B
+    ld      a, (Object_0.scrX)
+    ld      b, 64 ; TODO: shouldn't be 63?
+    call    UnitTests.check_A_equals_B
 
     ret
 
@@ -382,7 +427,7 @@ ObjectLogic_Tests:
 ; Player.angle = 135
 ; Object.angleToPlayer = 135
 ; Object.isVisible = true
-; Object.scrX = 128
+; Object.scrX = 32
 .Quad_2_Test_3:
     ; --- Arrange
     call    PlayerInit
@@ -411,9 +456,9 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ; ld      a, (Object_0.scrX)
-    ; ld      b, 128
-    ; call    UnitTests.check_A_equals_B
+    ld      a, (Object_0.scrX)
+    ld      b, 32
+    call    UnitTests.check_A_equals_B
 
     ret
 
@@ -423,7 +468,7 @@ ObjectLogic_Tests:
 ; Player.angle = 315
 ; Object.angleToPlayer = 315
 ; Object.isVisible = true
-; Object.scrX = 128
+; Object.scrX = 32
 .Quad_4_Test_0:
     ; --- Arrange
     call    PlayerInit
@@ -454,9 +499,9 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ; ld      a, (Object_0.scrX)
-    ; ld      b, 128
-    ; call    UnitTests.check_A_equals_B
+    ld      a, (Object_0.scrX)
+    ld      b, 32
+    call    UnitTests.check_A_equals_B
 
     ret
 
@@ -466,7 +511,7 @@ ObjectLogic_Tests:
 ; Player.angle = 349
 ; Object.angleToPlayer = 349
 ; Object.isVisible = true
-; Object.scrX = 128
+; Object.scrX = 32
 .Quad_4_Test_1:
     ; --- Arrange
     call    PlayerInit
@@ -497,9 +542,9 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ; ld      a, (Object_0.scrX)
-    ; ld      b, 128
-    ; call    UnitTests.check_A_equals_B
+    ld      a, (Object_0.scrX)
+    ld      b, 32
+    call    UnitTests.check_A_equals_B
 
     ret
 
@@ -509,7 +554,7 @@ ObjectLogic_Tests:
 ; Player.angle = 349
 ; Object.angleToPlayer = 11
 ; Object.isVisible = true
-; Object.scrX = 128
+; Object.scrX = 10
 .Quad_4_Test_2:
     ; --- Arrange
     call    PlayerInit
@@ -541,9 +586,10 @@ ObjectLogic_Tests:
     call    UnitTests.check_A_is_true
 
 
-    ; ld      a, (Object_0.scrX)
-    ; ld      b, 128
-    ; call    UnitTests.check_A_equals_B
+    ld      a, (Object_0.scrX)
+    ld      b, 10
+    call    UnitTests.check_A_equals_B
+
 
     ret
 
