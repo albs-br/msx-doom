@@ -156,6 +156,9 @@ ObjectLogic:
     ld      hl, (Object_Temp.angleToPlayer)
     ld      de, (Player.FoV_end)
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    ; jp      c, .outOfView
+    ; jp      .FoVstart_isBigger_isVisible
+    jp      z, .outOfView
     jp      nc, .FoVstart_isBigger_isVisible
     jp      .outOfView
 
