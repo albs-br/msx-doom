@@ -15,25 +15,25 @@ Player:
 
     org     0xc100 ; fixed addr to make it easier to track on tcl debug script
 Object_0:       ;rb Object_Temp.size
-    .X:             rw 1 ; X coord of object on map (0-65535)
-    .Y:             rw 1 ; Y coord of object on map (0-65535)
-    .distance_X:    rw 1 ; distance X to player
-    .distance_Y:    rw 1 ; distance Y to player
-    .angleToPlayer: rw 1 ; angle between player and this object (0-359)
-    .isVisible:     rb 1 ; indicates if object is inside player field of view (0: not visible, not 0: visible)
-    .scrX:          rb 1 ; X coord of the object center inside player FoV, when visible (0-63) TODO: rename to posX_inside_FoV
+    .X:                 rw 1 ; X coord of object on map (0-65535)
+    .Y:                 rw 1 ; Y coord of object on map (0-65535)
+    .distance_X:        rw 1 ; distance X to player
+    .distance_Y:        rw 1 ; distance Y to player
+    .angleToPlayer:     rw 1 ; angle between player and this object (0-359)
+    .isVisible:         rb 1 ; indicates if object is inside player field of view (0: not visible, not 0: visible)
+    .posX_inside_FoV:   rb 1 ; X coord of the object center inside player FoV, when visible (0-63) TODO: rename to posX_inside_FoV
 
 ;     org     0xc200
 ; Object_1:       rb Object_Temp.size
 
 Object_Temp:
-    .X:             rw 1 ; X coord of object on map (0-65535)
-    .Y:             rw 1 ; Y coord of object on map (0-65535)
-    .distance_X:    rw 1 ; distance X to player
-    .distance_Y:    rw 1 ; distance Y to player
-    .angleToPlayer: rw 1 ; angle between player and this object (0-359)
-    .isVisible:     rb 1 ; indicates if object is inside player field of view (0: not visible, not 0: visible)
-    .scrX:          rb 1 ; X coord of the object center inside player FoV, when visible (0-63) TODO: rename to posX_inside_FoV
+    .X:                 rw 1 ; X coord of object on map (0-65535)
+    .Y:                 rw 1 ; Y coord of object on map (0-65535)
+    .distance_X:        rw 1 ; distance X to player
+    .distance_Y:        rw 1 ; distance Y to player
+    .angleToPlayer:     rw 1 ; angle between player and this object (0-359)
+    .isVisible:         rb 1 ; indicates if object is inside player field of view (0: not visible, not 0: visible)
+    .posX_inside_FoV:   rb 1 ; X coord of the object center inside player FoV, when visible (0-63) TODO: rename to posX_inside_FoV
 .size:          equ $ - Object_Temp
 
 ObjectAddress:  rw 1

@@ -286,6 +286,7 @@ SetInterlacedMode: equ 04158h ; last def. pass 3
 ObjectLogic.return: equ 04C43h ; last def. pass 3
 BIOS_PRMFLG: equ 0F7B4h ; last def. pass 3
 Execute_VDP_HMMM.vdpReady: equ 041CCh ; last def. pass 3
+Object_Temp.posX_inside_FoV: equ 0C117h ; last def. pass 3
 VDP_COMMAND_HMMC: equ 0F0h ; last def. pass 3
 BIOS_WRPRIM: equ 0F385h ; last def. pass 3
 BIOS_FNKFLG: equ 0FBCEh ; last def. pass 3
@@ -346,7 +347,6 @@ REG26SAV: equ 0FFFBh ; last def. pass 3
 BIOS_SCRMOD: equ 0FCAFh ; last def. pass 3
 BIOS_NORUSE: equ 0FAFDh ; last def. pass 3
 BIOS_H_EVAL: equ 0FF70h ; last def. pass 3
-Object_0.scrX: equ 0C10Bh ; last def. pass 3
 BIOS_PARM1: equ 0F6E8h ; last def. pass 3
 BIOS_ONGSBF: equ 0FBD8h ; last def. pass 3
 BIOS_H_LOF: equ 0FE9Eh ; last def. pass 3
@@ -427,6 +427,7 @@ BIOS_ARG: equ 0F847h ; last def. pass 3
 BIOS_CLS: equ 0C3h ; last def. pass 3
 BIOS_PRTFLG: equ 0F416h ; last def. pass 3
 BIOS_DISSCR: equ 041h ; last def. pass 3
+Object_0.posX_inside_FoV: equ 0C10Bh ; last def. pass 3
 NAMTBL: equ 01800h ; last def. pass 3
 BIOS_PARM2: equ 0F750h ; last def. pass 3
 BIOS_RG9SAV: equ 0FFE8h ; last def. pass 3
@@ -532,7 +533,6 @@ BIOS_ERAFNK: equ 0CCh ; last def. pass 3
 LUT_sin: equ 0468Ah ; last def. pass 3
 BIOS_MLTATR: equ 0F3D7h ; last def. pass 3
 BIOS_FILNAM: equ 0F866h ; last def. pass 3
-Object_Temp.scrX: equ 0C117h ; last def. pass 3
 BIOS_QUETAB: equ 0F959h ; last def. pass 3
 Player.FoV_start: equ 0C087h ; last def. pass 3
 REG4SAV: equ 0F3E3h ; last def. pass 3

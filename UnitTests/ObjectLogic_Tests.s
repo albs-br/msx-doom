@@ -103,7 +103,7 @@ ObjectLogic_Tests:
 ; Object.angleToPlayer = 45
 ; Player.angle = 13
 ; Object.isVisible = true
-; Object.scrX = 0
+; Object.posX_inside_FoV = 0
 .Quad_1_Test_2:
     ; --- Arrange
     call    PlayerInit
@@ -130,7 +130,7 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ld      a, (Object_0.scrX)
+    ld      a, (Object_0.posX_inside_FoV)
     ld      b, 0
     call    UnitTests.check_A_equals_B
 
@@ -142,7 +142,7 @@ ObjectLogic_Tests:
 ; Player.angle = 45
 ; Object.angleToPlayer = 45
 ; Object.isVisible = true
-; Object.scrX = 32
+; Object.posX_inside_FoV = 32
 .Quad_1_Test_3:
     ; --- Arrange
     call    PlayerInit
@@ -169,7 +169,7 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ld      a, (Object_0.scrX)
+    ld      a, (Object_0.posX_inside_FoV)
     ld      b, 32
     call    UnitTests.check_A_equals_B
 
@@ -181,7 +181,7 @@ ObjectLogic_Tests:
 ; Player.angle = 77
 ; Object.angleToPlayer = 45
 ; Object.isVisible = true
-; Object.scrX = 63
+; Object.posX_inside_FoV = 63
 .Quad_1_Test_3a:
     ; --- Arrange
     call    PlayerInit
@@ -208,8 +208,8 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ld      a, (Object_0.scrX)
-    ld      b, 64 ; shouldn't it be 63?
+    ld      a, (Object_0.posX_inside_FoV)
+    ld      b, 64 ; TODO: shouldn't it be 63?
     call    UnitTests.check_A_equals_B
 
     ret
@@ -220,7 +220,7 @@ ObjectLogic_Tests:
 ; Player.angle = 0
 ; Object.angleToPlayer = 0
 ; Object.isVisible = true
-; Object.scrX = 32
+; Object.posX_inside_FoV = 32
 .Quad_1_Test_4:
     ; --- Arrange
     call    PlayerInit
@@ -259,7 +259,7 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ld      a, (Object_0.scrX)
+    ld      a, (Object_0.posX_inside_FoV)
     ld      b, 32
     call    UnitTests.check_A_equals_B
 
@@ -271,7 +271,7 @@ ObjectLogic_Tests:
 ; Player.angle = 32
 ; Object.angleToPlayer = 0
 ; Object.isVisible = true
-; Object.scrX = 32
+; Object.posX_inside_FoV = 32
 .Quad_1_Test_5:
     ; --- Arrange
     call    PlayerInit
@@ -310,8 +310,8 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ld      a, (Object_0.scrX)
-    ld      b, 64 ; TODO: shouldn't be 63?
+    ld      a, (Object_0.posX_inside_FoV)
+    ld      b, 64 ; TODO: shouldn't it be 63?
     call    UnitTests.check_A_equals_B
 
     ret
@@ -427,7 +427,7 @@ ObjectLogic_Tests:
 ; Player.angle = 135
 ; Object.angleToPlayer = 135
 ; Object.isVisible = true
-; Object.scrX = 32
+; Object.posX_inside_FoV = 32
 .Quad_2_Test_3:
     ; --- Arrange
     call    PlayerInit
@@ -456,7 +456,7 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ld      a, (Object_0.scrX)
+    ld      a, (Object_0.posX_inside_FoV)
     ld      b, 32
     call    UnitTests.check_A_equals_B
 
@@ -468,7 +468,7 @@ ObjectLogic_Tests:
 ; Player.angle = 315
 ; Object.angleToPlayer = 315
 ; Object.isVisible = true
-; Object.scrX = 32
+; Object.posX_inside_FoV = 32
 .Quad_4_Test_0:
     ; --- Arrange
     call    PlayerInit
@@ -499,7 +499,7 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ld      a, (Object_0.scrX)
+    ld      a, (Object_0.posX_inside_FoV)
     ld      b, 32
     call    UnitTests.check_A_equals_B
 
@@ -511,7 +511,7 @@ ObjectLogic_Tests:
 ; Player.angle = 349
 ; Object.angleToPlayer = 349
 ; Object.isVisible = true
-; Object.scrX = 32
+; Object.posX_inside_FoV = 32
 .Quad_4_Test_1:
     ; --- Arrange
     call    PlayerInit
@@ -542,7 +542,7 @@ ObjectLogic_Tests:
     ld      a, (Object_0.isVisible)
     call    UnitTests.check_A_is_true
 
-    ld      a, (Object_0.scrX)
+    ld      a, (Object_0.posX_inside_FoV)
     ld      b, 32
     call    UnitTests.check_A_equals_B
 
@@ -554,7 +554,7 @@ ObjectLogic_Tests:
 ; Player.angle = 349
 ; Object.angleToPlayer = 11
 ; Object.isVisible = true
-; Object.scrX = 10
+; Object.posX_inside_FoV = 10
 .Quad_4_Test_2:
     ; --- Arrange
     call    PlayerInit
@@ -586,7 +586,7 @@ ObjectLogic_Tests:
     call    UnitTests.check_A_is_true
 
 
-    ld      a, (Object_0.scrX)
+    ld      a, (Object_0.posX_inside_FoV)
     ld      b, 10
     call    UnitTests.check_A_equals_B
 

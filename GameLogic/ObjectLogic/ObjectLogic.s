@@ -202,7 +202,7 @@ ObjectLogic:
     ld      de, (Player.FoV_start)
     add     hl, de
     ld      a, l
-    ld      (Object_Temp.scrX), a
+    ld      (Object_Temp.posX_inside_FoV), a
 
     jp      .cont_100
 
@@ -213,7 +213,7 @@ ObjectLogic:
     xor     a
     sbc     hl, de
     ld      a, l
-    ld      (Object_Temp.scrX), a
+    ld      (Object_Temp.posX_inside_FoV), a
 
     jp      .cont_100
 
@@ -233,7 +233,7 @@ ObjectLogic:
     xor     a
     sbc     hl, de
     ld      a, l
-    ld      (Object_Temp.scrX), a
+    ld      (Object_Temp.posX_inside_FoV), a
 
 
     jp      .cont_100

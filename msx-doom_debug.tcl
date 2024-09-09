@@ -11,7 +11,7 @@ ram_watch   add     0xc104      -type word       -desc Obj_0.dis_X             -
 ram_watch   add     0xc106      -type word       -desc Obj_0.dis_Y             -format dec
 ram_watch   add     0xc108      -type word       -desc Obj_0.angle             -format dec
 ram_watch   add     0xc10a      -type byte       -desc Obj_0.isVis             -format dec
-ram_watch   add     0xc10b      -type byte       -desc Obj_0.scrX             -format dec
+ram_watch   add     0xc10b      -type byte       -desc Obj_0.posX_inside_FoV             -format dec
 
 
 
