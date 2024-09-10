@@ -1,4 +1,23 @@
 ; TODO: angle can be byte here
+
+; TODO: possible performance improvement:
+; table with all possible values and angles
+; this way there is no need to loop through all the table until find the value (more costly when getting close to table end)
+; just add LUT_Atan2 with the value to be found
+; this approach trades space for speed, which is good here
+;LUT_Atan2:
+;   db      0 ; angle for value 0 = 0 degrees
+;   db      1 ; angle for value 1 = 0 degrees
+;   db      2 ; angle for value 2 = 0 degrees
+;   db      3 ; angle for value 3 = 0 degrees
+; (...)
+;   db      16 ; angle for value 16 = 4 degrees
+;   db      17 ; angle for value 17 = 4 degrees
+; (...)
+;   db    4096 ; angle for value 4096 = 90 degrees
+; (...)
+;   db   10000 ; angle for value 10000 = 90 degrees
+
 LUT_Atan2:
     dw 0, 0
     dw 16, 4

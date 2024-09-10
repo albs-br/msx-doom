@@ -250,7 +250,7 @@ ObjectLogic_Tests:
     call    UnitTests.check_A_is_false
 
     ; ld      a, (Object_0.posX_inside_FoV)
-    ; ld      b, 64 ; TODO: shouldn't it be 63?
+    ; ld      b, 64
     ; call    UnitTests.check_A_equals_B
 
     ret
