@@ -21,7 +21,7 @@ Object_0:       ;rb Object_Temp.size
     .distance_Y:        rw 1 ; distance Y to player
     .angleToPlayer:     rw 1 ; angle between player and this object (0-359)
     .isVisible:         rb 1 ; indicates if object is inside player field of view (0: not visible, not 0: visible)
-    .posX_inside_FoV:   rb 1 ; X coord of the object center inside player FoV, when visible (0-63) TODO: rename to posX_inside_FoV
+    .posX_inside_FoV:   rb 1 ; X coord of the object center inside player FoV, when visible (0-63)
 
 ;     org     0xc200
 ; Object_1:       rb Object_Temp.size
@@ -33,7 +33,7 @@ Object_Temp:
     .distance_Y:        rw 1 ; distance Y to player
     .angleToPlayer:     rw 1 ; angle between player and this object (0-359)
     .isVisible:         rb 1 ; indicates if object is inside player field of view (0: not visible, not 0: visible)
-    .posX_inside_FoV:   rb 1 ; X coord of the object center inside player FoV, when visible (0-63) TODO: rename to posX_inside_FoV
+    .posX_inside_FoV:   rb 1 ; X coord of the object center inside player FoV, when visible (0-63)
 .size:          equ $ - Object_Temp
 
 ObjectAddress:  rw 1

@@ -1,4 +1,10 @@
 Update_walkDXandDY:
+
+    ; set MegaROM page for LUT data
+    ld      a, LUT_MEGAROM_PAGE
+    ld	    (Seg_P8000_SW), a
+
+
     ; --- Update .walk_DX based on angle
     ld      hl, (Player.angle)
     

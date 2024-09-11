@@ -7,7 +7,7 @@ ObjectLogic_Tests:
 
     ; TODO: 
     ;   test all 4 quadrants OK
-    ;   test edge cases, etc
+    ;   test edge cases, transitions 0 - 359 degrees, etc
 
     ; tests object is on 1st quadrant in relation to player
     call    .Quad_1_Test_0
