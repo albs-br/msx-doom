@@ -10,6 +10,7 @@ Math_Tests:
     call    .FPDE_Div_BC88_Test_2
     call    .FPDE_Div_BC88_Test_3
     call    .FPDE_Div_BC88_Test_4
+    call    .FPDE_Div_BC88_Test_5
 
     ret
 
@@ -135,6 +136,32 @@ Math_Tests:
     ld      b, 1
     call    UnitTests.check_A_equals_B
     ld      hl, 0xfe00  ; 0x1fe = 510.0
+    call    UnitTests.check_HL_equals_DE
+
+    ret
+
+; ---------------------------
+
+; --- Test case:
+; 7245 divided by 38 = 190
+; 0x1c4d (28.?) divided by 0x0026 (0.15) = aprox 187
+.FPDE_Div_BC88_Test_5:
+    ; --- Arrange
+    ld      de, 7245
+    ld      bc, 38
+
+
+
+    ; --- Act
+    di
+        call    FPDE_Div_BC88 ; DE divided by BC (both 8.8 fixed point), result in ADE (16.8)
+    ei
+
+
+
+    ; --- Assert
+    call    UnitTests.check_A_equals_0
+    ld      hl, 0xbea8 ; 190.?
     call    UnitTests.check_HL_equals_DE
 
     ret

@@ -64,6 +64,10 @@ ObjectLogic:
     ; A can be bigger than zero if BC smaller than 0.0
     ; e.g. 10 / 0.5 is the same as 10 * 2
     ; 255.0 / 0.5 = 510.0 (A will be higher than 0)
+    ; Possible fix:
+    ; if (A != 0) DE = MAX_VALUE ; MAX_VALUE = 4096
+    or      a
+    jp      nz, .ret90degrees ; possible fix
 
     ; TODO: (not sure if the bad performance on results close to 90 degrees is due to LUT or division time)
     ; if (D != 0) divResultLargerThan256 else divResultSmallerThan256 ; Not sure if necessary
