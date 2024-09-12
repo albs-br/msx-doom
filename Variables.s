@@ -22,10 +22,13 @@ Object_0:       ;rb Object_Temp.size
     .angleToPlayer:     rw 1 ; angle between player and this object (0-359)
     .isVisible:         rb 1 ; indicates if object is inside player field of view (0: not visible, not 0: visible)
     .posX_inside_FoV:   rb 1 ; X coord of the object center inside player FoV, when visible (0-63)
+    .quadrant:          rb 1 ; quadrant in relation to player pos on map (1-4)
+    .Y_div_by_X:        rb 3 ; division result in 16.8 fixed point
 
 ;     org     0xc200
 ; Object_1:       rb Object_Temp.size
 
+    org     0xd000
 Object_Temp:
     .X:                 rw 1 ; X coord of object on map (0-65535)
     .Y:                 rw 1 ; Y coord of object on map (0-65535)
@@ -34,6 +37,8 @@ Object_Temp:
     .angleToPlayer:     rw 1 ; angle between player and this object (0-359)
     .isVisible:         rb 1 ; indicates if object is inside player field of view (0: not visible, not 0: visible)
     .posX_inside_FoV:   rb 1 ; X coord of the object center inside player FoV, when visible (0-63)
+    .quadrant:          rb 1 ; quadrant in relation to player pos on map (1-4)
+    .Y_div_by_X:        rb 3 ; division result in 16.8 fixed point
 .size:          equ $ - Object_Temp
 
-ObjectAddress:  rw 1
+ObjectAddress:  rw 1 ; c118

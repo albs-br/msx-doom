@@ -15,33 +15,18 @@ ObjectLogic:
 
     
     ; --- Calc distance X
-    push    hl
-        ld      e, (hl)         ; DE = (HL)
-        inc     hl
-        ld      d, (hl)
-
-        ld      hl, (Player.X)
-
-        call    .calcAbsoluteDistance
-
-        ld      (Object_Temp.distance_X), hl
-    pop     hl
+    ld      hl, (Player.X)
+    ld      de, (Object_Temp.X)
+    call    .calcAbsoluteDistance
+    ld      (Object_Temp.distance_X), hl
 
 
 
 
     ; --- Calc distance Y
-    inc     hl
-    inc     hl
-
-    ld      e, (hl)         ; DE = (HL)
-    inc     hl
-    ld      d, (hl)
-
     ld      hl, (Player.Y)
-
+    ld      de, (Object_Temp.Y)
     call    .calcAbsoluteDistance
-
     ld      (Object_Temp.distance_Y), hl
 
 
@@ -59,6 +44,12 @@ ObjectLogic:
         call    FPDE_Div_BC88 ; DE divided by BC (both 8.8 fixed point), result in ADE (16.8)
     ei
     
+    ; save division result (ADE)
+    ld      (Object_Temp.Y_div_by_X), de            ; little endian: ADE turns EDA in memory
+    ld      (Object_Temp.Y_div_by_X + 2), a
+
+
+
     ; BUG WARNING
     ; TODO: higher byte of division result (register A) is being ignored
     ; A can be bigger than zero if BC smaller than 0.0
@@ -68,6 +59,7 @@ ObjectLogic:
     ; if (A != 0) DE = MAX_VALUE ; MAX_VALUE = 4096
     or      a
     jp      nz, .ret90degrees ; possible fix
+    ;jp      nz, $ ; pay attention, when stopped here Obj_0 vars wasn't updated yet, you need instead to watch Obj_temp vars
 
     ; TODO: (not sure if the bad performance on results close to 90 degrees is due to LUT or division time)
     ; if (D != 0) divResultLargerThan256 else divResultSmallerThan256 ; Not sure if necessary
@@ -122,13 +114,13 @@ ObjectLogic:
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      c, .player_Y_isLessThan_object_Y
     
-    ;       if (Player.X > Object.X) angle2ndQuadrant; else angle1stQuadrant (do nothing)
+    ;       if (Player.X > Object.X) angle2ndQuadrant; else angle1stQuadrant
     ld      hl, (Player.X)
     ld      de, (Object_Temp.X)
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .angle2ndQuadrant
 
-    jp      .cont_2
+    jp      .angle1stQuadrant
 
 .player_Y_isLessThan_object_Y:
 
@@ -302,8 +294,19 @@ ObjectLogic:
 
     ret
 
+; 1st quadrant (no need to adjust angle, it is already in the correct range (0-90))
+.angle1stQuadrant:
+    ld      a, 1
+    ld      (Object_Temp.quadrant), a
+
+    jp      .cont_2
+
+
 ; Calc object angle for 2nd quadrant (object is above and left of player; 90-180 range)
 .angle2ndQuadrant:
+    ld      a, 2
+    ld      (Object_Temp.quadrant), a
+
     ; angle = 180 - angle
     ld      hl, 180
     ld      bc, (Object_Temp.angleToPlayer) ; must be on (0-90 range)
@@ -315,6 +318,9 @@ ObjectLogic:
 
 ; Calc object angle for 4th quadrant (object is below and left of player; 270-359 range)
 .angle4thQuadrant:
+    ld      a, 4
+    ld      (Object_Temp.quadrant), a
+
     ; angle = 360 - angle
     ld      hl, 360
     ld      bc, (Object_Temp.angleToPlayer) ; must be on (0-90 range)
@@ -326,6 +332,9 @@ ObjectLogic:
 
 ; Calc object angle for 3rd quadrant (object is below and left of player; 180-270 range)
 .angle3rdQuadrant:
+    ld      a, 3
+    ld      (Object_Temp.quadrant), a
+
     ; angle = 270 - angle
     ld      hl, 270
     ld      bc, (Object_Temp.angleToPlayer) ; must be on (0-90 range)
