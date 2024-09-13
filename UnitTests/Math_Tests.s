@@ -215,8 +215,7 @@ Math_Tests:
 
 
     ; --- Assert
-    ld      b, 0x00
-    call    UnitTests.check_A_equals_B
+    call    UnitTests.check_A_equals_0
     ld      hl, 0x0001
     call    UnitTests.check_HL_equals_DE
 
@@ -241,8 +240,7 @@ Math_Tests:
 
 
     ; --- Assert
-    ld      b, 0x00
-    call    UnitTests.check_A_equals_B
+    call    UnitTests.check_A_equals_0
     ld      hl, 0x0001
     call    UnitTests.check_HL_equals_DE
 

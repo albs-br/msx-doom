@@ -56,10 +56,10 @@ ObjectLogic:
 
     ; BUG FIXED
     ; higher byte of division result (register A) is being ignored
-    ; A can be bigger than zero if BC smaller than 0.0
-    ; e.g. 10 / 0.5 is the same as 10 * 2
+    ; register A can be bigger than zero if BC smaller than 1.0
+    ; e.g.:
     ; 255.0 / 0.5 = 510.0 (A will be higher than 0)
-    ; Possible fix:
+    ; bug fix:
     ; if (A > 0 || DE >= MAX_VALUE) ret90degrees
     or      a
     jp      nz, .ret90degrees
