@@ -1,5 +1,7 @@
 PLAYER_FIELD_OF_VIEW: equ 64 ; it's important to be a power of two to make it easier to convert to screen width coordinate (0-255)
 
+DIVISION_DIST_Y_BY_DIST_X_MAX_VALUE: equ 4096
+
 ; Input:
 ;   HL: object addr in RAM
 ObjectLogic:
@@ -50,16 +52,21 @@ ObjectLogic:
 
 
 
-    ; BUG WARNING
-    ; TODO: higher byte of division result (register A) is being ignored
+
+
+    ; BUG FIXED
+    ; higher byte of division result (register A) is being ignored
     ; A can be bigger than zero if BC smaller than 0.0
     ; e.g. 10 / 0.5 is the same as 10 * 2
     ; 255.0 / 0.5 = 510.0 (A will be higher than 0)
     ; Possible fix:
-    ; if (A != 0) DE = MAX_VALUE ; MAX_VALUE = 4096
+    ; if (A > 0 || DE >= MAX_VALUE) ret90degrees
     or      a
-    jp      nz, .ret90degrees ; possible fix
+    jp      nz, .ret90degrees
     ;jp      nz, $ ; pay attention, when stopped here Obj_0 vars wasn't updated yet, you need instead to watch Obj_temp vars
+    ld      bc, DIVISION_DIST_Y_BY_DIST_X_MAX_VALUE - 1
+    call    Comp_BC_DE         ; Compare Contents Of BC & DE, Set Z-Flag IF (BC == DE), Set CY-Flag IF (BC < DE)
+    jp      c, .ret90degrees
 
     ; TODO: (not sure if the bad performance on results close to 90 degrees is due to LUT or division time)
     ; if (D != 0) divResultLargerThan256 else divResultSmallerThan256 ; Not sure if necessary
@@ -335,11 +342,10 @@ ObjectLogic:
     ld      a, 3
     ld      (Object_Temp.quadrant), a
 
-    ; angle = 270 - angle
-    ld      hl, 270
+    ; angle = 180 + angle
+    ld      hl, 180
     ld      bc, (Object_Temp.angleToPlayer) ; must be on (0-90 range)
-    xor     a
-    sbc     hl, bc
+    add     hl, bc
     ld      (Object_Temp.angleToPlayer), hl
 
     jp      .cont_2

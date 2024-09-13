@@ -26,6 +26,7 @@ ObjectLogic_Tests:
     call    .Quad_2_Test_1
     call    .Quad_2_Test_2
     call    .Quad_2_Test_3
+    call    .Quad_2_Test_z ; _Z tests: distance Y very large and distance X very small, division result uses all 3 bytes (ADE)
 
     ; tests object is on 3rd quadrant in relation to player
     call    .Quad_3_Test_0
@@ -664,6 +665,53 @@ ObjectLogic_Tests:
 ; ---------------------------
 
 ; --- Test case:
+; Player.angle = 349
+; Object.angleToPlayer = 90
+; Object.isVisible = true
+; Object.posX_inside_FoV = 10
+.Quad_2_Test_z:
+    ; --- Arrange
+    call    PlayerInit
+    ld      hl, 349
+    ld      (Player.angle), hl
+    call    PlayerInit.updateCalcFields
+
+    ld      hl, Object_0
+    call    ObjectInit
+    ld      hl, 32768 - 11
+    ld      (Object_0.X), hl
+    ld      hl, 32768 - 25800
+    ld      (Object_0.Y), hl
+
+
+
+    ; --- Act
+    ld      hl, Object_0
+    call    ObjectLogic
+
+
+
+    ; --- Assert
+    ld      hl, (Object_0.angleToPlayer)
+    ld      de, 90
+    call    UnitTests.check_HL_equals_DE
+
+    ld      a, (Object_0.isVisible)
+    call    UnitTests.check_A_is_false
+
+    ld      a, (Object_0.quadrant)
+    ld      b, 2
+    call    UnitTests.check_A_equals_B
+
+    ; ld      a, (Object_0.posX_inside_FoV)
+    ; ld      b, 10
+    ; call    UnitTests.check_A_equals_B
+
+    ret
+
+; ---------------------------
+
+; --- Test case:
 ; Player.angle = 225
 ; Object.angleToPlayer = 225
 ; Object.isVisible = true
@@ -899,7 +947,7 @@ ObjectLogic_Tests:
 
 ; --- Test case:
 ; Player.angle = 349
-; Object.angleToPlayer = 11
+; Object.angleToPlayer = 270
 ; Object.isVisible = true
 ; Object.posX_inside_FoV = 10
 .Quad_3_Test_z:
@@ -939,8 +987,6 @@ ObjectLogic_Tests:
     ; ld      a, (Object_0.posX_inside_FoV)
     ; ld      b, 10
     ; call    UnitTests.check_A_equals_B
-
-jp$
 
     ret
 ; ---------------------------

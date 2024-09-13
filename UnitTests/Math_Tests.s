@@ -11,6 +11,9 @@ Math_Tests:
     call    .FPDE_Div_BC88_Test_3
     call    .FPDE_Div_BC88_Test_4
     call    .FPDE_Div_BC88_Test_5
+    call    .FPDE_Div_BC88_Test_6
+    call    .FPDE_Div_BC88_Test_7
+    call    .FPDE_Div_BC88_Test_8
 
     ret
 
@@ -162,6 +165,85 @@ Math_Tests:
     ; --- Assert
     call    UnitTests.check_A_equals_0
     ld      hl, 0xbea8 ; 190.?
+    call    UnitTests.check_HL_equals_DE
+
+    ret
+
+; ---------------------------
+
+; --- Test case:
+; 25800 divided by 11 = 2345.45
+; 0x???? (?.?) divided by 0x???? (?.??) = aprox ?
+.FPDE_Div_BC88_Test_6:
+    ; --- Arrange
+    ld      de, 25800
+    ld      bc, 11
+
+
+
+    ; --- Act
+    di
+        call    FPDE_Div_BC88 ; DE divided by BC (both 8.8 fixed point), result in ADE (16.8)
+    ei
+
+
+
+    ; --- Assert
+    ld      b, 0x09
+    call    UnitTests.check_A_equals_B
+    ld      hl, 0x2974
+    call    UnitTests.check_HL_equals_DE
+
+    ret
+
+; ---------------------------
+
+; --- Test case:
+; 1 divided by 10000 = 0.0001 ; below the maximum precision of decimal part ((1/256) = 0.0039)
+.FPDE_Div_BC88_Test_7:
+    ; --- Arrange
+    ld      de, 1
+    ld      bc, 10000
+
+
+
+    ; --- Act
+    di
+        call    FPDE_Div_BC88 ; DE divided by BC (both 8.8 fixed point), result in ADE (16.8)
+    ei
+
+
+
+    ; --- Assert
+    ld      b, 0x00
+    call    UnitTests.check_A_equals_B
+    ld      hl, 0x0001
+    call    UnitTests.check_HL_equals_DE
+
+    ret
+
+; ---------------------------
+
+; --- Test case:
+; 1 divided by 65535 = 0.? ; below the maximum precision of decimal part ((1/256) = 0.0039)
+.FPDE_Div_BC88_Test_8:
+    ; --- Arrange
+    ld      de, 1
+    ld      bc, 65535
+
+
+
+    ; --- Act
+    di
+        call    FPDE_Div_BC88 ; DE divided by BC (both 8.8 fixed point), result in ADE (16.8)
+    ei
+
+
+
+    ; --- Assert
+    ld      b, 0x00
+    call    UnitTests.check_A_equals_B
+    ld      hl, 0x0001
     call    UnitTests.check_HL_equals_DE
 
     ret
