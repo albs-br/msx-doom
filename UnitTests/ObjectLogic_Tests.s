@@ -46,6 +46,7 @@ ObjectLogic_Tests:
     ; distance tests
     call    .Distance_Test_0
     call    .Distance_Test_1
+    call    .Distance_Test_2
 
     ret
 
@@ -1284,6 +1285,56 @@ ObjectLogic_Tests:
 
     ld      hl, (Object_0.distanceToPlayer)
     ld      de, 180 ; 255 / 1.41 = 180
+    call    UnitTests.check_HL_equals_DE
+
+    ret
+
+; ---------------------------
+
+; --- Test case:
+; Object.isVisible = true
+; Object.posX_inside_FoV = 32
+; Object.distanceToPlayer = 216
+.Distance_Test_2:
+    ; --- Arrange
+    call    PlayerInit
+    ld      hl, 0
+    ld      (Player.angle), hl
+    call    PlayerInit.updateCalcFields
+
+    ld      hl, Object_0
+    call    ObjectInit
+    ld      hl, 32768 + 4096 - 1
+    ld      (Object_0.X), hl
+    ld      hl, 32768 + 2048
+    ld      (Object_0.Y), hl
+
+
+
+    ; --- Act
+    ld      hl, Object_0
+    call    ObjectLogic
+
+
+
+    ; --- Assert
+    ld      hl, (Object_0.angleToPlayer)
+    ld      de, 331
+    call    UnitTests.check_HL_equals_DE
+
+    ld      a, (Object_0.isVisible)
+    call    UnitTests.check_A_is_true
+
+    ld      a, (Object_0.quadrant)
+    ld      b, 4
+    call    UnitTests.check_A_equals_B
+
+    ld      a, (Object_0.posX_inside_FoV)
+    ld      b, 61
+    call    UnitTests.check_A_equals_B
+
+    ld      hl, (Object_0.distanceToPlayer)
+    ld      de, 201 ; 255 * 0.79 = 202
     call    UnitTests.check_HL_equals_DE
 
     ret
