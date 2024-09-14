@@ -362,13 +362,13 @@ ObjectLogic:
     ld      hl, (Object_Temp.distance_X)
     ld      de, 4096
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    ;jp      nc, .calcDistanceFromPlayer_outOfView
-    ret     nc
+    jp      nc, .calcDistanceFromPlayer_outOfView
+    ;ret     nc
     ld      hl, (Object_Temp.distance_Y)
     ld      de, 4096
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    ;jp      nc, .calcDistanceFromPlayer_outOfView
-    ret     nc
+    jp      nc, .calcDistanceFromPlayer_outOfView
+    ;ret     nc
 
 
     ; --- calc Obj.distance_X ^ 2
@@ -405,6 +405,11 @@ ObjectLogic:
 
     ld      (Object_Temp.distanceToPlayer), a
 
+    ret
+
+.calcDistanceFromPlayer_outOfView:
+    ld      a, 255
+    ld      (Object_Temp.distanceToPlayer), a
     ret
 
 ; Input: HL
