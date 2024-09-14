@@ -62,7 +62,7 @@ Update_FoV:
 
     ; ---- if (angle >= 32) FoV_end = angle - 32; else FoV_end = 360 - (32 - angle)
     ld      de, PLAYER_FIELD_OF_VIEW / 2
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .set_FoV_end_angle_minus_32
 
     ; FoV_end = 360 - (32 - angle)
@@ -89,7 +89,7 @@ Update_FoV:
 
     ; ---- if (angle < (360-32)) FoV_start = angle + 32; else FoV_start = 32 - (360 - angle);
     ld      de, 360 - (PLAYER_FIELD_OF_VIEW / 2)
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      c, .set_FoV_start_angle_plus_32
 
 

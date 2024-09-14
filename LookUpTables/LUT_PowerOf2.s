@@ -1,4098 +1,4097 @@
-
 LUT_PowerOf2:
-        dw      0       ; 0 ^ 2 = 0, two higher bytes value = 0
-        dw      0       ; 1 ^ 2 = 1, two higher bytes value = 0
-        dw      0       ; 2 ^ 2 = 4, two higher bytes value = 0
-        dw      0       ; 3 ^ 2 = 9, two higher bytes value = 0
-        dw      0       ; 4 ^ 2 = 16, two higher bytes value = 0
-        dw      0       ; 5 ^ 2 = 25, two higher bytes value = 0
-        dw      0       ; 6 ^ 2 = 36, two higher bytes value = 0
-        dw      0       ; 7 ^ 2 = 49, two higher bytes value = 0
-        dw      0       ; 8 ^ 2 = 64, two higher bytes value = 0
-        dw      0       ; 9 ^ 2 = 81, two higher bytes value = 0
-        dw      0       ; 10 ^ 2 = 100, two higher bytes value = 0
-        dw      0       ; 11 ^ 2 = 121, two higher bytes value = 0
-        dw      0       ; 12 ^ 2 = 144, two higher bytes value = 0
-        dw      0       ; 13 ^ 2 = 169, two higher bytes value = 0
-        dw      0       ; 14 ^ 2 = 196, two higher bytes value = 0
-        dw      0       ; 15 ^ 2 = 225, two higher bytes value = 0
-        dw      1       ; 16 ^ 2 = 256, two higher bytes value = 1
-        dw      1       ; 17 ^ 2 = 289, two higher bytes value = 1
-        dw      1       ; 18 ^ 2 = 324, two higher bytes value = 1
-        dw      1       ; 19 ^ 2 = 361, two higher bytes value = 1
-        dw      1       ; 20 ^ 2 = 400, two higher bytes value = 1
-        dw      1       ; 21 ^ 2 = 441, two higher bytes value = 1
-        dw      1       ; 22 ^ 2 = 484, two higher bytes value = 1
-        dw      2       ; 23 ^ 2 = 529, two higher bytes value = 2
-        dw      2       ; 24 ^ 2 = 576, two higher bytes value = 2
-        dw      2       ; 25 ^ 2 = 625, two higher bytes value = 2
-        dw      2       ; 26 ^ 2 = 676, two higher bytes value = 2
-        dw      2       ; 27 ^ 2 = 729, two higher bytes value = 2
-        dw      3       ; 28 ^ 2 = 784, two higher bytes value = 3
-        dw      3       ; 29 ^ 2 = 841, two higher bytes value = 3
-        dw      3       ; 30 ^ 2 = 900, two higher bytes value = 3
-        dw      3       ; 31 ^ 2 = 961, two higher bytes value = 3
-        dw      4       ; 32 ^ 2 = 1024, two higher bytes value = 4
-        dw      4       ; 33 ^ 2 = 1089, two higher bytes value = 4
-        dw      4       ; 34 ^ 2 = 1156, two higher bytes value = 4
-        dw      4       ; 35 ^ 2 = 1225, two higher bytes value = 4
-        dw      5       ; 36 ^ 2 = 1296, two higher bytes value = 5
-        dw      5       ; 37 ^ 2 = 1369, two higher bytes value = 5
-        dw      5       ; 38 ^ 2 = 1444, two higher bytes value = 5
-        dw      5       ; 39 ^ 2 = 1521, two higher bytes value = 5
-        dw      6       ; 40 ^ 2 = 1600, two higher bytes value = 6
-        dw      6       ; 41 ^ 2 = 1681, two higher bytes value = 6
-        dw      6       ; 42 ^ 2 = 1764, two higher bytes value = 6
-        dw      7       ; 43 ^ 2 = 1849, two higher bytes value = 7
-        dw      7       ; 44 ^ 2 = 1936, two higher bytes value = 7
-        dw      7       ; 45 ^ 2 = 2025, two higher bytes value = 7
-        dw      8       ; 46 ^ 2 = 2116, two higher bytes value = 8
-        dw      8       ; 47 ^ 2 = 2209, two higher bytes value = 8
-        dw      9       ; 48 ^ 2 = 2304, two higher bytes value = 9
-        dw      9       ; 49 ^ 2 = 2401, two higher bytes value = 9
-        dw      9       ; 50 ^ 2 = 2500, two higher bytes value = 9
-        dw      10      ; 51 ^ 2 = 2601, two higher bytes value = 10
-        dw      10      ; 52 ^ 2 = 2704, two higher bytes value = 10
-        dw      10      ; 53 ^ 2 = 2809, two higher bytes value = 10
-        dw      11      ; 54 ^ 2 = 2916, two higher bytes value = 11
-        dw      11      ; 55 ^ 2 = 3025, two higher bytes value = 11
-        dw      12      ; 56 ^ 2 = 3136, two higher bytes value = 12
-        dw      12      ; 57 ^ 2 = 3249, two higher bytes value = 12
-        dw      13      ; 58 ^ 2 = 3364, two higher bytes value = 13
-        dw      13      ; 59 ^ 2 = 3481, two higher bytes value = 13
-        dw      14      ; 60 ^ 2 = 3600, two higher bytes value = 14
-        dw      14      ; 61 ^ 2 = 3721, two higher bytes value = 14
-        dw      15      ; 62 ^ 2 = 3844, two higher bytes value = 15
-        dw      15      ; 63 ^ 2 = 3969, two higher bytes value = 15
-        dw      16      ; 64 ^ 2 = 4096, two higher bytes value = 16
-        dw      16      ; 65 ^ 2 = 4225, two higher bytes value = 16
-        dw      17      ; 66 ^ 2 = 4356, two higher bytes value = 17
-        dw      17      ; 67 ^ 2 = 4489, two higher bytes value = 17
-        dw      18      ; 68 ^ 2 = 4624, two higher bytes value = 18
-        dw      18      ; 69 ^ 2 = 4761, two higher bytes value = 18
-        dw      19      ; 70 ^ 2 = 4900, two higher bytes value = 19
-        dw      19      ; 71 ^ 2 = 5041, two higher bytes value = 19
-        dw      20      ; 72 ^ 2 = 5184, two higher bytes value = 20
-        dw      20      ; 73 ^ 2 = 5329, two higher bytes value = 20
-        dw      21      ; 74 ^ 2 = 5476, two higher bytes value = 21
-        dw      21      ; 75 ^ 2 = 5625, two higher bytes value = 21
-        dw      22      ; 76 ^ 2 = 5776, two higher bytes value = 22
-        dw      23      ; 77 ^ 2 = 5929, two higher bytes value = 23
-        dw      23      ; 78 ^ 2 = 6084, two higher bytes value = 23
-        dw      24      ; 79 ^ 2 = 6241, two higher bytes value = 24
-        dw      25      ; 80 ^ 2 = 6400, two higher bytes value = 25
-        dw      25      ; 81 ^ 2 = 6561, two higher bytes value = 25
-        dw      26      ; 82 ^ 2 = 6724, two higher bytes value = 26
-        dw      26      ; 83 ^ 2 = 6889, two higher bytes value = 26
-        dw      27      ; 84 ^ 2 = 7056, two higher bytes value = 27
-        dw      28      ; 85 ^ 2 = 7225, two higher bytes value = 28
-        dw      28      ; 86 ^ 2 = 7396, two higher bytes value = 28
-        dw      29      ; 87 ^ 2 = 7569, two higher bytes value = 29
-        dw      30      ; 88 ^ 2 = 7744, two higher bytes value = 30
-        dw      30      ; 89 ^ 2 = 7921, two higher bytes value = 30
-        dw      31      ; 90 ^ 2 = 8100, two higher bytes value = 31
-        dw      32      ; 91 ^ 2 = 8281, two higher bytes value = 32
-        dw      33      ; 92 ^ 2 = 8464, two higher bytes value = 33
-        dw      33      ; 93 ^ 2 = 8649, two higher bytes value = 33
-        dw      34      ; 94 ^ 2 = 8836, two higher bytes value = 34
-        dw      35      ; 95 ^ 2 = 9025, two higher bytes value = 35
-        dw      36      ; 96 ^ 2 = 9216, two higher bytes value = 36
-        dw      36      ; 97 ^ 2 = 9409, two higher bytes value = 36
-        dw      37      ; 98 ^ 2 = 9604, two higher bytes value = 37
-        dw      38      ; 99 ^ 2 = 9801, two higher bytes value = 38
-        dw      39      ; 100 ^ 2 = 10000, two higher bytes value = 39
-        dw      39      ; 101 ^ 2 = 10201, two higher bytes value = 39
-        dw      40      ; 102 ^ 2 = 10404, two higher bytes value = 40
-        dw      41      ; 103 ^ 2 = 10609, two higher bytes value = 41
-        dw      42      ; 104 ^ 2 = 10816, two higher bytes value = 42
-        dw      43      ; 105 ^ 2 = 11025, two higher bytes value = 43
-        dw      43      ; 106 ^ 2 = 11236, two higher bytes value = 43
-        dw      44      ; 107 ^ 2 = 11449, two higher bytes value = 44
-        dw      45      ; 108 ^ 2 = 11664, two higher bytes value = 45
-        dw      46      ; 109 ^ 2 = 11881, two higher bytes value = 46
-        dw      47      ; 110 ^ 2 = 12100, two higher bytes value = 47
-        dw      48      ; 111 ^ 2 = 12321, two higher bytes value = 48
-        dw      49      ; 112 ^ 2 = 12544, two higher bytes value = 49
-        dw      49      ; 113 ^ 2 = 12769, two higher bytes value = 49
-        dw      50      ; 114 ^ 2 = 12996, two higher bytes value = 50
-        dw      51      ; 115 ^ 2 = 13225, two higher bytes value = 51
-        dw      52      ; 116 ^ 2 = 13456, two higher bytes value = 52
-        dw      53      ; 117 ^ 2 = 13689, two higher bytes value = 53
-        dw      54      ; 118 ^ 2 = 13924, two higher bytes value = 54
-        dw      55      ; 119 ^ 2 = 14161, two higher bytes value = 55
-        dw      56      ; 120 ^ 2 = 14400, two higher bytes value = 56
-        dw      57      ; 121 ^ 2 = 14641, two higher bytes value = 57
-        dw      58      ; 122 ^ 2 = 14884, two higher bytes value = 58
-        dw      59      ; 123 ^ 2 = 15129, two higher bytes value = 59
-        dw      60      ; 124 ^ 2 = 15376, two higher bytes value = 60
-        dw      61      ; 125 ^ 2 = 15625, two higher bytes value = 61
-        dw      62      ; 126 ^ 2 = 15876, two higher bytes value = 62
-        dw      63      ; 127 ^ 2 = 16129, two higher bytes value = 63
-        dw      64      ; 128 ^ 2 = 16384, two higher bytes value = 64
-        dw      65      ; 129 ^ 2 = 16641, two higher bytes value = 65
-        dw      66      ; 130 ^ 2 = 16900, two higher bytes value = 66
-        dw      67      ; 131 ^ 2 = 17161, two higher bytes value = 67
-        dw      68      ; 132 ^ 2 = 17424, two higher bytes value = 68
-        dw      69      ; 133 ^ 2 = 17689, two higher bytes value = 69
-        dw      70      ; 134 ^ 2 = 17956, two higher bytes value = 70
-        dw      71      ; 135 ^ 2 = 18225, two higher bytes value = 71
-        dw      72      ; 136 ^ 2 = 18496, two higher bytes value = 72
-        dw      73      ; 137 ^ 2 = 18769, two higher bytes value = 73
-        dw      74      ; 138 ^ 2 = 19044, two higher bytes value = 74
-        dw      75      ; 139 ^ 2 = 19321, two higher bytes value = 75
-        dw      76      ; 140 ^ 2 = 19600, two higher bytes value = 76
-        dw      77      ; 141 ^ 2 = 19881, two higher bytes value = 77
-        dw      78      ; 142 ^ 2 = 20164, two higher bytes value = 78
-        dw      79      ; 143 ^ 2 = 20449, two higher bytes value = 79
-        dw      81      ; 144 ^ 2 = 20736, two higher bytes value = 81
-        dw      82      ; 145 ^ 2 = 21025, two higher bytes value = 82
-        dw      83      ; 146 ^ 2 = 21316, two higher bytes value = 83
-        dw      84      ; 147 ^ 2 = 21609, two higher bytes value = 84
-        dw      85      ; 148 ^ 2 = 21904, two higher bytes value = 85
-        dw      86      ; 149 ^ 2 = 22201, two higher bytes value = 86
-        dw      87      ; 150 ^ 2 = 22500, two higher bytes value = 87
-        dw      89      ; 151 ^ 2 = 22801, two higher bytes value = 89
-        dw      90      ; 152 ^ 2 = 23104, two higher bytes value = 90
-        dw      91      ; 153 ^ 2 = 23409, two higher bytes value = 91
-        dw      92      ; 154 ^ 2 = 23716, two higher bytes value = 92
-        dw      93      ; 155 ^ 2 = 24025, two higher bytes value = 93
-        dw      95      ; 156 ^ 2 = 24336, two higher bytes value = 95
-        dw      96      ; 157 ^ 2 = 24649, two higher bytes value = 96
-        dw      97      ; 158 ^ 2 = 24964, two higher bytes value = 97
-        dw      98      ; 159 ^ 2 = 25281, two higher bytes value = 98
-        dw      100     ; 160 ^ 2 = 25600, two higher bytes value = 100
-        dw      101     ; 161 ^ 2 = 25921, two higher bytes value = 101
-        dw      102     ; 162 ^ 2 = 26244, two higher bytes value = 102
-        dw      103     ; 163 ^ 2 = 26569, two higher bytes value = 103
-        dw      105     ; 164 ^ 2 = 26896, two higher bytes value = 105
-        dw      106     ; 165 ^ 2 = 27225, two higher bytes value = 106
-        dw      107     ; 166 ^ 2 = 27556, two higher bytes value = 107
-        dw      108     ; 167 ^ 2 = 27889, two higher bytes value = 108
-        dw      110     ; 168 ^ 2 = 28224, two higher bytes value = 110
-        dw      111     ; 169 ^ 2 = 28561, two higher bytes value = 111
-        dw      112     ; 170 ^ 2 = 28900, two higher bytes value = 112
-        dw      114     ; 171 ^ 2 = 29241, two higher bytes value = 114
-        dw      115     ; 172 ^ 2 = 29584, two higher bytes value = 115
-        dw      116     ; 173 ^ 2 = 29929, two higher bytes value = 116
-        dw      118     ; 174 ^ 2 = 30276, two higher bytes value = 118
-        dw      119     ; 175 ^ 2 = 30625, two higher bytes value = 119
-        dw      121     ; 176 ^ 2 = 30976, two higher bytes value = 121
-        dw      122     ; 177 ^ 2 = 31329, two higher bytes value = 122
-        dw      123     ; 178 ^ 2 = 31684, two higher bytes value = 123
-        dw      125     ; 179 ^ 2 = 32041, two higher bytes value = 125
-        dw      126     ; 180 ^ 2 = 32400, two higher bytes value = 126
-        dw      127     ; 181 ^ 2 = 32761, two higher bytes value = 127
-        dw      129     ; 182 ^ 2 = 33124, two higher bytes value = 129
-        dw      130     ; 183 ^ 2 = 33489, two higher bytes value = 130
-        dw      132     ; 184 ^ 2 = 33856, two higher bytes value = 132
-        dw      133     ; 185 ^ 2 = 34225, two higher bytes value = 133
-        dw      135     ; 186 ^ 2 = 34596, two higher bytes value = 135
-        dw      136     ; 187 ^ 2 = 34969, two higher bytes value = 136
-        dw      138     ; 188 ^ 2 = 35344, two higher bytes value = 138
-        dw      139     ; 189 ^ 2 = 35721, two higher bytes value = 139
-        dw      141     ; 190 ^ 2 = 36100, two higher bytes value = 141
-        dw      142     ; 191 ^ 2 = 36481, two higher bytes value = 142
-        dw      144     ; 192 ^ 2 = 36864, two higher bytes value = 144
-        dw      145     ; 193 ^ 2 = 37249, two higher bytes value = 145
-        dw      147     ; 194 ^ 2 = 37636, two higher bytes value = 147
-        dw      148     ; 195 ^ 2 = 38025, two higher bytes value = 148
-        dw      150     ; 196 ^ 2 = 38416, two higher bytes value = 150
-        dw      151     ; 197 ^ 2 = 38809, two higher bytes value = 151
-        dw      153     ; 198 ^ 2 = 39204, two higher bytes value = 153
-        dw      154     ; 199 ^ 2 = 39601, two higher bytes value = 154
-        dw      156     ; 200 ^ 2 = 40000, two higher bytes value = 156
-        dw      157     ; 201 ^ 2 = 40401, two higher bytes value = 157
-        dw      159     ; 202 ^ 2 = 40804, two higher bytes value = 159
-        dw      160     ; 203 ^ 2 = 41209, two higher bytes value = 160
-        dw      162     ; 204 ^ 2 = 41616, two higher bytes value = 162
-        dw      164     ; 205 ^ 2 = 42025, two higher bytes value = 164
-        dw      165     ; 206 ^ 2 = 42436, two higher bytes value = 165
-        dw      167     ; 207 ^ 2 = 42849, two higher bytes value = 167
-        dw      169     ; 208 ^ 2 = 43264, two higher bytes value = 169
-        dw      170     ; 209 ^ 2 = 43681, two higher bytes value = 170
-        dw      172     ; 210 ^ 2 = 44100, two higher bytes value = 172
-        dw      173     ; 211 ^ 2 = 44521, two higher bytes value = 173
-        dw      175     ; 212 ^ 2 = 44944, two higher bytes value = 175
-        dw      177     ; 213 ^ 2 = 45369, two higher bytes value = 177
-        dw      178     ; 214 ^ 2 = 45796, two higher bytes value = 178
-        dw      180     ; 215 ^ 2 = 46225, two higher bytes value = 180
-        dw      182     ; 216 ^ 2 = 46656, two higher bytes value = 182
-        dw      183     ; 217 ^ 2 = 47089, two higher bytes value = 183
-        dw      185     ; 218 ^ 2 = 47524, two higher bytes value = 185
-        dw      187     ; 219 ^ 2 = 47961, two higher bytes value = 187
-        dw      189     ; 220 ^ 2 = 48400, two higher bytes value = 189
-        dw      190     ; 221 ^ 2 = 48841, two higher bytes value = 190
-        dw      192     ; 222 ^ 2 = 49284, two higher bytes value = 192
-        dw      194     ; 223 ^ 2 = 49729, two higher bytes value = 194
-        dw      196     ; 224 ^ 2 = 50176, two higher bytes value = 196
-        dw      197     ; 225 ^ 2 = 50625, two higher bytes value = 197
-        dw      199     ; 226 ^ 2 = 51076, two higher bytes value = 199
-        dw      201     ; 227 ^ 2 = 51529, two higher bytes value = 201
-        dw      203     ; 228 ^ 2 = 51984, two higher bytes value = 203
-        dw      204     ; 229 ^ 2 = 52441, two higher bytes value = 204
-        dw      206     ; 230 ^ 2 = 52900, two higher bytes value = 206
-        dw      208     ; 231 ^ 2 = 53361, two higher bytes value = 208
-        dw      210     ; 232 ^ 2 = 53824, two higher bytes value = 210
-        dw      212     ; 233 ^ 2 = 54289, two higher bytes value = 212
-        dw      213     ; 234 ^ 2 = 54756, two higher bytes value = 213
-        dw      215     ; 235 ^ 2 = 55225, two higher bytes value = 215
-        dw      217     ; 236 ^ 2 = 55696, two higher bytes value = 217
-        dw      219     ; 237 ^ 2 = 56169, two higher bytes value = 219
-        dw      221     ; 238 ^ 2 = 56644, two higher bytes value = 221
-        dw      223     ; 239 ^ 2 = 57121, two higher bytes value = 223
-        dw      225     ; 240 ^ 2 = 57600, two higher bytes value = 225
-        dw      226     ; 241 ^ 2 = 58081, two higher bytes value = 226
-        dw      228     ; 242 ^ 2 = 58564, two higher bytes value = 228
-        dw      230     ; 243 ^ 2 = 59049, two higher bytes value = 230
-        dw      232     ; 244 ^ 2 = 59536, two higher bytes value = 232
-        dw      234     ; 245 ^ 2 = 60025, two higher bytes value = 234
-        dw      236     ; 246 ^ 2 = 60516, two higher bytes value = 236
-        dw      238     ; 247 ^ 2 = 61009, two higher bytes value = 238
-        dw      240     ; 248 ^ 2 = 61504, two higher bytes value = 240
-        dw      242     ; 249 ^ 2 = 62001, two higher bytes value = 242
-        dw      244     ; 250 ^ 2 = 62500, two higher bytes value = 244
-        dw      246     ; 251 ^ 2 = 63001, two higher bytes value = 246
-        dw      248     ; 252 ^ 2 = 63504, two higher bytes value = 248
-        dw      250     ; 253 ^ 2 = 64009, two higher bytes value = 250
-        dw      252     ; 254 ^ 2 = 64516, two higher bytes value = 252
-        dw      254     ; 255 ^ 2 = 65025, two higher bytes value = 254
-        dw      256     ; 256 ^ 2 = 65536, two higher bytes value = 256
-        dw      258     ; 257 ^ 2 = 66049, two higher bytes value = 258
-        dw      260     ; 258 ^ 2 = 66564, two higher bytes value = 260
-        dw      262     ; 259 ^ 2 = 67081, two higher bytes value = 262
-        dw      264     ; 260 ^ 2 = 67600, two higher bytes value = 264
-        dw      266     ; 261 ^ 2 = 68121, two higher bytes value = 266
-        dw      268     ; 262 ^ 2 = 68644, two higher bytes value = 268
-        dw      270     ; 263 ^ 2 = 69169, two higher bytes value = 270
-        dw      272     ; 264 ^ 2 = 69696, two higher bytes value = 272
-        dw      274     ; 265 ^ 2 = 70225, two higher bytes value = 274
-        dw      276     ; 266 ^ 2 = 70756, two higher bytes value = 276
-        dw      278     ; 267 ^ 2 = 71289, two higher bytes value = 278
-        dw      280     ; 268 ^ 2 = 71824, two higher bytes value = 280
-        dw      282     ; 269 ^ 2 = 72361, two higher bytes value = 282
-        dw      284     ; 270 ^ 2 = 72900, two higher bytes value = 284
-        dw      286     ; 271 ^ 2 = 73441, two higher bytes value = 286
-        dw      289     ; 272 ^ 2 = 73984, two higher bytes value = 289
-        dw      291     ; 273 ^ 2 = 74529, two higher bytes value = 291
-        dw      293     ; 274 ^ 2 = 75076, two higher bytes value = 293
-        dw      295     ; 275 ^ 2 = 75625, two higher bytes value = 295
-        dw      297     ; 276 ^ 2 = 76176, two higher bytes value = 297
-        dw      299     ; 277 ^ 2 = 76729, two higher bytes value = 299
-        dw      301     ; 278 ^ 2 = 77284, two higher bytes value = 301
-        dw      304     ; 279 ^ 2 = 77841, two higher bytes value = 304
-        dw      306     ; 280 ^ 2 = 78400, two higher bytes value = 306
-        dw      308     ; 281 ^ 2 = 78961, two higher bytes value = 308
-        dw      310     ; 282 ^ 2 = 79524, two higher bytes value = 310
-        dw      312     ; 283 ^ 2 = 80089, two higher bytes value = 312
-        dw      315     ; 284 ^ 2 = 80656, two higher bytes value = 315
-        dw      317     ; 285 ^ 2 = 81225, two higher bytes value = 317
-        dw      319     ; 286 ^ 2 = 81796, two higher bytes value = 319
-        dw      321     ; 287 ^ 2 = 82369, two higher bytes value = 321
-        dw      324     ; 288 ^ 2 = 82944, two higher bytes value = 324
-        dw      326     ; 289 ^ 2 = 83521, two higher bytes value = 326
-        dw      328     ; 290 ^ 2 = 84100, two higher bytes value = 328
-        dw      330     ; 291 ^ 2 = 84681, two higher bytes value = 330
-        dw      333     ; 292 ^ 2 = 85264, two higher bytes value = 333
-        dw      335     ; 293 ^ 2 = 85849, two higher bytes value = 335
-        dw      337     ; 294 ^ 2 = 86436, two higher bytes value = 337
-        dw      339     ; 295 ^ 2 = 87025, two higher bytes value = 339
-        dw      342     ; 296 ^ 2 = 87616, two higher bytes value = 342
-        dw      344     ; 297 ^ 2 = 88209, two higher bytes value = 344
-        dw      346     ; 298 ^ 2 = 88804, two higher bytes value = 346
-        dw      349     ; 299 ^ 2 = 89401, two higher bytes value = 349
-        dw      351     ; 300 ^ 2 = 90000, two higher bytes value = 351
-        dw      353     ; 301 ^ 2 = 90601, two higher bytes value = 353
-        dw      356     ; 302 ^ 2 = 91204, two higher bytes value = 356
-        dw      358     ; 303 ^ 2 = 91809, two higher bytes value = 358
-        dw      361     ; 304 ^ 2 = 92416, two higher bytes value = 361
-        dw      363     ; 305 ^ 2 = 93025, two higher bytes value = 363
-        dw      365     ; 306 ^ 2 = 93636, two higher bytes value = 365
-        dw      368     ; 307 ^ 2 = 94249, two higher bytes value = 368
-        dw      370     ; 308 ^ 2 = 94864, two higher bytes value = 370
-        dw      372     ; 309 ^ 2 = 95481, two higher bytes value = 372
-        dw      375     ; 310 ^ 2 = 96100, two higher bytes value = 375
-        dw      377     ; 311 ^ 2 = 96721, two higher bytes value = 377
-        dw      380     ; 312 ^ 2 = 97344, two higher bytes value = 380
-        dw      382     ; 313 ^ 2 = 97969, two higher bytes value = 382
-        dw      385     ; 314 ^ 2 = 98596, two higher bytes value = 385
-        dw      387     ; 315 ^ 2 = 99225, two higher bytes value = 387
-        dw      390     ; 316 ^ 2 = 99856, two higher bytes value = 390
-        dw      392     ; 317 ^ 2 = 100489, two higher bytes value = 392
-        dw      395     ; 318 ^ 2 = 101124, two higher bytes value = 395
-        dw      397     ; 319 ^ 2 = 101761, two higher bytes value = 397
-        dw      400     ; 320 ^ 2 = 102400, two higher bytes value = 400
-        dw      402     ; 321 ^ 2 = 103041, two higher bytes value = 402
-        dw      405     ; 322 ^ 2 = 103684, two higher bytes value = 405
-        dw      407     ; 323 ^ 2 = 104329, two higher bytes value = 407
-        dw      410     ; 324 ^ 2 = 104976, two higher bytes value = 410
-        dw      412     ; 325 ^ 2 = 105625, two higher bytes value = 412
-        dw      415     ; 326 ^ 2 = 106276, two higher bytes value = 415
-        dw      417     ; 327 ^ 2 = 106929, two higher bytes value = 417
-        dw      420     ; 328 ^ 2 = 107584, two higher bytes value = 420
-        dw      422     ; 329 ^ 2 = 108241, two higher bytes value = 422
-        dw      425     ; 330 ^ 2 = 108900, two higher bytes value = 425
-        dw      427     ; 331 ^ 2 = 109561, two higher bytes value = 427
-        dw      430     ; 332 ^ 2 = 110224, two higher bytes value = 430
-        dw      433     ; 333 ^ 2 = 110889, two higher bytes value = 433
-        dw      435     ; 334 ^ 2 = 111556, two higher bytes value = 435
-        dw      438     ; 335 ^ 2 = 112225, two higher bytes value = 438
-        dw      441     ; 336 ^ 2 = 112896, two higher bytes value = 441
-        dw      443     ; 337 ^ 2 = 113569, two higher bytes value = 443
-        dw      446     ; 338 ^ 2 = 114244, two higher bytes value = 446
-        dw      448     ; 339 ^ 2 = 114921, two higher bytes value = 448
-        dw      451     ; 340 ^ 2 = 115600, two higher bytes value = 451
-        dw      454     ; 341 ^ 2 = 116281, two higher bytes value = 454
-        dw      456     ; 342 ^ 2 = 116964, two higher bytes value = 456
-        dw      459     ; 343 ^ 2 = 117649, two higher bytes value = 459
-        dw      462     ; 344 ^ 2 = 118336, two higher bytes value = 462
-        dw      464     ; 345 ^ 2 = 119025, two higher bytes value = 464
-        dw      467     ; 346 ^ 2 = 119716, two higher bytes value = 467
-        dw      470     ; 347 ^ 2 = 120409, two higher bytes value = 470
-        dw      473     ; 348 ^ 2 = 121104, two higher bytes value = 473
-        dw      475     ; 349 ^ 2 = 121801, two higher bytes value = 475
-        dw      478     ; 350 ^ 2 = 122500, two higher bytes value = 478
-        dw      481     ; 351 ^ 2 = 123201, two higher bytes value = 481
-        dw      484     ; 352 ^ 2 = 123904, two higher bytes value = 484
-        dw      486     ; 353 ^ 2 = 124609, two higher bytes value = 486
-        dw      489     ; 354 ^ 2 = 125316, two higher bytes value = 489
-        dw      492     ; 355 ^ 2 = 126025, two higher bytes value = 492
-        dw      495     ; 356 ^ 2 = 126736, two higher bytes value = 495
-        dw      497     ; 357 ^ 2 = 127449, two higher bytes value = 497
-        dw      500     ; 358 ^ 2 = 128164, two higher bytes value = 500
-        dw      503     ; 359 ^ 2 = 128881, two higher bytes value = 503
-        dw      506     ; 360 ^ 2 = 129600, two higher bytes value = 506
-        dw      509     ; 361 ^ 2 = 130321, two higher bytes value = 509
-        dw      511     ; 362 ^ 2 = 131044, two higher bytes value = 511
-        dw      514     ; 363 ^ 2 = 131769, two higher bytes value = 514
-        dw      517     ; 364 ^ 2 = 132496, two higher bytes value = 517
-        dw      520     ; 365 ^ 2 = 133225, two higher bytes value = 520
-        dw      523     ; 366 ^ 2 = 133956, two higher bytes value = 523
-        dw      526     ; 367 ^ 2 = 134689, two higher bytes value = 526
-        dw      529     ; 368 ^ 2 = 135424, two higher bytes value = 529
-        dw      531     ; 369 ^ 2 = 136161, two higher bytes value = 531
-        dw      534     ; 370 ^ 2 = 136900, two higher bytes value = 534
-        dw      537     ; 371 ^ 2 = 137641, two higher bytes value = 537
-        dw      540     ; 372 ^ 2 = 138384, two higher bytes value = 540
-        dw      543     ; 373 ^ 2 = 139129, two higher bytes value = 543
-        dw      546     ; 374 ^ 2 = 139876, two higher bytes value = 546
-        dw      549     ; 375 ^ 2 = 140625, two higher bytes value = 549
-        dw      552     ; 376 ^ 2 = 141376, two higher bytes value = 552
-        dw      555     ; 377 ^ 2 = 142129, two higher bytes value = 555
-        dw      558     ; 378 ^ 2 = 142884, two higher bytes value = 558
-        dw      561     ; 379 ^ 2 = 143641, two higher bytes value = 561
-        dw      564     ; 380 ^ 2 = 144400, two higher bytes value = 564
-        dw      567     ; 381 ^ 2 = 145161, two higher bytes value = 567
-        dw      570     ; 382 ^ 2 = 145924, two higher bytes value = 570
-        dw      573     ; 383 ^ 2 = 146689, two higher bytes value = 573
-        dw      576     ; 384 ^ 2 = 147456, two higher bytes value = 576
-        dw      579     ; 385 ^ 2 = 148225, two higher bytes value = 579
-        dw      582     ; 386 ^ 2 = 148996, two higher bytes value = 582
-        dw      585     ; 387 ^ 2 = 149769, two higher bytes value = 585
-        dw      588     ; 388 ^ 2 = 150544, two higher bytes value = 588
-        dw      591     ; 389 ^ 2 = 151321, two higher bytes value = 591
-        dw      594     ; 390 ^ 2 = 152100, two higher bytes value = 594
-        dw      597     ; 391 ^ 2 = 152881, two higher bytes value = 597
-        dw      600     ; 392 ^ 2 = 153664, two higher bytes value = 600
-        dw      603     ; 393 ^ 2 = 154449, two higher bytes value = 603
-        dw      606     ; 394 ^ 2 = 155236, two higher bytes value = 606
-        dw      609     ; 395 ^ 2 = 156025, two higher bytes value = 609
-        dw      612     ; 396 ^ 2 = 156816, two higher bytes value = 612
-        dw      615     ; 397 ^ 2 = 157609, two higher bytes value = 615
-        dw      618     ; 398 ^ 2 = 158404, two higher bytes value = 618
-        dw      621     ; 399 ^ 2 = 159201, two higher bytes value = 621
-        dw      625     ; 400 ^ 2 = 160000, two higher bytes value = 625
-        dw      628     ; 401 ^ 2 = 160801, two higher bytes value = 628
-        dw      631     ; 402 ^ 2 = 161604, two higher bytes value = 631
-        dw      634     ; 403 ^ 2 = 162409, two higher bytes value = 634
-        dw      637     ; 404 ^ 2 = 163216, two higher bytes value = 637
-        dw      640     ; 405 ^ 2 = 164025, two higher bytes value = 640
-        dw      643     ; 406 ^ 2 = 164836, two higher bytes value = 643
-        dw      647     ; 407 ^ 2 = 165649, two higher bytes value = 647
-        dw      650     ; 408 ^ 2 = 166464, two higher bytes value = 650
-        dw      653     ; 409 ^ 2 = 167281, two higher bytes value = 653
-        dw      656     ; 410 ^ 2 = 168100, two higher bytes value = 656
-        dw      659     ; 411 ^ 2 = 168921, two higher bytes value = 659
-        dw      663     ; 412 ^ 2 = 169744, two higher bytes value = 663
-        dw      666     ; 413 ^ 2 = 170569, two higher bytes value = 666
-        dw      669     ; 414 ^ 2 = 171396, two higher bytes value = 669
-        dw      672     ; 415 ^ 2 = 172225, two higher bytes value = 672
-        dw      676     ; 416 ^ 2 = 173056, two higher bytes value = 676
-        dw      679     ; 417 ^ 2 = 173889, two higher bytes value = 679
-        dw      682     ; 418 ^ 2 = 174724, two higher bytes value = 682
-        dw      685     ; 419 ^ 2 = 175561, two higher bytes value = 685
-        dw      689     ; 420 ^ 2 = 176400, two higher bytes value = 689
-        dw      692     ; 421 ^ 2 = 177241, two higher bytes value = 692
-        dw      695     ; 422 ^ 2 = 178084, two higher bytes value = 695
-        dw      698     ; 423 ^ 2 = 178929, two higher bytes value = 698
-        dw      702     ; 424 ^ 2 = 179776, two higher bytes value = 702
-        dw      705     ; 425 ^ 2 = 180625, two higher bytes value = 705
-        dw      708     ; 426 ^ 2 = 181476, two higher bytes value = 708
-        dw      712     ; 427 ^ 2 = 182329, two higher bytes value = 712
-        dw      715     ; 428 ^ 2 = 183184, two higher bytes value = 715
-        dw      718     ; 429 ^ 2 = 184041, two higher bytes value = 718
-        dw      722     ; 430 ^ 2 = 184900, two higher bytes value = 722
-        dw      725     ; 431 ^ 2 = 185761, two higher bytes value = 725
-        dw      729     ; 432 ^ 2 = 186624, two higher bytes value = 729
-        dw      732     ; 433 ^ 2 = 187489, two higher bytes value = 732
-        dw      735     ; 434 ^ 2 = 188356, two higher bytes value = 735
-        dw      739     ; 435 ^ 2 = 189225, two higher bytes value = 739
-        dw      742     ; 436 ^ 2 = 190096, two higher bytes value = 742
-        dw      745     ; 437 ^ 2 = 190969, two higher bytes value = 745
-        dw      749     ; 438 ^ 2 = 191844, two higher bytes value = 749
-        dw      752     ; 439 ^ 2 = 192721, two higher bytes value = 752
-        dw      756     ; 440 ^ 2 = 193600, two higher bytes value = 756
-        dw      759     ; 441 ^ 2 = 194481, two higher bytes value = 759
-        dw      763     ; 442 ^ 2 = 195364, two higher bytes value = 763
-        dw      766     ; 443 ^ 2 = 196249, two higher bytes value = 766
-        dw      770     ; 444 ^ 2 = 197136, two higher bytes value = 770
-        dw      773     ; 445 ^ 2 = 198025, two higher bytes value = 773
-        dw      777     ; 446 ^ 2 = 198916, two higher bytes value = 777
-        dw      780     ; 447 ^ 2 = 199809, two higher bytes value = 780
-        dw      784     ; 448 ^ 2 = 200704, two higher bytes value = 784
-        dw      787     ; 449 ^ 2 = 201601, two higher bytes value = 787
-        dw      791     ; 450 ^ 2 = 202500, two higher bytes value = 791
-        dw      794     ; 451 ^ 2 = 203401, two higher bytes value = 794
-        dw      798     ; 452 ^ 2 = 204304, two higher bytes value = 798
-        dw      801     ; 453 ^ 2 = 205209, two higher bytes value = 801
-        dw      805     ; 454 ^ 2 = 206116, two higher bytes value = 805
-        dw      808     ; 455 ^ 2 = 207025, two higher bytes value = 808
-        dw      812     ; 456 ^ 2 = 207936, two higher bytes value = 812
-        dw      815     ; 457 ^ 2 = 208849, two higher bytes value = 815
-        dw      819     ; 458 ^ 2 = 209764, two higher bytes value = 819
-        dw      822     ; 459 ^ 2 = 210681, two higher bytes value = 822
-        dw      826     ; 460 ^ 2 = 211600, two higher bytes value = 826
-        dw      830     ; 461 ^ 2 = 212521, two higher bytes value = 830
-        dw      833     ; 462 ^ 2 = 213444, two higher bytes value = 833
-        dw      837     ; 463 ^ 2 = 214369, two higher bytes value = 837
-        dw      841     ; 464 ^ 2 = 215296, two higher bytes value = 841
-        dw      844     ; 465 ^ 2 = 216225, two higher bytes value = 844
-        dw      848     ; 466 ^ 2 = 217156, two higher bytes value = 848
-        dw      851     ; 467 ^ 2 = 218089, two higher bytes value = 851
-        dw      855     ; 468 ^ 2 = 219024, two higher bytes value = 855
-        dw      859     ; 469 ^ 2 = 219961, two higher bytes value = 859
-        dw      862     ; 470 ^ 2 = 220900, two higher bytes value = 862
-        dw      866     ; 471 ^ 2 = 221841, two higher bytes value = 866
-        dw      870     ; 472 ^ 2 = 222784, two higher bytes value = 870
-        dw      873     ; 473 ^ 2 = 223729, two higher bytes value = 873
-        dw      877     ; 474 ^ 2 = 224676, two higher bytes value = 877
-        dw      881     ; 475 ^ 2 = 225625, two higher bytes value = 881
-        dw      885     ; 476 ^ 2 = 226576, two higher bytes value = 885
-        dw      888     ; 477 ^ 2 = 227529, two higher bytes value = 888
-        dw      892     ; 478 ^ 2 = 228484, two higher bytes value = 892
-        dw      896     ; 479 ^ 2 = 229441, two higher bytes value = 896
-        dw      900     ; 480 ^ 2 = 230400, two higher bytes value = 900
-        dw      903     ; 481 ^ 2 = 231361, two higher bytes value = 903
-        dw      907     ; 482 ^ 2 = 232324, two higher bytes value = 907
-        dw      911     ; 483 ^ 2 = 233289, two higher bytes value = 911
-        dw      915     ; 484 ^ 2 = 234256, two higher bytes value = 915
-        dw      918     ; 485 ^ 2 = 235225, two higher bytes value = 918
-        dw      922     ; 486 ^ 2 = 236196, two higher bytes value = 922
-        dw      926     ; 487 ^ 2 = 237169, two higher bytes value = 926
-        dw      930     ; 488 ^ 2 = 238144, two higher bytes value = 930
-        dw      934     ; 489 ^ 2 = 239121, two higher bytes value = 934
-        dw      937     ; 490 ^ 2 = 240100, two higher bytes value = 937
-        dw      941     ; 491 ^ 2 = 241081, two higher bytes value = 941
-        dw      945     ; 492 ^ 2 = 242064, two higher bytes value = 945
-        dw      949     ; 493 ^ 2 = 243049, two higher bytes value = 949
-        dw      953     ; 494 ^ 2 = 244036, two higher bytes value = 953
-        dw      957     ; 495 ^ 2 = 245025, two higher bytes value = 957
-        dw      961     ; 496 ^ 2 = 246016, two higher bytes value = 961
-        dw      964     ; 497 ^ 2 = 247009, two higher bytes value = 964
-        dw      968     ; 498 ^ 2 = 248004, two higher bytes value = 968
-        dw      972     ; 499 ^ 2 = 249001, two higher bytes value = 972
-        dw      976     ; 500 ^ 2 = 250000, two higher bytes value = 976
-        dw      980     ; 501 ^ 2 = 251001, two higher bytes value = 980
-        dw      984     ; 502 ^ 2 = 252004, two higher bytes value = 984
-        dw      988     ; 503 ^ 2 = 253009, two higher bytes value = 988
-        dw      992     ; 504 ^ 2 = 254016, two higher bytes value = 992
-        dw      996     ; 505 ^ 2 = 255025, two higher bytes value = 996
-        dw      1000    ; 506 ^ 2 = 256036, two higher bytes value = 1000
-        dw      1004    ; 507 ^ 2 = 257049, two higher bytes value = 1004
-        dw      1008    ; 508 ^ 2 = 258064, two higher bytes value = 1008
-        dw      1012    ; 509 ^ 2 = 259081, two higher bytes value = 1012
-        dw      1016    ; 510 ^ 2 = 260100, two higher bytes value = 1016
-        dw      1020    ; 511 ^ 2 = 261121, two higher bytes value = 1020
-        dw      1024    ; 512 ^ 2 = 262144, two higher bytes value = 1024
-        dw      1028    ; 513 ^ 2 = 263169, two higher bytes value = 1028
-        dw      1032    ; 514 ^ 2 = 264196, two higher bytes value = 1032
-        dw      1036    ; 515 ^ 2 = 265225, two higher bytes value = 1036
-        dw      1040    ; 516 ^ 2 = 266256, two higher bytes value = 1040
-        dw      1044    ; 517 ^ 2 = 267289, two higher bytes value = 1044
-        dw      1048    ; 518 ^ 2 = 268324, two higher bytes value = 1048
-        dw      1052    ; 519 ^ 2 = 269361, two higher bytes value = 1052
-        dw      1056    ; 520 ^ 2 = 270400, two higher bytes value = 1056
-        dw      1060    ; 521 ^ 2 = 271441, two higher bytes value = 1060
-        dw      1064    ; 522 ^ 2 = 272484, two higher bytes value = 1064
-        dw      1068    ; 523 ^ 2 = 273529, two higher bytes value = 1068
-        dw      1072    ; 524 ^ 2 = 274576, two higher bytes value = 1072
-        dw      1076    ; 525 ^ 2 = 275625, two higher bytes value = 1076
-        dw      1080    ; 526 ^ 2 = 276676, two higher bytes value = 1080
-        dw      1084    ; 527 ^ 2 = 277729, two higher bytes value = 1084
-        dw      1089    ; 528 ^ 2 = 278784, two higher bytes value = 1089
-        dw      1093    ; 529 ^ 2 = 279841, two higher bytes value = 1093
-        dw      1097    ; 530 ^ 2 = 280900, two higher bytes value = 1097
-        dw      1101    ; 531 ^ 2 = 281961, two higher bytes value = 1101
-        dw      1105    ; 532 ^ 2 = 283024, two higher bytes value = 1105
-        dw      1109    ; 533 ^ 2 = 284089, two higher bytes value = 1109
-        dw      1113    ; 534 ^ 2 = 285156, two higher bytes value = 1113
-        dw      1118    ; 535 ^ 2 = 286225, two higher bytes value = 1118
-        dw      1122    ; 536 ^ 2 = 287296, two higher bytes value = 1122
-        dw      1126    ; 537 ^ 2 = 288369, two higher bytes value = 1126
-        dw      1130    ; 538 ^ 2 = 289444, two higher bytes value = 1130
-        dw      1134    ; 539 ^ 2 = 290521, two higher bytes value = 1134
-        dw      1139    ; 540 ^ 2 = 291600, two higher bytes value = 1139
-        dw      1143    ; 541 ^ 2 = 292681, two higher bytes value = 1143
-        dw      1147    ; 542 ^ 2 = 293764, two higher bytes value = 1147
-        dw      1151    ; 543 ^ 2 = 294849, two higher bytes value = 1151
-        dw      1156    ; 544 ^ 2 = 295936, two higher bytes value = 1156
-        dw      1160    ; 545 ^ 2 = 297025, two higher bytes value = 1160
-        dw      1164    ; 546 ^ 2 = 298116, two higher bytes value = 1164
-        dw      1168    ; 547 ^ 2 = 299209, two higher bytes value = 1168
-        dw      1173    ; 548 ^ 2 = 300304, two higher bytes value = 1173
-        dw      1177    ; 549 ^ 2 = 301401, two higher bytes value = 1177
-        dw      1181    ; 550 ^ 2 = 302500, two higher bytes value = 1181
-        dw      1185    ; 551 ^ 2 = 303601, two higher bytes value = 1185
-        dw      1190    ; 552 ^ 2 = 304704, two higher bytes value = 1190
-        dw      1194    ; 553 ^ 2 = 305809, two higher bytes value = 1194
-        dw      1198    ; 554 ^ 2 = 306916, two higher bytes value = 1198
-        dw      1203    ; 555 ^ 2 = 308025, two higher bytes value = 1203
-        dw      1207    ; 556 ^ 2 = 309136, two higher bytes value = 1207
-        dw      1211    ; 557 ^ 2 = 310249, two higher bytes value = 1211
-        dw      1216    ; 558 ^ 2 = 311364, two higher bytes value = 1216
-        dw      1220    ; 559 ^ 2 = 312481, two higher bytes value = 1220
-        dw      1225    ; 560 ^ 2 = 313600, two higher bytes value = 1225
-        dw      1229    ; 561 ^ 2 = 314721, two higher bytes value = 1229
-        dw      1233    ; 562 ^ 2 = 315844, two higher bytes value = 1233
-        dw      1238    ; 563 ^ 2 = 316969, two higher bytes value = 1238
-        dw      1242    ; 564 ^ 2 = 318096, two higher bytes value = 1242
-        dw      1246    ; 565 ^ 2 = 319225, two higher bytes value = 1246
-        dw      1251    ; 566 ^ 2 = 320356, two higher bytes value = 1251
-        dw      1255    ; 567 ^ 2 = 321489, two higher bytes value = 1255
-        dw      1260    ; 568 ^ 2 = 322624, two higher bytes value = 1260
-        dw      1264    ; 569 ^ 2 = 323761, two higher bytes value = 1264
-        dw      1269    ; 570 ^ 2 = 324900, two higher bytes value = 1269
-        dw      1273    ; 571 ^ 2 = 326041, two higher bytes value = 1273
-        dw      1278    ; 572 ^ 2 = 327184, two higher bytes value = 1278
-        dw      1282    ; 573 ^ 2 = 328329, two higher bytes value = 1282
-        dw      1287    ; 574 ^ 2 = 329476, two higher bytes value = 1287
-        dw      1291    ; 575 ^ 2 = 330625, two higher bytes value = 1291
-        dw      1296    ; 576 ^ 2 = 331776, two higher bytes value = 1296
-        dw      1300    ; 577 ^ 2 = 332929, two higher bytes value = 1300
-        dw      1305    ; 578 ^ 2 = 334084, two higher bytes value = 1305
-        dw      1309    ; 579 ^ 2 = 335241, two higher bytes value = 1309
-        dw      1314    ; 580 ^ 2 = 336400, two higher bytes value = 1314
-        dw      1318    ; 581 ^ 2 = 337561, two higher bytes value = 1318
-        dw      1323    ; 582 ^ 2 = 338724, two higher bytes value = 1323
-        dw      1327    ; 583 ^ 2 = 339889, two higher bytes value = 1327
-        dw      1332    ; 584 ^ 2 = 341056, two higher bytes value = 1332
-        dw      1336    ; 585 ^ 2 = 342225, two higher bytes value = 1336
-        dw      1341    ; 586 ^ 2 = 343396, two higher bytes value = 1341
-        dw      1345    ; 587 ^ 2 = 344569, two higher bytes value = 1345
-        dw      1350    ; 588 ^ 2 = 345744, two higher bytes value = 1350
-        dw      1355    ; 589 ^ 2 = 346921, two higher bytes value = 1355
-        dw      1359    ; 590 ^ 2 = 348100, two higher bytes value = 1359
-        dw      1364    ; 591 ^ 2 = 349281, two higher bytes value = 1364
-        dw      1369    ; 592 ^ 2 = 350464, two higher bytes value = 1369
-        dw      1373    ; 593 ^ 2 = 351649, two higher bytes value = 1373
-        dw      1378    ; 594 ^ 2 = 352836, two higher bytes value = 1378
-        dw      1382    ; 595 ^ 2 = 354025, two higher bytes value = 1382
-        dw      1387    ; 596 ^ 2 = 355216, two higher bytes value = 1387
-        dw      1392    ; 597 ^ 2 = 356409, two higher bytes value = 1392
-        dw      1396    ; 598 ^ 2 = 357604, two higher bytes value = 1396
-        dw      1401    ; 599 ^ 2 = 358801, two higher bytes value = 1401
-        dw      1406    ; 600 ^ 2 = 360000, two higher bytes value = 1406
-        dw      1410    ; 601 ^ 2 = 361201, two higher bytes value = 1410
-        dw      1415    ; 602 ^ 2 = 362404, two higher bytes value = 1415
-        dw      1420    ; 603 ^ 2 = 363609, two higher bytes value = 1420
-        dw      1425    ; 604 ^ 2 = 364816, two higher bytes value = 1425
-        dw      1429    ; 605 ^ 2 = 366025, two higher bytes value = 1429
-        dw      1434    ; 606 ^ 2 = 367236, two higher bytes value = 1434
-        dw      1439    ; 607 ^ 2 = 368449, two higher bytes value = 1439
-        dw      1444    ; 608 ^ 2 = 369664, two higher bytes value = 1444
-        dw      1448    ; 609 ^ 2 = 370881, two higher bytes value = 1448
-        dw      1453    ; 610 ^ 2 = 372100, two higher bytes value = 1453
-        dw      1458    ; 611 ^ 2 = 373321, two higher bytes value = 1458
-        dw      1463    ; 612 ^ 2 = 374544, two higher bytes value = 1463
-        dw      1467    ; 613 ^ 2 = 375769, two higher bytes value = 1467
-        dw      1472    ; 614 ^ 2 = 376996, two higher bytes value = 1472
-        dw      1477    ; 615 ^ 2 = 378225, two higher bytes value = 1477
-        dw      1482    ; 616 ^ 2 = 379456, two higher bytes value = 1482
-        dw      1487    ; 617 ^ 2 = 380689, two higher bytes value = 1487
-        dw      1491    ; 618 ^ 2 = 381924, two higher bytes value = 1491
-        dw      1496    ; 619 ^ 2 = 383161, two higher bytes value = 1496
-        dw      1501    ; 620 ^ 2 = 384400, two higher bytes value = 1501
-        dw      1506    ; 621 ^ 2 = 385641, two higher bytes value = 1506
-        dw      1511    ; 622 ^ 2 = 386884, two higher bytes value = 1511
-        dw      1516    ; 623 ^ 2 = 388129, two higher bytes value = 1516
-        dw      1521    ; 624 ^ 2 = 389376, two higher bytes value = 1521
-        dw      1525    ; 625 ^ 2 = 390625, two higher bytes value = 1525
-        dw      1530    ; 626 ^ 2 = 391876, two higher bytes value = 1530
-        dw      1535    ; 627 ^ 2 = 393129, two higher bytes value = 1535
-        dw      1540    ; 628 ^ 2 = 394384, two higher bytes value = 1540
-        dw      1545    ; 629 ^ 2 = 395641, two higher bytes value = 1545
-        dw      1550    ; 630 ^ 2 = 396900, two higher bytes value = 1550
-        dw      1555    ; 631 ^ 2 = 398161, two higher bytes value = 1555
-        dw      1560    ; 632 ^ 2 = 399424, two higher bytes value = 1560
-        dw      1565    ; 633 ^ 2 = 400689, two higher bytes value = 1565
-        dw      1570    ; 634 ^ 2 = 401956, two higher bytes value = 1570
-        dw      1575    ; 635 ^ 2 = 403225, two higher bytes value = 1575
-        dw      1580    ; 636 ^ 2 = 404496, two higher bytes value = 1580
-        dw      1585    ; 637 ^ 2 = 405769, two higher bytes value = 1585
-        dw      1590    ; 638 ^ 2 = 407044, two higher bytes value = 1590
-        dw      1595    ; 639 ^ 2 = 408321, two higher bytes value = 1595
-        dw      1600    ; 640 ^ 2 = 409600, two higher bytes value = 1600
-        dw      1605    ; 641 ^ 2 = 410881, two higher bytes value = 1605
-        dw      1610    ; 642 ^ 2 = 412164, two higher bytes value = 1610
-        dw      1615    ; 643 ^ 2 = 413449, two higher bytes value = 1615
-        dw      1620    ; 644 ^ 2 = 414736, two higher bytes value = 1620
-        dw      1625    ; 645 ^ 2 = 416025, two higher bytes value = 1625
-        dw      1630    ; 646 ^ 2 = 417316, two higher bytes value = 1630
-        dw      1635    ; 647 ^ 2 = 418609, two higher bytes value = 1635
-        dw      1640    ; 648 ^ 2 = 419904, two higher bytes value = 1640
-        dw      1645    ; 649 ^ 2 = 421201, two higher bytes value = 1645
-        dw      1650    ; 650 ^ 2 = 422500, two higher bytes value = 1650
-        dw      1655    ; 651 ^ 2 = 423801, two higher bytes value = 1655
-        dw      1660    ; 652 ^ 2 = 425104, two higher bytes value = 1660
-        dw      1665    ; 653 ^ 2 = 426409, two higher bytes value = 1665
-        dw      1670    ; 654 ^ 2 = 427716, two higher bytes value = 1670
-        dw      1675    ; 655 ^ 2 = 429025, two higher bytes value = 1675
-        dw      1681    ; 656 ^ 2 = 430336, two higher bytes value = 1681
-        dw      1686    ; 657 ^ 2 = 431649, two higher bytes value = 1686
-        dw      1691    ; 658 ^ 2 = 432964, two higher bytes value = 1691
-        dw      1696    ; 659 ^ 2 = 434281, two higher bytes value = 1696
-        dw      1701    ; 660 ^ 2 = 435600, two higher bytes value = 1701
-        dw      1706    ; 661 ^ 2 = 436921, two higher bytes value = 1706
-        dw      1711    ; 662 ^ 2 = 438244, two higher bytes value = 1711
-        dw      1717    ; 663 ^ 2 = 439569, two higher bytes value = 1717
-        dw      1722    ; 664 ^ 2 = 440896, two higher bytes value = 1722
-        dw      1727    ; 665 ^ 2 = 442225, two higher bytes value = 1727
-        dw      1732    ; 666 ^ 2 = 443556, two higher bytes value = 1732
-        dw      1737    ; 667 ^ 2 = 444889, two higher bytes value = 1737
-        dw      1743    ; 668 ^ 2 = 446224, two higher bytes value = 1743
-        dw      1748    ; 669 ^ 2 = 447561, two higher bytes value = 1748
-        dw      1753    ; 670 ^ 2 = 448900, two higher bytes value = 1753
-        dw      1758    ; 671 ^ 2 = 450241, two higher bytes value = 1758
-        dw      1764    ; 672 ^ 2 = 451584, two higher bytes value = 1764
-        dw      1769    ; 673 ^ 2 = 452929, two higher bytes value = 1769
-        dw      1774    ; 674 ^ 2 = 454276, two higher bytes value = 1774
-        dw      1779    ; 675 ^ 2 = 455625, two higher bytes value = 1779
-        dw      1785    ; 676 ^ 2 = 456976, two higher bytes value = 1785
-        dw      1790    ; 677 ^ 2 = 458329, two higher bytes value = 1790
-        dw      1795    ; 678 ^ 2 = 459684, two higher bytes value = 1795
-        dw      1800    ; 679 ^ 2 = 461041, two higher bytes value = 1800
-        dw      1806    ; 680 ^ 2 = 462400, two higher bytes value = 1806
-        dw      1811    ; 681 ^ 2 = 463761, two higher bytes value = 1811
-        dw      1816    ; 682 ^ 2 = 465124, two higher bytes value = 1816
-        dw      1822    ; 683 ^ 2 = 466489, two higher bytes value = 1822
-        dw      1827    ; 684 ^ 2 = 467856, two higher bytes value = 1827
-        dw      1832    ; 685 ^ 2 = 469225, two higher bytes value = 1832
-        dw      1838    ; 686 ^ 2 = 470596, two higher bytes value = 1838
-        dw      1843    ; 687 ^ 2 = 471969, two higher bytes value = 1843
-        dw      1849    ; 688 ^ 2 = 473344, two higher bytes value = 1849
-        dw      1854    ; 689 ^ 2 = 474721, two higher bytes value = 1854
-        dw      1859    ; 690 ^ 2 = 476100, two higher bytes value = 1859
-        dw      1865    ; 691 ^ 2 = 477481, two higher bytes value = 1865
-        dw      1870    ; 692 ^ 2 = 478864, two higher bytes value = 1870
-        dw      1875    ; 693 ^ 2 = 480249, two higher bytes value = 1875
-        dw      1881    ; 694 ^ 2 = 481636, two higher bytes value = 1881
-        dw      1886    ; 695 ^ 2 = 483025, two higher bytes value = 1886
-        dw      1892    ; 696 ^ 2 = 484416, two higher bytes value = 1892
-        dw      1897    ; 697 ^ 2 = 485809, two higher bytes value = 1897
-        dw      1903    ; 698 ^ 2 = 487204, two higher bytes value = 1903
-        dw      1908    ; 699 ^ 2 = 488601, two higher bytes value = 1908
-        dw      1914    ; 700 ^ 2 = 490000, two higher bytes value = 1914
-        dw      1919    ; 701 ^ 2 = 491401, two higher bytes value = 1919
-        dw      1925    ; 702 ^ 2 = 492804, two higher bytes value = 1925
-        dw      1930    ; 703 ^ 2 = 494209, two higher bytes value = 1930
-        dw      1936    ; 704 ^ 2 = 495616, two higher bytes value = 1936
-        dw      1941    ; 705 ^ 2 = 497025, two higher bytes value = 1941
-        dw      1947    ; 706 ^ 2 = 498436, two higher bytes value = 1947
-        dw      1952    ; 707 ^ 2 = 499849, two higher bytes value = 1952
-        dw      1958    ; 708 ^ 2 = 501264, two higher bytes value = 1958
-        dw      1963    ; 709 ^ 2 = 502681, two higher bytes value = 1963
-        dw      1969    ; 710 ^ 2 = 504100, two higher bytes value = 1969
-        dw      1974    ; 711 ^ 2 = 505521, two higher bytes value = 1974
-        dw      1980    ; 712 ^ 2 = 506944, two higher bytes value = 1980
-        dw      1985    ; 713 ^ 2 = 508369, two higher bytes value = 1985
-        dw      1991    ; 714 ^ 2 = 509796, two higher bytes value = 1991
-        dw      1996    ; 715 ^ 2 = 511225, two higher bytes value = 1996
-        dw      2002    ; 716 ^ 2 = 512656, two higher bytes value = 2002
-        dw      2008    ; 717 ^ 2 = 514089, two higher bytes value = 2008
-        dw      2013    ; 718 ^ 2 = 515524, two higher bytes value = 2013
-        dw      2019    ; 719 ^ 2 = 516961, two higher bytes value = 2019
-        dw      2025    ; 720 ^ 2 = 518400, two higher bytes value = 2025
-        dw      2030    ; 721 ^ 2 = 519841, two higher bytes value = 2030
-        dw      2036    ; 722 ^ 2 = 521284, two higher bytes value = 2036
-        dw      2041    ; 723 ^ 2 = 522729, two higher bytes value = 2041
-        dw      2047    ; 724 ^ 2 = 524176, two higher bytes value = 2047
-        dw      2053    ; 725 ^ 2 = 525625, two higher bytes value = 2053
-        dw      2058    ; 726 ^ 2 = 527076, two higher bytes value = 2058
-        dw      2064    ; 727 ^ 2 = 528529, two higher bytes value = 2064
-        dw      2070    ; 728 ^ 2 = 529984, two higher bytes value = 2070
-        dw      2075    ; 729 ^ 2 = 531441, two higher bytes value = 2075
-        dw      2081    ; 730 ^ 2 = 532900, two higher bytes value = 2081
-        dw      2087    ; 731 ^ 2 = 534361, two higher bytes value = 2087
-        dw      2093    ; 732 ^ 2 = 535824, two higher bytes value = 2093
-        dw      2098    ; 733 ^ 2 = 537289, two higher bytes value = 2098
-        dw      2104    ; 734 ^ 2 = 538756, two higher bytes value = 2104
-        dw      2110    ; 735 ^ 2 = 540225, two higher bytes value = 2110
-        dw      2116    ; 736 ^ 2 = 541696, two higher bytes value = 2116
-        dw      2121    ; 737 ^ 2 = 543169, two higher bytes value = 2121
-        dw      2127    ; 738 ^ 2 = 544644, two higher bytes value = 2127
-        dw      2133    ; 739 ^ 2 = 546121, two higher bytes value = 2133
-        dw      2139    ; 740 ^ 2 = 547600, two higher bytes value = 2139
-        dw      2144    ; 741 ^ 2 = 549081, two higher bytes value = 2144
-        dw      2150    ; 742 ^ 2 = 550564, two higher bytes value = 2150
-        dw      2156    ; 743 ^ 2 = 552049, two higher bytes value = 2156
-        dw      2162    ; 744 ^ 2 = 553536, two higher bytes value = 2162
-        dw      2168    ; 745 ^ 2 = 555025, two higher bytes value = 2168
-        dw      2173    ; 746 ^ 2 = 556516, two higher bytes value = 2173
-        dw      2179    ; 747 ^ 2 = 558009, two higher bytes value = 2179
-        dw      2185    ; 748 ^ 2 = 559504, two higher bytes value = 2185
-        dw      2191    ; 749 ^ 2 = 561001, two higher bytes value = 2191
-        dw      2197    ; 750 ^ 2 = 562500, two higher bytes value = 2197
-        dw      2203    ; 751 ^ 2 = 564001, two higher bytes value = 2203
-        dw      2209    ; 752 ^ 2 = 565504, two higher bytes value = 2209
-        dw      2214    ; 753 ^ 2 = 567009, two higher bytes value = 2214
-        dw      2220    ; 754 ^ 2 = 568516, two higher bytes value = 2220
-        dw      2226    ; 755 ^ 2 = 570025, two higher bytes value = 2226
-        dw      2232    ; 756 ^ 2 = 571536, two higher bytes value = 2232
-        dw      2238    ; 757 ^ 2 = 573049, two higher bytes value = 2238
-        dw      2244    ; 758 ^ 2 = 574564, two higher bytes value = 2244
-        dw      2250    ; 759 ^ 2 = 576081, two higher bytes value = 2250
-        dw      2256    ; 760 ^ 2 = 577600, two higher bytes value = 2256
-        dw      2262    ; 761 ^ 2 = 579121, two higher bytes value = 2262
-        dw      2268    ; 762 ^ 2 = 580644, two higher bytes value = 2268
-        dw      2274    ; 763 ^ 2 = 582169, two higher bytes value = 2274
-        dw      2280    ; 764 ^ 2 = 583696, two higher bytes value = 2280
-        dw      2286    ; 765 ^ 2 = 585225, two higher bytes value = 2286
-        dw      2292    ; 766 ^ 2 = 586756, two higher bytes value = 2292
-        dw      2298    ; 767 ^ 2 = 588289, two higher bytes value = 2298
-        dw      2304    ; 768 ^ 2 = 589824, two higher bytes value = 2304
-        dw      2310    ; 769 ^ 2 = 591361, two higher bytes value = 2310
-        dw      2316    ; 770 ^ 2 = 592900, two higher bytes value = 2316
-        dw      2322    ; 771 ^ 2 = 594441, two higher bytes value = 2322
-        dw      2328    ; 772 ^ 2 = 595984, two higher bytes value = 2328
-        dw      2334    ; 773 ^ 2 = 597529, two higher bytes value = 2334
-        dw      2340    ; 774 ^ 2 = 599076, two higher bytes value = 2340
-        dw      2346    ; 775 ^ 2 = 600625, two higher bytes value = 2346
-        dw      2352    ; 776 ^ 2 = 602176, two higher bytes value = 2352
-        dw      2358    ; 777 ^ 2 = 603729, two higher bytes value = 2358
-        dw      2364    ; 778 ^ 2 = 605284, two higher bytes value = 2364
-        dw      2370    ; 779 ^ 2 = 606841, two higher bytes value = 2370
-        dw      2376    ; 780 ^ 2 = 608400, two higher bytes value = 2376
-        dw      2382    ; 781 ^ 2 = 609961, two higher bytes value = 2382
-        dw      2388    ; 782 ^ 2 = 611524, two higher bytes value = 2388
-        dw      2394    ; 783 ^ 2 = 613089, two higher bytes value = 2394
-        dw      2401    ; 784 ^ 2 = 614656, two higher bytes value = 2401
-        dw      2407    ; 785 ^ 2 = 616225, two higher bytes value = 2407
-        dw      2413    ; 786 ^ 2 = 617796, two higher bytes value = 2413
-        dw      2419    ; 787 ^ 2 = 619369, two higher bytes value = 2419
-        dw      2425    ; 788 ^ 2 = 620944, two higher bytes value = 2425
-        dw      2431    ; 789 ^ 2 = 622521, two higher bytes value = 2431
-        dw      2437    ; 790 ^ 2 = 624100, two higher bytes value = 2437
-        dw      2444    ; 791 ^ 2 = 625681, two higher bytes value = 2444
-        dw      2450    ; 792 ^ 2 = 627264, two higher bytes value = 2450
-        dw      2456    ; 793 ^ 2 = 628849, two higher bytes value = 2456
-        dw      2462    ; 794 ^ 2 = 630436, two higher bytes value = 2462
-        dw      2468    ; 795 ^ 2 = 632025, two higher bytes value = 2468
-        dw      2475    ; 796 ^ 2 = 633616, two higher bytes value = 2475
-        dw      2481    ; 797 ^ 2 = 635209, two higher bytes value = 2481
-        dw      2487    ; 798 ^ 2 = 636804, two higher bytes value = 2487
-        dw      2493    ; 799 ^ 2 = 638401, two higher bytes value = 2493
-        dw      2500    ; 800 ^ 2 = 640000, two higher bytes value = 2500
-        dw      2506    ; 801 ^ 2 = 641601, two higher bytes value = 2506
-        dw      2512    ; 802 ^ 2 = 643204, two higher bytes value = 2512
-        dw      2518    ; 803 ^ 2 = 644809, two higher bytes value = 2518
-        dw      2525    ; 804 ^ 2 = 646416, two higher bytes value = 2525
-        dw      2531    ; 805 ^ 2 = 648025, two higher bytes value = 2531
-        dw      2537    ; 806 ^ 2 = 649636, two higher bytes value = 2537
-        dw      2543    ; 807 ^ 2 = 651249, two higher bytes value = 2543
-        dw      2550    ; 808 ^ 2 = 652864, two higher bytes value = 2550
-        dw      2556    ; 809 ^ 2 = 654481, two higher bytes value = 2556
-        dw      2562    ; 810 ^ 2 = 656100, two higher bytes value = 2562
-        dw      2569    ; 811 ^ 2 = 657721, two higher bytes value = 2569
-        dw      2575    ; 812 ^ 2 = 659344, two higher bytes value = 2575
-        dw      2581    ; 813 ^ 2 = 660969, two higher bytes value = 2581
-        dw      2588    ; 814 ^ 2 = 662596, two higher bytes value = 2588
-        dw      2594    ; 815 ^ 2 = 664225, two higher bytes value = 2594
-        dw      2601    ; 816 ^ 2 = 665856, two higher bytes value = 2601
-        dw      2607    ; 817 ^ 2 = 667489, two higher bytes value = 2607
-        dw      2613    ; 818 ^ 2 = 669124, two higher bytes value = 2613
-        dw      2620    ; 819 ^ 2 = 670761, two higher bytes value = 2620
-        dw      2626    ; 820 ^ 2 = 672400, two higher bytes value = 2626
-        dw      2632    ; 821 ^ 2 = 674041, two higher bytes value = 2632
-        dw      2639    ; 822 ^ 2 = 675684, two higher bytes value = 2639
-        dw      2645    ; 823 ^ 2 = 677329, two higher bytes value = 2645
-        dw      2652    ; 824 ^ 2 = 678976, two higher bytes value = 2652
-        dw      2658    ; 825 ^ 2 = 680625, two higher bytes value = 2658
-        dw      2665    ; 826 ^ 2 = 682276, two higher bytes value = 2665
-        dw      2671    ; 827 ^ 2 = 683929, two higher bytes value = 2671
-        dw      2678    ; 828 ^ 2 = 685584, two higher bytes value = 2678
-        dw      2684    ; 829 ^ 2 = 687241, two higher bytes value = 2684
-        dw      2691    ; 830 ^ 2 = 688900, two higher bytes value = 2691
-        dw      2697    ; 831 ^ 2 = 690561, two higher bytes value = 2697
-        dw      2704    ; 832 ^ 2 = 692224, two higher bytes value = 2704
-        dw      2710    ; 833 ^ 2 = 693889, two higher bytes value = 2710
-        dw      2717    ; 834 ^ 2 = 695556, two higher bytes value = 2717
-        dw      2723    ; 835 ^ 2 = 697225, two higher bytes value = 2723
-        dw      2730    ; 836 ^ 2 = 698896, two higher bytes value = 2730
-        dw      2736    ; 837 ^ 2 = 700569, two higher bytes value = 2736
-        dw      2743    ; 838 ^ 2 = 702244, two higher bytes value = 2743
-        dw      2749    ; 839 ^ 2 = 703921, two higher bytes value = 2749
-        dw      2756    ; 840 ^ 2 = 705600, two higher bytes value = 2756
-        dw      2762    ; 841 ^ 2 = 707281, two higher bytes value = 2762
-        dw      2769    ; 842 ^ 2 = 708964, two higher bytes value = 2769
-        dw      2775    ; 843 ^ 2 = 710649, two higher bytes value = 2775
-        dw      2782    ; 844 ^ 2 = 712336, two higher bytes value = 2782
-        dw      2789    ; 845 ^ 2 = 714025, two higher bytes value = 2789
-        dw      2795    ; 846 ^ 2 = 715716, two higher bytes value = 2795
-        dw      2802    ; 847 ^ 2 = 717409, two higher bytes value = 2802
-        dw      2809    ; 848 ^ 2 = 719104, two higher bytes value = 2809
-        dw      2815    ; 849 ^ 2 = 720801, two higher bytes value = 2815
-        dw      2822    ; 850 ^ 2 = 722500, two higher bytes value = 2822
-        dw      2828    ; 851 ^ 2 = 724201, two higher bytes value = 2828
-        dw      2835    ; 852 ^ 2 = 725904, two higher bytes value = 2835
-        dw      2842    ; 853 ^ 2 = 727609, two higher bytes value = 2842
-        dw      2848    ; 854 ^ 2 = 729316, two higher bytes value = 2848
-        dw      2855    ; 855 ^ 2 = 731025, two higher bytes value = 2855
-        dw      2862    ; 856 ^ 2 = 732736, two higher bytes value = 2862
-        dw      2868    ; 857 ^ 2 = 734449, two higher bytes value = 2868
-        dw      2875    ; 858 ^ 2 = 736164, two higher bytes value = 2875
-        dw      2882    ; 859 ^ 2 = 737881, two higher bytes value = 2882
-        dw      2889    ; 860 ^ 2 = 739600, two higher bytes value = 2889
-        dw      2895    ; 861 ^ 2 = 741321, two higher bytes value = 2895
-        dw      2902    ; 862 ^ 2 = 743044, two higher bytes value = 2902
-        dw      2909    ; 863 ^ 2 = 744769, two higher bytes value = 2909
-        dw      2916    ; 864 ^ 2 = 746496, two higher bytes value = 2916
-        dw      2922    ; 865 ^ 2 = 748225, two higher bytes value = 2922
-        dw      2929    ; 866 ^ 2 = 749956, two higher bytes value = 2929
-        dw      2936    ; 867 ^ 2 = 751689, two higher bytes value = 2936
-        dw      2943    ; 868 ^ 2 = 753424, two higher bytes value = 2943
-        dw      2949    ; 869 ^ 2 = 755161, two higher bytes value = 2949
-        dw      2956    ; 870 ^ 2 = 756900, two higher bytes value = 2956
-        dw      2963    ; 871 ^ 2 = 758641, two higher bytes value = 2963
-        dw      2970    ; 872 ^ 2 = 760384, two higher bytes value = 2970
-        dw      2977    ; 873 ^ 2 = 762129, two higher bytes value = 2977
-        dw      2983    ; 874 ^ 2 = 763876, two higher bytes value = 2983
-        dw      2990    ; 875 ^ 2 = 765625, two higher bytes value = 2990
-        dw      2997    ; 876 ^ 2 = 767376, two higher bytes value = 2997
-        dw      3004    ; 877 ^ 2 = 769129, two higher bytes value = 3004
-        dw      3011    ; 878 ^ 2 = 770884, two higher bytes value = 3011
-        dw      3018    ; 879 ^ 2 = 772641, two higher bytes value = 3018
-        dw      3025    ; 880 ^ 2 = 774400, two higher bytes value = 3025
-        dw      3031    ; 881 ^ 2 = 776161, two higher bytes value = 3031
-        dw      3038    ; 882 ^ 2 = 777924, two higher bytes value = 3038
-        dw      3045    ; 883 ^ 2 = 779689, two higher bytes value = 3045
-        dw      3052    ; 884 ^ 2 = 781456, two higher bytes value = 3052
-        dw      3059    ; 885 ^ 2 = 783225, two higher bytes value = 3059
-        dw      3066    ; 886 ^ 2 = 784996, two higher bytes value = 3066
-        dw      3073    ; 887 ^ 2 = 786769, two higher bytes value = 3073
-        dw      3080    ; 888 ^ 2 = 788544, two higher bytes value = 3080
-        dw      3087    ; 889 ^ 2 = 790321, two higher bytes value = 3087
-        dw      3094    ; 890 ^ 2 = 792100, two higher bytes value = 3094
-        dw      3101    ; 891 ^ 2 = 793881, two higher bytes value = 3101
-        dw      3108    ; 892 ^ 2 = 795664, two higher bytes value = 3108
-        dw      3115    ; 893 ^ 2 = 797449, two higher bytes value = 3115
-        dw      3122    ; 894 ^ 2 = 799236, two higher bytes value = 3122
-        dw      3129    ; 895 ^ 2 = 801025, two higher bytes value = 3129
-        dw      3136    ; 896 ^ 2 = 802816, two higher bytes value = 3136
-        dw      3143    ; 897 ^ 2 = 804609, two higher bytes value = 3143
-        dw      3150    ; 898 ^ 2 = 806404, two higher bytes value = 3150
-        dw      3157    ; 899 ^ 2 = 808201, two higher bytes value = 3157
-        dw      3164    ; 900 ^ 2 = 810000, two higher bytes value = 3164
-        dw      3171    ; 901 ^ 2 = 811801, two higher bytes value = 3171
-        dw      3178    ; 902 ^ 2 = 813604, two higher bytes value = 3178
-        dw      3185    ; 903 ^ 2 = 815409, two higher bytes value = 3185
-        dw      3192    ; 904 ^ 2 = 817216, two higher bytes value = 3192
-        dw      3199    ; 905 ^ 2 = 819025, two higher bytes value = 3199
-        dw      3206    ; 906 ^ 2 = 820836, two higher bytes value = 3206
-        dw      3213    ; 907 ^ 2 = 822649, two higher bytes value = 3213
-        dw      3220    ; 908 ^ 2 = 824464, two higher bytes value = 3220
-        dw      3227    ; 909 ^ 2 = 826281, two higher bytes value = 3227
-        dw      3234    ; 910 ^ 2 = 828100, two higher bytes value = 3234
-        dw      3241    ; 911 ^ 2 = 829921, two higher bytes value = 3241
-        dw      3249    ; 912 ^ 2 = 831744, two higher bytes value = 3249
-        dw      3256    ; 913 ^ 2 = 833569, two higher bytes value = 3256
-        dw      3263    ; 914 ^ 2 = 835396, two higher bytes value = 3263
-        dw      3270    ; 915 ^ 2 = 837225, two higher bytes value = 3270
-        dw      3277    ; 916 ^ 2 = 839056, two higher bytes value = 3277
-        dw      3284    ; 917 ^ 2 = 840889, two higher bytes value = 3284
-        dw      3291    ; 918 ^ 2 = 842724, two higher bytes value = 3291
-        dw      3299    ; 919 ^ 2 = 844561, two higher bytes value = 3299
-        dw      3306    ; 920 ^ 2 = 846400, two higher bytes value = 3306
-        dw      3313    ; 921 ^ 2 = 848241, two higher bytes value = 3313
-        dw      3320    ; 922 ^ 2 = 850084, two higher bytes value = 3320
-        dw      3327    ; 923 ^ 2 = 851929, two higher bytes value = 3327
-        dw      3335    ; 924 ^ 2 = 853776, two higher bytes value = 3335
-        dw      3342    ; 925 ^ 2 = 855625, two higher bytes value = 3342
-        dw      3349    ; 926 ^ 2 = 857476, two higher bytes value = 3349
-        dw      3356    ; 927 ^ 2 = 859329, two higher bytes value = 3356
-        dw      3364    ; 928 ^ 2 = 861184, two higher bytes value = 3364
-        dw      3371    ; 929 ^ 2 = 863041, two higher bytes value = 3371
-        dw      3378    ; 930 ^ 2 = 864900, two higher bytes value = 3378
-        dw      3385    ; 931 ^ 2 = 866761, two higher bytes value = 3385
-        dw      3393    ; 932 ^ 2 = 868624, two higher bytes value = 3393
-        dw      3400    ; 933 ^ 2 = 870489, two higher bytes value = 3400
-        dw      3407    ; 934 ^ 2 = 872356, two higher bytes value = 3407
-        dw      3414    ; 935 ^ 2 = 874225, two higher bytes value = 3414
-        dw      3422    ; 936 ^ 2 = 876096, two higher bytes value = 3422
-        dw      3429    ; 937 ^ 2 = 877969, two higher bytes value = 3429
-        dw      3436    ; 938 ^ 2 = 879844, two higher bytes value = 3436
-        dw      3444    ; 939 ^ 2 = 881721, two higher bytes value = 3444
-        dw      3451    ; 940 ^ 2 = 883600, two higher bytes value = 3451
-        dw      3458    ; 941 ^ 2 = 885481, two higher bytes value = 3458
-        dw      3466    ; 942 ^ 2 = 887364, two higher bytes value = 3466
-        dw      3473    ; 943 ^ 2 = 889249, two higher bytes value = 3473
-        dw      3481    ; 944 ^ 2 = 891136, two higher bytes value = 3481
-        dw      3488    ; 945 ^ 2 = 893025, two higher bytes value = 3488
-        dw      3495    ; 946 ^ 2 = 894916, two higher bytes value = 3495
-        dw      3503    ; 947 ^ 2 = 896809, two higher bytes value = 3503
-        dw      3510    ; 948 ^ 2 = 898704, two higher bytes value = 3510
-        dw      3517    ; 949 ^ 2 = 900601, two higher bytes value = 3517
-        dw      3525    ; 950 ^ 2 = 902500, two higher bytes value = 3525
-        dw      3532    ; 951 ^ 2 = 904401, two higher bytes value = 3532
-        dw      3540    ; 952 ^ 2 = 906304, two higher bytes value = 3540
-        dw      3547    ; 953 ^ 2 = 908209, two higher bytes value = 3547
-        dw      3555    ; 954 ^ 2 = 910116, two higher bytes value = 3555
-        dw      3562    ; 955 ^ 2 = 912025, two higher bytes value = 3562
-        dw      3570    ; 956 ^ 2 = 913936, two higher bytes value = 3570
-        dw      3577    ; 957 ^ 2 = 915849, two higher bytes value = 3577
-        dw      3585    ; 958 ^ 2 = 917764, two higher bytes value = 3585
-        dw      3592    ; 959 ^ 2 = 919681, two higher bytes value = 3592
-        dw      3600    ; 960 ^ 2 = 921600, two higher bytes value = 3600
-        dw      3607    ; 961 ^ 2 = 923521, two higher bytes value = 3607
-        dw      3615    ; 962 ^ 2 = 925444, two higher bytes value = 3615
-        dw      3622    ; 963 ^ 2 = 927369, two higher bytes value = 3622
-        dw      3630    ; 964 ^ 2 = 929296, two higher bytes value = 3630
-        dw      3637    ; 965 ^ 2 = 931225, two higher bytes value = 3637
-        dw      3645    ; 966 ^ 2 = 933156, two higher bytes value = 3645
-        dw      3652    ; 967 ^ 2 = 935089, two higher bytes value = 3652
-        dw      3660    ; 968 ^ 2 = 937024, two higher bytes value = 3660
-        dw      3667    ; 969 ^ 2 = 938961, two higher bytes value = 3667
-        dw      3675    ; 970 ^ 2 = 940900, two higher bytes value = 3675
-        dw      3682    ; 971 ^ 2 = 942841, two higher bytes value = 3682
-        dw      3690    ; 972 ^ 2 = 944784, two higher bytes value = 3690
-        dw      3698    ; 973 ^ 2 = 946729, two higher bytes value = 3698
-        dw      3705    ; 974 ^ 2 = 948676, two higher bytes value = 3705
-        dw      3713    ; 975 ^ 2 = 950625, two higher bytes value = 3713
-        dw      3721    ; 976 ^ 2 = 952576, two higher bytes value = 3721
-        dw      3728    ; 977 ^ 2 = 954529, two higher bytes value = 3728
-        dw      3736    ; 978 ^ 2 = 956484, two higher bytes value = 3736
-        dw      3743    ; 979 ^ 2 = 958441, two higher bytes value = 3743
-        dw      3751    ; 980 ^ 2 = 960400, two higher bytes value = 3751
-        dw      3759    ; 981 ^ 2 = 962361, two higher bytes value = 3759
-        dw      3766    ; 982 ^ 2 = 964324, two higher bytes value = 3766
-        dw      3774    ; 983 ^ 2 = 966289, two higher bytes value = 3774
-        dw      3782    ; 984 ^ 2 = 968256, two higher bytes value = 3782
-        dw      3789    ; 985 ^ 2 = 970225, two higher bytes value = 3789
-        dw      3797    ; 986 ^ 2 = 972196, two higher bytes value = 3797
-        dw      3805    ; 987 ^ 2 = 974169, two higher bytes value = 3805
-        dw      3813    ; 988 ^ 2 = 976144, two higher bytes value = 3813
-        dw      3820    ; 989 ^ 2 = 978121, two higher bytes value = 3820
-        dw      3828    ; 990 ^ 2 = 980100, two higher bytes value = 3828
-        dw      3836    ; 991 ^ 2 = 982081, two higher bytes value = 3836
-        dw      3844    ; 992 ^ 2 = 984064, two higher bytes value = 3844
-        dw      3851    ; 993 ^ 2 = 986049, two higher bytes value = 3851
-        dw      3859    ; 994 ^ 2 = 988036, two higher bytes value = 3859
-        dw      3867    ; 995 ^ 2 = 990025, two higher bytes value = 3867
-        dw      3875    ; 996 ^ 2 = 992016, two higher bytes value = 3875
-        dw      3882    ; 997 ^ 2 = 994009, two higher bytes value = 3882
-        dw      3890    ; 998 ^ 2 = 996004, two higher bytes value = 3890
-        dw      3898    ; 999 ^ 2 = 998001, two higher bytes value = 3898
-        dw      3906    ; 1000 ^ 2 = 1000000, two higher bytes value = 3906
-        dw      3914    ; 1001 ^ 2 = 1002001, two higher bytes value = 3914
-        dw      3921    ; 1002 ^ 2 = 1004004, two higher bytes value = 3921
-        dw      3929    ; 1003 ^ 2 = 1006009, two higher bytes value = 3929
-        dw      3937    ; 1004 ^ 2 = 1008016, two higher bytes value = 3937
-        dw      3945    ; 1005 ^ 2 = 1010025, two higher bytes value = 3945
-        dw      3953    ; 1006 ^ 2 = 1012036, two higher bytes value = 3953
-        dw      3961    ; 1007 ^ 2 = 1014049, two higher bytes value = 3961
-        dw      3969    ; 1008 ^ 2 = 1016064, two higher bytes value = 3969
-        dw      3976    ; 1009 ^ 2 = 1018081, two higher bytes value = 3976
-        dw      3984    ; 1010 ^ 2 = 1020100, two higher bytes value = 3984
-        dw      3992    ; 1011 ^ 2 = 1022121, two higher bytes value = 3992
-        dw      4000    ; 1012 ^ 2 = 1024144, two higher bytes value = 4000
-        dw      4008    ; 1013 ^ 2 = 1026169, two higher bytes value = 4008
-        dw      4016    ; 1014 ^ 2 = 1028196, two higher bytes value = 4016
-        dw      4024    ; 1015 ^ 2 = 1030225, two higher bytes value = 4024
-        dw      4032    ; 1016 ^ 2 = 1032256, two higher bytes value = 4032
-        dw      4040    ; 1017 ^ 2 = 1034289, two higher bytes value = 4040
-        dw      4048    ; 1018 ^ 2 = 1036324, two higher bytes value = 4048
-        dw      4056    ; 1019 ^ 2 = 1038361, two higher bytes value = 4056
-        dw      4064    ; 1020 ^ 2 = 1040400, two higher bytes value = 4064
-        dw      4072    ; 1021 ^ 2 = 1042441, two higher bytes value = 4072
-        dw      4080    ; 1022 ^ 2 = 1044484, two higher bytes value = 4080
-        dw      4088    ; 1023 ^ 2 = 1046529, two higher bytes value = 4088
-        dw      4096    ; 1024 ^ 2 = 1048576, two higher bytes value = 4096
-        dw      4104    ; 1025 ^ 2 = 1050625, two higher bytes value = 4104
-        dw      4112    ; 1026 ^ 2 = 1052676, two higher bytes value = 4112
-        dw      4120    ; 1027 ^ 2 = 1054729, two higher bytes value = 4120
-        dw      4128    ; 1028 ^ 2 = 1056784, two higher bytes value = 4128
-        dw      4136    ; 1029 ^ 2 = 1058841, two higher bytes value = 4136
-        dw      4144    ; 1030 ^ 2 = 1060900, two higher bytes value = 4144
-        dw      4152    ; 1031 ^ 2 = 1062961, two higher bytes value = 4152
-        dw      4160    ; 1032 ^ 2 = 1065024, two higher bytes value = 4160
-        dw      4168    ; 1033 ^ 2 = 1067089, two higher bytes value = 4168
-        dw      4176    ; 1034 ^ 2 = 1069156, two higher bytes value = 4176
-        dw      4184    ; 1035 ^ 2 = 1071225, two higher bytes value = 4184
-        dw      4192    ; 1036 ^ 2 = 1073296, two higher bytes value = 4192
-        dw      4200    ; 1037 ^ 2 = 1075369, two higher bytes value = 4200
-        dw      4208    ; 1038 ^ 2 = 1077444, two higher bytes value = 4208
-        dw      4216    ; 1039 ^ 2 = 1079521, two higher bytes value = 4216
-        dw      4225    ; 1040 ^ 2 = 1081600, two higher bytes value = 4225
-        dw      4233    ; 1041 ^ 2 = 1083681, two higher bytes value = 4233
-        dw      4241    ; 1042 ^ 2 = 1085764, two higher bytes value = 4241
-        dw      4249    ; 1043 ^ 2 = 1087849, two higher bytes value = 4249
-        dw      4257    ; 1044 ^ 2 = 1089936, two higher bytes value = 4257
-        dw      4265    ; 1045 ^ 2 = 1092025, two higher bytes value = 4265
-        dw      4273    ; 1046 ^ 2 = 1094116, two higher bytes value = 4273
-        dw      4282    ; 1047 ^ 2 = 1096209, two higher bytes value = 4282
-        dw      4290    ; 1048 ^ 2 = 1098304, two higher bytes value = 4290
-        dw      4298    ; 1049 ^ 2 = 1100401, two higher bytes value = 4298
-        dw      4306    ; 1050 ^ 2 = 1102500, two higher bytes value = 4306
-        dw      4314    ; 1051 ^ 2 = 1104601, two higher bytes value = 4314
-        dw      4323    ; 1052 ^ 2 = 1106704, two higher bytes value = 4323
-        dw      4331    ; 1053 ^ 2 = 1108809, two higher bytes value = 4331
-        dw      4339    ; 1054 ^ 2 = 1110916, two higher bytes value = 4339
-        dw      4347    ; 1055 ^ 2 = 1113025, two higher bytes value = 4347
-        dw      4356    ; 1056 ^ 2 = 1115136, two higher bytes value = 4356
-        dw      4364    ; 1057 ^ 2 = 1117249, two higher bytes value = 4364
-        dw      4372    ; 1058 ^ 2 = 1119364, two higher bytes value = 4372
-        dw      4380    ; 1059 ^ 2 = 1121481, two higher bytes value = 4380
-        dw      4389    ; 1060 ^ 2 = 1123600, two higher bytes value = 4389
-        dw      4397    ; 1061 ^ 2 = 1125721, two higher bytes value = 4397
-        dw      4405    ; 1062 ^ 2 = 1127844, two higher bytes value = 4405
-        dw      4413    ; 1063 ^ 2 = 1129969, two higher bytes value = 4413
-        dw      4422    ; 1064 ^ 2 = 1132096, two higher bytes value = 4422
-        dw      4430    ; 1065 ^ 2 = 1134225, two higher bytes value = 4430
-        dw      4438    ; 1066 ^ 2 = 1136356, two higher bytes value = 4438
-        dw      4447    ; 1067 ^ 2 = 1138489, two higher bytes value = 4447
-        dw      4455    ; 1068 ^ 2 = 1140624, two higher bytes value = 4455
-        dw      4463    ; 1069 ^ 2 = 1142761, two higher bytes value = 4463
-        dw      4472    ; 1070 ^ 2 = 1144900, two higher bytes value = 4472
-        dw      4480    ; 1071 ^ 2 = 1147041, two higher bytes value = 4480
-        dw      4489    ; 1072 ^ 2 = 1149184, two higher bytes value = 4489
-        dw      4497    ; 1073 ^ 2 = 1151329, two higher bytes value = 4497
-        dw      4505    ; 1074 ^ 2 = 1153476, two higher bytes value = 4505
-        dw      4514    ; 1075 ^ 2 = 1155625, two higher bytes value = 4514
-        dw      4522    ; 1076 ^ 2 = 1157776, two higher bytes value = 4522
-        dw      4530    ; 1077 ^ 2 = 1159929, two higher bytes value = 4530
-        dw      4539    ; 1078 ^ 2 = 1162084, two higher bytes value = 4539
-        dw      4547    ; 1079 ^ 2 = 1164241, two higher bytes value = 4547
-        dw      4556    ; 1080 ^ 2 = 1166400, two higher bytes value = 4556
-        dw      4564    ; 1081 ^ 2 = 1168561, two higher bytes value = 4564
-        dw      4573    ; 1082 ^ 2 = 1170724, two higher bytes value = 4573
-        dw      4581    ; 1083 ^ 2 = 1172889, two higher bytes value = 4581
-        dw      4590    ; 1084 ^ 2 = 1175056, two higher bytes value = 4590
-        dw      4598    ; 1085 ^ 2 = 1177225, two higher bytes value = 4598
-        dw      4607    ; 1086 ^ 2 = 1179396, two higher bytes value = 4607
-        dw      4615    ; 1087 ^ 2 = 1181569, two higher bytes value = 4615
-        dw      4624    ; 1088 ^ 2 = 1183744, two higher bytes value = 4624
-        dw      4632    ; 1089 ^ 2 = 1185921, two higher bytes value = 4632
-        dw      4641    ; 1090 ^ 2 = 1188100, two higher bytes value = 4641
-        dw      4649    ; 1091 ^ 2 = 1190281, two higher bytes value = 4649
-        dw      4658    ; 1092 ^ 2 = 1192464, two higher bytes value = 4658
-        dw      4666    ; 1093 ^ 2 = 1194649, two higher bytes value = 4666
-        dw      4675    ; 1094 ^ 2 = 1196836, two higher bytes value = 4675
-        dw      4683    ; 1095 ^ 2 = 1199025, two higher bytes value = 4683
-        dw      4692    ; 1096 ^ 2 = 1201216, two higher bytes value = 4692
-        dw      4700    ; 1097 ^ 2 = 1203409, two higher bytes value = 4700
-        dw      4709    ; 1098 ^ 2 = 1205604, two higher bytes value = 4709
-        dw      4717    ; 1099 ^ 2 = 1207801, two higher bytes value = 4717
-        dw      4726    ; 1100 ^ 2 = 1210000, two higher bytes value = 4726
-        dw      4735    ; 1101 ^ 2 = 1212201, two higher bytes value = 4735
-        dw      4743    ; 1102 ^ 2 = 1214404, two higher bytes value = 4743
-        dw      4752    ; 1103 ^ 2 = 1216609, two higher bytes value = 4752
-        dw      4761    ; 1104 ^ 2 = 1218816, two higher bytes value = 4761
-        dw      4769    ; 1105 ^ 2 = 1221025, two higher bytes value = 4769
-        dw      4778    ; 1106 ^ 2 = 1223236, two higher bytes value = 4778
-        dw      4786    ; 1107 ^ 2 = 1225449, two higher bytes value = 4786
-        dw      4795    ; 1108 ^ 2 = 1227664, two higher bytes value = 4795
-        dw      4804    ; 1109 ^ 2 = 1229881, two higher bytes value = 4804
-        dw      4812    ; 1110 ^ 2 = 1232100, two higher bytes value = 4812
-        dw      4821    ; 1111 ^ 2 = 1234321, two higher bytes value = 4821
-        dw      4830    ; 1112 ^ 2 = 1236544, two higher bytes value = 4830
-        dw      4838    ; 1113 ^ 2 = 1238769, two higher bytes value = 4838
-        dw      4847    ; 1114 ^ 2 = 1240996, two higher bytes value = 4847
-        dw      4856    ; 1115 ^ 2 = 1243225, two higher bytes value = 4856
-        dw      4865    ; 1116 ^ 2 = 1245456, two higher bytes value = 4865
-        dw      4873    ; 1117 ^ 2 = 1247689, two higher bytes value = 4873
-        dw      4882    ; 1118 ^ 2 = 1249924, two higher bytes value = 4882
-        dw      4891    ; 1119 ^ 2 = 1252161, two higher bytes value = 4891
-        dw      4900    ; 1120 ^ 2 = 1254400, two higher bytes value = 4900
-        dw      4908    ; 1121 ^ 2 = 1256641, two higher bytes value = 4908
-        dw      4917    ; 1122 ^ 2 = 1258884, two higher bytes value = 4917
-        dw      4926    ; 1123 ^ 2 = 1261129, two higher bytes value = 4926
-        dw      4935    ; 1124 ^ 2 = 1263376, two higher bytes value = 4935
-        dw      4943    ; 1125 ^ 2 = 1265625, two higher bytes value = 4943
-        dw      4952    ; 1126 ^ 2 = 1267876, two higher bytes value = 4952
-        dw      4961    ; 1127 ^ 2 = 1270129, two higher bytes value = 4961
-        dw      4970    ; 1128 ^ 2 = 1272384, two higher bytes value = 4970
-        dw      4979    ; 1129 ^ 2 = 1274641, two higher bytes value = 4979
-        dw      4987    ; 1130 ^ 2 = 1276900, two higher bytes value = 4987
-        dw      4996    ; 1131 ^ 2 = 1279161, two higher bytes value = 4996
-        dw      5005    ; 1132 ^ 2 = 1281424, two higher bytes value = 5005
-        dw      5014    ; 1133 ^ 2 = 1283689, two higher bytes value = 5014
-        dw      5023    ; 1134 ^ 2 = 1285956, two higher bytes value = 5023
-        dw      5032    ; 1135 ^ 2 = 1288225, two higher bytes value = 5032
-        dw      5041    ; 1136 ^ 2 = 1290496, two higher bytes value = 5041
-        dw      5049    ; 1137 ^ 2 = 1292769, two higher bytes value = 5049
-        dw      5058    ; 1138 ^ 2 = 1295044, two higher bytes value = 5058
-        dw      5067    ; 1139 ^ 2 = 1297321, two higher bytes value = 5067
-        dw      5076    ; 1140 ^ 2 = 1299600, two higher bytes value = 5076
-        dw      5085    ; 1141 ^ 2 = 1301881, two higher bytes value = 5085
-        dw      5094    ; 1142 ^ 2 = 1304164, two higher bytes value = 5094
-        dw      5103    ; 1143 ^ 2 = 1306449, two higher bytes value = 5103
-        dw      5112    ; 1144 ^ 2 = 1308736, two higher bytes value = 5112
-        dw      5121    ; 1145 ^ 2 = 1311025, two higher bytes value = 5121
-        dw      5130    ; 1146 ^ 2 = 1313316, two higher bytes value = 5130
-        dw      5139    ; 1147 ^ 2 = 1315609, two higher bytes value = 5139
-        dw      5148    ; 1148 ^ 2 = 1317904, two higher bytes value = 5148
-        dw      5157    ; 1149 ^ 2 = 1320201, two higher bytes value = 5157
-        dw      5166    ; 1150 ^ 2 = 1322500, two higher bytes value = 5166
-        dw      5175    ; 1151 ^ 2 = 1324801, two higher bytes value = 5175
-        dw      5184    ; 1152 ^ 2 = 1327104, two higher bytes value = 5184
-        dw      5193    ; 1153 ^ 2 = 1329409, two higher bytes value = 5193
-        dw      5202    ; 1154 ^ 2 = 1331716, two higher bytes value = 5202
-        dw      5211    ; 1155 ^ 2 = 1334025, two higher bytes value = 5211
-        dw      5220    ; 1156 ^ 2 = 1336336, two higher bytes value = 5220
-        dw      5229    ; 1157 ^ 2 = 1338649, two higher bytes value = 5229
-        dw      5238    ; 1158 ^ 2 = 1340964, two higher bytes value = 5238
-        dw      5247    ; 1159 ^ 2 = 1343281, two higher bytes value = 5247
-        dw      5256    ; 1160 ^ 2 = 1345600, two higher bytes value = 5256
-        dw      5265    ; 1161 ^ 2 = 1347921, two higher bytes value = 5265
-        dw      5274    ; 1162 ^ 2 = 1350244, two higher bytes value = 5274
-        dw      5283    ; 1163 ^ 2 = 1352569, two higher bytes value = 5283
-        dw      5292    ; 1164 ^ 2 = 1354896, two higher bytes value = 5292
-        dw      5301    ; 1165 ^ 2 = 1357225, two higher bytes value = 5301
-        dw      5310    ; 1166 ^ 2 = 1359556, two higher bytes value = 5310
-        dw      5319    ; 1167 ^ 2 = 1361889, two higher bytes value = 5319
-        dw      5329    ; 1168 ^ 2 = 1364224, two higher bytes value = 5329
-        dw      5338    ; 1169 ^ 2 = 1366561, two higher bytes value = 5338
-        dw      5347    ; 1170 ^ 2 = 1368900, two higher bytes value = 5347
-        dw      5356    ; 1171 ^ 2 = 1371241, two higher bytes value = 5356
-        dw      5365    ; 1172 ^ 2 = 1373584, two higher bytes value = 5365
-        dw      5374    ; 1173 ^ 2 = 1375929, two higher bytes value = 5374
-        dw      5383    ; 1174 ^ 2 = 1378276, two higher bytes value = 5383
-        dw      5393    ; 1175 ^ 2 = 1380625, two higher bytes value = 5393
-        dw      5402    ; 1176 ^ 2 = 1382976, two higher bytes value = 5402
-        dw      5411    ; 1177 ^ 2 = 1385329, two higher bytes value = 5411
-        dw      5420    ; 1178 ^ 2 = 1387684, two higher bytes value = 5420
-        dw      5429    ; 1179 ^ 2 = 1390041, two higher bytes value = 5429
-        dw      5439    ; 1180 ^ 2 = 1392400, two higher bytes value = 5439
-        dw      5448    ; 1181 ^ 2 = 1394761, two higher bytes value = 5448
-        dw      5457    ; 1182 ^ 2 = 1397124, two higher bytes value = 5457
-        dw      5466    ; 1183 ^ 2 = 1399489, two higher bytes value = 5466
-        dw      5476    ; 1184 ^ 2 = 1401856, two higher bytes value = 5476
-        dw      5485    ; 1185 ^ 2 = 1404225, two higher bytes value = 5485
-        dw      5494    ; 1186 ^ 2 = 1406596, two higher bytes value = 5494
-        dw      5503    ; 1187 ^ 2 = 1408969, two higher bytes value = 5503
-        dw      5513    ; 1188 ^ 2 = 1411344, two higher bytes value = 5513
-        dw      5522    ; 1189 ^ 2 = 1413721, two higher bytes value = 5522
-        dw      5531    ; 1190 ^ 2 = 1416100, two higher bytes value = 5531
-        dw      5540    ; 1191 ^ 2 = 1418481, two higher bytes value = 5540
-        dw      5550    ; 1192 ^ 2 = 1420864, two higher bytes value = 5550
-        dw      5559    ; 1193 ^ 2 = 1423249, two higher bytes value = 5559
-        dw      5568    ; 1194 ^ 2 = 1425636, two higher bytes value = 5568
-        dw      5578    ; 1195 ^ 2 = 1428025, two higher bytes value = 5578
-        dw      5587    ; 1196 ^ 2 = 1430416, two higher bytes value = 5587
-        dw      5596    ; 1197 ^ 2 = 1432809, two higher bytes value = 5596
-        dw      5606    ; 1198 ^ 2 = 1435204, two higher bytes value = 5606
-        dw      5615    ; 1199 ^ 2 = 1437601, two higher bytes value = 5615
-        dw      5625    ; 1200 ^ 2 = 1440000, two higher bytes value = 5625
-        dw      5634    ; 1201 ^ 2 = 1442401, two higher bytes value = 5634
-        dw      5643    ; 1202 ^ 2 = 1444804, two higher bytes value = 5643
-        dw      5653    ; 1203 ^ 2 = 1447209, two higher bytes value = 5653
-        dw      5662    ; 1204 ^ 2 = 1449616, two higher bytes value = 5662
-        dw      5671    ; 1205 ^ 2 = 1452025, two higher bytes value = 5671
-        dw      5681    ; 1206 ^ 2 = 1454436, two higher bytes value = 5681
-        dw      5690    ; 1207 ^ 2 = 1456849, two higher bytes value = 5690
-        dw      5700    ; 1208 ^ 2 = 1459264, two higher bytes value = 5700
-        dw      5709    ; 1209 ^ 2 = 1461681, two higher bytes value = 5709
-        dw      5719    ; 1210 ^ 2 = 1464100, two higher bytes value = 5719
-        dw      5728    ; 1211 ^ 2 = 1466521, two higher bytes value = 5728
-        dw      5738    ; 1212 ^ 2 = 1468944, two higher bytes value = 5738
-        dw      5747    ; 1213 ^ 2 = 1471369, two higher bytes value = 5747
-        dw      5757    ; 1214 ^ 2 = 1473796, two higher bytes value = 5757
-        dw      5766    ; 1215 ^ 2 = 1476225, two higher bytes value = 5766
-        dw      5776    ; 1216 ^ 2 = 1478656, two higher bytes value = 5776
-        dw      5785    ; 1217 ^ 2 = 1481089, two higher bytes value = 5785
-        dw      5795    ; 1218 ^ 2 = 1483524, two higher bytes value = 5795
-        dw      5804    ; 1219 ^ 2 = 1485961, two higher bytes value = 5804
-        dw      5814    ; 1220 ^ 2 = 1488400, two higher bytes value = 5814
-        dw      5823    ; 1221 ^ 2 = 1490841, two higher bytes value = 5823
-        dw      5833    ; 1222 ^ 2 = 1493284, two higher bytes value = 5833
-        dw      5842    ; 1223 ^ 2 = 1495729, two higher bytes value = 5842
-        dw      5852    ; 1224 ^ 2 = 1498176, two higher bytes value = 5852
-        dw      5861    ; 1225 ^ 2 = 1500625, two higher bytes value = 5861
-        dw      5871    ; 1226 ^ 2 = 1503076, two higher bytes value = 5871
-        dw      5880    ; 1227 ^ 2 = 1505529, two higher bytes value = 5880
-        dw      5890    ; 1228 ^ 2 = 1507984, two higher bytes value = 5890
-        dw      5900    ; 1229 ^ 2 = 1510441, two higher bytes value = 5900
-        dw      5909    ; 1230 ^ 2 = 1512900, two higher bytes value = 5909
-        dw      5919    ; 1231 ^ 2 = 1515361, two higher bytes value = 5919
-        dw      5929    ; 1232 ^ 2 = 1517824, two higher bytes value = 5929
-        dw      5938    ; 1233 ^ 2 = 1520289, two higher bytes value = 5938
-        dw      5948    ; 1234 ^ 2 = 1522756, two higher bytes value = 5948
-        dw      5957    ; 1235 ^ 2 = 1525225, two higher bytes value = 5957
-        dw      5967    ; 1236 ^ 2 = 1527696, two higher bytes value = 5967
-        dw      5977    ; 1237 ^ 2 = 1530169, two higher bytes value = 5977
-        dw      5986    ; 1238 ^ 2 = 1532644, two higher bytes value = 5986
-        dw      5996    ; 1239 ^ 2 = 1535121, two higher bytes value = 5996
-        dw      6006    ; 1240 ^ 2 = 1537600, two higher bytes value = 6006
-        dw      6015    ; 1241 ^ 2 = 1540081, two higher bytes value = 6015
-        dw      6025    ; 1242 ^ 2 = 1542564, two higher bytes value = 6025
-        dw      6035    ; 1243 ^ 2 = 1545049, two higher bytes value = 6035
-        dw      6045    ; 1244 ^ 2 = 1547536, two higher bytes value = 6045
-        dw      6054    ; 1245 ^ 2 = 1550025, two higher bytes value = 6054
-        dw      6064    ; 1246 ^ 2 = 1552516, two higher bytes value = 6064
-        dw      6074    ; 1247 ^ 2 = 1555009, two higher bytes value = 6074
-        dw      6084    ; 1248 ^ 2 = 1557504, two higher bytes value = 6084
-        dw      6093    ; 1249 ^ 2 = 1560001, two higher bytes value = 6093
-        dw      6103    ; 1250 ^ 2 = 1562500, two higher bytes value = 6103
-        dw      6113    ; 1251 ^ 2 = 1565001, two higher bytes value = 6113
-        dw      6123    ; 1252 ^ 2 = 1567504, two higher bytes value = 6123
-        dw      6132    ; 1253 ^ 2 = 1570009, two higher bytes value = 6132
-        dw      6142    ; 1254 ^ 2 = 1572516, two higher bytes value = 6142
-        dw      6152    ; 1255 ^ 2 = 1575025, two higher bytes value = 6152
-        dw      6162    ; 1256 ^ 2 = 1577536, two higher bytes value = 6162
-        dw      6172    ; 1257 ^ 2 = 1580049, two higher bytes value = 6172
-        dw      6181    ; 1258 ^ 2 = 1582564, two higher bytes value = 6181
-        dw      6191    ; 1259 ^ 2 = 1585081, two higher bytes value = 6191
-        dw      6201    ; 1260 ^ 2 = 1587600, two higher bytes value = 6201
-        dw      6211    ; 1261 ^ 2 = 1590121, two higher bytes value = 6211
-        dw      6221    ; 1262 ^ 2 = 1592644, two higher bytes value = 6221
-        dw      6231    ; 1263 ^ 2 = 1595169, two higher bytes value = 6231
-        dw      6241    ; 1264 ^ 2 = 1597696, two higher bytes value = 6241
-        dw      6250    ; 1265 ^ 2 = 1600225, two higher bytes value = 6250
-        dw      6260    ; 1266 ^ 2 = 1602756, two higher bytes value = 6260
-        dw      6270    ; 1267 ^ 2 = 1605289, two higher bytes value = 6270
-        dw      6280    ; 1268 ^ 2 = 1607824, two higher bytes value = 6280
-        dw      6290    ; 1269 ^ 2 = 1610361, two higher bytes value = 6290
-        dw      6300    ; 1270 ^ 2 = 1612900, two higher bytes value = 6300
-        dw      6310    ; 1271 ^ 2 = 1615441, two higher bytes value = 6310
-        dw      6320    ; 1272 ^ 2 = 1617984, two higher bytes value = 6320
-        dw      6330    ; 1273 ^ 2 = 1620529, two higher bytes value = 6330
-        dw      6340    ; 1274 ^ 2 = 1623076, two higher bytes value = 6340
-        dw      6350    ; 1275 ^ 2 = 1625625, two higher bytes value = 6350
-        dw      6360    ; 1276 ^ 2 = 1628176, two higher bytes value = 6360
-        dw      6370    ; 1277 ^ 2 = 1630729, two higher bytes value = 6370
-        dw      6380    ; 1278 ^ 2 = 1633284, two higher bytes value = 6380
-        dw      6390    ; 1279 ^ 2 = 1635841, two higher bytes value = 6390
-        dw      6400    ; 1280 ^ 2 = 1638400, two higher bytes value = 6400
-        dw      6410    ; 1281 ^ 2 = 1640961, two higher bytes value = 6410
-        dw      6420    ; 1282 ^ 2 = 1643524, two higher bytes value = 6420
-        dw      6430    ; 1283 ^ 2 = 1646089, two higher bytes value = 6430
-        dw      6440    ; 1284 ^ 2 = 1648656, two higher bytes value = 6440
-        dw      6450    ; 1285 ^ 2 = 1651225, two higher bytes value = 6450
-        dw      6460    ; 1286 ^ 2 = 1653796, two higher bytes value = 6460
-        dw      6470    ; 1287 ^ 2 = 1656369, two higher bytes value = 6470
-        dw      6480    ; 1288 ^ 2 = 1658944, two higher bytes value = 6480
-        dw      6490    ; 1289 ^ 2 = 1661521, two higher bytes value = 6490
-        dw      6500    ; 1290 ^ 2 = 1664100, two higher bytes value = 6500
-        dw      6510    ; 1291 ^ 2 = 1666681, two higher bytes value = 6510
-        dw      6520    ; 1292 ^ 2 = 1669264, two higher bytes value = 6520
-        dw      6530    ; 1293 ^ 2 = 1671849, two higher bytes value = 6530
-        dw      6540    ; 1294 ^ 2 = 1674436, two higher bytes value = 6540
-        dw      6550    ; 1295 ^ 2 = 1677025, two higher bytes value = 6550
-        dw      6561    ; 1296 ^ 2 = 1679616, two higher bytes value = 6561
-        dw      6571    ; 1297 ^ 2 = 1682209, two higher bytes value = 6571
-        dw      6581    ; 1298 ^ 2 = 1684804, two higher bytes value = 6581
-        dw      6591    ; 1299 ^ 2 = 1687401, two higher bytes value = 6591
-        dw      6601    ; 1300 ^ 2 = 1690000, two higher bytes value = 6601
-        dw      6611    ; 1301 ^ 2 = 1692601, two higher bytes value = 6611
-        dw      6621    ; 1302 ^ 2 = 1695204, two higher bytes value = 6621
-        dw      6632    ; 1303 ^ 2 = 1697809, two higher bytes value = 6632
-        dw      6642    ; 1304 ^ 2 = 1700416, two higher bytes value = 6642
-        dw      6652    ; 1305 ^ 2 = 1703025, two higher bytes value = 6652
-        dw      6662    ; 1306 ^ 2 = 1705636, two higher bytes value = 6662
-        dw      6672    ; 1307 ^ 2 = 1708249, two higher bytes value = 6672
-        dw      6683    ; 1308 ^ 2 = 1710864, two higher bytes value = 6683
-        dw      6693    ; 1309 ^ 2 = 1713481, two higher bytes value = 6693
-        dw      6703    ; 1310 ^ 2 = 1716100, two higher bytes value = 6703
-        dw      6713    ; 1311 ^ 2 = 1718721, two higher bytes value = 6713
-        dw      6724    ; 1312 ^ 2 = 1721344, two higher bytes value = 6724
-        dw      6734    ; 1313 ^ 2 = 1723969, two higher bytes value = 6734
-        dw      6744    ; 1314 ^ 2 = 1726596, two higher bytes value = 6744
-        dw      6754    ; 1315 ^ 2 = 1729225, two higher bytes value = 6754
-        dw      6765    ; 1316 ^ 2 = 1731856, two higher bytes value = 6765
-        dw      6775    ; 1317 ^ 2 = 1734489, two higher bytes value = 6775
-        dw      6785    ; 1318 ^ 2 = 1737124, two higher bytes value = 6785
-        dw      6795    ; 1319 ^ 2 = 1739761, two higher bytes value = 6795
-        dw      6806    ; 1320 ^ 2 = 1742400, two higher bytes value = 6806
-        dw      6816    ; 1321 ^ 2 = 1745041, two higher bytes value = 6816
-        dw      6826    ; 1322 ^ 2 = 1747684, two higher bytes value = 6826
-        dw      6837    ; 1323 ^ 2 = 1750329, two higher bytes value = 6837
-        dw      6847    ; 1324 ^ 2 = 1752976, two higher bytes value = 6847
-        dw      6857    ; 1325 ^ 2 = 1755625, two higher bytes value = 6857
-        dw      6868    ; 1326 ^ 2 = 1758276, two higher bytes value = 6868
-        dw      6878    ; 1327 ^ 2 = 1760929, two higher bytes value = 6878
-        dw      6889    ; 1328 ^ 2 = 1763584, two higher bytes value = 6889
-        dw      6899    ; 1329 ^ 2 = 1766241, two higher bytes value = 6899
-        dw      6909    ; 1330 ^ 2 = 1768900, two higher bytes value = 6909
-        dw      6920    ; 1331 ^ 2 = 1771561, two higher bytes value = 6920
-        dw      6930    ; 1332 ^ 2 = 1774224, two higher bytes value = 6930
-        dw      6940    ; 1333 ^ 2 = 1776889, two higher bytes value = 6940
-        dw      6951    ; 1334 ^ 2 = 1779556, two higher bytes value = 6951
-        dw      6961    ; 1335 ^ 2 = 1782225, two higher bytes value = 6961
-        dw      6972    ; 1336 ^ 2 = 1784896, two higher bytes value = 6972
-        dw      6982    ; 1337 ^ 2 = 1787569, two higher bytes value = 6982
-        dw      6993    ; 1338 ^ 2 = 1790244, two higher bytes value = 6993
-        dw      7003    ; 1339 ^ 2 = 1792921, two higher bytes value = 7003
-        dw      7014    ; 1340 ^ 2 = 1795600, two higher bytes value = 7014
-        dw      7024    ; 1341 ^ 2 = 1798281, two higher bytes value = 7024
-        dw      7035    ; 1342 ^ 2 = 1800964, two higher bytes value = 7035
-        dw      7045    ; 1343 ^ 2 = 1803649, two higher bytes value = 7045
-        dw      7056    ; 1344 ^ 2 = 1806336, two higher bytes value = 7056
-        dw      7066    ; 1345 ^ 2 = 1809025, two higher bytes value = 7066
-        dw      7077    ; 1346 ^ 2 = 1811716, two higher bytes value = 7077
-        dw      7087    ; 1347 ^ 2 = 1814409, two higher bytes value = 7087
-        dw      7098    ; 1348 ^ 2 = 1817104, two higher bytes value = 7098
-        dw      7108    ; 1349 ^ 2 = 1819801, two higher bytes value = 7108
-        dw      7119    ; 1350 ^ 2 = 1822500, two higher bytes value = 7119
-        dw      7129    ; 1351 ^ 2 = 1825201, two higher bytes value = 7129
-        dw      7140    ; 1352 ^ 2 = 1827904, two higher bytes value = 7140
-        dw      7150    ; 1353 ^ 2 = 1830609, two higher bytes value = 7150
-        dw      7161    ; 1354 ^ 2 = 1833316, two higher bytes value = 7161
-        dw      7171    ; 1355 ^ 2 = 1836025, two higher bytes value = 7171
-        dw      7182    ; 1356 ^ 2 = 1838736, two higher bytes value = 7182
-        dw      7193    ; 1357 ^ 2 = 1841449, two higher bytes value = 7193
-        dw      7203    ; 1358 ^ 2 = 1844164, two higher bytes value = 7203
-        dw      7214    ; 1359 ^ 2 = 1846881, two higher bytes value = 7214
-        dw      7225    ; 1360 ^ 2 = 1849600, two higher bytes value = 7225
-        dw      7235    ; 1361 ^ 2 = 1852321, two higher bytes value = 7235
-        dw      7246    ; 1362 ^ 2 = 1855044, two higher bytes value = 7246
-        dw      7256    ; 1363 ^ 2 = 1857769, two higher bytes value = 7256
-        dw      7267    ; 1364 ^ 2 = 1860496, two higher bytes value = 7267
-        dw      7278    ; 1365 ^ 2 = 1863225, two higher bytes value = 7278
-        dw      7288    ; 1366 ^ 2 = 1865956, two higher bytes value = 7288
-        dw      7299    ; 1367 ^ 2 = 1868689, two higher bytes value = 7299
-        dw      7310    ; 1368 ^ 2 = 1871424, two higher bytes value = 7310
-        dw      7320    ; 1369 ^ 2 = 1874161, two higher bytes value = 7320
-        dw      7331    ; 1370 ^ 2 = 1876900, two higher bytes value = 7331
-        dw      7342    ; 1371 ^ 2 = 1879641, two higher bytes value = 7342
-        dw      7353    ; 1372 ^ 2 = 1882384, two higher bytes value = 7353
-        dw      7363    ; 1373 ^ 2 = 1885129, two higher bytes value = 7363
-        dw      7374    ; 1374 ^ 2 = 1887876, two higher bytes value = 7374
-        dw      7385    ; 1375 ^ 2 = 1890625, two higher bytes value = 7385
-        dw      7396    ; 1376 ^ 2 = 1893376, two higher bytes value = 7396
-        dw      7406    ; 1377 ^ 2 = 1896129, two higher bytes value = 7406
-        dw      7417    ; 1378 ^ 2 = 1898884, two higher bytes value = 7417
-        dw      7428    ; 1379 ^ 2 = 1901641, two higher bytes value = 7428
-        dw      7439    ; 1380 ^ 2 = 1904400, two higher bytes value = 7439
-        dw      7449    ; 1381 ^ 2 = 1907161, two higher bytes value = 7449
-        dw      7460    ; 1382 ^ 2 = 1909924, two higher bytes value = 7460
-        dw      7471    ; 1383 ^ 2 = 1912689, two higher bytes value = 7471
-        dw      7482    ; 1384 ^ 2 = 1915456, two higher bytes value = 7482
-        dw      7493    ; 1385 ^ 2 = 1918225, two higher bytes value = 7493
-        dw      7503    ; 1386 ^ 2 = 1920996, two higher bytes value = 7503
-        dw      7514    ; 1387 ^ 2 = 1923769, two higher bytes value = 7514
-        dw      7525    ; 1388 ^ 2 = 1926544, two higher bytes value = 7525
-        dw      7536    ; 1389 ^ 2 = 1929321, two higher bytes value = 7536
-        dw      7547    ; 1390 ^ 2 = 1932100, two higher bytes value = 7547
-        dw      7558    ; 1391 ^ 2 = 1934881, two higher bytes value = 7558
-        dw      7569    ; 1392 ^ 2 = 1937664, two higher bytes value = 7569
-        dw      7579    ; 1393 ^ 2 = 1940449, two higher bytes value = 7579
-        dw      7590    ; 1394 ^ 2 = 1943236, two higher bytes value = 7590
-        dw      7601    ; 1395 ^ 2 = 1946025, two higher bytes value = 7601
-        dw      7612    ; 1396 ^ 2 = 1948816, two higher bytes value = 7612
-        dw      7623    ; 1397 ^ 2 = 1951609, two higher bytes value = 7623
-        dw      7634    ; 1398 ^ 2 = 1954404, two higher bytes value = 7634
-        dw      7645    ; 1399 ^ 2 = 1957201, two higher bytes value = 7645
-        dw      7656    ; 1400 ^ 2 = 1960000, two higher bytes value = 7656
-        dw      7667    ; 1401 ^ 2 = 1962801, two higher bytes value = 7667
-        dw      7678    ; 1402 ^ 2 = 1965604, two higher bytes value = 7678
-        dw      7689    ; 1403 ^ 2 = 1968409, two higher bytes value = 7689
-        dw      7700    ; 1404 ^ 2 = 1971216, two higher bytes value = 7700
-        dw      7711    ; 1405 ^ 2 = 1974025, two higher bytes value = 7711
-        dw      7722    ; 1406 ^ 2 = 1976836, two higher bytes value = 7722
-        dw      7733    ; 1407 ^ 2 = 1979649, two higher bytes value = 7733
-        dw      7744    ; 1408 ^ 2 = 1982464, two higher bytes value = 7744
-        dw      7755    ; 1409 ^ 2 = 1985281, two higher bytes value = 7755
-        dw      7766    ; 1410 ^ 2 = 1988100, two higher bytes value = 7766
-        dw      7777    ; 1411 ^ 2 = 1990921, two higher bytes value = 7777
-        dw      7788    ; 1412 ^ 2 = 1993744, two higher bytes value = 7788
-        dw      7799    ; 1413 ^ 2 = 1996569, two higher bytes value = 7799
-        dw      7810    ; 1414 ^ 2 = 1999396, two higher bytes value = 7810
-        dw      7821    ; 1415 ^ 2 = 2002225, two higher bytes value = 7821
-        dw      7832    ; 1416 ^ 2 = 2005056, two higher bytes value = 7832
-        dw      7843    ; 1417 ^ 2 = 2007889, two higher bytes value = 7843
-        dw      7854    ; 1418 ^ 2 = 2010724, two higher bytes value = 7854
-        dw      7865    ; 1419 ^ 2 = 2013561, two higher bytes value = 7865
-        dw      7876    ; 1420 ^ 2 = 2016400, two higher bytes value = 7876
-        dw      7887    ; 1421 ^ 2 = 2019241, two higher bytes value = 7887
-        dw      7898    ; 1422 ^ 2 = 2022084, two higher bytes value = 7898
-        dw      7909    ; 1423 ^ 2 = 2024929, two higher bytes value = 7909
-        dw      7921    ; 1424 ^ 2 = 2027776, two higher bytes value = 7921
-        dw      7932    ; 1425 ^ 2 = 2030625, two higher bytes value = 7932
-        dw      7943    ; 1426 ^ 2 = 2033476, two higher bytes value = 7943
-        dw      7954    ; 1427 ^ 2 = 2036329, two higher bytes value = 7954
-        dw      7965    ; 1428 ^ 2 = 2039184, two higher bytes value = 7965
-        dw      7976    ; 1429 ^ 2 = 2042041, two higher bytes value = 7976
-        dw      7987    ; 1430 ^ 2 = 2044900, two higher bytes value = 7987
-        dw      7999    ; 1431 ^ 2 = 2047761, two higher bytes value = 7999
-        dw      8010    ; 1432 ^ 2 = 2050624, two higher bytes value = 8010
-        dw      8021    ; 1433 ^ 2 = 2053489, two higher bytes value = 8021
-        dw      8032    ; 1434 ^ 2 = 2056356, two higher bytes value = 8032
-        dw      8043    ; 1435 ^ 2 = 2059225, two higher bytes value = 8043
-        dw      8055    ; 1436 ^ 2 = 2062096, two higher bytes value = 8055
-        dw      8066    ; 1437 ^ 2 = 2064969, two higher bytes value = 8066
-        dw      8077    ; 1438 ^ 2 = 2067844, two higher bytes value = 8077
-        dw      8088    ; 1439 ^ 2 = 2070721, two higher bytes value = 8088
-        dw      8100    ; 1440 ^ 2 = 2073600, two higher bytes value = 8100
-        dw      8111    ; 1441 ^ 2 = 2076481, two higher bytes value = 8111
-        dw      8122    ; 1442 ^ 2 = 2079364, two higher bytes value = 8122
-        dw      8133    ; 1443 ^ 2 = 2082249, two higher bytes value = 8133
-        dw      8145    ; 1444 ^ 2 = 2085136, two higher bytes value = 8145
-        dw      8156    ; 1445 ^ 2 = 2088025, two higher bytes value = 8156
-        dw      8167    ; 1446 ^ 2 = 2090916, two higher bytes value = 8167
-        dw      8178    ; 1447 ^ 2 = 2093809, two higher bytes value = 8178
-        dw      8190    ; 1448 ^ 2 = 2096704, two higher bytes value = 8190
-        dw      8201    ; 1449 ^ 2 = 2099601, two higher bytes value = 8201
-        dw      8212    ; 1450 ^ 2 = 2102500, two higher bytes value = 8212
-        dw      8224    ; 1451 ^ 2 = 2105401, two higher bytes value = 8224
-        dw      8235    ; 1452 ^ 2 = 2108304, two higher bytes value = 8235
-        dw      8246    ; 1453 ^ 2 = 2111209, two higher bytes value = 8246
-        dw      8258    ; 1454 ^ 2 = 2114116, two higher bytes value = 8258
-        dw      8269    ; 1455 ^ 2 = 2117025, two higher bytes value = 8269
-        dw      8281    ; 1456 ^ 2 = 2119936, two higher bytes value = 8281
-        dw      8292    ; 1457 ^ 2 = 2122849, two higher bytes value = 8292
-        dw      8303    ; 1458 ^ 2 = 2125764, two higher bytes value = 8303
-        dw      8315    ; 1459 ^ 2 = 2128681, two higher bytes value = 8315
-        dw      8326    ; 1460 ^ 2 = 2131600, two higher bytes value = 8326
-        dw      8337    ; 1461 ^ 2 = 2134521, two higher bytes value = 8337
-        dw      8349    ; 1462 ^ 2 = 2137444, two higher bytes value = 8349
-        dw      8360    ; 1463 ^ 2 = 2140369, two higher bytes value = 8360
-        dw      8372    ; 1464 ^ 2 = 2143296, two higher bytes value = 8372
-        dw      8383    ; 1465 ^ 2 = 2146225, two higher bytes value = 8383
-        dw      8395    ; 1466 ^ 2 = 2149156, two higher bytes value = 8395
-        dw      8406    ; 1467 ^ 2 = 2152089, two higher bytes value = 8406
-        dw      8418    ; 1468 ^ 2 = 2155024, two higher bytes value = 8418
-        dw      8429    ; 1469 ^ 2 = 2157961, two higher bytes value = 8429
-        dw      8441    ; 1470 ^ 2 = 2160900, two higher bytes value = 8441
-        dw      8452    ; 1471 ^ 2 = 2163841, two higher bytes value = 8452
-        dw      8464    ; 1472 ^ 2 = 2166784, two higher bytes value = 8464
-        dw      8475    ; 1473 ^ 2 = 2169729, two higher bytes value = 8475
-        dw      8487    ; 1474 ^ 2 = 2172676, two higher bytes value = 8487
-        dw      8498    ; 1475 ^ 2 = 2175625, two higher bytes value = 8498
-        dw      8510    ; 1476 ^ 2 = 2178576, two higher bytes value = 8510
-        dw      8521    ; 1477 ^ 2 = 2181529, two higher bytes value = 8521
-        dw      8533    ; 1478 ^ 2 = 2184484, two higher bytes value = 8533
-        dw      8544    ; 1479 ^ 2 = 2187441, two higher bytes value = 8544
-        dw      8556    ; 1480 ^ 2 = 2190400, two higher bytes value = 8556
-        dw      8567    ; 1481 ^ 2 = 2193361, two higher bytes value = 8567
-        dw      8579    ; 1482 ^ 2 = 2196324, two higher bytes value = 8579
-        dw      8590    ; 1483 ^ 2 = 2199289, two higher bytes value = 8590
-        dw      8602    ; 1484 ^ 2 = 2202256, two higher bytes value = 8602
-        dw      8614    ; 1485 ^ 2 = 2205225, two higher bytes value = 8614
-        dw      8625    ; 1486 ^ 2 = 2208196, two higher bytes value = 8625
-        dw      8637    ; 1487 ^ 2 = 2211169, two higher bytes value = 8637
-        dw      8649    ; 1488 ^ 2 = 2214144, two higher bytes value = 8649
-        dw      8660    ; 1489 ^ 2 = 2217121, two higher bytes value = 8660
-        dw      8672    ; 1490 ^ 2 = 2220100, two higher bytes value = 8672
-        dw      8683    ; 1491 ^ 2 = 2223081, two higher bytes value = 8683
-        dw      8695    ; 1492 ^ 2 = 2226064, two higher bytes value = 8695
-        dw      8707    ; 1493 ^ 2 = 2229049, two higher bytes value = 8707
-        dw      8718    ; 1494 ^ 2 = 2232036, two higher bytes value = 8718
-        dw      8730    ; 1495 ^ 2 = 2235025, two higher bytes value = 8730
-        dw      8742    ; 1496 ^ 2 = 2238016, two higher bytes value = 8742
-        dw      8753    ; 1497 ^ 2 = 2241009, two higher bytes value = 8753
-        dw      8765    ; 1498 ^ 2 = 2244004, two higher bytes value = 8765
-        dw      8777    ; 1499 ^ 2 = 2247001, two higher bytes value = 8777
-        dw      8789    ; 1500 ^ 2 = 2250000, two higher bytes value = 8789
-        dw      8800    ; 1501 ^ 2 = 2253001, two higher bytes value = 8800
-        dw      8812    ; 1502 ^ 2 = 2256004, two higher bytes value = 8812
-        dw      8824    ; 1503 ^ 2 = 2259009, two higher bytes value = 8824
-        dw      8836    ; 1504 ^ 2 = 2262016, two higher bytes value = 8836
-        dw      8847    ; 1505 ^ 2 = 2265025, two higher bytes value = 8847
-        dw      8859    ; 1506 ^ 2 = 2268036, two higher bytes value = 8859
-        dw      8871    ; 1507 ^ 2 = 2271049, two higher bytes value = 8871
-        dw      8883    ; 1508 ^ 2 = 2274064, two higher bytes value = 8883
-        dw      8894    ; 1509 ^ 2 = 2277081, two higher bytes value = 8894
-        dw      8906    ; 1510 ^ 2 = 2280100, two higher bytes value = 8906
-        dw      8918    ; 1511 ^ 2 = 2283121, two higher bytes value = 8918
-        dw      8930    ; 1512 ^ 2 = 2286144, two higher bytes value = 8930
-        dw      8942    ; 1513 ^ 2 = 2289169, two higher bytes value = 8942
-        dw      8953    ; 1514 ^ 2 = 2292196, two higher bytes value = 8953
-        dw      8965    ; 1515 ^ 2 = 2295225, two higher bytes value = 8965
-        dw      8977    ; 1516 ^ 2 = 2298256, two higher bytes value = 8977
-        dw      8989    ; 1517 ^ 2 = 2301289, two higher bytes value = 8989
-        dw      9001    ; 1518 ^ 2 = 2304324, two higher bytes value = 9001
-        dw      9013    ; 1519 ^ 2 = 2307361, two higher bytes value = 9013
-        dw      9025    ; 1520 ^ 2 = 2310400, two higher bytes value = 9025
-        dw      9036    ; 1521 ^ 2 = 2313441, two higher bytes value = 9036
-        dw      9048    ; 1522 ^ 2 = 2316484, two higher bytes value = 9048
-        dw      9060    ; 1523 ^ 2 = 2319529, two higher bytes value = 9060
-        dw      9072    ; 1524 ^ 2 = 2322576, two higher bytes value = 9072
-        dw      9084    ; 1525 ^ 2 = 2325625, two higher bytes value = 9084
-        dw      9096    ; 1526 ^ 2 = 2328676, two higher bytes value = 9096
-        dw      9108    ; 1527 ^ 2 = 2331729, two higher bytes value = 9108
-        dw      9120    ; 1528 ^ 2 = 2334784, two higher bytes value = 9120
-        dw      9132    ; 1529 ^ 2 = 2337841, two higher bytes value = 9132
-        dw      9144    ; 1530 ^ 2 = 2340900, two higher bytes value = 9144
-        dw      9156    ; 1531 ^ 2 = 2343961, two higher bytes value = 9156
-        dw      9168    ; 1532 ^ 2 = 2347024, two higher bytes value = 9168
-        dw      9180    ; 1533 ^ 2 = 2350089, two higher bytes value = 9180
-        dw      9192    ; 1534 ^ 2 = 2353156, two higher bytes value = 9192
-        dw      9204    ; 1535 ^ 2 = 2356225, two higher bytes value = 9204
-        dw      9216    ; 1536 ^ 2 = 2359296, two higher bytes value = 9216
-        dw      9228    ; 1537 ^ 2 = 2362369, two higher bytes value = 9228
-        dw      9240    ; 1538 ^ 2 = 2365444, two higher bytes value = 9240
-        dw      9252    ; 1539 ^ 2 = 2368521, two higher bytes value = 9252
-        dw      9264    ; 1540 ^ 2 = 2371600, two higher bytes value = 9264
-        dw      9276    ; 1541 ^ 2 = 2374681, two higher bytes value = 9276
-        dw      9288    ; 1542 ^ 2 = 2377764, two higher bytes value = 9288
-        dw      9300    ; 1543 ^ 2 = 2380849, two higher bytes value = 9300
-        dw      9312    ; 1544 ^ 2 = 2383936, two higher bytes value = 9312
-        dw      9324    ; 1545 ^ 2 = 2387025, two higher bytes value = 9324
-        dw      9336    ; 1546 ^ 2 = 2390116, two higher bytes value = 9336
-        dw      9348    ; 1547 ^ 2 = 2393209, two higher bytes value = 9348
-        dw      9360    ; 1548 ^ 2 = 2396304, two higher bytes value = 9360
-        dw      9372    ; 1549 ^ 2 = 2399401, two higher bytes value = 9372
-        dw      9384    ; 1550 ^ 2 = 2402500, two higher bytes value = 9384
-        dw      9396    ; 1551 ^ 2 = 2405601, two higher bytes value = 9396
-        dw      9409    ; 1552 ^ 2 = 2408704, two higher bytes value = 9409
-        dw      9421    ; 1553 ^ 2 = 2411809, two higher bytes value = 9421
-        dw      9433    ; 1554 ^ 2 = 2414916, two higher bytes value = 9433
-        dw      9445    ; 1555 ^ 2 = 2418025, two higher bytes value = 9445
-        dw      9457    ; 1556 ^ 2 = 2421136, two higher bytes value = 9457
-        dw      9469    ; 1557 ^ 2 = 2424249, two higher bytes value = 9469
-        dw      9481    ; 1558 ^ 2 = 2427364, two higher bytes value = 9481
-        dw      9494    ; 1559 ^ 2 = 2430481, two higher bytes value = 9494
-        dw      9506    ; 1560 ^ 2 = 2433600, two higher bytes value = 9506
-        dw      9518    ; 1561 ^ 2 = 2436721, two higher bytes value = 9518
-        dw      9530    ; 1562 ^ 2 = 2439844, two higher bytes value = 9530
-        dw      9542    ; 1563 ^ 2 = 2442969, two higher bytes value = 9542
-        dw      9555    ; 1564 ^ 2 = 2446096, two higher bytes value = 9555
-        dw      9567    ; 1565 ^ 2 = 2449225, two higher bytes value = 9567
-        dw      9579    ; 1566 ^ 2 = 2452356, two higher bytes value = 9579
-        dw      9591    ; 1567 ^ 2 = 2455489, two higher bytes value = 9591
-        dw      9604    ; 1568 ^ 2 = 2458624, two higher bytes value = 9604
-        dw      9616    ; 1569 ^ 2 = 2461761, two higher bytes value = 9616
-        dw      9628    ; 1570 ^ 2 = 2464900, two higher bytes value = 9628
-        dw      9640    ; 1571 ^ 2 = 2468041, two higher bytes value = 9640
-        dw      9653    ; 1572 ^ 2 = 2471184, two higher bytes value = 9653
-        dw      9665    ; 1573 ^ 2 = 2474329, two higher bytes value = 9665
-        dw      9677    ; 1574 ^ 2 = 2477476, two higher bytes value = 9677
-        dw      9689    ; 1575 ^ 2 = 2480625, two higher bytes value = 9689
-        dw      9702    ; 1576 ^ 2 = 2483776, two higher bytes value = 9702
-        dw      9714    ; 1577 ^ 2 = 2486929, two higher bytes value = 9714
-        dw      9726    ; 1578 ^ 2 = 2490084, two higher bytes value = 9726
-        dw      9739    ; 1579 ^ 2 = 2493241, two higher bytes value = 9739
-        dw      9751    ; 1580 ^ 2 = 2496400, two higher bytes value = 9751
-        dw      9763    ; 1581 ^ 2 = 2499561, two higher bytes value = 9763
-        dw      9776    ; 1582 ^ 2 = 2502724, two higher bytes value = 9776
-        dw      9788    ; 1583 ^ 2 = 2505889, two higher bytes value = 9788
-        dw      9801    ; 1584 ^ 2 = 2509056, two higher bytes value = 9801
-        dw      9813    ; 1585 ^ 2 = 2512225, two higher bytes value = 9813
-        dw      9825    ; 1586 ^ 2 = 2515396, two higher bytes value = 9825
-        dw      9838    ; 1587 ^ 2 = 2518569, two higher bytes value = 9838
-        dw      9850    ; 1588 ^ 2 = 2521744, two higher bytes value = 9850
-        dw      9862    ; 1589 ^ 2 = 2524921, two higher bytes value = 9862
-        dw      9875    ; 1590 ^ 2 = 2528100, two higher bytes value = 9875
-        dw      9887    ; 1591 ^ 2 = 2531281, two higher bytes value = 9887
-        dw      9900    ; 1592 ^ 2 = 2534464, two higher bytes value = 9900
-        dw      9912    ; 1593 ^ 2 = 2537649, two higher bytes value = 9912
-        dw      9925    ; 1594 ^ 2 = 2540836, two higher bytes value = 9925
-        dw      9937    ; 1595 ^ 2 = 2544025, two higher bytes value = 9937
-        dw      9950    ; 1596 ^ 2 = 2547216, two higher bytes value = 9950
-        dw      9962    ; 1597 ^ 2 = 2550409, two higher bytes value = 9962
-        dw      9975    ; 1598 ^ 2 = 2553604, two higher bytes value = 9975
-        dw      9987    ; 1599 ^ 2 = 2556801, two higher bytes value = 9987
-        dw      10000   ; 1600 ^ 2 = 2560000, two higher bytes value = 10000
-        dw      10012   ; 1601 ^ 2 = 2563201, two higher bytes value = 10012
-        dw      10025   ; 1602 ^ 2 = 2566404, two higher bytes value = 10025
-        dw      10037   ; 1603 ^ 2 = 2569609, two higher bytes value = 10037
-        dw      10050   ; 1604 ^ 2 = 2572816, two higher bytes value = 10050
-        dw      10062   ; 1605 ^ 2 = 2576025, two higher bytes value = 10062
-        dw      10075   ; 1606 ^ 2 = 2579236, two higher bytes value = 10075
-        dw      10087   ; 1607 ^ 2 = 2582449, two higher bytes value = 10087
-        dw      10100   ; 1608 ^ 2 = 2585664, two higher bytes value = 10100
-        dw      10112   ; 1609 ^ 2 = 2588881, two higher bytes value = 10112
-        dw      10125   ; 1610 ^ 2 = 2592100, two higher bytes value = 10125
-        dw      10137   ; 1611 ^ 2 = 2595321, two higher bytes value = 10137
-        dw      10150   ; 1612 ^ 2 = 2598544, two higher bytes value = 10150
-        dw      10163   ; 1613 ^ 2 = 2601769, two higher bytes value = 10163
-        dw      10175   ; 1614 ^ 2 = 2604996, two higher bytes value = 10175
-        dw      10188   ; 1615 ^ 2 = 2608225, two higher bytes value = 10188
-        dw      10201   ; 1616 ^ 2 = 2611456, two higher bytes value = 10201
-        dw      10213   ; 1617 ^ 2 = 2614689, two higher bytes value = 10213
-        dw      10226   ; 1618 ^ 2 = 2617924, two higher bytes value = 10226
-        dw      10238   ; 1619 ^ 2 = 2621161, two higher bytes value = 10238
-        dw      10251   ; 1620 ^ 2 = 2624400, two higher bytes value = 10251
-        dw      10264   ; 1621 ^ 2 = 2627641, two higher bytes value = 10264
-        dw      10276   ; 1622 ^ 2 = 2630884, two higher bytes value = 10276
-        dw      10289   ; 1623 ^ 2 = 2634129, two higher bytes value = 10289
-        dw      10302   ; 1624 ^ 2 = 2637376, two higher bytes value = 10302
-        dw      10314   ; 1625 ^ 2 = 2640625, two higher bytes value = 10314
-        dw      10327   ; 1626 ^ 2 = 2643876, two higher bytes value = 10327
-        dw      10340   ; 1627 ^ 2 = 2647129, two higher bytes value = 10340
-        dw      10353   ; 1628 ^ 2 = 2650384, two higher bytes value = 10353
-        dw      10365   ; 1629 ^ 2 = 2653641, two higher bytes value = 10365
-        dw      10378   ; 1630 ^ 2 = 2656900, two higher bytes value = 10378
-        dw      10391   ; 1631 ^ 2 = 2660161, two higher bytes value = 10391
-        dw      10404   ; 1632 ^ 2 = 2663424, two higher bytes value = 10404
-        dw      10416   ; 1633 ^ 2 = 2666689, two higher bytes value = 10416
-        dw      10429   ; 1634 ^ 2 = 2669956, two higher bytes value = 10429
-        dw      10442   ; 1635 ^ 2 = 2673225, two higher bytes value = 10442
-        dw      10455   ; 1636 ^ 2 = 2676496, two higher bytes value = 10455
-        dw      10467   ; 1637 ^ 2 = 2679769, two higher bytes value = 10467
-        dw      10480   ; 1638 ^ 2 = 2683044, two higher bytes value = 10480
-        dw      10493   ; 1639 ^ 2 = 2686321, two higher bytes value = 10493
-        dw      10506   ; 1640 ^ 2 = 2689600, two higher bytes value = 10506
-        dw      10519   ; 1641 ^ 2 = 2692881, two higher bytes value = 10519
-        dw      10531   ; 1642 ^ 2 = 2696164, two higher bytes value = 10531
-        dw      10544   ; 1643 ^ 2 = 2699449, two higher bytes value = 10544
-        dw      10557   ; 1644 ^ 2 = 2702736, two higher bytes value = 10557
-        dw      10570   ; 1645 ^ 2 = 2706025, two higher bytes value = 10570
-        dw      10583   ; 1646 ^ 2 = 2709316, two higher bytes value = 10583
-        dw      10596   ; 1647 ^ 2 = 2712609, two higher bytes value = 10596
-        dw      10609   ; 1648 ^ 2 = 2715904, two higher bytes value = 10609
-        dw      10621   ; 1649 ^ 2 = 2719201, two higher bytes value = 10621
-        dw      10634   ; 1650 ^ 2 = 2722500, two higher bytes value = 10634
-        dw      10647   ; 1651 ^ 2 = 2725801, two higher bytes value = 10647
-        dw      10660   ; 1652 ^ 2 = 2729104, two higher bytes value = 10660
-        dw      10673   ; 1653 ^ 2 = 2732409, two higher bytes value = 10673
-        dw      10686   ; 1654 ^ 2 = 2735716, two higher bytes value = 10686
-        dw      10699   ; 1655 ^ 2 = 2739025, two higher bytes value = 10699
-        dw      10712   ; 1656 ^ 2 = 2742336, two higher bytes value = 10712
-        dw      10725   ; 1657 ^ 2 = 2745649, two higher bytes value = 10725
-        dw      10738   ; 1658 ^ 2 = 2748964, two higher bytes value = 10738
-        dw      10751   ; 1659 ^ 2 = 2752281, two higher bytes value = 10751
-        dw      10764   ; 1660 ^ 2 = 2755600, two higher bytes value = 10764
-        dw      10777   ; 1661 ^ 2 = 2758921, two higher bytes value = 10777
-        dw      10790   ; 1662 ^ 2 = 2762244, two higher bytes value = 10790
-        dw      10803   ; 1663 ^ 2 = 2765569, two higher bytes value = 10803
-        dw      10816   ; 1664 ^ 2 = 2768896, two higher bytes value = 10816
-        dw      10829   ; 1665 ^ 2 = 2772225, two higher bytes value = 10829
-        dw      10842   ; 1666 ^ 2 = 2775556, two higher bytes value = 10842
-        dw      10855   ; 1667 ^ 2 = 2778889, two higher bytes value = 10855
-        dw      10868   ; 1668 ^ 2 = 2782224, two higher bytes value = 10868
-        dw      10881   ; 1669 ^ 2 = 2785561, two higher bytes value = 10881
-        dw      10894   ; 1670 ^ 2 = 2788900, two higher bytes value = 10894
-        dw      10907   ; 1671 ^ 2 = 2792241, two higher bytes value = 10907
-        dw      10920   ; 1672 ^ 2 = 2795584, two higher bytes value = 10920
-        dw      10933   ; 1673 ^ 2 = 2798929, two higher bytes value = 10933
-        dw      10946   ; 1674 ^ 2 = 2802276, two higher bytes value = 10946
-        dw      10959   ; 1675 ^ 2 = 2805625, two higher bytes value = 10959
-        dw      10972   ; 1676 ^ 2 = 2808976, two higher bytes value = 10972
-        dw      10985   ; 1677 ^ 2 = 2812329, two higher bytes value = 10985
-        dw      10998   ; 1678 ^ 2 = 2815684, two higher bytes value = 10998
-        dw      11011   ; 1679 ^ 2 = 2819041, two higher bytes value = 11011
-        dw      11025   ; 1680 ^ 2 = 2822400, two higher bytes value = 11025
-        dw      11038   ; 1681 ^ 2 = 2825761, two higher bytes value = 11038
-        dw      11051   ; 1682 ^ 2 = 2829124, two higher bytes value = 11051
-        dw      11064   ; 1683 ^ 2 = 2832489, two higher bytes value = 11064
-        dw      11077   ; 1684 ^ 2 = 2835856, two higher bytes value = 11077
-        dw      11090   ; 1685 ^ 2 = 2839225, two higher bytes value = 11090
-        dw      11103   ; 1686 ^ 2 = 2842596, two higher bytes value = 11103
-        dw      11117   ; 1687 ^ 2 = 2845969, two higher bytes value = 11117
-        dw      11130   ; 1688 ^ 2 = 2849344, two higher bytes value = 11130
-        dw      11143   ; 1689 ^ 2 = 2852721, two higher bytes value = 11143
-        dw      11156   ; 1690 ^ 2 = 2856100, two higher bytes value = 11156
-        dw      11169   ; 1691 ^ 2 = 2859481, two higher bytes value = 11169
-        dw      11183   ; 1692 ^ 2 = 2862864, two higher bytes value = 11183
-        dw      11196   ; 1693 ^ 2 = 2866249, two higher bytes value = 11196
-        dw      11209   ; 1694 ^ 2 = 2869636, two higher bytes value = 11209
-        dw      11222   ; 1695 ^ 2 = 2873025, two higher bytes value = 11222
-        dw      11236   ; 1696 ^ 2 = 2876416, two higher bytes value = 11236
-        dw      11249   ; 1697 ^ 2 = 2879809, two higher bytes value = 11249
-        dw      11262   ; 1698 ^ 2 = 2883204, two higher bytes value = 11262
-        dw      11275   ; 1699 ^ 2 = 2886601, two higher bytes value = 11275
-        dw      11289   ; 1700 ^ 2 = 2890000, two higher bytes value = 11289
-        dw      11302   ; 1701 ^ 2 = 2893401, two higher bytes value = 11302
-        dw      11315   ; 1702 ^ 2 = 2896804, two higher bytes value = 11315
-        dw      11328   ; 1703 ^ 2 = 2900209, two higher bytes value = 11328
-        dw      11342   ; 1704 ^ 2 = 2903616, two higher bytes value = 11342
-        dw      11355   ; 1705 ^ 2 = 2907025, two higher bytes value = 11355
-        dw      11368   ; 1706 ^ 2 = 2910436, two higher bytes value = 11368
-        dw      11382   ; 1707 ^ 2 = 2913849, two higher bytes value = 11382
-        dw      11395   ; 1708 ^ 2 = 2917264, two higher bytes value = 11395
-        dw      11408   ; 1709 ^ 2 = 2920681, two higher bytes value = 11408
-        dw      11422   ; 1710 ^ 2 = 2924100, two higher bytes value = 11422
-        dw      11435   ; 1711 ^ 2 = 2927521, two higher bytes value = 11435
-        dw      11449   ; 1712 ^ 2 = 2930944, two higher bytes value = 11449
-        dw      11462   ; 1713 ^ 2 = 2934369, two higher bytes value = 11462
-        dw      11475   ; 1714 ^ 2 = 2937796, two higher bytes value = 11475
-        dw      11489   ; 1715 ^ 2 = 2941225, two higher bytes value = 11489
-        dw      11502   ; 1716 ^ 2 = 2944656, two higher bytes value = 11502
-        dw      11515   ; 1717 ^ 2 = 2948089, two higher bytes value = 11515
-        dw      11529   ; 1718 ^ 2 = 2951524, two higher bytes value = 11529
-        dw      11542   ; 1719 ^ 2 = 2954961, two higher bytes value = 11542
-        dw      11556   ; 1720 ^ 2 = 2958400, two higher bytes value = 11556
-        dw      11569   ; 1721 ^ 2 = 2961841, two higher bytes value = 11569
-        dw      11583   ; 1722 ^ 2 = 2965284, two higher bytes value = 11583
-        dw      11596   ; 1723 ^ 2 = 2968729, two higher bytes value = 11596
-        dw      11610   ; 1724 ^ 2 = 2972176, two higher bytes value = 11610
-        dw      11623   ; 1725 ^ 2 = 2975625, two higher bytes value = 11623
-        dw      11637   ; 1726 ^ 2 = 2979076, two higher bytes value = 11637
-        dw      11650   ; 1727 ^ 2 = 2982529, two higher bytes value = 11650
-        dw      11664   ; 1728 ^ 2 = 2985984, two higher bytes value = 11664
-        dw      11677   ; 1729 ^ 2 = 2989441, two higher bytes value = 11677
-        dw      11691   ; 1730 ^ 2 = 2992900, two higher bytes value = 11691
-        dw      11704   ; 1731 ^ 2 = 2996361, two higher bytes value = 11704
-        dw      11718   ; 1732 ^ 2 = 2999824, two higher bytes value = 11718
-        dw      11731   ; 1733 ^ 2 = 3003289, two higher bytes value = 11731
-        dw      11745   ; 1734 ^ 2 = 3006756, two higher bytes value = 11745
-        dw      11758   ; 1735 ^ 2 = 3010225, two higher bytes value = 11758
-        dw      11772   ; 1736 ^ 2 = 3013696, two higher bytes value = 11772
-        dw      11785   ; 1737 ^ 2 = 3017169, two higher bytes value = 11785
-        dw      11799   ; 1738 ^ 2 = 3020644, two higher bytes value = 11799
-        dw      11812   ; 1739 ^ 2 = 3024121, two higher bytes value = 11812
-        dw      11826   ; 1740 ^ 2 = 3027600, two higher bytes value = 11826
-        dw      11840   ; 1741 ^ 2 = 3031081, two higher bytes value = 11840
-        dw      11853   ; 1742 ^ 2 = 3034564, two higher bytes value = 11853
-        dw      11867   ; 1743 ^ 2 = 3038049, two higher bytes value = 11867
-        dw      11881   ; 1744 ^ 2 = 3041536, two higher bytes value = 11881
-        dw      11894   ; 1745 ^ 2 = 3045025, two higher bytes value = 11894
-        dw      11908   ; 1746 ^ 2 = 3048516, two higher bytes value = 11908
-        dw      11921   ; 1747 ^ 2 = 3052009, two higher bytes value = 11921
-        dw      11935   ; 1748 ^ 2 = 3055504, two higher bytes value = 11935
-        dw      11949   ; 1749 ^ 2 = 3059001, two higher bytes value = 11949
-        dw      11962   ; 1750 ^ 2 = 3062500, two higher bytes value = 11962
-        dw      11976   ; 1751 ^ 2 = 3066001, two higher bytes value = 11976
-        dw      11990   ; 1752 ^ 2 = 3069504, two higher bytes value = 11990
-        dw      12003   ; 1753 ^ 2 = 3073009, two higher bytes value = 12003
-        dw      12017   ; 1754 ^ 2 = 3076516, two higher bytes value = 12017
-        dw      12031   ; 1755 ^ 2 = 3080025, two higher bytes value = 12031
-        dw      12045   ; 1756 ^ 2 = 3083536, two higher bytes value = 12045
-        dw      12058   ; 1757 ^ 2 = 3087049, two higher bytes value = 12058
-        dw      12072   ; 1758 ^ 2 = 3090564, two higher bytes value = 12072
-        dw      12086   ; 1759 ^ 2 = 3094081, two higher bytes value = 12086
-        dw      12100   ; 1760 ^ 2 = 3097600, two higher bytes value = 12100
-        dw      12113   ; 1761 ^ 2 = 3101121, two higher bytes value = 12113
-        dw      12127   ; 1762 ^ 2 = 3104644, two higher bytes value = 12127
-        dw      12141   ; 1763 ^ 2 = 3108169, two higher bytes value = 12141
-        dw      12155   ; 1764 ^ 2 = 3111696, two higher bytes value = 12155
-        dw      12168   ; 1765 ^ 2 = 3115225, two higher bytes value = 12168
-        dw      12182   ; 1766 ^ 2 = 3118756, two higher bytes value = 12182
-        dw      12196   ; 1767 ^ 2 = 3122289, two higher bytes value = 12196
-        dw      12210   ; 1768 ^ 2 = 3125824, two higher bytes value = 12210
-        dw      12224   ; 1769 ^ 2 = 3129361, two higher bytes value = 12224
-        dw      12237   ; 1770 ^ 2 = 3132900, two higher bytes value = 12237
-        dw      12251   ; 1771 ^ 2 = 3136441, two higher bytes value = 12251
-        dw      12265   ; 1772 ^ 2 = 3139984, two higher bytes value = 12265
-        dw      12279   ; 1773 ^ 2 = 3143529, two higher bytes value = 12279
-        dw      12293   ; 1774 ^ 2 = 3147076, two higher bytes value = 12293
-        dw      12307   ; 1775 ^ 2 = 3150625, two higher bytes value = 12307
-        dw      12321   ; 1776 ^ 2 = 3154176, two higher bytes value = 12321
-        dw      12334   ; 1777 ^ 2 = 3157729, two higher bytes value = 12334
-        dw      12348   ; 1778 ^ 2 = 3161284, two higher bytes value = 12348
-        dw      12362   ; 1779 ^ 2 = 3164841, two higher bytes value = 12362
-        dw      12376   ; 1780 ^ 2 = 3168400, two higher bytes value = 12376
-        dw      12390   ; 1781 ^ 2 = 3171961, two higher bytes value = 12390
-        dw      12404   ; 1782 ^ 2 = 3175524, two higher bytes value = 12404
-        dw      12418   ; 1783 ^ 2 = 3179089, two higher bytes value = 12418
-        dw      12432   ; 1784 ^ 2 = 3182656, two higher bytes value = 12432
-        dw      12446   ; 1785 ^ 2 = 3186225, two higher bytes value = 12446
-        dw      12460   ; 1786 ^ 2 = 3189796, two higher bytes value = 12460
-        dw      12474   ; 1787 ^ 2 = 3193369, two higher bytes value = 12474
-        dw      12488   ; 1788 ^ 2 = 3196944, two higher bytes value = 12488
-        dw      12502   ; 1789 ^ 2 = 3200521, two higher bytes value = 12502
-        dw      12516   ; 1790 ^ 2 = 3204100, two higher bytes value = 12516
-        dw      12530   ; 1791 ^ 2 = 3207681, two higher bytes value = 12530
-        dw      12544   ; 1792 ^ 2 = 3211264, two higher bytes value = 12544
-        dw      12558   ; 1793 ^ 2 = 3214849, two higher bytes value = 12558
-        dw      12572   ; 1794 ^ 2 = 3218436, two higher bytes value = 12572
-        dw      12586   ; 1795 ^ 2 = 3222025, two higher bytes value = 12586
-        dw      12600   ; 1796 ^ 2 = 3225616, two higher bytes value = 12600
-        dw      12614   ; 1797 ^ 2 = 3229209, two higher bytes value = 12614
-        dw      12628   ; 1798 ^ 2 = 3232804, two higher bytes value = 12628
-        dw      12642   ; 1799 ^ 2 = 3236401, two higher bytes value = 12642
-        dw      12656   ; 1800 ^ 2 = 3240000, two higher bytes value = 12656
-        dw      12670   ; 1801 ^ 2 = 3243601, two higher bytes value = 12670
-        dw      12684   ; 1802 ^ 2 = 3247204, two higher bytes value = 12684
-        dw      12698   ; 1803 ^ 2 = 3250809, two higher bytes value = 12698
-        dw      12712   ; 1804 ^ 2 = 3254416, two higher bytes value = 12712
-        dw      12726   ; 1805 ^ 2 = 3258025, two higher bytes value = 12726
-        dw      12740   ; 1806 ^ 2 = 3261636, two higher bytes value = 12740
-        dw      12754   ; 1807 ^ 2 = 3265249, two higher bytes value = 12754
-        dw      12769   ; 1808 ^ 2 = 3268864, two higher bytes value = 12769
-        dw      12783   ; 1809 ^ 2 = 3272481, two higher bytes value = 12783
-        dw      12797   ; 1810 ^ 2 = 3276100, two higher bytes value = 12797
-        dw      12811   ; 1811 ^ 2 = 3279721, two higher bytes value = 12811
-        dw      12825   ; 1812 ^ 2 = 3283344, two higher bytes value = 12825
-        dw      12839   ; 1813 ^ 2 = 3286969, two higher bytes value = 12839
-        dw      12853   ; 1814 ^ 2 = 3290596, two higher bytes value = 12853
-        dw      12868   ; 1815 ^ 2 = 3294225, two higher bytes value = 12868
-        dw      12882   ; 1816 ^ 2 = 3297856, two higher bytes value = 12882
-        dw      12896   ; 1817 ^ 2 = 3301489, two higher bytes value = 12896
-        dw      12910   ; 1818 ^ 2 = 3305124, two higher bytes value = 12910
-        dw      12924   ; 1819 ^ 2 = 3308761, two higher bytes value = 12924
-        dw      12939   ; 1820 ^ 2 = 3312400, two higher bytes value = 12939
-        dw      12953   ; 1821 ^ 2 = 3316041, two higher bytes value = 12953
-        dw      12967   ; 1822 ^ 2 = 3319684, two higher bytes value = 12967
-        dw      12981   ; 1823 ^ 2 = 3323329, two higher bytes value = 12981
-        dw      12996   ; 1824 ^ 2 = 3326976, two higher bytes value = 12996
-        dw      13010   ; 1825 ^ 2 = 3330625, two higher bytes value = 13010
-        dw      13024   ; 1826 ^ 2 = 3334276, two higher bytes value = 13024
-        dw      13038   ; 1827 ^ 2 = 3337929, two higher bytes value = 13038
-        dw      13053   ; 1828 ^ 2 = 3341584, two higher bytes value = 13053
-        dw      13067   ; 1829 ^ 2 = 3345241, two higher bytes value = 13067
-        dw      13081   ; 1830 ^ 2 = 3348900, two higher bytes value = 13081
-        dw      13095   ; 1831 ^ 2 = 3352561, two higher bytes value = 13095
-        dw      13110   ; 1832 ^ 2 = 3356224, two higher bytes value = 13110
-        dw      13124   ; 1833 ^ 2 = 3359889, two higher bytes value = 13124
-        dw      13138   ; 1834 ^ 2 = 3363556, two higher bytes value = 13138
-        dw      13153   ; 1835 ^ 2 = 3367225, two higher bytes value = 13153
-        dw      13167   ; 1836 ^ 2 = 3370896, two higher bytes value = 13167
-        dw      13181   ; 1837 ^ 2 = 3374569, two higher bytes value = 13181
-        dw      13196   ; 1838 ^ 2 = 3378244, two higher bytes value = 13196
-        dw      13210   ; 1839 ^ 2 = 3381921, two higher bytes value = 13210
-        dw      13225   ; 1840 ^ 2 = 3385600, two higher bytes value = 13225
-        dw      13239   ; 1841 ^ 2 = 3389281, two higher bytes value = 13239
-        dw      13253   ; 1842 ^ 2 = 3392964, two higher bytes value = 13253
-        dw      13268   ; 1843 ^ 2 = 3396649, two higher bytes value = 13268
-        dw      13282   ; 1844 ^ 2 = 3400336, two higher bytes value = 13282
-        dw      13296   ; 1845 ^ 2 = 3404025, two higher bytes value = 13296
-        dw      13311   ; 1846 ^ 2 = 3407716, two higher bytes value = 13311
-        dw      13325   ; 1847 ^ 2 = 3411409, two higher bytes value = 13325
-        dw      13340   ; 1848 ^ 2 = 3415104, two higher bytes value = 13340
-        dw      13354   ; 1849 ^ 2 = 3418801, two higher bytes value = 13354
-        dw      13369   ; 1850 ^ 2 = 3422500, two higher bytes value = 13369
-        dw      13383   ; 1851 ^ 2 = 3426201, two higher bytes value = 13383
-        dw      13398   ; 1852 ^ 2 = 3429904, two higher bytes value = 13398
-        dw      13412   ; 1853 ^ 2 = 3433609, two higher bytes value = 13412
-        dw      13427   ; 1854 ^ 2 = 3437316, two higher bytes value = 13427
-        dw      13441   ; 1855 ^ 2 = 3441025, two higher bytes value = 13441
-        dw      13456   ; 1856 ^ 2 = 3444736, two higher bytes value = 13456
-        dw      13470   ; 1857 ^ 2 = 3448449, two higher bytes value = 13470
-        dw      13485   ; 1858 ^ 2 = 3452164, two higher bytes value = 13485
-        dw      13499   ; 1859 ^ 2 = 3455881, two higher bytes value = 13499
-        dw      13514   ; 1860 ^ 2 = 3459600, two higher bytes value = 13514
-        dw      13528   ; 1861 ^ 2 = 3463321, two higher bytes value = 13528
-        dw      13543   ; 1862 ^ 2 = 3467044, two higher bytes value = 13543
-        dw      13557   ; 1863 ^ 2 = 3470769, two higher bytes value = 13557
-        dw      13572   ; 1864 ^ 2 = 3474496, two higher bytes value = 13572
-        dw      13586   ; 1865 ^ 2 = 3478225, two higher bytes value = 13586
-        dw      13601   ; 1866 ^ 2 = 3481956, two higher bytes value = 13601
-        dw      13615   ; 1867 ^ 2 = 3485689, two higher bytes value = 13615
-        dw      13630   ; 1868 ^ 2 = 3489424, two higher bytes value = 13630
-        dw      13645   ; 1869 ^ 2 = 3493161, two higher bytes value = 13645
-        dw      13659   ; 1870 ^ 2 = 3496900, two higher bytes value = 13659
-        dw      13674   ; 1871 ^ 2 = 3500641, two higher bytes value = 13674
-        dw      13689   ; 1872 ^ 2 = 3504384, two higher bytes value = 13689
-        dw      13703   ; 1873 ^ 2 = 3508129, two higher bytes value = 13703
-        dw      13718   ; 1874 ^ 2 = 3511876, two higher bytes value = 13718
-        dw      13732   ; 1875 ^ 2 = 3515625, two higher bytes value = 13732
-        dw      13747   ; 1876 ^ 2 = 3519376, two higher bytes value = 13747
-        dw      13762   ; 1877 ^ 2 = 3523129, two higher bytes value = 13762
-        dw      13776   ; 1878 ^ 2 = 3526884, two higher bytes value = 13776
-        dw      13791   ; 1879 ^ 2 = 3530641, two higher bytes value = 13791
-        dw      13806   ; 1880 ^ 2 = 3534400, two higher bytes value = 13806
-        dw      13820   ; 1881 ^ 2 = 3538161, two higher bytes value = 13820
-        dw      13835   ; 1882 ^ 2 = 3541924, two higher bytes value = 13835
-        dw      13850   ; 1883 ^ 2 = 3545689, two higher bytes value = 13850
-        dw      13865   ; 1884 ^ 2 = 3549456, two higher bytes value = 13865
-        dw      13879   ; 1885 ^ 2 = 3553225, two higher bytes value = 13879
-        dw      13894   ; 1886 ^ 2 = 3556996, two higher bytes value = 13894
-        dw      13909   ; 1887 ^ 2 = 3560769, two higher bytes value = 13909
-        dw      13924   ; 1888 ^ 2 = 3564544, two higher bytes value = 13924
-        dw      13938   ; 1889 ^ 2 = 3568321, two higher bytes value = 13938
-        dw      13953   ; 1890 ^ 2 = 3572100, two higher bytes value = 13953
-        dw      13968   ; 1891 ^ 2 = 3575881, two higher bytes value = 13968
-        dw      13983   ; 1892 ^ 2 = 3579664, two higher bytes value = 13983
-        dw      13997   ; 1893 ^ 2 = 3583449, two higher bytes value = 13997
-        dw      14012   ; 1894 ^ 2 = 3587236, two higher bytes value = 14012
-        dw      14027   ; 1895 ^ 2 = 3591025, two higher bytes value = 14027
-        dw      14042   ; 1896 ^ 2 = 3594816, two higher bytes value = 14042
-        dw      14057   ; 1897 ^ 2 = 3598609, two higher bytes value = 14057
-        dw      14071   ; 1898 ^ 2 = 3602404, two higher bytes value = 14071
-        dw      14086   ; 1899 ^ 2 = 3606201, two higher bytes value = 14086
-        dw      14101   ; 1900 ^ 2 = 3610000, two higher bytes value = 14101
-        dw      14116   ; 1901 ^ 2 = 3613801, two higher bytes value = 14116
-        dw      14131   ; 1902 ^ 2 = 3617604, two higher bytes value = 14131
-        dw      14146   ; 1903 ^ 2 = 3621409, two higher bytes value = 14146
-        dw      14161   ; 1904 ^ 2 = 3625216, two higher bytes value = 14161
-        dw      14175   ; 1905 ^ 2 = 3629025, two higher bytes value = 14175
-        dw      14190   ; 1906 ^ 2 = 3632836, two higher bytes value = 14190
-        dw      14205   ; 1907 ^ 2 = 3636649, two higher bytes value = 14205
-        dw      14220   ; 1908 ^ 2 = 3640464, two higher bytes value = 14220
-        dw      14235   ; 1909 ^ 2 = 3644281, two higher bytes value = 14235
-        dw      14250   ; 1910 ^ 2 = 3648100, two higher bytes value = 14250
-        dw      14265   ; 1911 ^ 2 = 3651921, two higher bytes value = 14265
-        dw      14280   ; 1912 ^ 2 = 3655744, two higher bytes value = 14280
-        dw      14295   ; 1913 ^ 2 = 3659569, two higher bytes value = 14295
-        dw      14310   ; 1914 ^ 2 = 3663396, two higher bytes value = 14310
-        dw      14325   ; 1915 ^ 2 = 3667225, two higher bytes value = 14325
-        dw      14340   ; 1916 ^ 2 = 3671056, two higher bytes value = 14340
-        dw      14355   ; 1917 ^ 2 = 3674889, two higher bytes value = 14355
-        dw      14370   ; 1918 ^ 2 = 3678724, two higher bytes value = 14370
-        dw      14385   ; 1919 ^ 2 = 3682561, two higher bytes value = 14385
-        dw      14400   ; 1920 ^ 2 = 3686400, two higher bytes value = 14400
-        dw      14415   ; 1921 ^ 2 = 3690241, two higher bytes value = 14415
-        dw      14430   ; 1922 ^ 2 = 3694084, two higher bytes value = 14430
-        dw      14445   ; 1923 ^ 2 = 3697929, two higher bytes value = 14445
-        dw      14460   ; 1924 ^ 2 = 3701776, two higher bytes value = 14460
-        dw      14475   ; 1925 ^ 2 = 3705625, two higher bytes value = 14475
-        dw      14490   ; 1926 ^ 2 = 3709476, two higher bytes value = 14490
-        dw      14505   ; 1927 ^ 2 = 3713329, two higher bytes value = 14505
-        dw      14520   ; 1928 ^ 2 = 3717184, two higher bytes value = 14520
-        dw      14535   ; 1929 ^ 2 = 3721041, two higher bytes value = 14535
-        dw      14550   ; 1930 ^ 2 = 3724900, two higher bytes value = 14550
-        dw      14565   ; 1931 ^ 2 = 3728761, two higher bytes value = 14565
-        dw      14580   ; 1932 ^ 2 = 3732624, two higher bytes value = 14580
-        dw      14595   ; 1933 ^ 2 = 3736489, two higher bytes value = 14595
-        dw      14610   ; 1934 ^ 2 = 3740356, two higher bytes value = 14610
-        dw      14625   ; 1935 ^ 2 = 3744225, two higher bytes value = 14625
-        dw      14641   ; 1936 ^ 2 = 3748096, two higher bytes value = 14641
-        dw      14656   ; 1937 ^ 2 = 3751969, two higher bytes value = 14656
-        dw      14671   ; 1938 ^ 2 = 3755844, two higher bytes value = 14671
-        dw      14686   ; 1939 ^ 2 = 3759721, two higher bytes value = 14686
-        dw      14701   ; 1940 ^ 2 = 3763600, two higher bytes value = 14701
-        dw      14716   ; 1941 ^ 2 = 3767481, two higher bytes value = 14716
-        dw      14731   ; 1942 ^ 2 = 3771364, two higher bytes value = 14731
-        dw      14747   ; 1943 ^ 2 = 3775249, two higher bytes value = 14747
-        dw      14762   ; 1944 ^ 2 = 3779136, two higher bytes value = 14762
-        dw      14777   ; 1945 ^ 2 = 3783025, two higher bytes value = 14777
-        dw      14792   ; 1946 ^ 2 = 3786916, two higher bytes value = 14792
-        dw      14807   ; 1947 ^ 2 = 3790809, two higher bytes value = 14807
-        dw      14823   ; 1948 ^ 2 = 3794704, two higher bytes value = 14823
-        dw      14838   ; 1949 ^ 2 = 3798601, two higher bytes value = 14838
-        dw      14853   ; 1950 ^ 2 = 3802500, two higher bytes value = 14853
-        dw      14868   ; 1951 ^ 2 = 3806401, two higher bytes value = 14868
-        dw      14884   ; 1952 ^ 2 = 3810304, two higher bytes value = 14884
-        dw      14899   ; 1953 ^ 2 = 3814209, two higher bytes value = 14899
-        dw      14914   ; 1954 ^ 2 = 3818116, two higher bytes value = 14914
-        dw      14929   ; 1955 ^ 2 = 3822025, two higher bytes value = 14929
-        dw      14945   ; 1956 ^ 2 = 3825936, two higher bytes value = 14945
-        dw      14960   ; 1957 ^ 2 = 3829849, two higher bytes value = 14960
-        dw      14975   ; 1958 ^ 2 = 3833764, two higher bytes value = 14975
-        dw      14990   ; 1959 ^ 2 = 3837681, two higher bytes value = 14990
-        dw      15006   ; 1960 ^ 2 = 3841600, two higher bytes value = 15006
-        dw      15021   ; 1961 ^ 2 = 3845521, two higher bytes value = 15021
-        dw      15036   ; 1962 ^ 2 = 3849444, two higher bytes value = 15036
-        dw      15052   ; 1963 ^ 2 = 3853369, two higher bytes value = 15052
-        dw      15067   ; 1964 ^ 2 = 3857296, two higher bytes value = 15067
-        dw      15082   ; 1965 ^ 2 = 3861225, two higher bytes value = 15082
-        dw      15098   ; 1966 ^ 2 = 3865156, two higher bytes value = 15098
-        dw      15113   ; 1967 ^ 2 = 3869089, two higher bytes value = 15113
-        dw      15129   ; 1968 ^ 2 = 3873024, two higher bytes value = 15129
-        dw      15144   ; 1969 ^ 2 = 3876961, two higher bytes value = 15144
-        dw      15159   ; 1970 ^ 2 = 3880900, two higher bytes value = 15159
-        dw      15175   ; 1971 ^ 2 = 3884841, two higher bytes value = 15175
-        dw      15190   ; 1972 ^ 2 = 3888784, two higher bytes value = 15190
-        dw      15205   ; 1973 ^ 2 = 3892729, two higher bytes value = 15205
-        dw      15221   ; 1974 ^ 2 = 3896676, two higher bytes value = 15221
-        dw      15236   ; 1975 ^ 2 = 3900625, two higher bytes value = 15236
-        dw      15252   ; 1976 ^ 2 = 3904576, two higher bytes value = 15252
-        dw      15267   ; 1977 ^ 2 = 3908529, two higher bytes value = 15267
-        dw      15283   ; 1978 ^ 2 = 3912484, two higher bytes value = 15283
-        dw      15298   ; 1979 ^ 2 = 3916441, two higher bytes value = 15298
-        dw      15314   ; 1980 ^ 2 = 3920400, two higher bytes value = 15314
-        dw      15329   ; 1981 ^ 2 = 3924361, two higher bytes value = 15329
-        dw      15345   ; 1982 ^ 2 = 3928324, two higher bytes value = 15345
-        dw      15360   ; 1983 ^ 2 = 3932289, two higher bytes value = 15360
-        dw      15376   ; 1984 ^ 2 = 3936256, two higher bytes value = 15376
-        dw      15391   ; 1985 ^ 2 = 3940225, two higher bytes value = 15391
-        dw      15407   ; 1986 ^ 2 = 3944196, two higher bytes value = 15407
-        dw      15422   ; 1987 ^ 2 = 3948169, two higher bytes value = 15422
-        dw      15438   ; 1988 ^ 2 = 3952144, two higher bytes value = 15438
-        dw      15453   ; 1989 ^ 2 = 3956121, two higher bytes value = 15453
-        dw      15469   ; 1990 ^ 2 = 3960100, two higher bytes value = 15469
-        dw      15484   ; 1991 ^ 2 = 3964081, two higher bytes value = 15484
-        dw      15500   ; 1992 ^ 2 = 3968064, two higher bytes value = 15500
-        dw      15515   ; 1993 ^ 2 = 3972049, two higher bytes value = 15515
-        dw      15531   ; 1994 ^ 2 = 3976036, two higher bytes value = 15531
-        dw      15546   ; 1995 ^ 2 = 3980025, two higher bytes value = 15546
-        dw      15562   ; 1996 ^ 2 = 3984016, two higher bytes value = 15562
-        dw      15578   ; 1997 ^ 2 = 3988009, two higher bytes value = 15578
-        dw      15593   ; 1998 ^ 2 = 3992004, two higher bytes value = 15593
-        dw      15609   ; 1999 ^ 2 = 3996001, two higher bytes value = 15609
-        dw      15625   ; 2000 ^ 2 = 4000000, two higher bytes value = 15625
-        dw      15640   ; 2001 ^ 2 = 4004001, two higher bytes value = 15640
-        dw      15656   ; 2002 ^ 2 = 4008004, two higher bytes value = 15656
-        dw      15671   ; 2003 ^ 2 = 4012009, two higher bytes value = 15671
-        dw      15687   ; 2004 ^ 2 = 4016016, two higher bytes value = 15687
-        dw      15703   ; 2005 ^ 2 = 4020025, two higher bytes value = 15703
-        dw      15718   ; 2006 ^ 2 = 4024036, two higher bytes value = 15718
-        dw      15734   ; 2007 ^ 2 = 4028049, two higher bytes value = 15734
-        dw      15750   ; 2008 ^ 2 = 4032064, two higher bytes value = 15750
-        dw      15765   ; 2009 ^ 2 = 4036081, two higher bytes value = 15765
-        dw      15781   ; 2010 ^ 2 = 4040100, two higher bytes value = 15781
-        dw      15797   ; 2011 ^ 2 = 4044121, two higher bytes value = 15797
-        dw      15813   ; 2012 ^ 2 = 4048144, two higher bytes value = 15813
-        dw      15828   ; 2013 ^ 2 = 4052169, two higher bytes value = 15828
-        dw      15844   ; 2014 ^ 2 = 4056196, two higher bytes value = 15844
-        dw      15860   ; 2015 ^ 2 = 4060225, two higher bytes value = 15860
-        dw      15876   ; 2016 ^ 2 = 4064256, two higher bytes value = 15876
-        dw      15891   ; 2017 ^ 2 = 4068289, two higher bytes value = 15891
-        dw      15907   ; 2018 ^ 2 = 4072324, two higher bytes value = 15907
-        dw      15923   ; 2019 ^ 2 = 4076361, two higher bytes value = 15923
-        dw      15939   ; 2020 ^ 2 = 4080400, two higher bytes value = 15939
-        dw      15954   ; 2021 ^ 2 = 4084441, two higher bytes value = 15954
-        dw      15970   ; 2022 ^ 2 = 4088484, two higher bytes value = 15970
-        dw      15986   ; 2023 ^ 2 = 4092529, two higher bytes value = 15986
-        dw      16002   ; 2024 ^ 2 = 4096576, two higher bytes value = 16002
-        dw      16018   ; 2025 ^ 2 = 4100625, two higher bytes value = 16018
-        dw      16033   ; 2026 ^ 2 = 4104676, two higher bytes value = 16033
-        dw      16049   ; 2027 ^ 2 = 4108729, two higher bytes value = 16049
-        dw      16065   ; 2028 ^ 2 = 4112784, two higher bytes value = 16065
-        dw      16081   ; 2029 ^ 2 = 4116841, two higher bytes value = 16081
-        dw      16097   ; 2030 ^ 2 = 4120900, two higher bytes value = 16097
-        dw      16113   ; 2031 ^ 2 = 4124961, two higher bytes value = 16113
-        dw      16129   ; 2032 ^ 2 = 4129024, two higher bytes value = 16129
-        dw      16144   ; 2033 ^ 2 = 4133089, two higher bytes value = 16144
-        dw      16160   ; 2034 ^ 2 = 4137156, two higher bytes value = 16160
-        dw      16176   ; 2035 ^ 2 = 4141225, two higher bytes value = 16176
-        dw      16192   ; 2036 ^ 2 = 4145296, two higher bytes value = 16192
-        dw      16208   ; 2037 ^ 2 = 4149369, two higher bytes value = 16208
-        dw      16224   ; 2038 ^ 2 = 4153444, two higher bytes value = 16224
-        dw      16240   ; 2039 ^ 2 = 4157521, two higher bytes value = 16240
-        dw      16256   ; 2040 ^ 2 = 4161600, two higher bytes value = 16256
-        dw      16272   ; 2041 ^ 2 = 4165681, two higher bytes value = 16272
-        dw      16288   ; 2042 ^ 2 = 4169764, two higher bytes value = 16288
-        dw      16304   ; 2043 ^ 2 = 4173849, two higher bytes value = 16304
-        dw      16320   ; 2044 ^ 2 = 4177936, two higher bytes value = 16320
-        dw      16336   ; 2045 ^ 2 = 4182025, two higher bytes value = 16336
-        dw      16352   ; 2046 ^ 2 = 4186116, two higher bytes value = 16352
-        dw      16368   ; 2047 ^ 2 = 4190209, two higher bytes value = 16368
-        dw      16384   ; 2048 ^ 2 = 4194304, two higher bytes value = 16384
-        dw      16400   ; 2049 ^ 2 = 4198401, two higher bytes value = 16400
-        dw      16416   ; 2050 ^ 2 = 4202500, two higher bytes value = 16416
-        dw      16432   ; 2051 ^ 2 = 4206601, two higher bytes value = 16432
-        dw      16448   ; 2052 ^ 2 = 4210704, two higher bytes value = 16448
-        dw      16464   ; 2053 ^ 2 = 4214809, two higher bytes value = 16464
-        dw      16480   ; 2054 ^ 2 = 4218916, two higher bytes value = 16480
-        dw      16496   ; 2055 ^ 2 = 4223025, two higher bytes value = 16496
-        dw      16512   ; 2056 ^ 2 = 4227136, two higher bytes value = 16512
-        dw      16528   ; 2057 ^ 2 = 4231249, two higher bytes value = 16528
-        dw      16544   ; 2058 ^ 2 = 4235364, two higher bytes value = 16544
-        dw      16560   ; 2059 ^ 2 = 4239481, two higher bytes value = 16560
-        dw      16576   ; 2060 ^ 2 = 4243600, two higher bytes value = 16576
-        dw      16592   ; 2061 ^ 2 = 4247721, two higher bytes value = 16592
-        dw      16608   ; 2062 ^ 2 = 4251844, two higher bytes value = 16608
-        dw      16624   ; 2063 ^ 2 = 4255969, two higher bytes value = 16624
-        dw      16641   ; 2064 ^ 2 = 4260096, two higher bytes value = 16641
-        dw      16657   ; 2065 ^ 2 = 4264225, two higher bytes value = 16657
-        dw      16673   ; 2066 ^ 2 = 4268356, two higher bytes value = 16673
-        dw      16689   ; 2067 ^ 2 = 4272489, two higher bytes value = 16689
-        dw      16705   ; 2068 ^ 2 = 4276624, two higher bytes value = 16705
-        dw      16721   ; 2069 ^ 2 = 4280761, two higher bytes value = 16721
-        dw      16737   ; 2070 ^ 2 = 4284900, two higher bytes value = 16737
-        dw      16754   ; 2071 ^ 2 = 4289041, two higher bytes value = 16754
-        dw      16770   ; 2072 ^ 2 = 4293184, two higher bytes value = 16770
-        dw      16786   ; 2073 ^ 2 = 4297329, two higher bytes value = 16786
-        dw      16802   ; 2074 ^ 2 = 4301476, two higher bytes value = 16802
-        dw      16818   ; 2075 ^ 2 = 4305625, two higher bytes value = 16818
-        dw      16835   ; 2076 ^ 2 = 4309776, two higher bytes value = 16835
-        dw      16851   ; 2077 ^ 2 = 4313929, two higher bytes value = 16851
-        dw      16867   ; 2078 ^ 2 = 4318084, two higher bytes value = 16867
-        dw      16883   ; 2079 ^ 2 = 4322241, two higher bytes value = 16883
-        dw      16900   ; 2080 ^ 2 = 4326400, two higher bytes value = 16900
-        dw      16916   ; 2081 ^ 2 = 4330561, two higher bytes value = 16916
-        dw      16932   ; 2082 ^ 2 = 4334724, two higher bytes value = 16932
-        dw      16948   ; 2083 ^ 2 = 4338889, two higher bytes value = 16948
-        dw      16965   ; 2084 ^ 2 = 4343056, two higher bytes value = 16965
-        dw      16981   ; 2085 ^ 2 = 4347225, two higher bytes value = 16981
-        dw      16997   ; 2086 ^ 2 = 4351396, two higher bytes value = 16997
-        dw      17013   ; 2087 ^ 2 = 4355569, two higher bytes value = 17013
-        dw      17030   ; 2088 ^ 2 = 4359744, two higher bytes value = 17030
-        dw      17046   ; 2089 ^ 2 = 4363921, two higher bytes value = 17046
-        dw      17062   ; 2090 ^ 2 = 4368100, two higher bytes value = 17062
-        dw      17079   ; 2091 ^ 2 = 4372281, two higher bytes value = 17079
-        dw      17095   ; 2092 ^ 2 = 4376464, two higher bytes value = 17095
-        dw      17111   ; 2093 ^ 2 = 4380649, two higher bytes value = 17111
-        dw      17128   ; 2094 ^ 2 = 4384836, two higher bytes value = 17128
-        dw      17144   ; 2095 ^ 2 = 4389025, two higher bytes value = 17144
-        dw      17161   ; 2096 ^ 2 = 4393216, two higher bytes value = 17161
-        dw      17177   ; 2097 ^ 2 = 4397409, two higher bytes value = 17177
-        dw      17193   ; 2098 ^ 2 = 4401604, two higher bytes value = 17193
-        dw      17210   ; 2099 ^ 2 = 4405801, two higher bytes value = 17210
-        dw      17226   ; 2100 ^ 2 = 4410000, two higher bytes value = 17226
-        dw      17242   ; 2101 ^ 2 = 4414201, two higher bytes value = 17242
-        dw      17259   ; 2102 ^ 2 = 4418404, two higher bytes value = 17259
-        dw      17275   ; 2103 ^ 2 = 4422609, two higher bytes value = 17275
-        dw      17292   ; 2104 ^ 2 = 4426816, two higher bytes value = 17292
-        dw      17308   ; 2105 ^ 2 = 4431025, two higher bytes value = 17308
-        dw      17325   ; 2106 ^ 2 = 4435236, two higher bytes value = 17325
-        dw      17341   ; 2107 ^ 2 = 4439449, two higher bytes value = 17341
-        dw      17358   ; 2108 ^ 2 = 4443664, two higher bytes value = 17358
-        dw      17374   ; 2109 ^ 2 = 4447881, two higher bytes value = 17374
-        dw      17391   ; 2110 ^ 2 = 4452100, two higher bytes value = 17391
-        dw      17407   ; 2111 ^ 2 = 4456321, two higher bytes value = 17407
-        dw      17424   ; 2112 ^ 2 = 4460544, two higher bytes value = 17424
-        dw      17440   ; 2113 ^ 2 = 4464769, two higher bytes value = 17440
-        dw      17457   ; 2114 ^ 2 = 4468996, two higher bytes value = 17457
-        dw      17473   ; 2115 ^ 2 = 4473225, two higher bytes value = 17473
-        dw      17490   ; 2116 ^ 2 = 4477456, two higher bytes value = 17490
-        dw      17506   ; 2117 ^ 2 = 4481689, two higher bytes value = 17506
-        dw      17523   ; 2118 ^ 2 = 4485924, two higher bytes value = 17523
-        dw      17539   ; 2119 ^ 2 = 4490161, two higher bytes value = 17539
-        dw      17556   ; 2120 ^ 2 = 4494400, two higher bytes value = 17556
-        dw      17572   ; 2121 ^ 2 = 4498641, two higher bytes value = 17572
-        dw      17589   ; 2122 ^ 2 = 4502884, two higher bytes value = 17589
-        dw      17605   ; 2123 ^ 2 = 4507129, two higher bytes value = 17605
-        dw      17622   ; 2124 ^ 2 = 4511376, two higher bytes value = 17622
-        dw      17639   ; 2125 ^ 2 = 4515625, two higher bytes value = 17639
-        dw      17655   ; 2126 ^ 2 = 4519876, two higher bytes value = 17655
-        dw      17672   ; 2127 ^ 2 = 4524129, two higher bytes value = 17672
-        dw      17689   ; 2128 ^ 2 = 4528384, two higher bytes value = 17689
-        dw      17705   ; 2129 ^ 2 = 4532641, two higher bytes value = 17705
-        dw      17722   ; 2130 ^ 2 = 4536900, two higher bytes value = 17722
-        dw      17738   ; 2131 ^ 2 = 4541161, two higher bytes value = 17738
-        dw      17755   ; 2132 ^ 2 = 4545424, two higher bytes value = 17755
-        dw      17772   ; 2133 ^ 2 = 4549689, two higher bytes value = 17772
-        dw      17788   ; 2134 ^ 2 = 4553956, two higher bytes value = 17788
-        dw      17805   ; 2135 ^ 2 = 4558225, two higher bytes value = 17805
-        dw      17822   ; 2136 ^ 2 = 4562496, two higher bytes value = 17822
-        dw      17838   ; 2137 ^ 2 = 4566769, two higher bytes value = 17838
-        dw      17855   ; 2138 ^ 2 = 4571044, two higher bytes value = 17855
-        dw      17872   ; 2139 ^ 2 = 4575321, two higher bytes value = 17872
-        dw      17889   ; 2140 ^ 2 = 4579600, two higher bytes value = 17889
-        dw      17905   ; 2141 ^ 2 = 4583881, two higher bytes value = 17905
-        dw      17922   ; 2142 ^ 2 = 4588164, two higher bytes value = 17922
-        dw      17939   ; 2143 ^ 2 = 4592449, two higher bytes value = 17939
-        dw      17956   ; 2144 ^ 2 = 4596736, two higher bytes value = 17956
-        dw      17972   ; 2145 ^ 2 = 4601025, two higher bytes value = 17972
-        dw      17989   ; 2146 ^ 2 = 4605316, two higher bytes value = 17989
-        dw      18006   ; 2147 ^ 2 = 4609609, two higher bytes value = 18006
-        dw      18023   ; 2148 ^ 2 = 4613904, two higher bytes value = 18023
-        dw      18039   ; 2149 ^ 2 = 4618201, two higher bytes value = 18039
-        dw      18056   ; 2150 ^ 2 = 4622500, two higher bytes value = 18056
-        dw      18073   ; 2151 ^ 2 = 4626801, two higher bytes value = 18073
-        dw      18090   ; 2152 ^ 2 = 4631104, two higher bytes value = 18090
-        dw      18107   ; 2153 ^ 2 = 4635409, two higher bytes value = 18107
-        dw      18123   ; 2154 ^ 2 = 4639716, two higher bytes value = 18123
-        dw      18140   ; 2155 ^ 2 = 4644025, two higher bytes value = 18140
-        dw      18157   ; 2156 ^ 2 = 4648336, two higher bytes value = 18157
-        dw      18174   ; 2157 ^ 2 = 4652649, two higher bytes value = 18174
-        dw      18191   ; 2158 ^ 2 = 4656964, two higher bytes value = 18191
-        dw      18208   ; 2159 ^ 2 = 4661281, two higher bytes value = 18208
-        dw      18225   ; 2160 ^ 2 = 4665600, two higher bytes value = 18225
-        dw      18241   ; 2161 ^ 2 = 4669921, two higher bytes value = 18241
-        dw      18258   ; 2162 ^ 2 = 4674244, two higher bytes value = 18258
-        dw      18275   ; 2163 ^ 2 = 4678569, two higher bytes value = 18275
-        dw      18292   ; 2164 ^ 2 = 4682896, two higher bytes value = 18292
-        dw      18309   ; 2165 ^ 2 = 4687225, two higher bytes value = 18309
-        dw      18326   ; 2166 ^ 2 = 4691556, two higher bytes value = 18326
-        dw      18343   ; 2167 ^ 2 = 4695889, two higher bytes value = 18343
-        dw      18360   ; 2168 ^ 2 = 4700224, two higher bytes value = 18360
-        dw      18377   ; 2169 ^ 2 = 4704561, two higher bytes value = 18377
-        dw      18394   ; 2170 ^ 2 = 4708900, two higher bytes value = 18394
-        dw      18411   ; 2171 ^ 2 = 4713241, two higher bytes value = 18411
-        dw      18428   ; 2172 ^ 2 = 4717584, two higher bytes value = 18428
-        dw      18445   ; 2173 ^ 2 = 4721929, two higher bytes value = 18445
-        dw      18462   ; 2174 ^ 2 = 4726276, two higher bytes value = 18462
-        dw      18479   ; 2175 ^ 2 = 4730625, two higher bytes value = 18479
-        dw      18496   ; 2176 ^ 2 = 4734976, two higher bytes value = 18496
-        dw      18513   ; 2177 ^ 2 = 4739329, two higher bytes value = 18513
-        dw      18530   ; 2178 ^ 2 = 4743684, two higher bytes value = 18530
-        dw      18547   ; 2179 ^ 2 = 4748041, two higher bytes value = 18547
-        dw      18564   ; 2180 ^ 2 = 4752400, two higher bytes value = 18564
-        dw      18581   ; 2181 ^ 2 = 4756761, two higher bytes value = 18581
-        dw      18598   ; 2182 ^ 2 = 4761124, two higher bytes value = 18598
-        dw      18615   ; 2183 ^ 2 = 4765489, two higher bytes value = 18615
-        dw      18632   ; 2184 ^ 2 = 4769856, two higher bytes value = 18632
-        dw      18649   ; 2185 ^ 2 = 4774225, two higher bytes value = 18649
-        dw      18666   ; 2186 ^ 2 = 4778596, two higher bytes value = 18666
-        dw      18683   ; 2187 ^ 2 = 4782969, two higher bytes value = 18683
-        dw      18700   ; 2188 ^ 2 = 4787344, two higher bytes value = 18700
-        dw      18717   ; 2189 ^ 2 = 4791721, two higher bytes value = 18717
-        dw      18734   ; 2190 ^ 2 = 4796100, two higher bytes value = 18734
-        dw      18751   ; 2191 ^ 2 = 4800481, two higher bytes value = 18751
-        dw      18769   ; 2192 ^ 2 = 4804864, two higher bytes value = 18769
-        dw      18786   ; 2193 ^ 2 = 4809249, two higher bytes value = 18786
-        dw      18803   ; 2194 ^ 2 = 4813636, two higher bytes value = 18803
-        dw      18820   ; 2195 ^ 2 = 4818025, two higher bytes value = 18820
-        dw      18837   ; 2196 ^ 2 = 4822416, two higher bytes value = 18837
-        dw      18854   ; 2197 ^ 2 = 4826809, two higher bytes value = 18854
-        dw      18871   ; 2198 ^ 2 = 4831204, two higher bytes value = 18871
-        dw      18889   ; 2199 ^ 2 = 4835601, two higher bytes value = 18889
-        dw      18906   ; 2200 ^ 2 = 4840000, two higher bytes value = 18906
-        dw      18923   ; 2201 ^ 2 = 4844401, two higher bytes value = 18923
-        dw      18940   ; 2202 ^ 2 = 4848804, two higher bytes value = 18940
-        dw      18957   ; 2203 ^ 2 = 4853209, two higher bytes value = 18957
-        dw      18975   ; 2204 ^ 2 = 4857616, two higher bytes value = 18975
-        dw      18992   ; 2205 ^ 2 = 4862025, two higher bytes value = 18992
-        dw      19009   ; 2206 ^ 2 = 4866436, two higher bytes value = 19009
-        dw      19026   ; 2207 ^ 2 = 4870849, two higher bytes value = 19026
-        dw      19044   ; 2208 ^ 2 = 4875264, two higher bytes value = 19044
-        dw      19061   ; 2209 ^ 2 = 4879681, two higher bytes value = 19061
-        dw      19078   ; 2210 ^ 2 = 4884100, two higher bytes value = 19078
-        dw      19095   ; 2211 ^ 2 = 4888521, two higher bytes value = 19095
-        dw      19113   ; 2212 ^ 2 = 4892944, two higher bytes value = 19113
-        dw      19130   ; 2213 ^ 2 = 4897369, two higher bytes value = 19130
-        dw      19147   ; 2214 ^ 2 = 4901796, two higher bytes value = 19147
-        dw      19164   ; 2215 ^ 2 = 4906225, two higher bytes value = 19164
-        dw      19182   ; 2216 ^ 2 = 4910656, two higher bytes value = 19182
-        dw      19199   ; 2217 ^ 2 = 4915089, two higher bytes value = 19199
-        dw      19216   ; 2218 ^ 2 = 4919524, two higher bytes value = 19216
-        dw      19234   ; 2219 ^ 2 = 4923961, two higher bytes value = 19234
-        dw      19251   ; 2220 ^ 2 = 4928400, two higher bytes value = 19251
-        dw      19268   ; 2221 ^ 2 = 4932841, two higher bytes value = 19268
-        dw      19286   ; 2222 ^ 2 = 4937284, two higher bytes value = 19286
-        dw      19303   ; 2223 ^ 2 = 4941729, two higher bytes value = 19303
-        dw      19321   ; 2224 ^ 2 = 4946176, two higher bytes value = 19321
-        dw      19338   ; 2225 ^ 2 = 4950625, two higher bytes value = 19338
-        dw      19355   ; 2226 ^ 2 = 4955076, two higher bytes value = 19355
-        dw      19373   ; 2227 ^ 2 = 4959529, two higher bytes value = 19373
-        dw      19390   ; 2228 ^ 2 = 4963984, two higher bytes value = 19390
-        dw      19407   ; 2229 ^ 2 = 4968441, two higher bytes value = 19407
-        dw      19425   ; 2230 ^ 2 = 4972900, two higher bytes value = 19425
-        dw      19442   ; 2231 ^ 2 = 4977361, two higher bytes value = 19442
-        dw      19460   ; 2232 ^ 2 = 4981824, two higher bytes value = 19460
-        dw      19477   ; 2233 ^ 2 = 4986289, two higher bytes value = 19477
-        dw      19495   ; 2234 ^ 2 = 4990756, two higher bytes value = 19495
-        dw      19512   ; 2235 ^ 2 = 4995225, two higher bytes value = 19512
-        dw      19530   ; 2236 ^ 2 = 4999696, two higher bytes value = 19530
-        dw      19547   ; 2237 ^ 2 = 5004169, two higher bytes value = 19547
-        dw      19565   ; 2238 ^ 2 = 5008644, two higher bytes value = 19565
-        dw      19582   ; 2239 ^ 2 = 5013121, two higher bytes value = 19582
-        dw      19600   ; 2240 ^ 2 = 5017600, two higher bytes value = 19600
-        dw      19617   ; 2241 ^ 2 = 5022081, two higher bytes value = 19617
-        dw      19635   ; 2242 ^ 2 = 5026564, two higher bytes value = 19635
-        dw      19652   ; 2243 ^ 2 = 5031049, two higher bytes value = 19652
-        dw      19670   ; 2244 ^ 2 = 5035536, two higher bytes value = 19670
-        dw      19687   ; 2245 ^ 2 = 5040025, two higher bytes value = 19687
-        dw      19705   ; 2246 ^ 2 = 5044516, two higher bytes value = 19705
-        dw      19722   ; 2247 ^ 2 = 5049009, two higher bytes value = 19722
-        dw      19740   ; 2248 ^ 2 = 5053504, two higher bytes value = 19740
-        dw      19757   ; 2249 ^ 2 = 5058001, two higher bytes value = 19757
-        dw      19775   ; 2250 ^ 2 = 5062500, two higher bytes value = 19775
-        dw      19792   ; 2251 ^ 2 = 5067001, two higher bytes value = 19792
-        dw      19810   ; 2252 ^ 2 = 5071504, two higher bytes value = 19810
-        dw      19828   ; 2253 ^ 2 = 5076009, two higher bytes value = 19828
-        dw      19845   ; 2254 ^ 2 = 5080516, two higher bytes value = 19845
-        dw      19863   ; 2255 ^ 2 = 5085025, two higher bytes value = 19863
-        dw      19881   ; 2256 ^ 2 = 5089536, two higher bytes value = 19881
-        dw      19898   ; 2257 ^ 2 = 5094049, two higher bytes value = 19898
-        dw      19916   ; 2258 ^ 2 = 5098564, two higher bytes value = 19916
-        dw      19933   ; 2259 ^ 2 = 5103081, two higher bytes value = 19933
-        dw      19951   ; 2260 ^ 2 = 5107600, two higher bytes value = 19951
-        dw      19969   ; 2261 ^ 2 = 5112121, two higher bytes value = 19969
-        dw      19986   ; 2262 ^ 2 = 5116644, two higher bytes value = 19986
-        dw      20004   ; 2263 ^ 2 = 5121169, two higher bytes value = 20004
-        dw      20022   ; 2264 ^ 2 = 5125696, two higher bytes value = 20022
-        dw      20039   ; 2265 ^ 2 = 5130225, two higher bytes value = 20039
-        dw      20057   ; 2266 ^ 2 = 5134756, two higher bytes value = 20057
-        dw      20075   ; 2267 ^ 2 = 5139289, two higher bytes value = 20075
-        dw      20093   ; 2268 ^ 2 = 5143824, two higher bytes value = 20093
-        dw      20110   ; 2269 ^ 2 = 5148361, two higher bytes value = 20110
-        dw      20128   ; 2270 ^ 2 = 5152900, two higher bytes value = 20128
-        dw      20146   ; 2271 ^ 2 = 5157441, two higher bytes value = 20146
-        dw      20164   ; 2272 ^ 2 = 5161984, two higher bytes value = 20164
-        dw      20181   ; 2273 ^ 2 = 5166529, two higher bytes value = 20181
-        dw      20199   ; 2274 ^ 2 = 5171076, two higher bytes value = 20199
-        dw      20217   ; 2275 ^ 2 = 5175625, two higher bytes value = 20217
-        dw      20235   ; 2276 ^ 2 = 5180176, two higher bytes value = 20235
-        dw      20252   ; 2277 ^ 2 = 5184729, two higher bytes value = 20252
-        dw      20270   ; 2278 ^ 2 = 5189284, two higher bytes value = 20270
-        dw      20288   ; 2279 ^ 2 = 5193841, two higher bytes value = 20288
-        dw      20306   ; 2280 ^ 2 = 5198400, two higher bytes value = 20306
-        dw      20324   ; 2281 ^ 2 = 5202961, two higher bytes value = 20324
-        dw      20341   ; 2282 ^ 2 = 5207524, two higher bytes value = 20341
-        dw      20359   ; 2283 ^ 2 = 5212089, two higher bytes value = 20359
-        dw      20377   ; 2284 ^ 2 = 5216656, two higher bytes value = 20377
-        dw      20395   ; 2285 ^ 2 = 5221225, two higher bytes value = 20395
-        dw      20413   ; 2286 ^ 2 = 5225796, two higher bytes value = 20413
-        dw      20431   ; 2287 ^ 2 = 5230369, two higher bytes value = 20431
-        dw      20449   ; 2288 ^ 2 = 5234944, two higher bytes value = 20449
-        dw      20466   ; 2289 ^ 2 = 5239521, two higher bytes value = 20466
-        dw      20484   ; 2290 ^ 2 = 5244100, two higher bytes value = 20484
-        dw      20502   ; 2291 ^ 2 = 5248681, two higher bytes value = 20502
-        dw      20520   ; 2292 ^ 2 = 5253264, two higher bytes value = 20520
-        dw      20538   ; 2293 ^ 2 = 5257849, two higher bytes value = 20538
-        dw      20556   ; 2294 ^ 2 = 5262436, two higher bytes value = 20556
-        dw      20574   ; 2295 ^ 2 = 5267025, two higher bytes value = 20574
-        dw      20592   ; 2296 ^ 2 = 5271616, two higher bytes value = 20592
-        dw      20610   ; 2297 ^ 2 = 5276209, two higher bytes value = 20610
-        dw      20628   ; 2298 ^ 2 = 5280804, two higher bytes value = 20628
-        dw      20646   ; 2299 ^ 2 = 5285401, two higher bytes value = 20646
-        dw      20664   ; 2300 ^ 2 = 5290000, two higher bytes value = 20664
-        dw      20682   ; 2301 ^ 2 = 5294601, two higher bytes value = 20682
-        dw      20700   ; 2302 ^ 2 = 5299204, two higher bytes value = 20700
-        dw      20718   ; 2303 ^ 2 = 5303809, two higher bytes value = 20718
-        dw      20736   ; 2304 ^ 2 = 5308416, two higher bytes value = 20736
-        dw      20754   ; 2305 ^ 2 = 5313025, two higher bytes value = 20754
-        dw      20772   ; 2306 ^ 2 = 5317636, two higher bytes value = 20772
-        dw      20790   ; 2307 ^ 2 = 5322249, two higher bytes value = 20790
-        dw      20808   ; 2308 ^ 2 = 5326864, two higher bytes value = 20808
-        dw      20826   ; 2309 ^ 2 = 5331481, two higher bytes value = 20826
-        dw      20844   ; 2310 ^ 2 = 5336100, two higher bytes value = 20844
-        dw      20862   ; 2311 ^ 2 = 5340721, two higher bytes value = 20862
-        dw      20880   ; 2312 ^ 2 = 5345344, two higher bytes value = 20880
-        dw      20898   ; 2313 ^ 2 = 5349969, two higher bytes value = 20898
-        dw      20916   ; 2314 ^ 2 = 5354596, two higher bytes value = 20916
-        dw      20934   ; 2315 ^ 2 = 5359225, two higher bytes value = 20934
-        dw      20952   ; 2316 ^ 2 = 5363856, two higher bytes value = 20952
-        dw      20970   ; 2317 ^ 2 = 5368489, two higher bytes value = 20970
-        dw      20988   ; 2318 ^ 2 = 5373124, two higher bytes value = 20988
-        dw      21006   ; 2319 ^ 2 = 5377761, two higher bytes value = 21006
-        dw      21025   ; 2320 ^ 2 = 5382400, two higher bytes value = 21025
-        dw      21043   ; 2321 ^ 2 = 5387041, two higher bytes value = 21043
-        dw      21061   ; 2322 ^ 2 = 5391684, two higher bytes value = 21061
-        dw      21079   ; 2323 ^ 2 = 5396329, two higher bytes value = 21079
-        dw      21097   ; 2324 ^ 2 = 5400976, two higher bytes value = 21097
-        dw      21115   ; 2325 ^ 2 = 5405625, two higher bytes value = 21115
-        dw      21133   ; 2326 ^ 2 = 5410276, two higher bytes value = 21133
-        dw      21152   ; 2327 ^ 2 = 5414929, two higher bytes value = 21152
-        dw      21170   ; 2328 ^ 2 = 5419584, two higher bytes value = 21170
-        dw      21188   ; 2329 ^ 2 = 5424241, two higher bytes value = 21188
-        dw      21206   ; 2330 ^ 2 = 5428900, two higher bytes value = 21206
-        dw      21224   ; 2331 ^ 2 = 5433561, two higher bytes value = 21224
-        dw      21243   ; 2332 ^ 2 = 5438224, two higher bytes value = 21243
-        dw      21261   ; 2333 ^ 2 = 5442889, two higher bytes value = 21261
-        dw      21279   ; 2334 ^ 2 = 5447556, two higher bytes value = 21279
-        dw      21297   ; 2335 ^ 2 = 5452225, two higher bytes value = 21297
-        dw      21316   ; 2336 ^ 2 = 5456896, two higher bytes value = 21316
-        dw      21334   ; 2337 ^ 2 = 5461569, two higher bytes value = 21334
-        dw      21352   ; 2338 ^ 2 = 5466244, two higher bytes value = 21352
-        dw      21370   ; 2339 ^ 2 = 5470921, two higher bytes value = 21370
-        dw      21389   ; 2340 ^ 2 = 5475600, two higher bytes value = 21389
-        dw      21407   ; 2341 ^ 2 = 5480281, two higher bytes value = 21407
-        dw      21425   ; 2342 ^ 2 = 5484964, two higher bytes value = 21425
-        dw      21443   ; 2343 ^ 2 = 5489649, two higher bytes value = 21443
-        dw      21462   ; 2344 ^ 2 = 5494336, two higher bytes value = 21462
-        dw      21480   ; 2345 ^ 2 = 5499025, two higher bytes value = 21480
-        dw      21498   ; 2346 ^ 2 = 5503716, two higher bytes value = 21498
-        dw      21517   ; 2347 ^ 2 = 5508409, two higher bytes value = 21517
-        dw      21535   ; 2348 ^ 2 = 5513104, two higher bytes value = 21535
-        dw      21553   ; 2349 ^ 2 = 5517801, two higher bytes value = 21553
-        dw      21572   ; 2350 ^ 2 = 5522500, two higher bytes value = 21572
-        dw      21590   ; 2351 ^ 2 = 5527201, two higher bytes value = 21590
-        dw      21609   ; 2352 ^ 2 = 5531904, two higher bytes value = 21609
-        dw      21627   ; 2353 ^ 2 = 5536609, two higher bytes value = 21627
-        dw      21645   ; 2354 ^ 2 = 5541316, two higher bytes value = 21645
-        dw      21664   ; 2355 ^ 2 = 5546025, two higher bytes value = 21664
-        dw      21682   ; 2356 ^ 2 = 5550736, two higher bytes value = 21682
-        dw      21700   ; 2357 ^ 2 = 5555449, two higher bytes value = 21700
-        dw      21719   ; 2358 ^ 2 = 5560164, two higher bytes value = 21719
-        dw      21737   ; 2359 ^ 2 = 5564881, two higher bytes value = 21737
-        dw      21756   ; 2360 ^ 2 = 5569600, two higher bytes value = 21756
-        dw      21774   ; 2361 ^ 2 = 5574321, two higher bytes value = 21774
-        dw      21793   ; 2362 ^ 2 = 5579044, two higher bytes value = 21793
-        dw      21811   ; 2363 ^ 2 = 5583769, two higher bytes value = 21811
-        dw      21830   ; 2364 ^ 2 = 5588496, two higher bytes value = 21830
-        dw      21848   ; 2365 ^ 2 = 5593225, two higher bytes value = 21848
-        dw      21867   ; 2366 ^ 2 = 5597956, two higher bytes value = 21867
-        dw      21885   ; 2367 ^ 2 = 5602689, two higher bytes value = 21885
-        dw      21904   ; 2368 ^ 2 = 5607424, two higher bytes value = 21904
-        dw      21922   ; 2369 ^ 2 = 5612161, two higher bytes value = 21922
-        dw      21941   ; 2370 ^ 2 = 5616900, two higher bytes value = 21941
-        dw      21959   ; 2371 ^ 2 = 5621641, two higher bytes value = 21959
-        dw      21978   ; 2372 ^ 2 = 5626384, two higher bytes value = 21978
-        dw      21996   ; 2373 ^ 2 = 5631129, two higher bytes value = 21996
-        dw      22015   ; 2374 ^ 2 = 5635876, two higher bytes value = 22015
-        dw      22033   ; 2375 ^ 2 = 5640625, two higher bytes value = 22033
-        dw      22052   ; 2376 ^ 2 = 5645376, two higher bytes value = 22052
-        dw      22070   ; 2377 ^ 2 = 5650129, two higher bytes value = 22070
-        dw      22089   ; 2378 ^ 2 = 5654884, two higher bytes value = 22089
-        dw      22107   ; 2379 ^ 2 = 5659641, two higher bytes value = 22107
-        dw      22126   ; 2380 ^ 2 = 5664400, two higher bytes value = 22126
-        dw      22145   ; 2381 ^ 2 = 5669161, two higher bytes value = 22145
-        dw      22163   ; 2382 ^ 2 = 5673924, two higher bytes value = 22163
-        dw      22182   ; 2383 ^ 2 = 5678689, two higher bytes value = 22182
-        dw      22201   ; 2384 ^ 2 = 5683456, two higher bytes value = 22201
-        dw      22219   ; 2385 ^ 2 = 5688225, two higher bytes value = 22219
-        dw      22238   ; 2386 ^ 2 = 5692996, two higher bytes value = 22238
-        dw      22256   ; 2387 ^ 2 = 5697769, two higher bytes value = 22256
-        dw      22275   ; 2388 ^ 2 = 5702544, two higher bytes value = 22275
-        dw      22294   ; 2389 ^ 2 = 5707321, two higher bytes value = 22294
-        dw      22312   ; 2390 ^ 2 = 5712100, two higher bytes value = 22312
-        dw      22331   ; 2391 ^ 2 = 5716881, two higher bytes value = 22331
-        dw      22350   ; 2392 ^ 2 = 5721664, two higher bytes value = 22350
-        dw      22368   ; 2393 ^ 2 = 5726449, two higher bytes value = 22368
-        dw      22387   ; 2394 ^ 2 = 5731236, two higher bytes value = 22387
-        dw      22406   ; 2395 ^ 2 = 5736025, two higher bytes value = 22406
-        dw      22425   ; 2396 ^ 2 = 5740816, two higher bytes value = 22425
-        dw      22443   ; 2397 ^ 2 = 5745609, two higher bytes value = 22443
-        dw      22462   ; 2398 ^ 2 = 5750404, two higher bytes value = 22462
-        dw      22481   ; 2399 ^ 2 = 5755201, two higher bytes value = 22481
-        dw      22500   ; 2400 ^ 2 = 5760000, two higher bytes value = 22500
-        dw      22518   ; 2401 ^ 2 = 5764801, two higher bytes value = 22518
-        dw      22537   ; 2402 ^ 2 = 5769604, two higher bytes value = 22537
-        dw      22556   ; 2403 ^ 2 = 5774409, two higher bytes value = 22556
-        dw      22575   ; 2404 ^ 2 = 5779216, two higher bytes value = 22575
-        dw      22593   ; 2405 ^ 2 = 5784025, two higher bytes value = 22593
-        dw      22612   ; 2406 ^ 2 = 5788836, two higher bytes value = 22612
-        dw      22631   ; 2407 ^ 2 = 5793649, two higher bytes value = 22631
-        dw      22650   ; 2408 ^ 2 = 5798464, two higher bytes value = 22650
-        dw      22669   ; 2409 ^ 2 = 5803281, two higher bytes value = 22669
-        dw      22687   ; 2410 ^ 2 = 5808100, two higher bytes value = 22687
-        dw      22706   ; 2411 ^ 2 = 5812921, two higher bytes value = 22706
-        dw      22725   ; 2412 ^ 2 = 5817744, two higher bytes value = 22725
-        dw      22744   ; 2413 ^ 2 = 5822569, two higher bytes value = 22744
-        dw      22763   ; 2414 ^ 2 = 5827396, two higher bytes value = 22763
-        dw      22782   ; 2415 ^ 2 = 5832225, two higher bytes value = 22782
-        dw      22801   ; 2416 ^ 2 = 5837056, two higher bytes value = 22801
-        dw      22819   ; 2417 ^ 2 = 5841889, two higher bytes value = 22819
-        dw      22838   ; 2418 ^ 2 = 5846724, two higher bytes value = 22838
-        dw      22857   ; 2419 ^ 2 = 5851561, two higher bytes value = 22857
-        dw      22876   ; 2420 ^ 2 = 5856400, two higher bytes value = 22876
-        dw      22895   ; 2421 ^ 2 = 5861241, two higher bytes value = 22895
-        dw      22914   ; 2422 ^ 2 = 5866084, two higher bytes value = 22914
-        dw      22933   ; 2423 ^ 2 = 5870929, two higher bytes value = 22933
-        dw      22952   ; 2424 ^ 2 = 5875776, two higher bytes value = 22952
-        dw      22971   ; 2425 ^ 2 = 5880625, two higher bytes value = 22971
-        dw      22990   ; 2426 ^ 2 = 5885476, two higher bytes value = 22990
-        dw      23009   ; 2427 ^ 2 = 5890329, two higher bytes value = 23009
-        dw      23028   ; 2428 ^ 2 = 5895184, two higher bytes value = 23028
-        dw      23047   ; 2429 ^ 2 = 5900041, two higher bytes value = 23047
-        dw      23066   ; 2430 ^ 2 = 5904900, two higher bytes value = 23066
-        dw      23085   ; 2431 ^ 2 = 5909761, two higher bytes value = 23085
-        dw      23104   ; 2432 ^ 2 = 5914624, two higher bytes value = 23104
-        dw      23123   ; 2433 ^ 2 = 5919489, two higher bytes value = 23123
-        dw      23142   ; 2434 ^ 2 = 5924356, two higher bytes value = 23142
-        dw      23161   ; 2435 ^ 2 = 5929225, two higher bytes value = 23161
-        dw      23180   ; 2436 ^ 2 = 5934096, two higher bytes value = 23180
-        dw      23199   ; 2437 ^ 2 = 5938969, two higher bytes value = 23199
-        dw      23218   ; 2438 ^ 2 = 5943844, two higher bytes value = 23218
-        dw      23237   ; 2439 ^ 2 = 5948721, two higher bytes value = 23237
-        dw      23256   ; 2440 ^ 2 = 5953600, two higher bytes value = 23256
-        dw      23275   ; 2441 ^ 2 = 5958481, two higher bytes value = 23275
-        dw      23294   ; 2442 ^ 2 = 5963364, two higher bytes value = 23294
-        dw      23313   ; 2443 ^ 2 = 5968249, two higher bytes value = 23313
-        dw      23332   ; 2444 ^ 2 = 5973136, two higher bytes value = 23332
-        dw      23351   ; 2445 ^ 2 = 5978025, two higher bytes value = 23351
-        dw      23370   ; 2446 ^ 2 = 5982916, two higher bytes value = 23370
-        dw      23389   ; 2447 ^ 2 = 5987809, two higher bytes value = 23389
-        dw      23409   ; 2448 ^ 2 = 5992704, two higher bytes value = 23409
-        dw      23428   ; 2449 ^ 2 = 5997601, two higher bytes value = 23428
-        dw      23447   ; 2450 ^ 2 = 6002500, two higher bytes value = 23447
-        dw      23466   ; 2451 ^ 2 = 6007401, two higher bytes value = 23466
-        dw      23485   ; 2452 ^ 2 = 6012304, two higher bytes value = 23485
-        dw      23504   ; 2453 ^ 2 = 6017209, two higher bytes value = 23504
-        dw      23523   ; 2454 ^ 2 = 6022116, two higher bytes value = 23523
-        dw      23543   ; 2455 ^ 2 = 6027025, two higher bytes value = 23543
-        dw      23562   ; 2456 ^ 2 = 6031936, two higher bytes value = 23562
-        dw      23581   ; 2457 ^ 2 = 6036849, two higher bytes value = 23581
-        dw      23600   ; 2458 ^ 2 = 6041764, two higher bytes value = 23600
-        dw      23619   ; 2459 ^ 2 = 6046681, two higher bytes value = 23619
-        dw      23639   ; 2460 ^ 2 = 6051600, two higher bytes value = 23639
-        dw      23658   ; 2461 ^ 2 = 6056521, two higher bytes value = 23658
-        dw      23677   ; 2462 ^ 2 = 6061444, two higher bytes value = 23677
-        dw      23696   ; 2463 ^ 2 = 6066369, two higher bytes value = 23696
-        dw      23716   ; 2464 ^ 2 = 6071296, two higher bytes value = 23716
-        dw      23735   ; 2465 ^ 2 = 6076225, two higher bytes value = 23735
-        dw      23754   ; 2466 ^ 2 = 6081156, two higher bytes value = 23754
-        dw      23773   ; 2467 ^ 2 = 6086089, two higher bytes value = 23773
-        dw      23793   ; 2468 ^ 2 = 6091024, two higher bytes value = 23793
-        dw      23812   ; 2469 ^ 2 = 6095961, two higher bytes value = 23812
-        dw      23831   ; 2470 ^ 2 = 6100900, two higher bytes value = 23831
-        dw      23850   ; 2471 ^ 2 = 6105841, two higher bytes value = 23850
-        dw      23870   ; 2472 ^ 2 = 6110784, two higher bytes value = 23870
-        dw      23889   ; 2473 ^ 2 = 6115729, two higher bytes value = 23889
-        dw      23908   ; 2474 ^ 2 = 6120676, two higher bytes value = 23908
-        dw      23928   ; 2475 ^ 2 = 6125625, two higher bytes value = 23928
-        dw      23947   ; 2476 ^ 2 = 6130576, two higher bytes value = 23947
-        dw      23966   ; 2477 ^ 2 = 6135529, two higher bytes value = 23966
-        dw      23986   ; 2478 ^ 2 = 6140484, two higher bytes value = 23986
-        dw      24005   ; 2479 ^ 2 = 6145441, two higher bytes value = 24005
-        dw      24025   ; 2480 ^ 2 = 6150400, two higher bytes value = 24025
-        dw      24044   ; 2481 ^ 2 = 6155361, two higher bytes value = 24044
-        dw      24063   ; 2482 ^ 2 = 6160324, two higher bytes value = 24063
-        dw      24083   ; 2483 ^ 2 = 6165289, two higher bytes value = 24083
-        dw      24102   ; 2484 ^ 2 = 6170256, two higher bytes value = 24102
-        dw      24121   ; 2485 ^ 2 = 6175225, two higher bytes value = 24121
-        dw      24141   ; 2486 ^ 2 = 6180196, two higher bytes value = 24141
-        dw      24160   ; 2487 ^ 2 = 6185169, two higher bytes value = 24160
-        dw      24180   ; 2488 ^ 2 = 6190144, two higher bytes value = 24180
-        dw      24199   ; 2489 ^ 2 = 6195121, two higher bytes value = 24199
-        dw      24219   ; 2490 ^ 2 = 6200100, two higher bytes value = 24219
-        dw      24238   ; 2491 ^ 2 = 6205081, two higher bytes value = 24238
-        dw      24258   ; 2492 ^ 2 = 6210064, two higher bytes value = 24258
-        dw      24277   ; 2493 ^ 2 = 6215049, two higher bytes value = 24277
-        dw      24297   ; 2494 ^ 2 = 6220036, two higher bytes value = 24297
-        dw      24316   ; 2495 ^ 2 = 6225025, two higher bytes value = 24316
-        dw      24336   ; 2496 ^ 2 = 6230016, two higher bytes value = 24336
-        dw      24355   ; 2497 ^ 2 = 6235009, two higher bytes value = 24355
-        dw      24375   ; 2498 ^ 2 = 6240004, two higher bytes value = 24375
-        dw      24394   ; 2499 ^ 2 = 6245001, two higher bytes value = 24394
-        dw      24414   ; 2500 ^ 2 = 6250000, two higher bytes value = 24414
-        dw      24433   ; 2501 ^ 2 = 6255001, two higher bytes value = 24433
-        dw      24453   ; 2502 ^ 2 = 6260004, two higher bytes value = 24453
-        dw      24472   ; 2503 ^ 2 = 6265009, two higher bytes value = 24472
-        dw      24492   ; 2504 ^ 2 = 6270016, two higher bytes value = 24492
-        dw      24511   ; 2505 ^ 2 = 6275025, two higher bytes value = 24511
-        dw      24531   ; 2506 ^ 2 = 6280036, two higher bytes value = 24531
-        dw      24550   ; 2507 ^ 2 = 6285049, two higher bytes value = 24550
-        dw      24570   ; 2508 ^ 2 = 6290064, two higher bytes value = 24570
-        dw      24590   ; 2509 ^ 2 = 6295081, two higher bytes value = 24590
-        dw      24609   ; 2510 ^ 2 = 6300100, two higher bytes value = 24609
-        dw      24629   ; 2511 ^ 2 = 6305121, two higher bytes value = 24629
-        dw      24649   ; 2512 ^ 2 = 6310144, two higher bytes value = 24649
-        dw      24668   ; 2513 ^ 2 = 6315169, two higher bytes value = 24668
-        dw      24688   ; 2514 ^ 2 = 6320196, two higher bytes value = 24688
-        dw      24707   ; 2515 ^ 2 = 6325225, two higher bytes value = 24707
-        dw      24727   ; 2516 ^ 2 = 6330256, two higher bytes value = 24727
-        dw      24747   ; 2517 ^ 2 = 6335289, two higher bytes value = 24747
-        dw      24766   ; 2518 ^ 2 = 6340324, two higher bytes value = 24766
-        dw      24786   ; 2519 ^ 2 = 6345361, two higher bytes value = 24786
-        dw      24806   ; 2520 ^ 2 = 6350400, two higher bytes value = 24806
-        dw      24825   ; 2521 ^ 2 = 6355441, two higher bytes value = 24825
-        dw      24845   ; 2522 ^ 2 = 6360484, two higher bytes value = 24845
-        dw      24865   ; 2523 ^ 2 = 6365529, two higher bytes value = 24865
-        dw      24885   ; 2524 ^ 2 = 6370576, two higher bytes value = 24885
-        dw      24904   ; 2525 ^ 2 = 6375625, two higher bytes value = 24904
-        dw      24924   ; 2526 ^ 2 = 6380676, two higher bytes value = 24924
-        dw      24944   ; 2527 ^ 2 = 6385729, two higher bytes value = 24944
-        dw      24964   ; 2528 ^ 2 = 6390784, two higher bytes value = 24964
-        dw      24983   ; 2529 ^ 2 = 6395841, two higher bytes value = 24983
-        dw      25003   ; 2530 ^ 2 = 6400900, two higher bytes value = 25003
-        dw      25023   ; 2531 ^ 2 = 6405961, two higher bytes value = 25023
-        dw      25043   ; 2532 ^ 2 = 6411024, two higher bytes value = 25043
-        dw      25062   ; 2533 ^ 2 = 6416089, two higher bytes value = 25062
-        dw      25082   ; 2534 ^ 2 = 6421156, two higher bytes value = 25082
-        dw      25102   ; 2535 ^ 2 = 6426225, two higher bytes value = 25102
-        dw      25122   ; 2536 ^ 2 = 6431296, two higher bytes value = 25122
-        dw      25142   ; 2537 ^ 2 = 6436369, two higher bytes value = 25142
-        dw      25161   ; 2538 ^ 2 = 6441444, two higher bytes value = 25161
-        dw      25181   ; 2539 ^ 2 = 6446521, two higher bytes value = 25181
-        dw      25201   ; 2540 ^ 2 = 6451600, two higher bytes value = 25201
-        dw      25221   ; 2541 ^ 2 = 6456681, two higher bytes value = 25221
-        dw      25241   ; 2542 ^ 2 = 6461764, two higher bytes value = 25241
-        dw      25261   ; 2543 ^ 2 = 6466849, two higher bytes value = 25261
-        dw      25281   ; 2544 ^ 2 = 6471936, two higher bytes value = 25281
-        dw      25300   ; 2545 ^ 2 = 6477025, two higher bytes value = 25300
-        dw      25320   ; 2546 ^ 2 = 6482116, two higher bytes value = 25320
-        dw      25340   ; 2547 ^ 2 = 6487209, two higher bytes value = 25340
-        dw      25360   ; 2548 ^ 2 = 6492304, two higher bytes value = 25360
-        dw      25380   ; 2549 ^ 2 = 6497401, two higher bytes value = 25380
-        dw      25400   ; 2550 ^ 2 = 6502500, two higher bytes value = 25400
-        dw      25420   ; 2551 ^ 2 = 6507601, two higher bytes value = 25420
-        dw      25440   ; 2552 ^ 2 = 6512704, two higher bytes value = 25440
-        dw      25460   ; 2553 ^ 2 = 6517809, two higher bytes value = 25460
-        dw      25480   ; 2554 ^ 2 = 6522916, two higher bytes value = 25480
-        dw      25500   ; 2555 ^ 2 = 6528025, two higher bytes value = 25500
-        dw      25520   ; 2556 ^ 2 = 6533136, two higher bytes value = 25520
-        dw      25540   ; 2557 ^ 2 = 6538249, two higher bytes value = 25540
-        dw      25560   ; 2558 ^ 2 = 6543364, two higher bytes value = 25560
-        dw      25580   ; 2559 ^ 2 = 6548481, two higher bytes value = 25580
-        dw      25600   ; 2560 ^ 2 = 6553600, two higher bytes value = 25600
-        dw      25620   ; 2561 ^ 2 = 6558721, two higher bytes value = 25620
-        dw      25640   ; 2562 ^ 2 = 6563844, two higher bytes value = 25640
-        dw      25660   ; 2563 ^ 2 = 6568969, two higher bytes value = 25660
-        dw      25680   ; 2564 ^ 2 = 6574096, two higher bytes value = 25680
-        dw      25700   ; 2565 ^ 2 = 6579225, two higher bytes value = 25700
-        dw      25720   ; 2566 ^ 2 = 6584356, two higher bytes value = 25720
-        dw      25740   ; 2567 ^ 2 = 6589489, two higher bytes value = 25740
-        dw      25760   ; 2568 ^ 2 = 6594624, two higher bytes value = 25760
-        dw      25780   ; 2569 ^ 2 = 6599761, two higher bytes value = 25780
-        dw      25800   ; 2570 ^ 2 = 6604900, two higher bytes value = 25800
-        dw      25820   ; 2571 ^ 2 = 6610041, two higher bytes value = 25820
-        dw      25840   ; 2572 ^ 2 = 6615184, two higher bytes value = 25840
-        dw      25860   ; 2573 ^ 2 = 6620329, two higher bytes value = 25860
-        dw      25880   ; 2574 ^ 2 = 6625476, two higher bytes value = 25880
-        dw      25900   ; 2575 ^ 2 = 6630625, two higher bytes value = 25900
-        dw      25921   ; 2576 ^ 2 = 6635776, two higher bytes value = 25921
-        dw      25941   ; 2577 ^ 2 = 6640929, two higher bytes value = 25941
-        dw      25961   ; 2578 ^ 2 = 6646084, two higher bytes value = 25961
-        dw      25981   ; 2579 ^ 2 = 6651241, two higher bytes value = 25981
-        dw      26001   ; 2580 ^ 2 = 6656400, two higher bytes value = 26001
-        dw      26021   ; 2581 ^ 2 = 6661561, two higher bytes value = 26021
-        dw      26041   ; 2582 ^ 2 = 6666724, two higher bytes value = 26041
-        dw      26062   ; 2583 ^ 2 = 6671889, two higher bytes value = 26062
-        dw      26082   ; 2584 ^ 2 = 6677056, two higher bytes value = 26082
-        dw      26102   ; 2585 ^ 2 = 6682225, two higher bytes value = 26102
-        dw      26122   ; 2586 ^ 2 = 6687396, two higher bytes value = 26122
-        dw      26142   ; 2587 ^ 2 = 6692569, two higher bytes value = 26142
-        dw      26163   ; 2588 ^ 2 = 6697744, two higher bytes value = 26163
-        dw      26183   ; 2589 ^ 2 = 6702921, two higher bytes value = 26183
-        dw      26203   ; 2590 ^ 2 = 6708100, two higher bytes value = 26203
-        dw      26223   ; 2591 ^ 2 = 6713281, two higher bytes value = 26223
-        dw      26244   ; 2592 ^ 2 = 6718464, two higher bytes value = 26244
-        dw      26264   ; 2593 ^ 2 = 6723649, two higher bytes value = 26264
-        dw      26284   ; 2594 ^ 2 = 6728836, two higher bytes value = 26284
-        dw      26304   ; 2595 ^ 2 = 6734025, two higher bytes value = 26304
-        dw      26325   ; 2596 ^ 2 = 6739216, two higher bytes value = 26325
-        dw      26345   ; 2597 ^ 2 = 6744409, two higher bytes value = 26345
-        dw      26365   ; 2598 ^ 2 = 6749604, two higher bytes value = 26365
-        dw      26385   ; 2599 ^ 2 = 6754801, two higher bytes value = 26385
-        dw      26406   ; 2600 ^ 2 = 6760000, two higher bytes value = 26406
-        dw      26426   ; 2601 ^ 2 = 6765201, two higher bytes value = 26426
-        dw      26446   ; 2602 ^ 2 = 6770404, two higher bytes value = 26446
-        dw      26467   ; 2603 ^ 2 = 6775609, two higher bytes value = 26467
-        dw      26487   ; 2604 ^ 2 = 6780816, two higher bytes value = 26487
-        dw      26507   ; 2605 ^ 2 = 6786025, two higher bytes value = 26507
-        dw      26528   ; 2606 ^ 2 = 6791236, two higher bytes value = 26528
-        dw      26548   ; 2607 ^ 2 = 6796449, two higher bytes value = 26548
-        dw      26569   ; 2608 ^ 2 = 6801664, two higher bytes value = 26569
-        dw      26589   ; 2609 ^ 2 = 6806881, two higher bytes value = 26589
-        dw      26609   ; 2610 ^ 2 = 6812100, two higher bytes value = 26609
-        dw      26630   ; 2611 ^ 2 = 6817321, two higher bytes value = 26630
-        dw      26650   ; 2612 ^ 2 = 6822544, two higher bytes value = 26650
-        dw      26670   ; 2613 ^ 2 = 6827769, two higher bytes value = 26670
-        dw      26691   ; 2614 ^ 2 = 6832996, two higher bytes value = 26691
-        dw      26711   ; 2615 ^ 2 = 6838225, two higher bytes value = 26711
-        dw      26732   ; 2616 ^ 2 = 6843456, two higher bytes value = 26732
-        dw      26752   ; 2617 ^ 2 = 6848689, two higher bytes value = 26752
-        dw      26773   ; 2618 ^ 2 = 6853924, two higher bytes value = 26773
-        dw      26793   ; 2619 ^ 2 = 6859161, two higher bytes value = 26793
-        dw      26814   ; 2620 ^ 2 = 6864400, two higher bytes value = 26814
-        dw      26834   ; 2621 ^ 2 = 6869641, two higher bytes value = 26834
-        dw      26855   ; 2622 ^ 2 = 6874884, two higher bytes value = 26855
-        dw      26875   ; 2623 ^ 2 = 6880129, two higher bytes value = 26875
-        dw      26896   ; 2624 ^ 2 = 6885376, two higher bytes value = 26896
-        dw      26916   ; 2625 ^ 2 = 6890625, two higher bytes value = 26916
-        dw      26937   ; 2626 ^ 2 = 6895876, two higher bytes value = 26937
-        dw      26957   ; 2627 ^ 2 = 6901129, two higher bytes value = 26957
-        dw      26978   ; 2628 ^ 2 = 6906384, two higher bytes value = 26978
-        dw      26998   ; 2629 ^ 2 = 6911641, two higher bytes value = 26998
-        dw      27019   ; 2630 ^ 2 = 6916900, two higher bytes value = 27019
-        dw      27039   ; 2631 ^ 2 = 6922161, two higher bytes value = 27039
-        dw      27060   ; 2632 ^ 2 = 6927424, two higher bytes value = 27060
-        dw      27080   ; 2633 ^ 2 = 6932689, two higher bytes value = 27080
-        dw      27101   ; 2634 ^ 2 = 6937956, two higher bytes value = 27101
-        dw      27121   ; 2635 ^ 2 = 6943225, two higher bytes value = 27121
-        dw      27142   ; 2636 ^ 2 = 6948496, two higher bytes value = 27142
-        dw      27163   ; 2637 ^ 2 = 6953769, two higher bytes value = 27163
-        dw      27183   ; 2638 ^ 2 = 6959044, two higher bytes value = 27183
-        dw      27204   ; 2639 ^ 2 = 6964321, two higher bytes value = 27204
-        dw      27225   ; 2640 ^ 2 = 6969600, two higher bytes value = 27225
-        dw      27245   ; 2641 ^ 2 = 6974881, two higher bytes value = 27245
-        dw      27266   ; 2642 ^ 2 = 6980164, two higher bytes value = 27266
-        dw      27286   ; 2643 ^ 2 = 6985449, two higher bytes value = 27286
-        dw      27307   ; 2644 ^ 2 = 6990736, two higher bytes value = 27307
-        dw      27328   ; 2645 ^ 2 = 6996025, two higher bytes value = 27328
-        dw      27348   ; 2646 ^ 2 = 7001316, two higher bytes value = 27348
-        dw      27369   ; 2647 ^ 2 = 7006609, two higher bytes value = 27369
-        dw      27390   ; 2648 ^ 2 = 7011904, two higher bytes value = 27390
-        dw      27410   ; 2649 ^ 2 = 7017201, two higher bytes value = 27410
-        dw      27431   ; 2650 ^ 2 = 7022500, two higher bytes value = 27431
-        dw      27452   ; 2651 ^ 2 = 7027801, two higher bytes value = 27452
-        dw      27473   ; 2652 ^ 2 = 7033104, two higher bytes value = 27473
-        dw      27493   ; 2653 ^ 2 = 7038409, two higher bytes value = 27493
-        dw      27514   ; 2654 ^ 2 = 7043716, two higher bytes value = 27514
-        dw      27535   ; 2655 ^ 2 = 7049025, two higher bytes value = 27535
-        dw      27556   ; 2656 ^ 2 = 7054336, two higher bytes value = 27556
-        dw      27576   ; 2657 ^ 2 = 7059649, two higher bytes value = 27576
-        dw      27597   ; 2658 ^ 2 = 7064964, two higher bytes value = 27597
-        dw      27618   ; 2659 ^ 2 = 7070281, two higher bytes value = 27618
-        dw      27639   ; 2660 ^ 2 = 7075600, two higher bytes value = 27639
-        dw      27659   ; 2661 ^ 2 = 7080921, two higher bytes value = 27659
-        dw      27680   ; 2662 ^ 2 = 7086244, two higher bytes value = 27680
-        dw      27701   ; 2663 ^ 2 = 7091569, two higher bytes value = 27701
-        dw      27722   ; 2664 ^ 2 = 7096896, two higher bytes value = 27722
-        dw      27743   ; 2665 ^ 2 = 7102225, two higher bytes value = 27743
-        dw      27763   ; 2666 ^ 2 = 7107556, two higher bytes value = 27763
-        dw      27784   ; 2667 ^ 2 = 7112889, two higher bytes value = 27784
-        dw      27805   ; 2668 ^ 2 = 7118224, two higher bytes value = 27805
-        dw      27826   ; 2669 ^ 2 = 7123561, two higher bytes value = 27826
-        dw      27847   ; 2670 ^ 2 = 7128900, two higher bytes value = 27847
-        dw      27868   ; 2671 ^ 2 = 7134241, two higher bytes value = 27868
-        dw      27889   ; 2672 ^ 2 = 7139584, two higher bytes value = 27889
-        dw      27909   ; 2673 ^ 2 = 7144929, two higher bytes value = 27909
-        dw      27930   ; 2674 ^ 2 = 7150276, two higher bytes value = 27930
-        dw      27951   ; 2675 ^ 2 = 7155625, two higher bytes value = 27951
-        dw      27972   ; 2676 ^ 2 = 7160976, two higher bytes value = 27972
-        dw      27993   ; 2677 ^ 2 = 7166329, two higher bytes value = 27993
-        dw      28014   ; 2678 ^ 2 = 7171684, two higher bytes value = 28014
-        dw      28035   ; 2679 ^ 2 = 7177041, two higher bytes value = 28035
-        dw      28056   ; 2680 ^ 2 = 7182400, two higher bytes value = 28056
-        dw      28077   ; 2681 ^ 2 = 7187761, two higher bytes value = 28077
-        dw      28098   ; 2682 ^ 2 = 7193124, two higher bytes value = 28098
-        dw      28119   ; 2683 ^ 2 = 7198489, two higher bytes value = 28119
-        dw      28140   ; 2684 ^ 2 = 7203856, two higher bytes value = 28140
-        dw      28161   ; 2685 ^ 2 = 7209225, two higher bytes value = 28161
-        dw      28182   ; 2686 ^ 2 = 7214596, two higher bytes value = 28182
-        dw      28203   ; 2687 ^ 2 = 7219969, two higher bytes value = 28203
-        dw      28224   ; 2688 ^ 2 = 7225344, two higher bytes value = 28224
-        dw      28245   ; 2689 ^ 2 = 7230721, two higher bytes value = 28245
-        dw      28266   ; 2690 ^ 2 = 7236100, two higher bytes value = 28266
-        dw      28287   ; 2691 ^ 2 = 7241481, two higher bytes value = 28287
-        dw      28308   ; 2692 ^ 2 = 7246864, two higher bytes value = 28308
-        dw      28329   ; 2693 ^ 2 = 7252249, two higher bytes value = 28329
-        dw      28350   ; 2694 ^ 2 = 7257636, two higher bytes value = 28350
-        dw      28371   ; 2695 ^ 2 = 7263025, two higher bytes value = 28371
-        dw      28392   ; 2696 ^ 2 = 7268416, two higher bytes value = 28392
-        dw      28413   ; 2697 ^ 2 = 7273809, two higher bytes value = 28413
-        dw      28434   ; 2698 ^ 2 = 7279204, two higher bytes value = 28434
-        dw      28455   ; 2699 ^ 2 = 7284601, two higher bytes value = 28455
-        dw      28476   ; 2700 ^ 2 = 7290000, two higher bytes value = 28476
-        dw      28497   ; 2701 ^ 2 = 7295401, two higher bytes value = 28497
-        dw      28518   ; 2702 ^ 2 = 7300804, two higher bytes value = 28518
-        dw      28539   ; 2703 ^ 2 = 7306209, two higher bytes value = 28539
-        dw      28561   ; 2704 ^ 2 = 7311616, two higher bytes value = 28561
-        dw      28582   ; 2705 ^ 2 = 7317025, two higher bytes value = 28582
-        dw      28603   ; 2706 ^ 2 = 7322436, two higher bytes value = 28603
-        dw      28624   ; 2707 ^ 2 = 7327849, two higher bytes value = 28624
-        dw      28645   ; 2708 ^ 2 = 7333264, two higher bytes value = 28645
-        dw      28666   ; 2709 ^ 2 = 7338681, two higher bytes value = 28666
-        dw      28687   ; 2710 ^ 2 = 7344100, two higher bytes value = 28687
-        dw      28709   ; 2711 ^ 2 = 7349521, two higher bytes value = 28709
-        dw      28730   ; 2712 ^ 2 = 7354944, two higher bytes value = 28730
-        dw      28751   ; 2713 ^ 2 = 7360369, two higher bytes value = 28751
-        dw      28772   ; 2714 ^ 2 = 7365796, two higher bytes value = 28772
-        dw      28793   ; 2715 ^ 2 = 7371225, two higher bytes value = 28793
-        dw      28815   ; 2716 ^ 2 = 7376656, two higher bytes value = 28815
-        dw      28836   ; 2717 ^ 2 = 7382089, two higher bytes value = 28836
-        dw      28857   ; 2718 ^ 2 = 7387524, two higher bytes value = 28857
-        dw      28878   ; 2719 ^ 2 = 7392961, two higher bytes value = 28878
-        dw      28900   ; 2720 ^ 2 = 7398400, two higher bytes value = 28900
-        dw      28921   ; 2721 ^ 2 = 7403841, two higher bytes value = 28921
-        dw      28942   ; 2722 ^ 2 = 7409284, two higher bytes value = 28942
-        dw      28963   ; 2723 ^ 2 = 7414729, two higher bytes value = 28963
-        dw      28985   ; 2724 ^ 2 = 7420176, two higher bytes value = 28985
-        dw      29006   ; 2725 ^ 2 = 7425625, two higher bytes value = 29006
-        dw      29027   ; 2726 ^ 2 = 7431076, two higher bytes value = 29027
-        dw      29048   ; 2727 ^ 2 = 7436529, two higher bytes value = 29048
-        dw      29070   ; 2728 ^ 2 = 7441984, two higher bytes value = 29070
-        dw      29091   ; 2729 ^ 2 = 7447441, two higher bytes value = 29091
-        dw      29112   ; 2730 ^ 2 = 7452900, two higher bytes value = 29112
-        dw      29134   ; 2731 ^ 2 = 7458361, two higher bytes value = 29134
-        dw      29155   ; 2732 ^ 2 = 7463824, two higher bytes value = 29155
-        dw      29176   ; 2733 ^ 2 = 7469289, two higher bytes value = 29176
-        dw      29198   ; 2734 ^ 2 = 7474756, two higher bytes value = 29198
-        dw      29219   ; 2735 ^ 2 = 7480225, two higher bytes value = 29219
-        dw      29241   ; 2736 ^ 2 = 7485696, two higher bytes value = 29241
-        dw      29262   ; 2737 ^ 2 = 7491169, two higher bytes value = 29262
-        dw      29283   ; 2738 ^ 2 = 7496644, two higher bytes value = 29283
-        dw      29305   ; 2739 ^ 2 = 7502121, two higher bytes value = 29305
-        dw      29326   ; 2740 ^ 2 = 7507600, two higher bytes value = 29326
-        dw      29347   ; 2741 ^ 2 = 7513081, two higher bytes value = 29347
-        dw      29369   ; 2742 ^ 2 = 7518564, two higher bytes value = 29369
-        dw      29390   ; 2743 ^ 2 = 7524049, two higher bytes value = 29390
-        dw      29412   ; 2744 ^ 2 = 7529536, two higher bytes value = 29412
-        dw      29433   ; 2745 ^ 2 = 7535025, two higher bytes value = 29433
-        dw      29455   ; 2746 ^ 2 = 7540516, two higher bytes value = 29455
-        dw      29476   ; 2747 ^ 2 = 7546009, two higher bytes value = 29476
-        dw      29498   ; 2748 ^ 2 = 7551504, two higher bytes value = 29498
-        dw      29519   ; 2749 ^ 2 = 7557001, two higher bytes value = 29519
-        dw      29541   ; 2750 ^ 2 = 7562500, two higher bytes value = 29541
-        dw      29562   ; 2751 ^ 2 = 7568001, two higher bytes value = 29562
-        dw      29584   ; 2752 ^ 2 = 7573504, two higher bytes value = 29584
-        dw      29605   ; 2753 ^ 2 = 7579009, two higher bytes value = 29605
-        dw      29627   ; 2754 ^ 2 = 7584516, two higher bytes value = 29627
-        dw      29648   ; 2755 ^ 2 = 7590025, two higher bytes value = 29648
-        dw      29670   ; 2756 ^ 2 = 7595536, two higher bytes value = 29670
-        dw      29691   ; 2757 ^ 2 = 7601049, two higher bytes value = 29691
-        dw      29713   ; 2758 ^ 2 = 7606564, two higher bytes value = 29713
-        dw      29734   ; 2759 ^ 2 = 7612081, two higher bytes value = 29734
-        dw      29756   ; 2760 ^ 2 = 7617600, two higher bytes value = 29756
-        dw      29777   ; 2761 ^ 2 = 7623121, two higher bytes value = 29777
-        dw      29799   ; 2762 ^ 2 = 7628644, two higher bytes value = 29799
-        dw      29820   ; 2763 ^ 2 = 7634169, two higher bytes value = 29820
-        dw      29842   ; 2764 ^ 2 = 7639696, two higher bytes value = 29842
-        dw      29864   ; 2765 ^ 2 = 7645225, two higher bytes value = 29864
-        dw      29885   ; 2766 ^ 2 = 7650756, two higher bytes value = 29885
-        dw      29907   ; 2767 ^ 2 = 7656289, two higher bytes value = 29907
-        dw      29929   ; 2768 ^ 2 = 7661824, two higher bytes value = 29929
-        dw      29950   ; 2769 ^ 2 = 7667361, two higher bytes value = 29950
-        dw      29972   ; 2770 ^ 2 = 7672900, two higher bytes value = 29972
-        dw      29993   ; 2771 ^ 2 = 7678441, two higher bytes value = 29993
-        dw      30015   ; 2772 ^ 2 = 7683984, two higher bytes value = 30015
-        dw      30037   ; 2773 ^ 2 = 7689529, two higher bytes value = 30037
-        dw      30058   ; 2774 ^ 2 = 7695076, two higher bytes value = 30058
-        dw      30080   ; 2775 ^ 2 = 7700625, two higher bytes value = 30080
-        dw      30102   ; 2776 ^ 2 = 7706176, two higher bytes value = 30102
-        dw      30123   ; 2777 ^ 2 = 7711729, two higher bytes value = 30123
-        dw      30145   ; 2778 ^ 2 = 7717284, two higher bytes value = 30145
-        dw      30167   ; 2779 ^ 2 = 7722841, two higher bytes value = 30167
-        dw      30189   ; 2780 ^ 2 = 7728400, two higher bytes value = 30189
-        dw      30210   ; 2781 ^ 2 = 7733961, two higher bytes value = 30210
-        dw      30232   ; 2782 ^ 2 = 7739524, two higher bytes value = 30232
-        dw      30254   ; 2783 ^ 2 = 7745089, two higher bytes value = 30254
-        dw      30276   ; 2784 ^ 2 = 7750656, two higher bytes value = 30276
-        dw      30297   ; 2785 ^ 2 = 7756225, two higher bytes value = 30297
-        dw      30319   ; 2786 ^ 2 = 7761796, two higher bytes value = 30319
-        dw      30341   ; 2787 ^ 2 = 7767369, two higher bytes value = 30341
-        dw      30363   ; 2788 ^ 2 = 7772944, two higher bytes value = 30363
-        dw      30384   ; 2789 ^ 2 = 7778521, two higher bytes value = 30384
-        dw      30406   ; 2790 ^ 2 = 7784100, two higher bytes value = 30406
-        dw      30428   ; 2791 ^ 2 = 7789681, two higher bytes value = 30428
-        dw      30450   ; 2792 ^ 2 = 7795264, two higher bytes value = 30450
-        dw      30472   ; 2793 ^ 2 = 7800849, two higher bytes value = 30472
-        dw      30493   ; 2794 ^ 2 = 7806436, two higher bytes value = 30493
-        dw      30515   ; 2795 ^ 2 = 7812025, two higher bytes value = 30515
-        dw      30537   ; 2796 ^ 2 = 7817616, two higher bytes value = 30537
-        dw      30559   ; 2797 ^ 2 = 7823209, two higher bytes value = 30559
-        dw      30581   ; 2798 ^ 2 = 7828804, two higher bytes value = 30581
-        dw      30603   ; 2799 ^ 2 = 7834401, two higher bytes value = 30603
-        dw      30625   ; 2800 ^ 2 = 7840000, two higher bytes value = 30625
-        dw      30646   ; 2801 ^ 2 = 7845601, two higher bytes value = 30646
-        dw      30668   ; 2802 ^ 2 = 7851204, two higher bytes value = 30668
-        dw      30690   ; 2803 ^ 2 = 7856809, two higher bytes value = 30690
-        dw      30712   ; 2804 ^ 2 = 7862416, two higher bytes value = 30712
-        dw      30734   ; 2805 ^ 2 = 7868025, two higher bytes value = 30734
-        dw      30756   ; 2806 ^ 2 = 7873636, two higher bytes value = 30756
-        dw      30778   ; 2807 ^ 2 = 7879249, two higher bytes value = 30778
-        dw      30800   ; 2808 ^ 2 = 7884864, two higher bytes value = 30800
-        dw      30822   ; 2809 ^ 2 = 7890481, two higher bytes value = 30822
-        dw      30844   ; 2810 ^ 2 = 7896100, two higher bytes value = 30844
-        dw      30866   ; 2811 ^ 2 = 7901721, two higher bytes value = 30866
-        dw      30888   ; 2812 ^ 2 = 7907344, two higher bytes value = 30888
-        dw      30910   ; 2813 ^ 2 = 7912969, two higher bytes value = 30910
-        dw      30932   ; 2814 ^ 2 = 7918596, two higher bytes value = 30932
-        dw      30954   ; 2815 ^ 2 = 7924225, two higher bytes value = 30954
-        dw      30976   ; 2816 ^ 2 = 7929856, two higher bytes value = 30976
-        dw      30998   ; 2817 ^ 2 = 7935489, two higher bytes value = 30998
-        dw      31020   ; 2818 ^ 2 = 7941124, two higher bytes value = 31020
-        dw      31042   ; 2819 ^ 2 = 7946761, two higher bytes value = 31042
-        dw      31064   ; 2820 ^ 2 = 7952400, two higher bytes value = 31064
-        dw      31086   ; 2821 ^ 2 = 7958041, two higher bytes value = 31086
-        dw      31108   ; 2822 ^ 2 = 7963684, two higher bytes value = 31108
-        dw      31130   ; 2823 ^ 2 = 7969329, two higher bytes value = 31130
-        dw      31152   ; 2824 ^ 2 = 7974976, two higher bytes value = 31152
-        dw      31174   ; 2825 ^ 2 = 7980625, two higher bytes value = 31174
-        dw      31196   ; 2826 ^ 2 = 7986276, two higher bytes value = 31196
-        dw      31218   ; 2827 ^ 2 = 7991929, two higher bytes value = 31218
-        dw      31240   ; 2828 ^ 2 = 7997584, two higher bytes value = 31240
-        dw      31262   ; 2829 ^ 2 = 8003241, two higher bytes value = 31262
-        dw      31284   ; 2830 ^ 2 = 8008900, two higher bytes value = 31284
-        dw      31306   ; 2831 ^ 2 = 8014561, two higher bytes value = 31306
-        dw      31329   ; 2832 ^ 2 = 8020224, two higher bytes value = 31329
-        dw      31351   ; 2833 ^ 2 = 8025889, two higher bytes value = 31351
-        dw      31373   ; 2834 ^ 2 = 8031556, two higher bytes value = 31373
-        dw      31395   ; 2835 ^ 2 = 8037225, two higher bytes value = 31395
-        dw      31417   ; 2836 ^ 2 = 8042896, two higher bytes value = 31417
-        dw      31439   ; 2837 ^ 2 = 8048569, two higher bytes value = 31439
-        dw      31461   ; 2838 ^ 2 = 8054244, two higher bytes value = 31461
-        dw      31484   ; 2839 ^ 2 = 8059921, two higher bytes value = 31484
-        dw      31506   ; 2840 ^ 2 = 8065600, two higher bytes value = 31506
-        dw      31528   ; 2841 ^ 2 = 8071281, two higher bytes value = 31528
-        dw      31550   ; 2842 ^ 2 = 8076964, two higher bytes value = 31550
-        dw      31572   ; 2843 ^ 2 = 8082649, two higher bytes value = 31572
-        dw      31595   ; 2844 ^ 2 = 8088336, two higher bytes value = 31595
-        dw      31617   ; 2845 ^ 2 = 8094025, two higher bytes value = 31617
-        dw      31639   ; 2846 ^ 2 = 8099716, two higher bytes value = 31639
-        dw      31661   ; 2847 ^ 2 = 8105409, two higher bytes value = 31661
-        dw      31684   ; 2848 ^ 2 = 8111104, two higher bytes value = 31684
-        dw      31706   ; 2849 ^ 2 = 8116801, two higher bytes value = 31706
-        dw      31728   ; 2850 ^ 2 = 8122500, two higher bytes value = 31728
-        dw      31750   ; 2851 ^ 2 = 8128201, two higher bytes value = 31750
-        dw      31773   ; 2852 ^ 2 = 8133904, two higher bytes value = 31773
-        dw      31795   ; 2853 ^ 2 = 8139609, two higher bytes value = 31795
-        dw      31817   ; 2854 ^ 2 = 8145316, two higher bytes value = 31817
-        dw      31839   ; 2855 ^ 2 = 8151025, two higher bytes value = 31839
-        dw      31862   ; 2856 ^ 2 = 8156736, two higher bytes value = 31862
-        dw      31884   ; 2857 ^ 2 = 8162449, two higher bytes value = 31884
-        dw      31906   ; 2858 ^ 2 = 8168164, two higher bytes value = 31906
-        dw      31929   ; 2859 ^ 2 = 8173881, two higher bytes value = 31929
-        dw      31951   ; 2860 ^ 2 = 8179600, two higher bytes value = 31951
-        dw      31973   ; 2861 ^ 2 = 8185321, two higher bytes value = 31973
-        dw      31996   ; 2862 ^ 2 = 8191044, two higher bytes value = 31996
-        dw      32018   ; 2863 ^ 2 = 8196769, two higher bytes value = 32018
-        dw      32041   ; 2864 ^ 2 = 8202496, two higher bytes value = 32041
-        dw      32063   ; 2865 ^ 2 = 8208225, two higher bytes value = 32063
-        dw      32085   ; 2866 ^ 2 = 8213956, two higher bytes value = 32085
-        dw      32108   ; 2867 ^ 2 = 8219689, two higher bytes value = 32108
-        dw      32130   ; 2868 ^ 2 = 8225424, two higher bytes value = 32130
-        dw      32152   ; 2869 ^ 2 = 8231161, two higher bytes value = 32152
-        dw      32175   ; 2870 ^ 2 = 8236900, two higher bytes value = 32175
-        dw      32197   ; 2871 ^ 2 = 8242641, two higher bytes value = 32197
-        dw      32220   ; 2872 ^ 2 = 8248384, two higher bytes value = 32220
-        dw      32242   ; 2873 ^ 2 = 8254129, two higher bytes value = 32242
-        dw      32265   ; 2874 ^ 2 = 8259876, two higher bytes value = 32265
-        dw      32287   ; 2875 ^ 2 = 8265625, two higher bytes value = 32287
-        dw      32310   ; 2876 ^ 2 = 8271376, two higher bytes value = 32310
-        dw      32332   ; 2877 ^ 2 = 8277129, two higher bytes value = 32332
-        dw      32355   ; 2878 ^ 2 = 8282884, two higher bytes value = 32355
-        dw      32377   ; 2879 ^ 2 = 8288641, two higher bytes value = 32377
-        dw      32400   ; 2880 ^ 2 = 8294400, two higher bytes value = 32400
-        dw      32422   ; 2881 ^ 2 = 8300161, two higher bytes value = 32422
-        dw      32445   ; 2882 ^ 2 = 8305924, two higher bytes value = 32445
-        dw      32467   ; 2883 ^ 2 = 8311689, two higher bytes value = 32467
-        dw      32490   ; 2884 ^ 2 = 8317456, two higher bytes value = 32490
-        dw      32512   ; 2885 ^ 2 = 8323225, two higher bytes value = 32512
-        dw      32535   ; 2886 ^ 2 = 8328996, two higher bytes value = 32535
-        dw      32557   ; 2887 ^ 2 = 8334769, two higher bytes value = 32557
-        dw      32580   ; 2888 ^ 2 = 8340544, two higher bytes value = 32580
-        dw      32602   ; 2889 ^ 2 = 8346321, two higher bytes value = 32602
-        dw      32625   ; 2890 ^ 2 = 8352100, two higher bytes value = 32625
-        dw      32647   ; 2891 ^ 2 = 8357881, two higher bytes value = 32647
-        dw      32670   ; 2892 ^ 2 = 8363664, two higher bytes value = 32670
-        dw      32693   ; 2893 ^ 2 = 8369449, two higher bytes value = 32693
-        dw      32715   ; 2894 ^ 2 = 8375236, two higher bytes value = 32715
-        dw      32738   ; 2895 ^ 2 = 8381025, two higher bytes value = 32738
-        dw      32761   ; 2896 ^ 2 = 8386816, two higher bytes value = 32761
-        dw      32783   ; 2897 ^ 2 = 8392609, two higher bytes value = 32783
-        dw      32806   ; 2898 ^ 2 = 8398404, two higher bytes value = 32806
-        dw      32828   ; 2899 ^ 2 = 8404201, two higher bytes value = 32828
-        dw      32851   ; 2900 ^ 2 = 8410000, two higher bytes value = 32851
-        dw      32874   ; 2901 ^ 2 = 8415801, two higher bytes value = 32874
-        dw      32896   ; 2902 ^ 2 = 8421604, two higher bytes value = 32896
-        dw      32919   ; 2903 ^ 2 = 8427409, two higher bytes value = 32919
-        dw      32942   ; 2904 ^ 2 = 8433216, two higher bytes value = 32942
-        dw      32964   ; 2905 ^ 2 = 8439025, two higher bytes value = 32964
-        dw      32987   ; 2906 ^ 2 = 8444836, two higher bytes value = 32987
-        dw      33010   ; 2907 ^ 2 = 8450649, two higher bytes value = 33010
-        dw      33033   ; 2908 ^ 2 = 8456464, two higher bytes value = 33033
-        dw      33055   ; 2909 ^ 2 = 8462281, two higher bytes value = 33055
-        dw      33078   ; 2910 ^ 2 = 8468100, two higher bytes value = 33078
-        dw      33101   ; 2911 ^ 2 = 8473921, two higher bytes value = 33101
-        dw      33124   ; 2912 ^ 2 = 8479744, two higher bytes value = 33124
-        dw      33146   ; 2913 ^ 2 = 8485569, two higher bytes value = 33146
-        dw      33169   ; 2914 ^ 2 = 8491396, two higher bytes value = 33169
-        dw      33192   ; 2915 ^ 2 = 8497225, two higher bytes value = 33192
-        dw      33215   ; 2916 ^ 2 = 8503056, two higher bytes value = 33215
-        dw      33237   ; 2917 ^ 2 = 8508889, two higher bytes value = 33237
-        dw      33260   ; 2918 ^ 2 = 8514724, two higher bytes value = 33260
-        dw      33283   ; 2919 ^ 2 = 8520561, two higher bytes value = 33283
-        dw      33306   ; 2920 ^ 2 = 8526400, two higher bytes value = 33306
-        dw      33329   ; 2921 ^ 2 = 8532241, two higher bytes value = 33329
-        dw      33351   ; 2922 ^ 2 = 8538084, two higher bytes value = 33351
-        dw      33374   ; 2923 ^ 2 = 8543929, two higher bytes value = 33374
-        dw      33397   ; 2924 ^ 2 = 8549776, two higher bytes value = 33397
-        dw      33420   ; 2925 ^ 2 = 8555625, two higher bytes value = 33420
-        dw      33443   ; 2926 ^ 2 = 8561476, two higher bytes value = 33443
-        dw      33466   ; 2927 ^ 2 = 8567329, two higher bytes value = 33466
-        dw      33489   ; 2928 ^ 2 = 8573184, two higher bytes value = 33489
-        dw      33511   ; 2929 ^ 2 = 8579041, two higher bytes value = 33511
-        dw      33534   ; 2930 ^ 2 = 8584900, two higher bytes value = 33534
-        dw      33557   ; 2931 ^ 2 = 8590761, two higher bytes value = 33557
-        dw      33580   ; 2932 ^ 2 = 8596624, two higher bytes value = 33580
-        dw      33603   ; 2933 ^ 2 = 8602489, two higher bytes value = 33603
-        dw      33626   ; 2934 ^ 2 = 8608356, two higher bytes value = 33626
-        dw      33649   ; 2935 ^ 2 = 8614225, two higher bytes value = 33649
-        dw      33672   ; 2936 ^ 2 = 8620096, two higher bytes value = 33672
-        dw      33695   ; 2937 ^ 2 = 8625969, two higher bytes value = 33695
-        dw      33718   ; 2938 ^ 2 = 8631844, two higher bytes value = 33718
-        dw      33741   ; 2939 ^ 2 = 8637721, two higher bytes value = 33741
-        dw      33764   ; 2940 ^ 2 = 8643600, two higher bytes value = 33764
-        dw      33787   ; 2941 ^ 2 = 8649481, two higher bytes value = 33787
-        dw      33810   ; 2942 ^ 2 = 8655364, two higher bytes value = 33810
-        dw      33833   ; 2943 ^ 2 = 8661249, two higher bytes value = 33833
-        dw      33856   ; 2944 ^ 2 = 8667136, two higher bytes value = 33856
-        dw      33879   ; 2945 ^ 2 = 8673025, two higher bytes value = 33879
-        dw      33902   ; 2946 ^ 2 = 8678916, two higher bytes value = 33902
-        dw      33925   ; 2947 ^ 2 = 8684809, two higher bytes value = 33925
-        dw      33948   ; 2948 ^ 2 = 8690704, two higher bytes value = 33948
-        dw      33971   ; 2949 ^ 2 = 8696601, two higher bytes value = 33971
-        dw      33994   ; 2950 ^ 2 = 8702500, two higher bytes value = 33994
-        dw      34017   ; 2951 ^ 2 = 8708401, two higher bytes value = 34017
-        dw      34040   ; 2952 ^ 2 = 8714304, two higher bytes value = 34040
-        dw      34063   ; 2953 ^ 2 = 8720209, two higher bytes value = 34063
-        dw      34086   ; 2954 ^ 2 = 8726116, two higher bytes value = 34086
-        dw      34109   ; 2955 ^ 2 = 8732025, two higher bytes value = 34109
-        dw      34132   ; 2956 ^ 2 = 8737936, two higher bytes value = 34132
-        dw      34155   ; 2957 ^ 2 = 8743849, two higher bytes value = 34155
-        dw      34178   ; 2958 ^ 2 = 8749764, two higher bytes value = 34178
-        dw      34201   ; 2959 ^ 2 = 8755681, two higher bytes value = 34201
-        dw      34225   ; 2960 ^ 2 = 8761600, two higher bytes value = 34225
-        dw      34248   ; 2961 ^ 2 = 8767521, two higher bytes value = 34248
-        dw      34271   ; 2962 ^ 2 = 8773444, two higher bytes value = 34271
-        dw      34294   ; 2963 ^ 2 = 8779369, two higher bytes value = 34294
-        dw      34317   ; 2964 ^ 2 = 8785296, two higher bytes value = 34317
-        dw      34340   ; 2965 ^ 2 = 8791225, two higher bytes value = 34340
-        dw      34363   ; 2966 ^ 2 = 8797156, two higher bytes value = 34363
-        dw      34387   ; 2967 ^ 2 = 8803089, two higher bytes value = 34387
-        dw      34410   ; 2968 ^ 2 = 8809024, two higher bytes value = 34410
-        dw      34433   ; 2969 ^ 2 = 8814961, two higher bytes value = 34433
-        dw      34456   ; 2970 ^ 2 = 8820900, two higher bytes value = 34456
-        dw      34479   ; 2971 ^ 2 = 8826841, two higher bytes value = 34479
-        dw      34503   ; 2972 ^ 2 = 8832784, two higher bytes value = 34503
-        dw      34526   ; 2973 ^ 2 = 8838729, two higher bytes value = 34526
-        dw      34549   ; 2974 ^ 2 = 8844676, two higher bytes value = 34549
-        dw      34572   ; 2975 ^ 2 = 8850625, two higher bytes value = 34572
-        dw      34596   ; 2976 ^ 2 = 8856576, two higher bytes value = 34596
-        dw      34619   ; 2977 ^ 2 = 8862529, two higher bytes value = 34619
-        dw      34642   ; 2978 ^ 2 = 8868484, two higher bytes value = 34642
-        dw      34665   ; 2979 ^ 2 = 8874441, two higher bytes value = 34665
-        dw      34689   ; 2980 ^ 2 = 8880400, two higher bytes value = 34689
-        dw      34712   ; 2981 ^ 2 = 8886361, two higher bytes value = 34712
-        dw      34735   ; 2982 ^ 2 = 8892324, two higher bytes value = 34735
-        dw      34758   ; 2983 ^ 2 = 8898289, two higher bytes value = 34758
-        dw      34782   ; 2984 ^ 2 = 8904256, two higher bytes value = 34782
-        dw      34805   ; 2985 ^ 2 = 8910225, two higher bytes value = 34805
-        dw      34828   ; 2986 ^ 2 = 8916196, two higher bytes value = 34828
-        dw      34852   ; 2987 ^ 2 = 8922169, two higher bytes value = 34852
-        dw      34875   ; 2988 ^ 2 = 8928144, two higher bytes value = 34875
-        dw      34898   ; 2989 ^ 2 = 8934121, two higher bytes value = 34898
-        dw      34922   ; 2990 ^ 2 = 8940100, two higher bytes value = 34922
-        dw      34945   ; 2991 ^ 2 = 8946081, two higher bytes value = 34945
-        dw      34969   ; 2992 ^ 2 = 8952064, two higher bytes value = 34969
-        dw      34992   ; 2993 ^ 2 = 8958049, two higher bytes value = 34992
-        dw      35015   ; 2994 ^ 2 = 8964036, two higher bytes value = 35015
-        dw      35039   ; 2995 ^ 2 = 8970025, two higher bytes value = 35039
-        dw      35062   ; 2996 ^ 2 = 8976016, two higher bytes value = 35062
-        dw      35085   ; 2997 ^ 2 = 8982009, two higher bytes value = 35085
-        dw      35109   ; 2998 ^ 2 = 8988004, two higher bytes value = 35109
-        dw      35132   ; 2999 ^ 2 = 8994001, two higher bytes value = 35132
-        dw      35156   ; 3000 ^ 2 = 9000000, two higher bytes value = 35156
-        dw      35179   ; 3001 ^ 2 = 9006001, two higher bytes value = 35179
-        dw      35203   ; 3002 ^ 2 = 9012004, two higher bytes value = 35203
-        dw      35226   ; 3003 ^ 2 = 9018009, two higher bytes value = 35226
-        dw      35250   ; 3004 ^ 2 = 9024016, two higher bytes value = 35250
-        dw      35273   ; 3005 ^ 2 = 9030025, two higher bytes value = 35273
-        dw      35297   ; 3006 ^ 2 = 9036036, two higher bytes value = 35297
-        dw      35320   ; 3007 ^ 2 = 9042049, two higher bytes value = 35320
-        dw      35344   ; 3008 ^ 2 = 9048064, two higher bytes value = 35344
-        dw      35367   ; 3009 ^ 2 = 9054081, two higher bytes value = 35367
-        dw      35391   ; 3010 ^ 2 = 9060100, two higher bytes value = 35391
-        dw      35414   ; 3011 ^ 2 = 9066121, two higher bytes value = 35414
-        dw      35438   ; 3012 ^ 2 = 9072144, two higher bytes value = 35438
-        dw      35461   ; 3013 ^ 2 = 9078169, two higher bytes value = 35461
-        dw      35485   ; 3014 ^ 2 = 9084196, two higher bytes value = 35485
-        dw      35508   ; 3015 ^ 2 = 9090225, two higher bytes value = 35508
-        dw      35532   ; 3016 ^ 2 = 9096256, two higher bytes value = 35532
-        dw      35555   ; 3017 ^ 2 = 9102289, two higher bytes value = 35555
-        dw      35579   ; 3018 ^ 2 = 9108324, two higher bytes value = 35579
-        dw      35602   ; 3019 ^ 2 = 9114361, two higher bytes value = 35602
-        dw      35626   ; 3020 ^ 2 = 9120400, two higher bytes value = 35626
-        dw      35650   ; 3021 ^ 2 = 9126441, two higher bytes value = 35650
-        dw      35673   ; 3022 ^ 2 = 9132484, two higher bytes value = 35673
-        dw      35697   ; 3023 ^ 2 = 9138529, two higher bytes value = 35697
-        dw      35721   ; 3024 ^ 2 = 9144576, two higher bytes value = 35721
-        dw      35744   ; 3025 ^ 2 = 9150625, two higher bytes value = 35744
-        dw      35768   ; 3026 ^ 2 = 9156676, two higher bytes value = 35768
-        dw      35791   ; 3027 ^ 2 = 9162729, two higher bytes value = 35791
-        dw      35815   ; 3028 ^ 2 = 9168784, two higher bytes value = 35815
-        dw      35839   ; 3029 ^ 2 = 9174841, two higher bytes value = 35839
-        dw      35862   ; 3030 ^ 2 = 9180900, two higher bytes value = 35862
-        dw      35886   ; 3031 ^ 2 = 9186961, two higher bytes value = 35886
-        dw      35910   ; 3032 ^ 2 = 9193024, two higher bytes value = 35910
-        dw      35933   ; 3033 ^ 2 = 9199089, two higher bytes value = 35933
-        dw      35957   ; 3034 ^ 2 = 9205156, two higher bytes value = 35957
-        dw      35981   ; 3035 ^ 2 = 9211225, two higher bytes value = 35981
-        dw      36005   ; 3036 ^ 2 = 9217296, two higher bytes value = 36005
-        dw      36028   ; 3037 ^ 2 = 9223369, two higher bytes value = 36028
-        dw      36052   ; 3038 ^ 2 = 9229444, two higher bytes value = 36052
-        dw      36076   ; 3039 ^ 2 = 9235521, two higher bytes value = 36076
-        dw      36100   ; 3040 ^ 2 = 9241600, two higher bytes value = 36100
-        dw      36123   ; 3041 ^ 2 = 9247681, two higher bytes value = 36123
-        dw      36147   ; 3042 ^ 2 = 9253764, two higher bytes value = 36147
-        dw      36171   ; 3043 ^ 2 = 9259849, two higher bytes value = 36171
-        dw      36195   ; 3044 ^ 2 = 9265936, two higher bytes value = 36195
-        dw      36218   ; 3045 ^ 2 = 9272025, two higher bytes value = 36218
-        dw      36242   ; 3046 ^ 2 = 9278116, two higher bytes value = 36242
-        dw      36266   ; 3047 ^ 2 = 9284209, two higher bytes value = 36266
-        dw      36290   ; 3048 ^ 2 = 9290304, two higher bytes value = 36290
-        dw      36314   ; 3049 ^ 2 = 9296401, two higher bytes value = 36314
-        dw      36337   ; 3050 ^ 2 = 9302500, two higher bytes value = 36337
-        dw      36361   ; 3051 ^ 2 = 9308601, two higher bytes value = 36361
-        dw      36385   ; 3052 ^ 2 = 9314704, two higher bytes value = 36385
-        dw      36409   ; 3053 ^ 2 = 9320809, two higher bytes value = 36409
-        dw      36433   ; 3054 ^ 2 = 9326916, two higher bytes value = 36433
-        dw      36457   ; 3055 ^ 2 = 9333025, two higher bytes value = 36457
-        dw      36481   ; 3056 ^ 2 = 9339136, two higher bytes value = 36481
-        dw      36504   ; 3057 ^ 2 = 9345249, two higher bytes value = 36504
-        dw      36528   ; 3058 ^ 2 = 9351364, two higher bytes value = 36528
-        dw      36552   ; 3059 ^ 2 = 9357481, two higher bytes value = 36552
-        dw      36576   ; 3060 ^ 2 = 9363600, two higher bytes value = 36576
-        dw      36600   ; 3061 ^ 2 = 9369721, two higher bytes value = 36600
-        dw      36624   ; 3062 ^ 2 = 9375844, two higher bytes value = 36624
-        dw      36648   ; 3063 ^ 2 = 9381969, two higher bytes value = 36648
-        dw      36672   ; 3064 ^ 2 = 9388096, two higher bytes value = 36672
-        dw      36696   ; 3065 ^ 2 = 9394225, two higher bytes value = 36696
-        dw      36720   ; 3066 ^ 2 = 9400356, two higher bytes value = 36720
-        dw      36744   ; 3067 ^ 2 = 9406489, two higher bytes value = 36744
-        dw      36768   ; 3068 ^ 2 = 9412624, two higher bytes value = 36768
-        dw      36792   ; 3069 ^ 2 = 9418761, two higher bytes value = 36792
-        dw      36816   ; 3070 ^ 2 = 9424900, two higher bytes value = 36816
-        dw      36840   ; 3071 ^ 2 = 9431041, two higher bytes value = 36840
-        dw      36864   ; 3072 ^ 2 = 9437184, two higher bytes value = 36864
-        dw      36888   ; 3073 ^ 2 = 9443329, two higher bytes value = 36888
-        dw      36912   ; 3074 ^ 2 = 9449476, two higher bytes value = 36912
-        dw      36936   ; 3075 ^ 2 = 9455625, two higher bytes value = 36936
-        dw      36960   ; 3076 ^ 2 = 9461776, two higher bytes value = 36960
-        dw      36984   ; 3077 ^ 2 = 9467929, two higher bytes value = 36984
-        dw      37008   ; 3078 ^ 2 = 9474084, two higher bytes value = 37008
-        dw      37032   ; 3079 ^ 2 = 9480241, two higher bytes value = 37032
-        dw      37056   ; 3080 ^ 2 = 9486400, two higher bytes value = 37056
-        dw      37080   ; 3081 ^ 2 = 9492561, two higher bytes value = 37080
-        dw      37104   ; 3082 ^ 2 = 9498724, two higher bytes value = 37104
-        dw      37128   ; 3083 ^ 2 = 9504889, two higher bytes value = 37128
-        dw      37152   ; 3084 ^ 2 = 9511056, two higher bytes value = 37152
-        dw      37176   ; 3085 ^ 2 = 9517225, two higher bytes value = 37176
-        dw      37200   ; 3086 ^ 2 = 9523396, two higher bytes value = 37200
-        dw      37224   ; 3087 ^ 2 = 9529569, two higher bytes value = 37224
-        dw      37249   ; 3088 ^ 2 = 9535744, two higher bytes value = 37249
-        dw      37273   ; 3089 ^ 2 = 9541921, two higher bytes value = 37273
-        dw      37297   ; 3090 ^ 2 = 9548100, two higher bytes value = 37297
-        dw      37321   ; 3091 ^ 2 = 9554281, two higher bytes value = 37321
-        dw      37345   ; 3092 ^ 2 = 9560464, two higher bytes value = 37345
-        dw      37369   ; 3093 ^ 2 = 9566649, two higher bytes value = 37369
-        dw      37393   ; 3094 ^ 2 = 9572836, two higher bytes value = 37393
-        dw      37418   ; 3095 ^ 2 = 9579025, two higher bytes value = 37418
-        dw      37442   ; 3096 ^ 2 = 9585216, two higher bytes value = 37442
-        dw      37466   ; 3097 ^ 2 = 9591409, two higher bytes value = 37466
-        dw      37490   ; 3098 ^ 2 = 9597604, two higher bytes value = 37490
-        dw      37514   ; 3099 ^ 2 = 9603801, two higher bytes value = 37514
-        dw      37539   ; 3100 ^ 2 = 9610000, two higher bytes value = 37539
-        dw      37563   ; 3101 ^ 2 = 9616201, two higher bytes value = 37563
-        dw      37587   ; 3102 ^ 2 = 9622404, two higher bytes value = 37587
-        dw      37611   ; 3103 ^ 2 = 9628609, two higher bytes value = 37611
-        dw      37636   ; 3104 ^ 2 = 9634816, two higher bytes value = 37636
-        dw      37660   ; 3105 ^ 2 = 9641025, two higher bytes value = 37660
-        dw      37684   ; 3106 ^ 2 = 9647236, two higher bytes value = 37684
-        dw      37708   ; 3107 ^ 2 = 9653449, two higher bytes value = 37708
-        dw      37733   ; 3108 ^ 2 = 9659664, two higher bytes value = 37733
-        dw      37757   ; 3109 ^ 2 = 9665881, two higher bytes value = 37757
-        dw      37781   ; 3110 ^ 2 = 9672100, two higher bytes value = 37781
-        dw      37805   ; 3111 ^ 2 = 9678321, two higher bytes value = 37805
-        dw      37830   ; 3112 ^ 2 = 9684544, two higher bytes value = 37830
-        dw      37854   ; 3113 ^ 2 = 9690769, two higher bytes value = 37854
-        dw      37878   ; 3114 ^ 2 = 9696996, two higher bytes value = 37878
-        dw      37903   ; 3115 ^ 2 = 9703225, two higher bytes value = 37903
-        dw      37927   ; 3116 ^ 2 = 9709456, two higher bytes value = 37927
-        dw      37951   ; 3117 ^ 2 = 9715689, two higher bytes value = 37951
-        dw      37976   ; 3118 ^ 2 = 9721924, two higher bytes value = 37976
-        dw      38000   ; 3119 ^ 2 = 9728161, two higher bytes value = 38000
-        dw      38025   ; 3120 ^ 2 = 9734400, two higher bytes value = 38025
-        dw      38049   ; 3121 ^ 2 = 9740641, two higher bytes value = 38049
-        dw      38073   ; 3122 ^ 2 = 9746884, two higher bytes value = 38073
-        dw      38098   ; 3123 ^ 2 = 9753129, two higher bytes value = 38098
-        dw      38122   ; 3124 ^ 2 = 9759376, two higher bytes value = 38122
-        dw      38146   ; 3125 ^ 2 = 9765625, two higher bytes value = 38146
-        dw      38171   ; 3126 ^ 2 = 9771876, two higher bytes value = 38171
-        dw      38195   ; 3127 ^ 2 = 9778129, two higher bytes value = 38195
-        dw      38220   ; 3128 ^ 2 = 9784384, two higher bytes value = 38220
-        dw      38244   ; 3129 ^ 2 = 9790641, two higher bytes value = 38244
-        dw      38269   ; 3130 ^ 2 = 9796900, two higher bytes value = 38269
-        dw      38293   ; 3131 ^ 2 = 9803161, two higher bytes value = 38293
-        dw      38318   ; 3132 ^ 2 = 9809424, two higher bytes value = 38318
-        dw      38342   ; 3133 ^ 2 = 9815689, two higher bytes value = 38342
-        dw      38367   ; 3134 ^ 2 = 9821956, two higher bytes value = 38367
-        dw      38391   ; 3135 ^ 2 = 9828225, two higher bytes value = 38391
-        dw      38416   ; 3136 ^ 2 = 9834496, two higher bytes value = 38416
-        dw      38440   ; 3137 ^ 2 = 9840769, two higher bytes value = 38440
-        dw      38465   ; 3138 ^ 2 = 9847044, two higher bytes value = 38465
-        dw      38489   ; 3139 ^ 2 = 9853321, two higher bytes value = 38489
-        dw      38514   ; 3140 ^ 2 = 9859600, two higher bytes value = 38514
-        dw      38538   ; 3141 ^ 2 = 9865881, two higher bytes value = 38538
-        dw      38563   ; 3142 ^ 2 = 9872164, two higher bytes value = 38563
-        dw      38587   ; 3143 ^ 2 = 9878449, two higher bytes value = 38587
-        dw      38612   ; 3144 ^ 2 = 9884736, two higher bytes value = 38612
-        dw      38636   ; 3145 ^ 2 = 9891025, two higher bytes value = 38636
-        dw      38661   ; 3146 ^ 2 = 9897316, two higher bytes value = 38661
-        dw      38685   ; 3147 ^ 2 = 9903609, two higher bytes value = 38685
-        dw      38710   ; 3148 ^ 2 = 9909904, two higher bytes value = 38710
-        dw      38735   ; 3149 ^ 2 = 9916201, two higher bytes value = 38735
-        dw      38759   ; 3150 ^ 2 = 9922500, two higher bytes value = 38759
-        dw      38784   ; 3151 ^ 2 = 9928801, two higher bytes value = 38784
-        dw      38809   ; 3152 ^ 2 = 9935104, two higher bytes value = 38809
-        dw      38833   ; 3153 ^ 2 = 9941409, two higher bytes value = 38833
-        dw      38858   ; 3154 ^ 2 = 9947716, two higher bytes value = 38858
-        dw      38882   ; 3155 ^ 2 = 9954025, two higher bytes value = 38882
-        dw      38907   ; 3156 ^ 2 = 9960336, two higher bytes value = 38907
-        dw      38932   ; 3157 ^ 2 = 9966649, two higher bytes value = 38932
-        dw      38956   ; 3158 ^ 2 = 9972964, two higher bytes value = 38956
-        dw      38981   ; 3159 ^ 2 = 9979281, two higher bytes value = 38981
-        dw      39006   ; 3160 ^ 2 = 9985600, two higher bytes value = 39006
-        dw      39030   ; 3161 ^ 2 = 9991921, two higher bytes value = 39030
-        dw      39055   ; 3162 ^ 2 = 9998244, two higher bytes value = 39055
-        dw      39080   ; 3163 ^ 2 = 10004569, two higher bytes value = 39080
-        dw      39105   ; 3164 ^ 2 = 10010896, two higher bytes value = 39105
-        dw      39129   ; 3165 ^ 2 = 10017225, two higher bytes value = 39129
-        dw      39154   ; 3166 ^ 2 = 10023556, two higher bytes value = 39154
-        dw      39179   ; 3167 ^ 2 = 10029889, two higher bytes value = 39179
-        dw      39204   ; 3168 ^ 2 = 10036224, two higher bytes value = 39204
-        dw      39228   ; 3169 ^ 2 = 10042561, two higher bytes value = 39228
-        dw      39253   ; 3170 ^ 2 = 10048900, two higher bytes value = 39253
-        dw      39278   ; 3171 ^ 2 = 10055241, two higher bytes value = 39278
-        dw      39303   ; 3172 ^ 2 = 10061584, two higher bytes value = 39303
-        dw      39327   ; 3173 ^ 2 = 10067929, two higher bytes value = 39327
-        dw      39352   ; 3174 ^ 2 = 10074276, two higher bytes value = 39352
-        dw      39377   ; 3175 ^ 2 = 10080625, two higher bytes value = 39377
-        dw      39402   ; 3176 ^ 2 = 10086976, two higher bytes value = 39402
-        dw      39427   ; 3177 ^ 2 = 10093329, two higher bytes value = 39427
-        dw      39451   ; 3178 ^ 2 = 10099684, two higher bytes value = 39451
-        dw      39476   ; 3179 ^ 2 = 10106041, two higher bytes value = 39476
-        dw      39501   ; 3180 ^ 2 = 10112400, two higher bytes value = 39501
-        dw      39526   ; 3181 ^ 2 = 10118761, two higher bytes value = 39526
-        dw      39551   ; 3182 ^ 2 = 10125124, two higher bytes value = 39551
-        dw      39576   ; 3183 ^ 2 = 10131489, two higher bytes value = 39576
-        dw      39601   ; 3184 ^ 2 = 10137856, two higher bytes value = 39601
-        dw      39625   ; 3185 ^ 2 = 10144225, two higher bytes value = 39625
-        dw      39650   ; 3186 ^ 2 = 10150596, two higher bytes value = 39650
-        dw      39675   ; 3187 ^ 2 = 10156969, two higher bytes value = 39675
-        dw      39700   ; 3188 ^ 2 = 10163344, two higher bytes value = 39700
-        dw      39725   ; 3189 ^ 2 = 10169721, two higher bytes value = 39725
-        dw      39750   ; 3190 ^ 2 = 10176100, two higher bytes value = 39750
-        dw      39775   ; 3191 ^ 2 = 10182481, two higher bytes value = 39775
-        dw      39800   ; 3192 ^ 2 = 10188864, two higher bytes value = 39800
-        dw      39825   ; 3193 ^ 2 = 10195249, two higher bytes value = 39825
-        dw      39850   ; 3194 ^ 2 = 10201636, two higher bytes value = 39850
-        dw      39875   ; 3195 ^ 2 = 10208025, two higher bytes value = 39875
-        dw      39900   ; 3196 ^ 2 = 10214416, two higher bytes value = 39900
-        dw      39925   ; 3197 ^ 2 = 10220809, two higher bytes value = 39925
-        dw      39950   ; 3198 ^ 2 = 10227204, two higher bytes value = 39950
-        dw      39975   ; 3199 ^ 2 = 10233601, two higher bytes value = 39975
-        dw      40000   ; 3200 ^ 2 = 10240000, two higher bytes value = 40000
-        dw      40025   ; 3201 ^ 2 = 10246401, two higher bytes value = 40025
-        dw      40050   ; 3202 ^ 2 = 10252804, two higher bytes value = 40050
-        dw      40075   ; 3203 ^ 2 = 10259209, two higher bytes value = 40075
-        dw      40100   ; 3204 ^ 2 = 10265616, two higher bytes value = 40100
-        dw      40125   ; 3205 ^ 2 = 10272025, two higher bytes value = 40125
-        dw      40150   ; 3206 ^ 2 = 10278436, two higher bytes value = 40150
-        dw      40175   ; 3207 ^ 2 = 10284849, two higher bytes value = 40175
-        dw      40200   ; 3208 ^ 2 = 10291264, two higher bytes value = 40200
-        dw      40225   ; 3209 ^ 2 = 10297681, two higher bytes value = 40225
-        dw      40250   ; 3210 ^ 2 = 10304100, two higher bytes value = 40250
-        dw      40275   ; 3211 ^ 2 = 10310521, two higher bytes value = 40275
-        dw      40300   ; 3212 ^ 2 = 10316944, two higher bytes value = 40300
-        dw      40325   ; 3213 ^ 2 = 10323369, two higher bytes value = 40325
-        dw      40350   ; 3214 ^ 2 = 10329796, two higher bytes value = 40350
-        dw      40375   ; 3215 ^ 2 = 10336225, two higher bytes value = 40375
-        dw      40401   ; 3216 ^ 2 = 10342656, two higher bytes value = 40401
-        dw      40426   ; 3217 ^ 2 = 10349089, two higher bytes value = 40426
-        dw      40451   ; 3218 ^ 2 = 10355524, two higher bytes value = 40451
-        dw      40476   ; 3219 ^ 2 = 10361961, two higher bytes value = 40476
-        dw      40501   ; 3220 ^ 2 = 10368400, two higher bytes value = 40501
-        dw      40526   ; 3221 ^ 2 = 10374841, two higher bytes value = 40526
-        dw      40551   ; 3222 ^ 2 = 10381284, two higher bytes value = 40551
-        dw      40577   ; 3223 ^ 2 = 10387729, two higher bytes value = 40577
-        dw      40602   ; 3224 ^ 2 = 10394176, two higher bytes value = 40602
-        dw      40627   ; 3225 ^ 2 = 10400625, two higher bytes value = 40627
-        dw      40652   ; 3226 ^ 2 = 10407076, two higher bytes value = 40652
-        dw      40677   ; 3227 ^ 2 = 10413529, two higher bytes value = 40677
-        dw      40703   ; 3228 ^ 2 = 10419984, two higher bytes value = 40703
-        dw      40728   ; 3229 ^ 2 = 10426441, two higher bytes value = 40728
-        dw      40753   ; 3230 ^ 2 = 10432900, two higher bytes value = 40753
-        dw      40778   ; 3231 ^ 2 = 10439361, two higher bytes value = 40778
-        dw      40804   ; 3232 ^ 2 = 10445824, two higher bytes value = 40804
-        dw      40829   ; 3233 ^ 2 = 10452289, two higher bytes value = 40829
-        dw      40854   ; 3234 ^ 2 = 10458756, two higher bytes value = 40854
-        dw      40879   ; 3235 ^ 2 = 10465225, two higher bytes value = 40879
-        dw      40905   ; 3236 ^ 2 = 10471696, two higher bytes value = 40905
-        dw      40930   ; 3237 ^ 2 = 10478169, two higher bytes value = 40930
-        dw      40955   ; 3238 ^ 2 = 10484644, two higher bytes value = 40955
-        dw      40980   ; 3239 ^ 2 = 10491121, two higher bytes value = 40980
-        dw      41006   ; 3240 ^ 2 = 10497600, two higher bytes value = 41006
-        dw      41031   ; 3241 ^ 2 = 10504081, two higher bytes value = 41031
-        dw      41056   ; 3242 ^ 2 = 10510564, two higher bytes value = 41056
-        dw      41082   ; 3243 ^ 2 = 10517049, two higher bytes value = 41082
-        dw      41107   ; 3244 ^ 2 = 10523536, two higher bytes value = 41107
-        dw      41132   ; 3245 ^ 2 = 10530025, two higher bytes value = 41132
-        dw      41158   ; 3246 ^ 2 = 10536516, two higher bytes value = 41158
-        dw      41183   ; 3247 ^ 2 = 10543009, two higher bytes value = 41183
-        dw      41209   ; 3248 ^ 2 = 10549504, two higher bytes value = 41209
-        dw      41234   ; 3249 ^ 2 = 10556001, two higher bytes value = 41234
-        dw      41259   ; 3250 ^ 2 = 10562500, two higher bytes value = 41259
-        dw      41285   ; 3251 ^ 2 = 10569001, two higher bytes value = 41285
-        dw      41310   ; 3252 ^ 2 = 10575504, two higher bytes value = 41310
-        dw      41335   ; 3253 ^ 2 = 10582009, two higher bytes value = 41335
-        dw      41361   ; 3254 ^ 2 = 10588516, two higher bytes value = 41361
-        dw      41386   ; 3255 ^ 2 = 10595025, two higher bytes value = 41386
-        dw      41412   ; 3256 ^ 2 = 10601536, two higher bytes value = 41412
-        dw      41437   ; 3257 ^ 2 = 10608049, two higher bytes value = 41437
-        dw      41463   ; 3258 ^ 2 = 10614564, two higher bytes value = 41463
-        dw      41488   ; 3259 ^ 2 = 10621081, two higher bytes value = 41488
-        dw      41514   ; 3260 ^ 2 = 10627600, two higher bytes value = 41514
-        dw      41539   ; 3261 ^ 2 = 10634121, two higher bytes value = 41539
-        dw      41565   ; 3262 ^ 2 = 10640644, two higher bytes value = 41565
-        dw      41590   ; 3263 ^ 2 = 10647169, two higher bytes value = 41590
-        dw      41616   ; 3264 ^ 2 = 10653696, two higher bytes value = 41616
-        dw      41641   ; 3265 ^ 2 = 10660225, two higher bytes value = 41641
-        dw      41667   ; 3266 ^ 2 = 10666756, two higher bytes value = 41667
-        dw      41692   ; 3267 ^ 2 = 10673289, two higher bytes value = 41692
-        dw      41718   ; 3268 ^ 2 = 10679824, two higher bytes value = 41718
-        dw      41743   ; 3269 ^ 2 = 10686361, two higher bytes value = 41743
-        dw      41769   ; 3270 ^ 2 = 10692900, two higher bytes value = 41769
-        dw      41794   ; 3271 ^ 2 = 10699441, two higher bytes value = 41794
-        dw      41820   ; 3272 ^ 2 = 10705984, two higher bytes value = 41820
-        dw      41845   ; 3273 ^ 2 = 10712529, two higher bytes value = 41845
-        dw      41871   ; 3274 ^ 2 = 10719076, two higher bytes value = 41871
-        dw      41896   ; 3275 ^ 2 = 10725625, two higher bytes value = 41896
-        dw      41922   ; 3276 ^ 2 = 10732176, two higher bytes value = 41922
-        dw      41948   ; 3277 ^ 2 = 10738729, two higher bytes value = 41948
-        dw      41973   ; 3278 ^ 2 = 10745284, two higher bytes value = 41973
-        dw      41999   ; 3279 ^ 2 = 10751841, two higher bytes value = 41999
-        dw      42025   ; 3280 ^ 2 = 10758400, two higher bytes value = 42025
-        dw      42050   ; 3281 ^ 2 = 10764961, two higher bytes value = 42050
-        dw      42076   ; 3282 ^ 2 = 10771524, two higher bytes value = 42076
-        dw      42101   ; 3283 ^ 2 = 10778089, two higher bytes value = 42101
-        dw      42127   ; 3284 ^ 2 = 10784656, two higher bytes value = 42127
-        dw      42153   ; 3285 ^ 2 = 10791225, two higher bytes value = 42153
-        dw      42178   ; 3286 ^ 2 = 10797796, two higher bytes value = 42178
-        dw      42204   ; 3287 ^ 2 = 10804369, two higher bytes value = 42204
-        dw      42230   ; 3288 ^ 2 = 10810944, two higher bytes value = 42230
-        dw      42255   ; 3289 ^ 2 = 10817521, two higher bytes value = 42255
-        dw      42281   ; 3290 ^ 2 = 10824100, two higher bytes value = 42281
-        dw      42307   ; 3291 ^ 2 = 10830681, two higher bytes value = 42307
-        dw      42333   ; 3292 ^ 2 = 10837264, two higher bytes value = 42333
-        dw      42358   ; 3293 ^ 2 = 10843849, two higher bytes value = 42358
-        dw      42384   ; 3294 ^ 2 = 10850436, two higher bytes value = 42384
-        dw      42410   ; 3295 ^ 2 = 10857025, two higher bytes value = 42410
-        dw      42436   ; 3296 ^ 2 = 10863616, two higher bytes value = 42436
-        dw      42461   ; 3297 ^ 2 = 10870209, two higher bytes value = 42461
-        dw      42487   ; 3298 ^ 2 = 10876804, two higher bytes value = 42487
-        dw      42513   ; 3299 ^ 2 = 10883401, two higher bytes value = 42513
-        dw      42539   ; 3300 ^ 2 = 10890000, two higher bytes value = 42539
-        dw      42564   ; 3301 ^ 2 = 10896601, two higher bytes value = 42564
-        dw      42590   ; 3302 ^ 2 = 10903204, two higher bytes value = 42590
-        dw      42616   ; 3303 ^ 2 = 10909809, two higher bytes value = 42616
-        dw      42642   ; 3304 ^ 2 = 10916416, two higher bytes value = 42642
-        dw      42668   ; 3305 ^ 2 = 10923025, two higher bytes value = 42668
-        dw      42693   ; 3306 ^ 2 = 10929636, two higher bytes value = 42693
-        dw      42719   ; 3307 ^ 2 = 10936249, two higher bytes value = 42719
-        dw      42745   ; 3308 ^ 2 = 10942864, two higher bytes value = 42745
-        dw      42771   ; 3309 ^ 2 = 10949481, two higher bytes value = 42771
-        dw      42797   ; 3310 ^ 2 = 10956100, two higher bytes value = 42797
-        dw      42823   ; 3311 ^ 2 = 10962721, two higher bytes value = 42823
-        dw      42849   ; 3312 ^ 2 = 10969344, two higher bytes value = 42849
-        dw      42874   ; 3313 ^ 2 = 10975969, two higher bytes value = 42874
-        dw      42900   ; 3314 ^ 2 = 10982596, two higher bytes value = 42900
-        dw      42926   ; 3315 ^ 2 = 10989225, two higher bytes value = 42926
-        dw      42952   ; 3316 ^ 2 = 10995856, two higher bytes value = 42952
-        dw      42978   ; 3317 ^ 2 = 11002489, two higher bytes value = 42978
-        dw      43004   ; 3318 ^ 2 = 11009124, two higher bytes value = 43004
-        dw      43030   ; 3319 ^ 2 = 11015761, two higher bytes value = 43030
-        dw      43056   ; 3320 ^ 2 = 11022400, two higher bytes value = 43056
-        dw      43082   ; 3321 ^ 2 = 11029041, two higher bytes value = 43082
-        dw      43108   ; 3322 ^ 2 = 11035684, two higher bytes value = 43108
-        dw      43134   ; 3323 ^ 2 = 11042329, two higher bytes value = 43134
-        dw      43160   ; 3324 ^ 2 = 11048976, two higher bytes value = 43160
-        dw      43186   ; 3325 ^ 2 = 11055625, two higher bytes value = 43186
-        dw      43212   ; 3326 ^ 2 = 11062276, two higher bytes value = 43212
-        dw      43238   ; 3327 ^ 2 = 11068929, two higher bytes value = 43238
-        dw      43264   ; 3328 ^ 2 = 11075584, two higher bytes value = 43264
-        dw      43290   ; 3329 ^ 2 = 11082241, two higher bytes value = 43290
-        dw      43316   ; 3330 ^ 2 = 11088900, two higher bytes value = 43316
-        dw      43342   ; 3331 ^ 2 = 11095561, two higher bytes value = 43342
-        dw      43368   ; 3332 ^ 2 = 11102224, two higher bytes value = 43368
-        dw      43394   ; 3333 ^ 2 = 11108889, two higher bytes value = 43394
-        dw      43420   ; 3334 ^ 2 = 11115556, two higher bytes value = 43420
-        dw      43446   ; 3335 ^ 2 = 11122225, two higher bytes value = 43446
-        dw      43472   ; 3336 ^ 2 = 11128896, two higher bytes value = 43472
-        dw      43498   ; 3337 ^ 2 = 11135569, two higher bytes value = 43498
-        dw      43524   ; 3338 ^ 2 = 11142244, two higher bytes value = 43524
-        dw      43550   ; 3339 ^ 2 = 11148921, two higher bytes value = 43550
-        dw      43576   ; 3340 ^ 2 = 11155600, two higher bytes value = 43576
-        dw      43602   ; 3341 ^ 2 = 11162281, two higher bytes value = 43602
-        dw      43628   ; 3342 ^ 2 = 11168964, two higher bytes value = 43628
-        dw      43654   ; 3343 ^ 2 = 11175649, two higher bytes value = 43654
-        dw      43681   ; 3344 ^ 2 = 11182336, two higher bytes value = 43681
-        dw      43707   ; 3345 ^ 2 = 11189025, two higher bytes value = 43707
-        dw      43733   ; 3346 ^ 2 = 11195716, two higher bytes value = 43733
-        dw      43759   ; 3347 ^ 2 = 11202409, two higher bytes value = 43759
-        dw      43785   ; 3348 ^ 2 = 11209104, two higher bytes value = 43785
-        dw      43811   ; 3349 ^ 2 = 11215801, two higher bytes value = 43811
-        dw      43837   ; 3350 ^ 2 = 11222500, two higher bytes value = 43837
-        dw      43864   ; 3351 ^ 2 = 11229201, two higher bytes value = 43864
-        dw      43890   ; 3352 ^ 2 = 11235904, two higher bytes value = 43890
-        dw      43916   ; 3353 ^ 2 = 11242609, two higher bytes value = 43916
-        dw      43942   ; 3354 ^ 2 = 11249316, two higher bytes value = 43942
-        dw      43968   ; 3355 ^ 2 = 11256025, two higher bytes value = 43968
-        dw      43995   ; 3356 ^ 2 = 11262736, two higher bytes value = 43995
-        dw      44021   ; 3357 ^ 2 = 11269449, two higher bytes value = 44021
-        dw      44047   ; 3358 ^ 2 = 11276164, two higher bytes value = 44047
-        dw      44073   ; 3359 ^ 2 = 11282881, two higher bytes value = 44073
-        dw      44100   ; 3360 ^ 2 = 11289600, two higher bytes value = 44100
-        dw      44126   ; 3361 ^ 2 = 11296321, two higher bytes value = 44126
-        dw      44152   ; 3362 ^ 2 = 11303044, two higher bytes value = 44152
-        dw      44178   ; 3363 ^ 2 = 11309769, two higher bytes value = 44178
-        dw      44205   ; 3364 ^ 2 = 11316496, two higher bytes value = 44205
-        dw      44231   ; 3365 ^ 2 = 11323225, two higher bytes value = 44231
-        dw      44257   ; 3366 ^ 2 = 11329956, two higher bytes value = 44257
-        dw      44283   ; 3367 ^ 2 = 11336689, two higher bytes value = 44283
-        dw      44310   ; 3368 ^ 2 = 11343424, two higher bytes value = 44310
-        dw      44336   ; 3369 ^ 2 = 11350161, two higher bytes value = 44336
-        dw      44362   ; 3370 ^ 2 = 11356900, two higher bytes value = 44362
-        dw      44389   ; 3371 ^ 2 = 11363641, two higher bytes value = 44389
-        dw      44415   ; 3372 ^ 2 = 11370384, two higher bytes value = 44415
-        dw      44441   ; 3373 ^ 2 = 11377129, two higher bytes value = 44441
-        dw      44468   ; 3374 ^ 2 = 11383876, two higher bytes value = 44468
-        dw      44494   ; 3375 ^ 2 = 11390625, two higher bytes value = 44494
-        dw      44521   ; 3376 ^ 2 = 11397376, two higher bytes value = 44521
-        dw      44547   ; 3377 ^ 2 = 11404129, two higher bytes value = 44547
-        dw      44573   ; 3378 ^ 2 = 11410884, two higher bytes value = 44573
-        dw      44600   ; 3379 ^ 2 = 11417641, two higher bytes value = 44600
-        dw      44626   ; 3380 ^ 2 = 11424400, two higher bytes value = 44626
-        dw      44652   ; 3381 ^ 2 = 11431161, two higher bytes value = 44652
-        dw      44679   ; 3382 ^ 2 = 11437924, two higher bytes value = 44679
-        dw      44705   ; 3383 ^ 2 = 11444689, two higher bytes value = 44705
-        dw      44732   ; 3384 ^ 2 = 11451456, two higher bytes value = 44732
-        dw      44758   ; 3385 ^ 2 = 11458225, two higher bytes value = 44758
-        dw      44785   ; 3386 ^ 2 = 11464996, two higher bytes value = 44785
-        dw      44811   ; 3387 ^ 2 = 11471769, two higher bytes value = 44811
-        dw      44838   ; 3388 ^ 2 = 11478544, two higher bytes value = 44838
-        dw      44864   ; 3389 ^ 2 = 11485321, two higher bytes value = 44864
-        dw      44891   ; 3390 ^ 2 = 11492100, two higher bytes value = 44891
-        dw      44917   ; 3391 ^ 2 = 11498881, two higher bytes value = 44917
-        dw      44944   ; 3392 ^ 2 = 11505664, two higher bytes value = 44944
-        dw      44970   ; 3393 ^ 2 = 11512449, two higher bytes value = 44970
-        dw      44997   ; 3394 ^ 2 = 11519236, two higher bytes value = 44997
-        dw      45023   ; 3395 ^ 2 = 11526025, two higher bytes value = 45023
-        dw      45050   ; 3396 ^ 2 = 11532816, two higher bytes value = 45050
-        dw      45076   ; 3397 ^ 2 = 11539609, two higher bytes value = 45076
-        dw      45103   ; 3398 ^ 2 = 11546404, two higher bytes value = 45103
-        dw      45129   ; 3399 ^ 2 = 11553201, two higher bytes value = 45129
-        dw      45156   ; 3400 ^ 2 = 11560000, two higher bytes value = 45156
-        dw      45182   ; 3401 ^ 2 = 11566801, two higher bytes value = 45182
-        dw      45209   ; 3402 ^ 2 = 11573604, two higher bytes value = 45209
-        dw      45235   ; 3403 ^ 2 = 11580409, two higher bytes value = 45235
-        dw      45262   ; 3404 ^ 2 = 11587216, two higher bytes value = 45262
-        dw      45289   ; 3405 ^ 2 = 11594025, two higher bytes value = 45289
-        dw      45315   ; 3406 ^ 2 = 11600836, two higher bytes value = 45315
-        dw      45342   ; 3407 ^ 2 = 11607649, two higher bytes value = 45342
-        dw      45369   ; 3408 ^ 2 = 11614464, two higher bytes value = 45369
-        dw      45395   ; 3409 ^ 2 = 11621281, two higher bytes value = 45395
-        dw      45422   ; 3410 ^ 2 = 11628100, two higher bytes value = 45422
-        dw      45448   ; 3411 ^ 2 = 11634921, two higher bytes value = 45448
-        dw      45475   ; 3412 ^ 2 = 11641744, two higher bytes value = 45475
-        dw      45502   ; 3413 ^ 2 = 11648569, two higher bytes value = 45502
-        dw      45528   ; 3414 ^ 2 = 11655396, two higher bytes value = 45528
-        dw      45555   ; 3415 ^ 2 = 11662225, two higher bytes value = 45555
-        dw      45582   ; 3416 ^ 2 = 11669056, two higher bytes value = 45582
-        dw      45608   ; 3417 ^ 2 = 11675889, two higher bytes value = 45608
-        dw      45635   ; 3418 ^ 2 = 11682724, two higher bytes value = 45635
-        dw      45662   ; 3419 ^ 2 = 11689561, two higher bytes value = 45662
-        dw      45689   ; 3420 ^ 2 = 11696400, two higher bytes value = 45689
-        dw      45715   ; 3421 ^ 2 = 11703241, two higher bytes value = 45715
-        dw      45742   ; 3422 ^ 2 = 11710084, two higher bytes value = 45742
-        dw      45769   ; 3423 ^ 2 = 11716929, two higher bytes value = 45769
-        dw      45796   ; 3424 ^ 2 = 11723776, two higher bytes value = 45796
-        dw      45822   ; 3425 ^ 2 = 11730625, two higher bytes value = 45822
-        dw      45849   ; 3426 ^ 2 = 11737476, two higher bytes value = 45849
-        dw      45876   ; 3427 ^ 2 = 11744329, two higher bytes value = 45876
-        dw      45903   ; 3428 ^ 2 = 11751184, two higher bytes value = 45903
-        dw      45929   ; 3429 ^ 2 = 11758041, two higher bytes value = 45929
-        dw      45956   ; 3430 ^ 2 = 11764900, two higher bytes value = 45956
-        dw      45983   ; 3431 ^ 2 = 11771761, two higher bytes value = 45983
-        dw      46010   ; 3432 ^ 2 = 11778624, two higher bytes value = 46010
-        dw      46037   ; 3433 ^ 2 = 11785489, two higher bytes value = 46037
-        dw      46063   ; 3434 ^ 2 = 11792356, two higher bytes value = 46063
-        dw      46090   ; 3435 ^ 2 = 11799225, two higher bytes value = 46090
-        dw      46117   ; 3436 ^ 2 = 11806096, two higher bytes value = 46117
-        dw      46144   ; 3437 ^ 2 = 11812969, two higher bytes value = 46144
-        dw      46171   ; 3438 ^ 2 = 11819844, two higher bytes value = 46171
-        dw      46198   ; 3439 ^ 2 = 11826721, two higher bytes value = 46198
-        dw      46225   ; 3440 ^ 2 = 11833600, two higher bytes value = 46225
-        dw      46251   ; 3441 ^ 2 = 11840481, two higher bytes value = 46251
-        dw      46278   ; 3442 ^ 2 = 11847364, two higher bytes value = 46278
-        dw      46305   ; 3443 ^ 2 = 11854249, two higher bytes value = 46305
-        dw      46332   ; 3444 ^ 2 = 11861136, two higher bytes value = 46332
-        dw      46359   ; 3445 ^ 2 = 11868025, two higher bytes value = 46359
-        dw      46386   ; 3446 ^ 2 = 11874916, two higher bytes value = 46386
-        dw      46413   ; 3447 ^ 2 = 11881809, two higher bytes value = 46413
-        dw      46440   ; 3448 ^ 2 = 11888704, two higher bytes value = 46440
-        dw      46467   ; 3449 ^ 2 = 11895601, two higher bytes value = 46467
-        dw      46494   ; 3450 ^ 2 = 11902500, two higher bytes value = 46494
-        dw      46521   ; 3451 ^ 2 = 11909401, two higher bytes value = 46521
-        dw      46548   ; 3452 ^ 2 = 11916304, two higher bytes value = 46548
-        dw      46575   ; 3453 ^ 2 = 11923209, two higher bytes value = 46575
-        dw      46602   ; 3454 ^ 2 = 11930116, two higher bytes value = 46602
-        dw      46629   ; 3455 ^ 2 = 11937025, two higher bytes value = 46629
-        dw      46656   ; 3456 ^ 2 = 11943936, two higher bytes value = 46656
-        dw      46683   ; 3457 ^ 2 = 11950849, two higher bytes value = 46683
-        dw      46710   ; 3458 ^ 2 = 11957764, two higher bytes value = 46710
-        dw      46737   ; 3459 ^ 2 = 11964681, two higher bytes value = 46737
-        dw      46764   ; 3460 ^ 2 = 11971600, two higher bytes value = 46764
-        dw      46791   ; 3461 ^ 2 = 11978521, two higher bytes value = 46791
-        dw      46818   ; 3462 ^ 2 = 11985444, two higher bytes value = 46818
-        dw      46845   ; 3463 ^ 2 = 11992369, two higher bytes value = 46845
-        dw      46872   ; 3464 ^ 2 = 11999296, two higher bytes value = 46872
-        dw      46899   ; 3465 ^ 2 = 12006225, two higher bytes value = 46899
-        dw      46926   ; 3466 ^ 2 = 12013156, two higher bytes value = 46926
-        dw      46953   ; 3467 ^ 2 = 12020089, two higher bytes value = 46953
-        dw      46980   ; 3468 ^ 2 = 12027024, two higher bytes value = 46980
-        dw      47007   ; 3469 ^ 2 = 12033961, two higher bytes value = 47007
-        dw      47034   ; 3470 ^ 2 = 12040900, two higher bytes value = 47034
-        dw      47061   ; 3471 ^ 2 = 12047841, two higher bytes value = 47061
-        dw      47089   ; 3472 ^ 2 = 12054784, two higher bytes value = 47089
-        dw      47116   ; 3473 ^ 2 = 12061729, two higher bytes value = 47116
-        dw      47143   ; 3474 ^ 2 = 12068676, two higher bytes value = 47143
-        dw      47170   ; 3475 ^ 2 = 12075625, two higher bytes value = 47170
-        dw      47197   ; 3476 ^ 2 = 12082576, two higher bytes value = 47197
-        dw      47224   ; 3477 ^ 2 = 12089529, two higher bytes value = 47224
-        dw      47251   ; 3478 ^ 2 = 12096484, two higher bytes value = 47251
-        dw      47279   ; 3479 ^ 2 = 12103441, two higher bytes value = 47279
-        dw      47306   ; 3480 ^ 2 = 12110400, two higher bytes value = 47306
-        dw      47333   ; 3481 ^ 2 = 12117361, two higher bytes value = 47333
-        dw      47360   ; 3482 ^ 2 = 12124324, two higher bytes value = 47360
-        dw      47387   ; 3483 ^ 2 = 12131289, two higher bytes value = 47387
-        dw      47415   ; 3484 ^ 2 = 12138256, two higher bytes value = 47415
-        dw      47442   ; 3485 ^ 2 = 12145225, two higher bytes value = 47442
-        dw      47469   ; 3486 ^ 2 = 12152196, two higher bytes value = 47469
-        dw      47496   ; 3487 ^ 2 = 12159169, two higher bytes value = 47496
-        dw      47524   ; 3488 ^ 2 = 12166144, two higher bytes value = 47524
-        dw      47551   ; 3489 ^ 2 = 12173121, two higher bytes value = 47551
-        dw      47578   ; 3490 ^ 2 = 12180100, two higher bytes value = 47578
-        dw      47605   ; 3491 ^ 2 = 12187081, two higher bytes value = 47605
-        dw      47633   ; 3492 ^ 2 = 12194064, two higher bytes value = 47633
-        dw      47660   ; 3493 ^ 2 = 12201049, two higher bytes value = 47660
-        dw      47687   ; 3494 ^ 2 = 12208036, two higher bytes value = 47687
-        dw      47714   ; 3495 ^ 2 = 12215025, two higher bytes value = 47714
-        dw      47742   ; 3496 ^ 2 = 12222016, two higher bytes value = 47742
-        dw      47769   ; 3497 ^ 2 = 12229009, two higher bytes value = 47769
-        dw      47796   ; 3498 ^ 2 = 12236004, two higher bytes value = 47796
-        dw      47824   ; 3499 ^ 2 = 12243001, two higher bytes value = 47824
-        dw      47851   ; 3500 ^ 2 = 12250000, two higher bytes value = 47851
-        dw      47878   ; 3501 ^ 2 = 12257001, two higher bytes value = 47878
-        dw      47906   ; 3502 ^ 2 = 12264004, two higher bytes value = 47906
-        dw      47933   ; 3503 ^ 2 = 12271009, two higher bytes value = 47933
-        dw      47961   ; 3504 ^ 2 = 12278016, two higher bytes value = 47961
-        dw      47988   ; 3505 ^ 2 = 12285025, two higher bytes value = 47988
-        dw      48015   ; 3506 ^ 2 = 12292036, two higher bytes value = 48015
-        dw      48043   ; 3507 ^ 2 = 12299049, two higher bytes value = 48043
-        dw      48070   ; 3508 ^ 2 = 12306064, two higher bytes value = 48070
-        dw      48097   ; 3509 ^ 2 = 12313081, two higher bytes value = 48097
-        dw      48125   ; 3510 ^ 2 = 12320100, two higher bytes value = 48125
-        dw      48152   ; 3511 ^ 2 = 12327121, two higher bytes value = 48152
-        dw      48180   ; 3512 ^ 2 = 12334144, two higher bytes value = 48180
-        dw      48207   ; 3513 ^ 2 = 12341169, two higher bytes value = 48207
-        dw      48235   ; 3514 ^ 2 = 12348196, two higher bytes value = 48235
-        dw      48262   ; 3515 ^ 2 = 12355225, two higher bytes value = 48262
-        dw      48290   ; 3516 ^ 2 = 12362256, two higher bytes value = 48290
-        dw      48317   ; 3517 ^ 2 = 12369289, two higher bytes value = 48317
-        dw      48345   ; 3518 ^ 2 = 12376324, two higher bytes value = 48345
-        dw      48372   ; 3519 ^ 2 = 12383361, two higher bytes value = 48372
-        dw      48400   ; 3520 ^ 2 = 12390400, two higher bytes value = 48400
-        dw      48427   ; 3521 ^ 2 = 12397441, two higher bytes value = 48427
-        dw      48455   ; 3522 ^ 2 = 12404484, two higher bytes value = 48455
-        dw      48482   ; 3523 ^ 2 = 12411529, two higher bytes value = 48482
-        dw      48510   ; 3524 ^ 2 = 12418576, two higher bytes value = 48510
-        dw      48537   ; 3525 ^ 2 = 12425625, two higher bytes value = 48537
-        dw      48565   ; 3526 ^ 2 = 12432676, two higher bytes value = 48565
-        dw      48592   ; 3527 ^ 2 = 12439729, two higher bytes value = 48592
-        dw      48620   ; 3528 ^ 2 = 12446784, two higher bytes value = 48620
-        dw      48647   ; 3529 ^ 2 = 12453841, two higher bytes value = 48647
-        dw      48675   ; 3530 ^ 2 = 12460900, two higher bytes value = 48675
-        dw      48702   ; 3531 ^ 2 = 12467961, two higher bytes value = 48702
-        dw      48730   ; 3532 ^ 2 = 12475024, two higher bytes value = 48730
-        dw      48758   ; 3533 ^ 2 = 12482089, two higher bytes value = 48758
-        dw      48785   ; 3534 ^ 2 = 12489156, two higher bytes value = 48785
-        dw      48813   ; 3535 ^ 2 = 12496225, two higher bytes value = 48813
-        dw      48841   ; 3536 ^ 2 = 12503296, two higher bytes value = 48841
-        dw      48868   ; 3537 ^ 2 = 12510369, two higher bytes value = 48868
-        dw      48896   ; 3538 ^ 2 = 12517444, two higher bytes value = 48896
-        dw      48923   ; 3539 ^ 2 = 12524521, two higher bytes value = 48923
-        dw      48951   ; 3540 ^ 2 = 12531600, two higher bytes value = 48951
-        dw      48979   ; 3541 ^ 2 = 12538681, two higher bytes value = 48979
-        dw      49006   ; 3542 ^ 2 = 12545764, two higher bytes value = 49006
-        dw      49034   ; 3543 ^ 2 = 12552849, two higher bytes value = 49034
-        dw      49062   ; 3544 ^ 2 = 12559936, two higher bytes value = 49062
-        dw      49089   ; 3545 ^ 2 = 12567025, two higher bytes value = 49089
-        dw      49117   ; 3546 ^ 2 = 12574116, two higher bytes value = 49117
-        dw      49145   ; 3547 ^ 2 = 12581209, two higher bytes value = 49145
-        dw      49173   ; 3548 ^ 2 = 12588304, two higher bytes value = 49173
-        dw      49200   ; 3549 ^ 2 = 12595401, two higher bytes value = 49200
-        dw      49228   ; 3550 ^ 2 = 12602500, two higher bytes value = 49228
-        dw      49256   ; 3551 ^ 2 = 12609601, two higher bytes value = 49256
-        dw      49284   ; 3552 ^ 2 = 12616704, two higher bytes value = 49284
-        dw      49311   ; 3553 ^ 2 = 12623809, two higher bytes value = 49311
-        dw      49339   ; 3554 ^ 2 = 12630916, two higher bytes value = 49339
-        dw      49367   ; 3555 ^ 2 = 12638025, two higher bytes value = 49367
-        dw      49395   ; 3556 ^ 2 = 12645136, two higher bytes value = 49395
-        dw      49422   ; 3557 ^ 2 = 12652249, two higher bytes value = 49422
-        dw      49450   ; 3558 ^ 2 = 12659364, two higher bytes value = 49450
-        dw      49478   ; 3559 ^ 2 = 12666481, two higher bytes value = 49478
-        dw      49506   ; 3560 ^ 2 = 12673600, two higher bytes value = 49506
-        dw      49534   ; 3561 ^ 2 = 12680721, two higher bytes value = 49534
-        dw      49561   ; 3562 ^ 2 = 12687844, two higher bytes value = 49561
-        dw      49589   ; 3563 ^ 2 = 12694969, two higher bytes value = 49589
-        dw      49617   ; 3564 ^ 2 = 12702096, two higher bytes value = 49617
-        dw      49645   ; 3565 ^ 2 = 12709225, two higher bytes value = 49645
-        dw      49673   ; 3566 ^ 2 = 12716356, two higher bytes value = 49673
-        dw      49701   ; 3567 ^ 2 = 12723489, two higher bytes value = 49701
-        dw      49729   ; 3568 ^ 2 = 12730624, two higher bytes value = 49729
-        dw      49756   ; 3569 ^ 2 = 12737761, two higher bytes value = 49756
-        dw      49784   ; 3570 ^ 2 = 12744900, two higher bytes value = 49784
-        dw      49812   ; 3571 ^ 2 = 12752041, two higher bytes value = 49812
-        dw      49840   ; 3572 ^ 2 = 12759184, two higher bytes value = 49840
-        dw      49868   ; 3573 ^ 2 = 12766329, two higher bytes value = 49868
-        dw      49896   ; 3574 ^ 2 = 12773476, two higher bytes value = 49896
-        dw      49924   ; 3575 ^ 2 = 12780625, two higher bytes value = 49924
-        dw      49952   ; 3576 ^ 2 = 12787776, two higher bytes value = 49952
-        dw      49980   ; 3577 ^ 2 = 12794929, two higher bytes value = 49980
-        dw      50008   ; 3578 ^ 2 = 12802084, two higher bytes value = 50008
-        dw      50036   ; 3579 ^ 2 = 12809241, two higher bytes value = 50036
-        dw      50064   ; 3580 ^ 2 = 12816400, two higher bytes value = 50064
-        dw      50092   ; 3581 ^ 2 = 12823561, two higher bytes value = 50092
-        dw      50120   ; 3582 ^ 2 = 12830724, two higher bytes value = 50120
-        dw      50148   ; 3583 ^ 2 = 12837889, two higher bytes value = 50148
-        dw      50176   ; 3584 ^ 2 = 12845056, two higher bytes value = 50176
-        dw      50204   ; 3585 ^ 2 = 12852225, two higher bytes value = 50204
-        dw      50232   ; 3586 ^ 2 = 12859396, two higher bytes value = 50232
-        dw      50260   ; 3587 ^ 2 = 12866569, two higher bytes value = 50260
-        dw      50288   ; 3588 ^ 2 = 12873744, two higher bytes value = 50288
-        dw      50316   ; 3589 ^ 2 = 12880921, two higher bytes value = 50316
-        dw      50344   ; 3590 ^ 2 = 12888100, two higher bytes value = 50344
-        dw      50372   ; 3591 ^ 2 = 12895281, two higher bytes value = 50372
-        dw      50400   ; 3592 ^ 2 = 12902464, two higher bytes value = 50400
-        dw      50428   ; 3593 ^ 2 = 12909649, two higher bytes value = 50428
-        dw      50456   ; 3594 ^ 2 = 12916836, two higher bytes value = 50456
-        dw      50484   ; 3595 ^ 2 = 12924025, two higher bytes value = 50484
-        dw      50512   ; 3596 ^ 2 = 12931216, two higher bytes value = 50512
-        dw      50540   ; 3597 ^ 2 = 12938409, two higher bytes value = 50540
-        dw      50568   ; 3598 ^ 2 = 12945604, two higher bytes value = 50568
-        dw      50596   ; 3599 ^ 2 = 12952801, two higher bytes value = 50596
-        dw      50625   ; 3600 ^ 2 = 12960000, two higher bytes value = 50625
-        dw      50653   ; 3601 ^ 2 = 12967201, two higher bytes value = 50653
-        dw      50681   ; 3602 ^ 2 = 12974404, two higher bytes value = 50681
-        dw      50709   ; 3603 ^ 2 = 12981609, two higher bytes value = 50709
-        dw      50737   ; 3604 ^ 2 = 12988816, two higher bytes value = 50737
-        dw      50765   ; 3605 ^ 2 = 12996025, two higher bytes value = 50765
-        dw      50793   ; 3606 ^ 2 = 13003236, two higher bytes value = 50793
-        dw      50822   ; 3607 ^ 2 = 13010449, two higher bytes value = 50822
-        dw      50850   ; 3608 ^ 2 = 13017664, two higher bytes value = 50850
-        dw      50878   ; 3609 ^ 2 = 13024881, two higher bytes value = 50878
-        dw      50906   ; 3610 ^ 2 = 13032100, two higher bytes value = 50906
-        dw      50934   ; 3611 ^ 2 = 13039321, two higher bytes value = 50934
-        dw      50963   ; 3612 ^ 2 = 13046544, two higher bytes value = 50963
-        dw      50991   ; 3613 ^ 2 = 13053769, two higher bytes value = 50991
-        dw      51019   ; 3614 ^ 2 = 13060996, two higher bytes value = 51019
-        dw      51047   ; 3615 ^ 2 = 13068225, two higher bytes value = 51047
-        dw      51076   ; 3616 ^ 2 = 13075456, two higher bytes value = 51076
-        dw      51104   ; 3617 ^ 2 = 13082689, two higher bytes value = 51104
-        dw      51132   ; 3618 ^ 2 = 13089924, two higher bytes value = 51132
-        dw      51160   ; 3619 ^ 2 = 13097161, two higher bytes value = 51160
-        dw      51189   ; 3620 ^ 2 = 13104400, two higher bytes value = 51189
-        dw      51217   ; 3621 ^ 2 = 13111641, two higher bytes value = 51217
-        dw      51245   ; 3622 ^ 2 = 13118884, two higher bytes value = 51245
-        dw      51273   ; 3623 ^ 2 = 13126129, two higher bytes value = 51273
-        dw      51302   ; 3624 ^ 2 = 13133376, two higher bytes value = 51302
-        dw      51330   ; 3625 ^ 2 = 13140625, two higher bytes value = 51330
-        dw      51358   ; 3626 ^ 2 = 13147876, two higher bytes value = 51358
-        dw      51387   ; 3627 ^ 2 = 13155129, two higher bytes value = 51387
-        dw      51415   ; 3628 ^ 2 = 13162384, two higher bytes value = 51415
-        dw      51443   ; 3629 ^ 2 = 13169641, two higher bytes value = 51443
-        dw      51472   ; 3630 ^ 2 = 13176900, two higher bytes value = 51472
-        dw      51500   ; 3631 ^ 2 = 13184161, two higher bytes value = 51500
-        dw      51529   ; 3632 ^ 2 = 13191424, two higher bytes value = 51529
-        dw      51557   ; 3633 ^ 2 = 13198689, two higher bytes value = 51557
-        dw      51585   ; 3634 ^ 2 = 13205956, two higher bytes value = 51585
-        dw      51614   ; 3635 ^ 2 = 13213225, two higher bytes value = 51614
-        dw      51642   ; 3636 ^ 2 = 13220496, two higher bytes value = 51642
-        dw      51670   ; 3637 ^ 2 = 13227769, two higher bytes value = 51670
-        dw      51699   ; 3638 ^ 2 = 13235044, two higher bytes value = 51699
-        dw      51727   ; 3639 ^ 2 = 13242321, two higher bytes value = 51727
-        dw      51756   ; 3640 ^ 2 = 13249600, two higher bytes value = 51756
-        dw      51784   ; 3641 ^ 2 = 13256881, two higher bytes value = 51784
-        dw      51813   ; 3642 ^ 2 = 13264164, two higher bytes value = 51813
-        dw      51841   ; 3643 ^ 2 = 13271449, two higher bytes value = 51841
-        dw      51870   ; 3644 ^ 2 = 13278736, two higher bytes value = 51870
-        dw      51898   ; 3645 ^ 2 = 13286025, two higher bytes value = 51898
-        dw      51927   ; 3646 ^ 2 = 13293316, two higher bytes value = 51927
-        dw      51955   ; 3647 ^ 2 = 13300609, two higher bytes value = 51955
-        dw      51984   ; 3648 ^ 2 = 13307904, two higher bytes value = 51984
-        dw      52012   ; 3649 ^ 2 = 13315201, two higher bytes value = 52012
-        dw      52041   ; 3650 ^ 2 = 13322500, two higher bytes value = 52041
-        dw      52069   ; 3651 ^ 2 = 13329801, two higher bytes value = 52069
-        dw      52098   ; 3652 ^ 2 = 13337104, two higher bytes value = 52098
-        dw      52126   ; 3653 ^ 2 = 13344409, two higher bytes value = 52126
-        dw      52155   ; 3654 ^ 2 = 13351716, two higher bytes value = 52155
-        dw      52183   ; 3655 ^ 2 = 13359025, two higher bytes value = 52183
-        dw      52212   ; 3656 ^ 2 = 13366336, two higher bytes value = 52212
-        dw      52240   ; 3657 ^ 2 = 13373649, two higher bytes value = 52240
-        dw      52269   ; 3658 ^ 2 = 13380964, two higher bytes value = 52269
-        dw      52297   ; 3659 ^ 2 = 13388281, two higher bytes value = 52297
-        dw      52326   ; 3660 ^ 2 = 13395600, two higher bytes value = 52326
-        dw      52355   ; 3661 ^ 2 = 13402921, two higher bytes value = 52355
-        dw      52383   ; 3662 ^ 2 = 13410244, two higher bytes value = 52383
-        dw      52412   ; 3663 ^ 2 = 13417569, two higher bytes value = 52412
-        dw      52441   ; 3664 ^ 2 = 13424896, two higher bytes value = 52441
-        dw      52469   ; 3665 ^ 2 = 13432225, two higher bytes value = 52469
-        dw      52498   ; 3666 ^ 2 = 13439556, two higher bytes value = 52498
-        dw      52526   ; 3667 ^ 2 = 13446889, two higher bytes value = 52526
-        dw      52555   ; 3668 ^ 2 = 13454224, two higher bytes value = 52555
-        dw      52584   ; 3669 ^ 2 = 13461561, two higher bytes value = 52584
-        dw      52612   ; 3670 ^ 2 = 13468900, two higher bytes value = 52612
-        dw      52641   ; 3671 ^ 2 = 13476241, two higher bytes value = 52641
-        dw      52670   ; 3672 ^ 2 = 13483584, two higher bytes value = 52670
-        dw      52698   ; 3673 ^ 2 = 13490929, two higher bytes value = 52698
-        dw      52727   ; 3674 ^ 2 = 13498276, two higher bytes value = 52727
-        dw      52756   ; 3675 ^ 2 = 13505625, two higher bytes value = 52756
-        dw      52785   ; 3676 ^ 2 = 13512976, two higher bytes value = 52785
-        dw      52813   ; 3677 ^ 2 = 13520329, two higher bytes value = 52813
-        dw      52842   ; 3678 ^ 2 = 13527684, two higher bytes value = 52842
-        dw      52871   ; 3679 ^ 2 = 13535041, two higher bytes value = 52871
-        dw      52900   ; 3680 ^ 2 = 13542400, two higher bytes value = 52900
-        dw      52928   ; 3681 ^ 2 = 13549761, two higher bytes value = 52928
-        dw      52957   ; 3682 ^ 2 = 13557124, two higher bytes value = 52957
-        dw      52986   ; 3683 ^ 2 = 13564489, two higher bytes value = 52986
-        dw      53015   ; 3684 ^ 2 = 13571856, two higher bytes value = 53015
-        dw      53043   ; 3685 ^ 2 = 13579225, two higher bytes value = 53043
-        dw      53072   ; 3686 ^ 2 = 13586596, two higher bytes value = 53072
-        dw      53101   ; 3687 ^ 2 = 13593969, two higher bytes value = 53101
-        dw      53130   ; 3688 ^ 2 = 13601344, two higher bytes value = 53130
-        dw      53159   ; 3689 ^ 2 = 13608721, two higher bytes value = 53159
-        dw      53187   ; 3690 ^ 2 = 13616100, two higher bytes value = 53187
-        dw      53216   ; 3691 ^ 2 = 13623481, two higher bytes value = 53216
-        dw      53245   ; 3692 ^ 2 = 13630864, two higher bytes value = 53245
-        dw      53274   ; 3693 ^ 2 = 13638249, two higher bytes value = 53274
-        dw      53303   ; 3694 ^ 2 = 13645636, two higher bytes value = 53303
-        dw      53332   ; 3695 ^ 2 = 13653025, two higher bytes value = 53332
-        dw      53361   ; 3696 ^ 2 = 13660416, two higher bytes value = 53361
-        dw      53389   ; 3697 ^ 2 = 13667809, two higher bytes value = 53389
-        dw      53418   ; 3698 ^ 2 = 13675204, two higher bytes value = 53418
-        dw      53447   ; 3699 ^ 2 = 13682601, two higher bytes value = 53447
-        dw      53476   ; 3700 ^ 2 = 13690000, two higher bytes value = 53476
-        dw      53505   ; 3701 ^ 2 = 13697401, two higher bytes value = 53505
-        dw      53534   ; 3702 ^ 2 = 13704804, two higher bytes value = 53534
-        dw      53563   ; 3703 ^ 2 = 13712209, two higher bytes value = 53563
-        dw      53592   ; 3704 ^ 2 = 13719616, two higher bytes value = 53592
-        dw      53621   ; 3705 ^ 2 = 13727025, two higher bytes value = 53621
-        dw      53650   ; 3706 ^ 2 = 13734436, two higher bytes value = 53650
-        dw      53679   ; 3707 ^ 2 = 13741849, two higher bytes value = 53679
-        dw      53708   ; 3708 ^ 2 = 13749264, two higher bytes value = 53708
-        dw      53737   ; 3709 ^ 2 = 13756681, two higher bytes value = 53737
-        dw      53766   ; 3710 ^ 2 = 13764100, two higher bytes value = 53766
-        dw      53795   ; 3711 ^ 2 = 13771521, two higher bytes value = 53795
-        dw      53824   ; 3712 ^ 2 = 13778944, two higher bytes value = 53824
-        dw      53853   ; 3713 ^ 2 = 13786369, two higher bytes value = 53853
-        dw      53882   ; 3714 ^ 2 = 13793796, two higher bytes value = 53882
-        dw      53911   ; 3715 ^ 2 = 13801225, two higher bytes value = 53911
-        dw      53940   ; 3716 ^ 2 = 13808656, two higher bytes value = 53940
-        dw      53969   ; 3717 ^ 2 = 13816089, two higher bytes value = 53969
-        dw      53998   ; 3718 ^ 2 = 13823524, two higher bytes value = 53998
-        dw      54027   ; 3719 ^ 2 = 13830961, two higher bytes value = 54027
-        dw      54056   ; 3720 ^ 2 = 13838400, two higher bytes value = 54056
-        dw      54085   ; 3721 ^ 2 = 13845841, two higher bytes value = 54085
-        dw      54114   ; 3722 ^ 2 = 13853284, two higher bytes value = 54114
-        dw      54143   ; 3723 ^ 2 = 13860729, two higher bytes value = 54143
-        dw      54172   ; 3724 ^ 2 = 13868176, two higher bytes value = 54172
-        dw      54201   ; 3725 ^ 2 = 13875625, two higher bytes value = 54201
-        dw      54230   ; 3726 ^ 2 = 13883076, two higher bytes value = 54230
-        dw      54259   ; 3727 ^ 2 = 13890529, two higher bytes value = 54259
-        dw      54289   ; 3728 ^ 2 = 13897984, two higher bytes value = 54289
-        dw      54318   ; 3729 ^ 2 = 13905441, two higher bytes value = 54318
-        dw      54347   ; 3730 ^ 2 = 13912900, two higher bytes value = 54347
-        dw      54376   ; 3731 ^ 2 = 13920361, two higher bytes value = 54376
-        dw      54405   ; 3732 ^ 2 = 13927824, two higher bytes value = 54405
-        dw      54434   ; 3733 ^ 2 = 13935289, two higher bytes value = 54434
-        dw      54463   ; 3734 ^ 2 = 13942756, two higher bytes value = 54463
-        dw      54493   ; 3735 ^ 2 = 13950225, two higher bytes value = 54493
-        dw      54522   ; 3736 ^ 2 = 13957696, two higher bytes value = 54522
-        dw      54551   ; 3737 ^ 2 = 13965169, two higher bytes value = 54551
-        dw      54580   ; 3738 ^ 2 = 13972644, two higher bytes value = 54580
-        dw      54609   ; 3739 ^ 2 = 13980121, two higher bytes value = 54609
-        dw      54639   ; 3740 ^ 2 = 13987600, two higher bytes value = 54639
-        dw      54668   ; 3741 ^ 2 = 13995081, two higher bytes value = 54668
-        dw      54697   ; 3742 ^ 2 = 14002564, two higher bytes value = 54697
-        dw      54726   ; 3743 ^ 2 = 14010049, two higher bytes value = 54726
-        dw      54756   ; 3744 ^ 2 = 14017536, two higher bytes value = 54756
-        dw      54785   ; 3745 ^ 2 = 14025025, two higher bytes value = 54785
-        dw      54814   ; 3746 ^ 2 = 14032516, two higher bytes value = 54814
-        dw      54843   ; 3747 ^ 2 = 14040009, two higher bytes value = 54843
-        dw      54873   ; 3748 ^ 2 = 14047504, two higher bytes value = 54873
-        dw      54902   ; 3749 ^ 2 = 14055001, two higher bytes value = 54902
-        dw      54931   ; 3750 ^ 2 = 14062500, two higher bytes value = 54931
-        dw      54960   ; 3751 ^ 2 = 14070001, two higher bytes value = 54960
-        dw      54990   ; 3752 ^ 2 = 14077504, two higher bytes value = 54990
-        dw      55019   ; 3753 ^ 2 = 14085009, two higher bytes value = 55019
-        dw      55048   ; 3754 ^ 2 = 14092516, two higher bytes value = 55048
-        dw      55078   ; 3755 ^ 2 = 14100025, two higher bytes value = 55078
-        dw      55107   ; 3756 ^ 2 = 14107536, two higher bytes value = 55107
-        dw      55136   ; 3757 ^ 2 = 14115049, two higher bytes value = 55136
-        dw      55166   ; 3758 ^ 2 = 14122564, two higher bytes value = 55166
-        dw      55195   ; 3759 ^ 2 = 14130081, two higher bytes value = 55195
-        dw      55225   ; 3760 ^ 2 = 14137600, two higher bytes value = 55225
-        dw      55254   ; 3761 ^ 2 = 14145121, two higher bytes value = 55254
-        dw      55283   ; 3762 ^ 2 = 14152644, two higher bytes value = 55283
-        dw      55313   ; 3763 ^ 2 = 14160169, two higher bytes value = 55313
-        dw      55342   ; 3764 ^ 2 = 14167696, two higher bytes value = 55342
-        dw      55371   ; 3765 ^ 2 = 14175225, two higher bytes value = 55371
-        dw      55401   ; 3766 ^ 2 = 14182756, two higher bytes value = 55401
-        dw      55430   ; 3767 ^ 2 = 14190289, two higher bytes value = 55430
-        dw      55460   ; 3768 ^ 2 = 14197824, two higher bytes value = 55460
-        dw      55489   ; 3769 ^ 2 = 14205361, two higher bytes value = 55489
-        dw      55519   ; 3770 ^ 2 = 14212900, two higher bytes value = 55519
-        dw      55548   ; 3771 ^ 2 = 14220441, two higher bytes value = 55548
-        dw      55578   ; 3772 ^ 2 = 14227984, two higher bytes value = 55578
-        dw      55607   ; 3773 ^ 2 = 14235529, two higher bytes value = 55607
-        dw      55637   ; 3774 ^ 2 = 14243076, two higher bytes value = 55637
-        dw      55666   ; 3775 ^ 2 = 14250625, two higher bytes value = 55666
-        dw      55696   ; 3776 ^ 2 = 14258176, two higher bytes value = 55696
-        dw      55725   ; 3777 ^ 2 = 14265729, two higher bytes value = 55725
-        dw      55755   ; 3778 ^ 2 = 14273284, two higher bytes value = 55755
-        dw      55784   ; 3779 ^ 2 = 14280841, two higher bytes value = 55784
-        dw      55814   ; 3780 ^ 2 = 14288400, two higher bytes value = 55814
-        dw      55843   ; 3781 ^ 2 = 14295961, two higher bytes value = 55843
-        dw      55873   ; 3782 ^ 2 = 14303524, two higher bytes value = 55873
-        dw      55902   ; 3783 ^ 2 = 14311089, two higher bytes value = 55902
-        dw      55932   ; 3784 ^ 2 = 14318656, two higher bytes value = 55932
-        dw      55961   ; 3785 ^ 2 = 14326225, two higher bytes value = 55961
-        dw      55991   ; 3786 ^ 2 = 14333796, two higher bytes value = 55991
-        dw      56020   ; 3787 ^ 2 = 14341369, two higher bytes value = 56020
-        dw      56050   ; 3788 ^ 2 = 14348944, two higher bytes value = 56050
-        dw      56080   ; 3789 ^ 2 = 14356521, two higher bytes value = 56080
-        dw      56109   ; 3790 ^ 2 = 14364100, two higher bytes value = 56109
-        dw      56139   ; 3791 ^ 2 = 14371681, two higher bytes value = 56139
-        dw      56169   ; 3792 ^ 2 = 14379264, two higher bytes value = 56169
-        dw      56198   ; 3793 ^ 2 = 14386849, two higher bytes value = 56198
-        dw      56228   ; 3794 ^ 2 = 14394436, two higher bytes value = 56228
-        dw      56257   ; 3795 ^ 2 = 14402025, two higher bytes value = 56257
-        dw      56287   ; 3796 ^ 2 = 14409616, two higher bytes value = 56287
-        dw      56317   ; 3797 ^ 2 = 14417209, two higher bytes value = 56317
-        dw      56346   ; 3798 ^ 2 = 14424804, two higher bytes value = 56346
-        dw      56376   ; 3799 ^ 2 = 14432401, two higher bytes value = 56376
-        dw      56406   ; 3800 ^ 2 = 14440000, two higher bytes value = 56406
-        dw      56435   ; 3801 ^ 2 = 14447601, two higher bytes value = 56435
-        dw      56465   ; 3802 ^ 2 = 14455204, two higher bytes value = 56465
-        dw      56495   ; 3803 ^ 2 = 14462809, two higher bytes value = 56495
-        dw      56525   ; 3804 ^ 2 = 14470416, two higher bytes value = 56525
-        dw      56554   ; 3805 ^ 2 = 14478025, two higher bytes value = 56554
-        dw      56584   ; 3806 ^ 2 = 14485636, two higher bytes value = 56584
-        dw      56614   ; 3807 ^ 2 = 14493249, two higher bytes value = 56614
-        dw      56644   ; 3808 ^ 2 = 14500864, two higher bytes value = 56644
-        dw      56673   ; 3809 ^ 2 = 14508481, two higher bytes value = 56673
-        dw      56703   ; 3810 ^ 2 = 14516100, two higher bytes value = 56703
-        dw      56733   ; 3811 ^ 2 = 14523721, two higher bytes value = 56733
-        dw      56763   ; 3812 ^ 2 = 14531344, two higher bytes value = 56763
-        dw      56792   ; 3813 ^ 2 = 14538969, two higher bytes value = 56792
-        dw      56822   ; 3814 ^ 2 = 14546596, two higher bytes value = 56822
-        dw      56852   ; 3815 ^ 2 = 14554225, two higher bytes value = 56852
-        dw      56882   ; 3816 ^ 2 = 14561856, two higher bytes value = 56882
-        dw      56912   ; 3817 ^ 2 = 14569489, two higher bytes value = 56912
-        dw      56941   ; 3818 ^ 2 = 14577124, two higher bytes value = 56941
-        dw      56971   ; 3819 ^ 2 = 14584761, two higher bytes value = 56971
-        dw      57001   ; 3820 ^ 2 = 14592400, two higher bytes value = 57001
-        dw      57031   ; 3821 ^ 2 = 14600041, two higher bytes value = 57031
-        dw      57061   ; 3822 ^ 2 = 14607684, two higher bytes value = 57061
-        dw      57091   ; 3823 ^ 2 = 14615329, two higher bytes value = 57091
-        dw      57121   ; 3824 ^ 2 = 14622976, two higher bytes value = 57121
-        dw      57150   ; 3825 ^ 2 = 14630625, two higher bytes value = 57150
-        dw      57180   ; 3826 ^ 2 = 14638276, two higher bytes value = 57180
-        dw      57210   ; 3827 ^ 2 = 14645929, two higher bytes value = 57210
-        dw      57240   ; 3828 ^ 2 = 14653584, two higher bytes value = 57240
-        dw      57270   ; 3829 ^ 2 = 14661241, two higher bytes value = 57270
-        dw      57300   ; 3830 ^ 2 = 14668900, two higher bytes value = 57300
-        dw      57330   ; 3831 ^ 2 = 14676561, two higher bytes value = 57330
-        dw      57360   ; 3832 ^ 2 = 14684224, two higher bytes value = 57360
-        dw      57390   ; 3833 ^ 2 = 14691889, two higher bytes value = 57390
-        dw      57420   ; 3834 ^ 2 = 14699556, two higher bytes value = 57420
-        dw      57450   ; 3835 ^ 2 = 14707225, two higher bytes value = 57450
-        dw      57480   ; 3836 ^ 2 = 14714896, two higher bytes value = 57480
-        dw      57510   ; 3837 ^ 2 = 14722569, two higher bytes value = 57510
-        dw      57540   ; 3838 ^ 2 = 14730244, two higher bytes value = 57540
-        dw      57570   ; 3839 ^ 2 = 14737921, two higher bytes value = 57570
-        dw      57600   ; 3840 ^ 2 = 14745600, two higher bytes value = 57600
-        dw      57630   ; 3841 ^ 2 = 14753281, two higher bytes value = 57630
-        dw      57660   ; 3842 ^ 2 = 14760964, two higher bytes value = 57660
-        dw      57690   ; 3843 ^ 2 = 14768649, two higher bytes value = 57690
-        dw      57720   ; 3844 ^ 2 = 14776336, two higher bytes value = 57720
-        dw      57750   ; 3845 ^ 2 = 14784025, two higher bytes value = 57750
-        dw      57780   ; 3846 ^ 2 = 14791716, two higher bytes value = 57780
-        dw      57810   ; 3847 ^ 2 = 14799409, two higher bytes value = 57810
-        dw      57840   ; 3848 ^ 2 = 14807104, two higher bytes value = 57840
-        dw      57870   ; 3849 ^ 2 = 14814801, two higher bytes value = 57870
-        dw      57900   ; 3850 ^ 2 = 14822500, two higher bytes value = 57900
-        dw      57930   ; 3851 ^ 2 = 14830201, two higher bytes value = 57930
-        dw      57960   ; 3852 ^ 2 = 14837904, two higher bytes value = 57960
-        dw      57990   ; 3853 ^ 2 = 14845609, two higher bytes value = 57990
-        dw      58020   ; 3854 ^ 2 = 14853316, two higher bytes value = 58020
-        dw      58050   ; 3855 ^ 2 = 14861025, two higher bytes value = 58050
-        dw      58081   ; 3856 ^ 2 = 14868736, two higher bytes value = 58081
-        dw      58111   ; 3857 ^ 2 = 14876449, two higher bytes value = 58111
-        dw      58141   ; 3858 ^ 2 = 14884164, two higher bytes value = 58141
-        dw      58171   ; 3859 ^ 2 = 14891881, two higher bytes value = 58171
-        dw      58201   ; 3860 ^ 2 = 14899600, two higher bytes value = 58201
-        dw      58231   ; 3861 ^ 2 = 14907321, two higher bytes value = 58231
-        dw      58261   ; 3862 ^ 2 = 14915044, two higher bytes value = 58261
-        dw      58292   ; 3863 ^ 2 = 14922769, two higher bytes value = 58292
-        dw      58322   ; 3864 ^ 2 = 14930496, two higher bytes value = 58322
-        dw      58352   ; 3865 ^ 2 = 14938225, two higher bytes value = 58352
-        dw      58382   ; 3866 ^ 2 = 14945956, two higher bytes value = 58382
-        dw      58412   ; 3867 ^ 2 = 14953689, two higher bytes value = 58412
-        dw      58443   ; 3868 ^ 2 = 14961424, two higher bytes value = 58443
-        dw      58473   ; 3869 ^ 2 = 14969161, two higher bytes value = 58473
-        dw      58503   ; 3870 ^ 2 = 14976900, two higher bytes value = 58503
-        dw      58533   ; 3871 ^ 2 = 14984641, two higher bytes value = 58533
-        dw      58564   ; 3872 ^ 2 = 14992384, two higher bytes value = 58564
-        dw      58594   ; 3873 ^ 2 = 15000129, two higher bytes value = 58594
-        dw      58624   ; 3874 ^ 2 = 15007876, two higher bytes value = 58624
-        dw      58654   ; 3875 ^ 2 = 15015625, two higher bytes value = 58654
-        dw      58685   ; 3876 ^ 2 = 15023376, two higher bytes value = 58685
-        dw      58715   ; 3877 ^ 2 = 15031129, two higher bytes value = 58715
-        dw      58745   ; 3878 ^ 2 = 15038884, two higher bytes value = 58745
-        dw      58775   ; 3879 ^ 2 = 15046641, two higher bytes value = 58775
-        dw      58806   ; 3880 ^ 2 = 15054400, two higher bytes value = 58806
-        dw      58836   ; 3881 ^ 2 = 15062161, two higher bytes value = 58836
-        dw      58866   ; 3882 ^ 2 = 15069924, two higher bytes value = 58866
-        dw      58897   ; 3883 ^ 2 = 15077689, two higher bytes value = 58897
-        dw      58927   ; 3884 ^ 2 = 15085456, two higher bytes value = 58927
-        dw      58957   ; 3885 ^ 2 = 15093225, two higher bytes value = 58957
-        dw      58988   ; 3886 ^ 2 = 15100996, two higher bytes value = 58988
-        dw      59018   ; 3887 ^ 2 = 15108769, two higher bytes value = 59018
-        dw      59049   ; 3888 ^ 2 = 15116544, two higher bytes value = 59049
-        dw      59079   ; 3889 ^ 2 = 15124321, two higher bytes value = 59079
-        dw      59109   ; 3890 ^ 2 = 15132100, two higher bytes value = 59109
-        dw      59140   ; 3891 ^ 2 = 15139881, two higher bytes value = 59140
-        dw      59170   ; 3892 ^ 2 = 15147664, two higher bytes value = 59170
-        dw      59200   ; 3893 ^ 2 = 15155449, two higher bytes value = 59200
-        dw      59231   ; 3894 ^ 2 = 15163236, two higher bytes value = 59231
-        dw      59261   ; 3895 ^ 2 = 15171025, two higher bytes value = 59261
-        dw      59292   ; 3896 ^ 2 = 15178816, two higher bytes value = 59292
-        dw      59322   ; 3897 ^ 2 = 15186609, two higher bytes value = 59322
-        dw      59353   ; 3898 ^ 2 = 15194404, two higher bytes value = 59353
-        dw      59383   ; 3899 ^ 2 = 15202201, two higher bytes value = 59383
-        dw      59414   ; 3900 ^ 2 = 15210000, two higher bytes value = 59414
-        dw      59444   ; 3901 ^ 2 = 15217801, two higher bytes value = 59444
-        dw      59475   ; 3902 ^ 2 = 15225604, two higher bytes value = 59475
-        dw      59505   ; 3903 ^ 2 = 15233409, two higher bytes value = 59505
-        dw      59536   ; 3904 ^ 2 = 15241216, two higher bytes value = 59536
-        dw      59566   ; 3905 ^ 2 = 15249025, two higher bytes value = 59566
-        dw      59597   ; 3906 ^ 2 = 15256836, two higher bytes value = 59597
-        dw      59627   ; 3907 ^ 2 = 15264649, two higher bytes value = 59627
-        dw      59658   ; 3908 ^ 2 = 15272464, two higher bytes value = 59658
-        dw      59688   ; 3909 ^ 2 = 15280281, two higher bytes value = 59688
-        dw      59719   ; 3910 ^ 2 = 15288100, two higher bytes value = 59719
-        dw      59749   ; 3911 ^ 2 = 15295921, two higher bytes value = 59749
-        dw      59780   ; 3912 ^ 2 = 15303744, two higher bytes value = 59780
-        dw      59810   ; 3913 ^ 2 = 15311569, two higher bytes value = 59810
-        dw      59841   ; 3914 ^ 2 = 15319396, two higher bytes value = 59841
-        dw      59871   ; 3915 ^ 2 = 15327225, two higher bytes value = 59871
-        dw      59902   ; 3916 ^ 2 = 15335056, two higher bytes value = 59902
-        dw      59933   ; 3917 ^ 2 = 15342889, two higher bytes value = 59933
-        dw      59963   ; 3918 ^ 2 = 15350724, two higher bytes value = 59963
-        dw      59994   ; 3919 ^ 2 = 15358561, two higher bytes value = 59994
-        dw      60025   ; 3920 ^ 2 = 15366400, two higher bytes value = 60025
-        dw      60055   ; 3921 ^ 2 = 15374241, two higher bytes value = 60055
-        dw      60086   ; 3922 ^ 2 = 15382084, two higher bytes value = 60086
-        dw      60116   ; 3923 ^ 2 = 15389929, two higher bytes value = 60116
-        dw      60147   ; 3924 ^ 2 = 15397776, two higher bytes value = 60147
-        dw      60178   ; 3925 ^ 2 = 15405625, two higher bytes value = 60178
-        dw      60208   ; 3926 ^ 2 = 15413476, two higher bytes value = 60208
-        dw      60239   ; 3927 ^ 2 = 15421329, two higher bytes value = 60239
-        dw      60270   ; 3928 ^ 2 = 15429184, two higher bytes value = 60270
-        dw      60300   ; 3929 ^ 2 = 15437041, two higher bytes value = 60300
-        dw      60331   ; 3930 ^ 2 = 15444900, two higher bytes value = 60331
-        dw      60362   ; 3931 ^ 2 = 15452761, two higher bytes value = 60362
-        dw      60393   ; 3932 ^ 2 = 15460624, two higher bytes value = 60393
-        dw      60423   ; 3933 ^ 2 = 15468489, two higher bytes value = 60423
-        dw      60454   ; 3934 ^ 2 = 15476356, two higher bytes value = 60454
-        dw      60485   ; 3935 ^ 2 = 15484225, two higher bytes value = 60485
-        dw      60516   ; 3936 ^ 2 = 15492096, two higher bytes value = 60516
-        dw      60546   ; 3937 ^ 2 = 15499969, two higher bytes value = 60546
-        dw      60577   ; 3938 ^ 2 = 15507844, two higher bytes value = 60577
-        dw      60608   ; 3939 ^ 2 = 15515721, two higher bytes value = 60608
-        dw      60639   ; 3940 ^ 2 = 15523600, two higher bytes value = 60639
-        dw      60669   ; 3941 ^ 2 = 15531481, two higher bytes value = 60669
-        dw      60700   ; 3942 ^ 2 = 15539364, two higher bytes value = 60700
-        dw      60731   ; 3943 ^ 2 = 15547249, two higher bytes value = 60731
-        dw      60762   ; 3944 ^ 2 = 15555136, two higher bytes value = 60762
-        dw      60793   ; 3945 ^ 2 = 15563025, two higher bytes value = 60793
-        dw      60823   ; 3946 ^ 2 = 15570916, two higher bytes value = 60823
-        dw      60854   ; 3947 ^ 2 = 15578809, two higher bytes value = 60854
-        dw      60885   ; 3948 ^ 2 = 15586704, two higher bytes value = 60885
-        dw      60916   ; 3949 ^ 2 = 15594601, two higher bytes value = 60916
-        dw      60947   ; 3950 ^ 2 = 15602500, two higher bytes value = 60947
-        dw      60978   ; 3951 ^ 2 = 15610401, two higher bytes value = 60978
-        dw      61009   ; 3952 ^ 2 = 15618304, two higher bytes value = 61009
-        dw      61039   ; 3953 ^ 2 = 15626209, two higher bytes value = 61039
-        dw      61070   ; 3954 ^ 2 = 15634116, two higher bytes value = 61070
-        dw      61101   ; 3955 ^ 2 = 15642025, two higher bytes value = 61101
-        dw      61132   ; 3956 ^ 2 = 15649936, two higher bytes value = 61132
-        dw      61163   ; 3957 ^ 2 = 15657849, two higher bytes value = 61163
-        dw      61194   ; 3958 ^ 2 = 15665764, two higher bytes value = 61194
-        dw      61225   ; 3959 ^ 2 = 15673681, two higher bytes value = 61225
-        dw      61256   ; 3960 ^ 2 = 15681600, two higher bytes value = 61256
-        dw      61287   ; 3961 ^ 2 = 15689521, two higher bytes value = 61287
-        dw      61318   ; 3962 ^ 2 = 15697444, two higher bytes value = 61318
-        dw      61349   ; 3963 ^ 2 = 15705369, two higher bytes value = 61349
-        dw      61380   ; 3964 ^ 2 = 15713296, two higher bytes value = 61380
-        dw      61411   ; 3965 ^ 2 = 15721225, two higher bytes value = 61411
-        dw      61442   ; 3966 ^ 2 = 15729156, two higher bytes value = 61442
-        dw      61473   ; 3967 ^ 2 = 15737089, two higher bytes value = 61473
-        dw      61504   ; 3968 ^ 2 = 15745024, two higher bytes value = 61504
-        dw      61535   ; 3969 ^ 2 = 15752961, two higher bytes value = 61535
-        dw      61566   ; 3970 ^ 2 = 15760900, two higher bytes value = 61566
-        dw      61597   ; 3971 ^ 2 = 15768841, two higher bytes value = 61597
-        dw      61628   ; 3972 ^ 2 = 15776784, two higher bytes value = 61628
-        dw      61659   ; 3973 ^ 2 = 15784729, two higher bytes value = 61659
-        dw      61690   ; 3974 ^ 2 = 15792676, two higher bytes value = 61690
-        dw      61721   ; 3975 ^ 2 = 15800625, two higher bytes value = 61721
-        dw      61752   ; 3976 ^ 2 = 15808576, two higher bytes value = 61752
-        dw      61783   ; 3977 ^ 2 = 15816529, two higher bytes value = 61783
-        dw      61814   ; 3978 ^ 2 = 15824484, two higher bytes value = 61814
-        dw      61845   ; 3979 ^ 2 = 15832441, two higher bytes value = 61845
-        dw      61876   ; 3980 ^ 2 = 15840400, two higher bytes value = 61876
-        dw      61907   ; 3981 ^ 2 = 15848361, two higher bytes value = 61907
-        dw      61938   ; 3982 ^ 2 = 15856324, two higher bytes value = 61938
-        dw      61969   ; 3983 ^ 2 = 15864289, two higher bytes value = 61969
-        dw      62001   ; 3984 ^ 2 = 15872256, two higher bytes value = 62001
-        dw      62032   ; 3985 ^ 2 = 15880225, two higher bytes value = 62032
-        dw      62063   ; 3986 ^ 2 = 15888196, two higher bytes value = 62063
-        dw      62094   ; 3987 ^ 2 = 15896169, two higher bytes value = 62094
-        dw      62125   ; 3988 ^ 2 = 15904144, two higher bytes value = 62125
-        dw      62156   ; 3989 ^ 2 = 15912121, two higher bytes value = 62156
-        dw      62187   ; 3990 ^ 2 = 15920100, two higher bytes value = 62187
-        dw      62219   ; 3991 ^ 2 = 15928081, two higher bytes value = 62219
-        dw      62250   ; 3992 ^ 2 = 15936064, two higher bytes value = 62250
-        dw      62281   ; 3993 ^ 2 = 15944049, two higher bytes value = 62281
-        dw      62312   ; 3994 ^ 2 = 15952036, two higher bytes value = 62312
-        dw      62343   ; 3995 ^ 2 = 15960025, two higher bytes value = 62343
-        dw      62375   ; 3996 ^ 2 = 15968016, two higher bytes value = 62375
-        dw      62406   ; 3997 ^ 2 = 15976009, two higher bytes value = 62406
-        dw      62437   ; 3998 ^ 2 = 15984004, two higher bytes value = 62437
-        dw      62468   ; 3999 ^ 2 = 15992001, two higher bytes value = 62468
-        dw      62500   ; 4000 ^ 2 = 16000000, two higher bytes value = 62500
-        dw      62531   ; 4001 ^ 2 = 16008001, two higher bytes value = 62531
-        dw      62562   ; 4002 ^ 2 = 16016004, two higher bytes value = 62562
-        dw      62593   ; 4003 ^ 2 = 16024009, two higher bytes value = 62593
-        dw      62625   ; 4004 ^ 2 = 16032016, two higher bytes value = 62625
-        dw      62656   ; 4005 ^ 2 = 16040025, two higher bytes value = 62656
-        dw      62687   ; 4006 ^ 2 = 16048036, two higher bytes value = 62687
-        dw      62718   ; 4007 ^ 2 = 16056049, two higher bytes value = 62718
-        dw      62750   ; 4008 ^ 2 = 16064064, two higher bytes value = 62750
-        dw      62781   ; 4009 ^ 2 = 16072081, two higher bytes value = 62781
-        dw      62812   ; 4010 ^ 2 = 16080100, two higher bytes value = 62812
-        dw      62844   ; 4011 ^ 2 = 16088121, two higher bytes value = 62844
-        dw      62875   ; 4012 ^ 2 = 16096144, two higher bytes value = 62875
-        dw      62906   ; 4013 ^ 2 = 16104169, two higher bytes value = 62906
-        dw      62938   ; 4014 ^ 2 = 16112196, two higher bytes value = 62938
-        dw      62969   ; 4015 ^ 2 = 16120225, two higher bytes value = 62969
-        dw      63001   ; 4016 ^ 2 = 16128256, two higher bytes value = 63001
-        dw      63032   ; 4017 ^ 2 = 16136289, two higher bytes value = 63032
-        dw      63063   ; 4018 ^ 2 = 16144324, two higher bytes value = 63063
-        dw      63095   ; 4019 ^ 2 = 16152361, two higher bytes value = 63095
-        dw      63126   ; 4020 ^ 2 = 16160400, two higher bytes value = 63126
-        dw      63157   ; 4021 ^ 2 = 16168441, two higher bytes value = 63157
-        dw      63189   ; 4022 ^ 2 = 16176484, two higher bytes value = 63189
-        dw      63220   ; 4023 ^ 2 = 16184529, two higher bytes value = 63220
-        dw      63252   ; 4024 ^ 2 = 16192576, two higher bytes value = 63252
-        dw      63283   ; 4025 ^ 2 = 16200625, two higher bytes value = 63283
-        dw      63315   ; 4026 ^ 2 = 16208676, two higher bytes value = 63315
-        dw      63346   ; 4027 ^ 2 = 16216729, two higher bytes value = 63346
-        dw      63378   ; 4028 ^ 2 = 16224784, two higher bytes value = 63378
-        dw      63409   ; 4029 ^ 2 = 16232841, two higher bytes value = 63409
-        dw      63441   ; 4030 ^ 2 = 16240900, two higher bytes value = 63441
-        dw      63472   ; 4031 ^ 2 = 16248961, two higher bytes value = 63472
-        dw      63504   ; 4032 ^ 2 = 16257024, two higher bytes value = 63504
-        dw      63535   ; 4033 ^ 2 = 16265089, two higher bytes value = 63535
-        dw      63567   ; 4034 ^ 2 = 16273156, two higher bytes value = 63567
-        dw      63598   ; 4035 ^ 2 = 16281225, two higher bytes value = 63598
-        dw      63630   ; 4036 ^ 2 = 16289296, two higher bytes value = 63630
-        dw      63661   ; 4037 ^ 2 = 16297369, two higher bytes value = 63661
-        dw      63693   ; 4038 ^ 2 = 16305444, two higher bytes value = 63693
-        dw      63724   ; 4039 ^ 2 = 16313521, two higher bytes value = 63724
-        dw      63756   ; 4040 ^ 2 = 16321600, two higher bytes value = 63756
-        dw      63787   ; 4041 ^ 2 = 16329681, two higher bytes value = 63787
-        dw      63819   ; 4042 ^ 2 = 16337764, two higher bytes value = 63819
-        dw      63850   ; 4043 ^ 2 = 16345849, two higher bytes value = 63850
-        dw      63882   ; 4044 ^ 2 = 16353936, two higher bytes value = 63882
-        dw      63914   ; 4045 ^ 2 = 16362025, two higher bytes value = 63914
-        dw      63945   ; 4046 ^ 2 = 16370116, two higher bytes value = 63945
-        dw      63977   ; 4047 ^ 2 = 16378209, two higher bytes value = 63977
-        dw      64009   ; 4048 ^ 2 = 16386304, two higher bytes value = 64009
-        dw      64040   ; 4049 ^ 2 = 16394401, two higher bytes value = 64040
-        dw      64072   ; 4050 ^ 2 = 16402500, two higher bytes value = 64072
-        dw      64103   ; 4051 ^ 2 = 16410601, two higher bytes value = 64103
-        dw      64135   ; 4052 ^ 2 = 16418704, two higher bytes value = 64135
-        dw      64167   ; 4053 ^ 2 = 16426809, two higher bytes value = 64167
-        dw      64198   ; 4054 ^ 2 = 16434916, two higher bytes value = 64198
-        dw      64230   ; 4055 ^ 2 = 16443025, two higher bytes value = 64230
-        dw      64262   ; 4056 ^ 2 = 16451136, two higher bytes value = 64262
-        dw      64293   ; 4057 ^ 2 = 16459249, two higher bytes value = 64293
-        dw      64325   ; 4058 ^ 2 = 16467364, two higher bytes value = 64325
-        dw      64357   ; 4059 ^ 2 = 16475481, two higher bytes value = 64357
-        dw      64389   ; 4060 ^ 2 = 16483600, two higher bytes value = 64389
-        dw      64420   ; 4061 ^ 2 = 16491721, two higher bytes value = 64420
-        dw      64452   ; 4062 ^ 2 = 16499844, two higher bytes value = 64452
-        dw      64484   ; 4063 ^ 2 = 16507969, two higher bytes value = 64484
-        dw      64516   ; 4064 ^ 2 = 16516096, two higher bytes value = 64516
-        dw      64547   ; 4065 ^ 2 = 16524225, two higher bytes value = 64547
-        dw      64579   ; 4066 ^ 2 = 16532356, two higher bytes value = 64579
-        dw      64611   ; 4067 ^ 2 = 16540489, two higher bytes value = 64611
-        dw      64643   ; 4068 ^ 2 = 16548624, two higher bytes value = 64643
-        dw      64674   ; 4069 ^ 2 = 16556761, two higher bytes value = 64674
-        dw      64706   ; 4070 ^ 2 = 16564900, two higher bytes value = 64706
-        dw      64738   ; 4071 ^ 2 = 16573041, two higher bytes value = 64738
-        dw      64770   ; 4072 ^ 2 = 16581184, two higher bytes value = 64770
-        dw      64802   ; 4073 ^ 2 = 16589329, two higher bytes value = 64802
-        dw      64833   ; 4074 ^ 2 = 16597476, two higher bytes value = 64833
-        dw      64865   ; 4075 ^ 2 = 16605625, two higher bytes value = 64865
-        dw      64897   ; 4076 ^ 2 = 16613776, two higher bytes value = 64897
-        dw      64929   ; 4077 ^ 2 = 16621929, two higher bytes value = 64929
-        dw      64961   ; 4078 ^ 2 = 16630084, two higher bytes value = 64961
-        dw      64993   ; 4079 ^ 2 = 16638241, two higher bytes value = 64993
-        dw      65025   ; 4080 ^ 2 = 16646400, two higher bytes value = 65025
-        dw      65056   ; 4081 ^ 2 = 16654561, two higher bytes value = 65056
-        dw      65088   ; 4082 ^ 2 = 16662724, two higher bytes value = 65088
-        dw      65120   ; 4083 ^ 2 = 16670889, two higher bytes value = 65120
-        dw      65152   ; 4084 ^ 2 = 16679056, two higher bytes value = 65152
-        dw      65184   ; 4085 ^ 2 = 16687225, two higher bytes value = 65184
-        dw      65216   ; 4086 ^ 2 = 16695396, two higher bytes value = 65216
-        dw      65248   ; 4087 ^ 2 = 16703569, two higher bytes value = 65248
-        dw      65280   ; 4088 ^ 2 = 16711744, two higher bytes value = 65280
-        dw      65312   ; 4089 ^ 2 = 16719921, two higher bytes value = 65312
-        dw      65344   ; 4090 ^ 2 = 16728100, two higher bytes value = 65344
-        dw      65376   ; 4091 ^ 2 = 16736281, two higher bytes value = 65376
-        dw      65408   ; 4092 ^ 2 = 16744464, two higher bytes value = 65408
-        dw      65440   ; 4093 ^ 2 = 16752649, two higher bytes value = 65440
-        dw      65472   ; 4094 ^ 2 = 16760836, two higher bytes value = 65472
-        dw      65504   ; 4095 ^ 2 = 16769025, two higher bytes value = 65504
+        dw      0       ; 0 ^ 2 = 0, value >> 9 = 0
+        dw      0       ; 1 ^ 2 = 1, value >> 9 = 0
+        dw      0       ; 2 ^ 2 = 4, value >> 9 = 0
+        dw      0       ; 3 ^ 2 = 9, value >> 9 = 0
+        dw      0       ; 4 ^ 2 = 16, value >> 9 = 0
+        dw      0       ; 5 ^ 2 = 25, value >> 9 = 0
+        dw      0       ; 6 ^ 2 = 36, value >> 9 = 0
+        dw      0       ; 7 ^ 2 = 49, value >> 9 = 0
+        dw      0       ; 8 ^ 2 = 64, value >> 9 = 0
+        dw      0       ; 9 ^ 2 = 81, value >> 9 = 0
+        dw      0       ; 10 ^ 2 = 100, value >> 9 = 0
+        dw      0       ; 11 ^ 2 = 121, value >> 9 = 0
+        dw      0       ; 12 ^ 2 = 144, value >> 9 = 0
+        dw      0       ; 13 ^ 2 = 169, value >> 9 = 0
+        dw      0       ; 14 ^ 2 = 196, value >> 9 = 0
+        dw      0       ; 15 ^ 2 = 225, value >> 9 = 0
+        dw      0       ; 16 ^ 2 = 256, value >> 9 = 0
+        dw      0       ; 17 ^ 2 = 289, value >> 9 = 0
+        dw      0       ; 18 ^ 2 = 324, value >> 9 = 0
+        dw      0       ; 19 ^ 2 = 361, value >> 9 = 0
+        dw      0       ; 20 ^ 2 = 400, value >> 9 = 0
+        dw      0       ; 21 ^ 2 = 441, value >> 9 = 0
+        dw      0       ; 22 ^ 2 = 484, value >> 9 = 0
+        dw      1       ; 23 ^ 2 = 529, value >> 9 = 1
+        dw      1       ; 24 ^ 2 = 576, value >> 9 = 1
+        dw      1       ; 25 ^ 2 = 625, value >> 9 = 1
+        dw      1       ; 26 ^ 2 = 676, value >> 9 = 1
+        dw      1       ; 27 ^ 2 = 729, value >> 9 = 1
+        dw      1       ; 28 ^ 2 = 784, value >> 9 = 1
+        dw      1       ; 29 ^ 2 = 841, value >> 9 = 1
+        dw      1       ; 30 ^ 2 = 900, value >> 9 = 1
+        dw      1       ; 31 ^ 2 = 961, value >> 9 = 1
+        dw      2       ; 32 ^ 2 = 1024, value >> 9 = 2
+        dw      2       ; 33 ^ 2 = 1089, value >> 9 = 2
+        dw      2       ; 34 ^ 2 = 1156, value >> 9 = 2
+        dw      2       ; 35 ^ 2 = 1225, value >> 9 = 2
+        dw      2       ; 36 ^ 2 = 1296, value >> 9 = 2
+        dw      2       ; 37 ^ 2 = 1369, value >> 9 = 2
+        dw      2       ; 38 ^ 2 = 1444, value >> 9 = 2
+        dw      2       ; 39 ^ 2 = 1521, value >> 9 = 2
+        dw      3       ; 40 ^ 2 = 1600, value >> 9 = 3
+        dw      3       ; 41 ^ 2 = 1681, value >> 9 = 3
+        dw      3       ; 42 ^ 2 = 1764, value >> 9 = 3
+        dw      3       ; 43 ^ 2 = 1849, value >> 9 = 3
+        dw      3       ; 44 ^ 2 = 1936, value >> 9 = 3
+        dw      3       ; 45 ^ 2 = 2025, value >> 9 = 3
+        dw      4       ; 46 ^ 2 = 2116, value >> 9 = 4
+        dw      4       ; 47 ^ 2 = 2209, value >> 9 = 4
+        dw      4       ; 48 ^ 2 = 2304, value >> 9 = 4
+        dw      4       ; 49 ^ 2 = 2401, value >> 9 = 4
+        dw      4       ; 50 ^ 2 = 2500, value >> 9 = 4
+        dw      5       ; 51 ^ 2 = 2601, value >> 9 = 5
+        dw      5       ; 52 ^ 2 = 2704, value >> 9 = 5
+        dw      5       ; 53 ^ 2 = 2809, value >> 9 = 5
+        dw      5       ; 54 ^ 2 = 2916, value >> 9 = 5
+        dw      5       ; 55 ^ 2 = 3025, value >> 9 = 5
+        dw      6       ; 56 ^ 2 = 3136, value >> 9 = 6
+        dw      6       ; 57 ^ 2 = 3249, value >> 9 = 6
+        dw      6       ; 58 ^ 2 = 3364, value >> 9 = 6
+        dw      6       ; 59 ^ 2 = 3481, value >> 9 = 6
+        dw      7       ; 60 ^ 2 = 3600, value >> 9 = 7
+        dw      7       ; 61 ^ 2 = 3721, value >> 9 = 7
+        dw      7       ; 62 ^ 2 = 3844, value >> 9 = 7
+        dw      7       ; 63 ^ 2 = 3969, value >> 9 = 7
+        dw      8       ; 64 ^ 2 = 4096, value >> 9 = 8
+        dw      8       ; 65 ^ 2 = 4225, value >> 9 = 8
+        dw      8       ; 66 ^ 2 = 4356, value >> 9 = 8
+        dw      8       ; 67 ^ 2 = 4489, value >> 9 = 8
+        dw      9       ; 68 ^ 2 = 4624, value >> 9 = 9
+        dw      9       ; 69 ^ 2 = 4761, value >> 9 = 9
+        dw      9       ; 70 ^ 2 = 4900, value >> 9 = 9
+        dw      9       ; 71 ^ 2 = 5041, value >> 9 = 9
+        dw      10      ; 72 ^ 2 = 5184, value >> 9 = 10
+        dw      10      ; 73 ^ 2 = 5329, value >> 9 = 10
+        dw      10      ; 74 ^ 2 = 5476, value >> 9 = 10
+        dw      10      ; 75 ^ 2 = 5625, value >> 9 = 10
+        dw      11      ; 76 ^ 2 = 5776, value >> 9 = 11
+        dw      11      ; 77 ^ 2 = 5929, value >> 9 = 11
+        dw      11      ; 78 ^ 2 = 6084, value >> 9 = 11
+        dw      12      ; 79 ^ 2 = 6241, value >> 9 = 12
+        dw      12      ; 80 ^ 2 = 6400, value >> 9 = 12
+        dw      12      ; 81 ^ 2 = 6561, value >> 9 = 12
+        dw      13      ; 82 ^ 2 = 6724, value >> 9 = 13
+        dw      13      ; 83 ^ 2 = 6889, value >> 9 = 13
+        dw      13      ; 84 ^ 2 = 7056, value >> 9 = 13
+        dw      14      ; 85 ^ 2 = 7225, value >> 9 = 14
+        dw      14      ; 86 ^ 2 = 7396, value >> 9 = 14
+        dw      14      ; 87 ^ 2 = 7569, value >> 9 = 14
+        dw      15      ; 88 ^ 2 = 7744, value >> 9 = 15
+        dw      15      ; 89 ^ 2 = 7921, value >> 9 = 15
+        dw      15      ; 90 ^ 2 = 8100, value >> 9 = 15
+        dw      16      ; 91 ^ 2 = 8281, value >> 9 = 16
+        dw      16      ; 92 ^ 2 = 8464, value >> 9 = 16
+        dw      16      ; 93 ^ 2 = 8649, value >> 9 = 16
+        dw      17      ; 94 ^ 2 = 8836, value >> 9 = 17
+        dw      17      ; 95 ^ 2 = 9025, value >> 9 = 17
+        dw      18      ; 96 ^ 2 = 9216, value >> 9 = 18
+        dw      18      ; 97 ^ 2 = 9409, value >> 9 = 18
+        dw      18      ; 98 ^ 2 = 9604, value >> 9 = 18
+        dw      19      ; 99 ^ 2 = 9801, value >> 9 = 19
+        dw      19      ; 100 ^ 2 = 10000, value >> 9 = 19
+        dw      19      ; 101 ^ 2 = 10201, value >> 9 = 19
+        dw      20      ; 102 ^ 2 = 10404, value >> 9 = 20
+        dw      20      ; 103 ^ 2 = 10609, value >> 9 = 20
+        dw      21      ; 104 ^ 2 = 10816, value >> 9 = 21
+        dw      21      ; 105 ^ 2 = 11025, value >> 9 = 21
+        dw      21      ; 106 ^ 2 = 11236, value >> 9 = 21
+        dw      22      ; 107 ^ 2 = 11449, value >> 9 = 22
+        dw      22      ; 108 ^ 2 = 11664, value >> 9 = 22
+        dw      23      ; 109 ^ 2 = 11881, value >> 9 = 23
+        dw      23      ; 110 ^ 2 = 12100, value >> 9 = 23
+        dw      24      ; 111 ^ 2 = 12321, value >> 9 = 24
+        dw      24      ; 112 ^ 2 = 12544, value >> 9 = 24
+        dw      24      ; 113 ^ 2 = 12769, value >> 9 = 24
+        dw      25      ; 114 ^ 2 = 12996, value >> 9 = 25
+        dw      25      ; 115 ^ 2 = 13225, value >> 9 = 25
+        dw      26      ; 116 ^ 2 = 13456, value >> 9 = 26
+        dw      26      ; 117 ^ 2 = 13689, value >> 9 = 26
+        dw      27      ; 118 ^ 2 = 13924, value >> 9 = 27
+        dw      27      ; 119 ^ 2 = 14161, value >> 9 = 27
+        dw      28      ; 120 ^ 2 = 14400, value >> 9 = 28
+        dw      28      ; 121 ^ 2 = 14641, value >> 9 = 28
+        dw      29      ; 122 ^ 2 = 14884, value >> 9 = 29
+        dw      29      ; 123 ^ 2 = 15129, value >> 9 = 29
+        dw      30      ; 124 ^ 2 = 15376, value >> 9 = 30
+        dw      30      ; 125 ^ 2 = 15625, value >> 9 = 30
+        dw      31      ; 126 ^ 2 = 15876, value >> 9 = 31
+        dw      31      ; 127 ^ 2 = 16129, value >> 9 = 31
+        dw      32      ; 128 ^ 2 = 16384, value >> 9 = 32
+        dw      32      ; 129 ^ 2 = 16641, value >> 9 = 32
+        dw      33      ; 130 ^ 2 = 16900, value >> 9 = 33
+        dw      33      ; 131 ^ 2 = 17161, value >> 9 = 33
+        dw      34      ; 132 ^ 2 = 17424, value >> 9 = 34
+        dw      34      ; 133 ^ 2 = 17689, value >> 9 = 34
+        dw      35      ; 134 ^ 2 = 17956, value >> 9 = 35
+        dw      35      ; 135 ^ 2 = 18225, value >> 9 = 35
+        dw      36      ; 136 ^ 2 = 18496, value >> 9 = 36
+        dw      36      ; 137 ^ 2 = 18769, value >> 9 = 36
+        dw      37      ; 138 ^ 2 = 19044, value >> 9 = 37
+        dw      37      ; 139 ^ 2 = 19321, value >> 9 = 37
+        dw      38      ; 140 ^ 2 = 19600, value >> 9 = 38
+        dw      38      ; 141 ^ 2 = 19881, value >> 9 = 38
+        dw      39      ; 142 ^ 2 = 20164, value >> 9 = 39
+        dw      39      ; 143 ^ 2 = 20449, value >> 9 = 39
+        dw      40      ; 144 ^ 2 = 20736, value >> 9 = 40
+        dw      41      ; 145 ^ 2 = 21025, value >> 9 = 41
+        dw      41      ; 146 ^ 2 = 21316, value >> 9 = 41
+        dw      42      ; 147 ^ 2 = 21609, value >> 9 = 42
+        dw      42      ; 148 ^ 2 = 21904, value >> 9 = 42
+        dw      43      ; 149 ^ 2 = 22201, value >> 9 = 43
+        dw      43      ; 150 ^ 2 = 22500, value >> 9 = 43
+        dw      44      ; 151 ^ 2 = 22801, value >> 9 = 44
+        dw      45      ; 152 ^ 2 = 23104, value >> 9 = 45
+        dw      45      ; 153 ^ 2 = 23409, value >> 9 = 45
+        dw      46      ; 154 ^ 2 = 23716, value >> 9 = 46
+        dw      46      ; 155 ^ 2 = 24025, value >> 9 = 46
+        dw      47      ; 156 ^ 2 = 24336, value >> 9 = 47
+        dw      48      ; 157 ^ 2 = 24649, value >> 9 = 48
+        dw      48      ; 158 ^ 2 = 24964, value >> 9 = 48
+        dw      49      ; 159 ^ 2 = 25281, value >> 9 = 49
+        dw      50      ; 160 ^ 2 = 25600, value >> 9 = 50
+        dw      50      ; 161 ^ 2 = 25921, value >> 9 = 50
+        dw      51      ; 162 ^ 2 = 26244, value >> 9 = 51
+        dw      51      ; 163 ^ 2 = 26569, value >> 9 = 51
+        dw      52      ; 164 ^ 2 = 26896, value >> 9 = 52
+        dw      53      ; 165 ^ 2 = 27225, value >> 9 = 53
+        dw      53      ; 166 ^ 2 = 27556, value >> 9 = 53
+        dw      54      ; 167 ^ 2 = 27889, value >> 9 = 54
+        dw      55      ; 168 ^ 2 = 28224, value >> 9 = 55
+        dw      55      ; 169 ^ 2 = 28561, value >> 9 = 55
+        dw      56      ; 170 ^ 2 = 28900, value >> 9 = 56
+        dw      57      ; 171 ^ 2 = 29241, value >> 9 = 57
+        dw      57      ; 172 ^ 2 = 29584, value >> 9 = 57
+        dw      58      ; 173 ^ 2 = 29929, value >> 9 = 58
+        dw      59      ; 174 ^ 2 = 30276, value >> 9 = 59
+        dw      59      ; 175 ^ 2 = 30625, value >> 9 = 59
+        dw      60      ; 176 ^ 2 = 30976, value >> 9 = 60
+        dw      61      ; 177 ^ 2 = 31329, value >> 9 = 61
+        dw      61      ; 178 ^ 2 = 31684, value >> 9 = 61
+        dw      62      ; 179 ^ 2 = 32041, value >> 9 = 62
+        dw      63      ; 180 ^ 2 = 32400, value >> 9 = 63
+        dw      63      ; 181 ^ 2 = 32761, value >> 9 = 63
+        dw      64      ; 182 ^ 2 = 33124, value >> 9 = 64
+        dw      65      ; 183 ^ 2 = 33489, value >> 9 = 65
+        dw      66      ; 184 ^ 2 = 33856, value >> 9 = 66
+        dw      66      ; 185 ^ 2 = 34225, value >> 9 = 66
+        dw      67      ; 186 ^ 2 = 34596, value >> 9 = 67
+        dw      68      ; 187 ^ 2 = 34969, value >> 9 = 68
+        dw      69      ; 188 ^ 2 = 35344, value >> 9 = 69
+        dw      69      ; 189 ^ 2 = 35721, value >> 9 = 69
+        dw      70      ; 190 ^ 2 = 36100, value >> 9 = 70
+        dw      71      ; 191 ^ 2 = 36481, value >> 9 = 71
+        dw      72      ; 192 ^ 2 = 36864, value >> 9 = 72
+        dw      72      ; 193 ^ 2 = 37249, value >> 9 = 72
+        dw      73      ; 194 ^ 2 = 37636, value >> 9 = 73
+        dw      74      ; 195 ^ 2 = 38025, value >> 9 = 74
+        dw      75      ; 196 ^ 2 = 38416, value >> 9 = 75
+        dw      75      ; 197 ^ 2 = 38809, value >> 9 = 75
+        dw      76      ; 198 ^ 2 = 39204, value >> 9 = 76
+        dw      77      ; 199 ^ 2 = 39601, value >> 9 = 77
+        dw      78      ; 200 ^ 2 = 40000, value >> 9 = 78
+        dw      78      ; 201 ^ 2 = 40401, value >> 9 = 78
+        dw      79      ; 202 ^ 2 = 40804, value >> 9 = 79
+        dw      80      ; 203 ^ 2 = 41209, value >> 9 = 80
+        dw      81      ; 204 ^ 2 = 41616, value >> 9 = 81
+        dw      82      ; 205 ^ 2 = 42025, value >> 9 = 82
+        dw      82      ; 206 ^ 2 = 42436, value >> 9 = 82
+        dw      83      ; 207 ^ 2 = 42849, value >> 9 = 83
+        dw      84      ; 208 ^ 2 = 43264, value >> 9 = 84
+        dw      85      ; 209 ^ 2 = 43681, value >> 9 = 85
+        dw      86      ; 210 ^ 2 = 44100, value >> 9 = 86
+        dw      86      ; 211 ^ 2 = 44521, value >> 9 = 86
+        dw      87      ; 212 ^ 2 = 44944, value >> 9 = 87
+        dw      88      ; 213 ^ 2 = 45369, value >> 9 = 88
+        dw      89      ; 214 ^ 2 = 45796, value >> 9 = 89
+        dw      90      ; 215 ^ 2 = 46225, value >> 9 = 90
+        dw      91      ; 216 ^ 2 = 46656, value >> 9 = 91
+        dw      91      ; 217 ^ 2 = 47089, value >> 9 = 91
+        dw      92      ; 218 ^ 2 = 47524, value >> 9 = 92
+        dw      93      ; 219 ^ 2 = 47961, value >> 9 = 93
+        dw      94      ; 220 ^ 2 = 48400, value >> 9 = 94
+        dw      95      ; 221 ^ 2 = 48841, value >> 9 = 95
+        dw      96      ; 222 ^ 2 = 49284, value >> 9 = 96
+        dw      97      ; 223 ^ 2 = 49729, value >> 9 = 97
+        dw      98      ; 224 ^ 2 = 50176, value >> 9 = 98
+        dw      98      ; 225 ^ 2 = 50625, value >> 9 = 98
+        dw      99      ; 226 ^ 2 = 51076, value >> 9 = 99
+        dw      100     ; 227 ^ 2 = 51529, value >> 9 = 100
+        dw      101     ; 228 ^ 2 = 51984, value >> 9 = 101
+        dw      102     ; 229 ^ 2 = 52441, value >> 9 = 102
+        dw      103     ; 230 ^ 2 = 52900, value >> 9 = 103
+        dw      104     ; 231 ^ 2 = 53361, value >> 9 = 104
+        dw      105     ; 232 ^ 2 = 53824, value >> 9 = 105
+        dw      106     ; 233 ^ 2 = 54289, value >> 9 = 106
+        dw      106     ; 234 ^ 2 = 54756, value >> 9 = 106
+        dw      107     ; 235 ^ 2 = 55225, value >> 9 = 107
+        dw      108     ; 236 ^ 2 = 55696, value >> 9 = 108
+        dw      109     ; 237 ^ 2 = 56169, value >> 9 = 109
+        dw      110     ; 238 ^ 2 = 56644, value >> 9 = 110
+        dw      111     ; 239 ^ 2 = 57121, value >> 9 = 111
+        dw      112     ; 240 ^ 2 = 57600, value >> 9 = 112
+        dw      113     ; 241 ^ 2 = 58081, value >> 9 = 113
+        dw      114     ; 242 ^ 2 = 58564, value >> 9 = 114
+        dw      115     ; 243 ^ 2 = 59049, value >> 9 = 115
+        dw      116     ; 244 ^ 2 = 59536, value >> 9 = 116
+        dw      117     ; 245 ^ 2 = 60025, value >> 9 = 117
+        dw      118     ; 246 ^ 2 = 60516, value >> 9 = 118
+        dw      119     ; 247 ^ 2 = 61009, value >> 9 = 119
+        dw      120     ; 248 ^ 2 = 61504, value >> 9 = 120
+        dw      121     ; 249 ^ 2 = 62001, value >> 9 = 121
+        dw      122     ; 250 ^ 2 = 62500, value >> 9 = 122
+        dw      123     ; 251 ^ 2 = 63001, value >> 9 = 123
+        dw      124     ; 252 ^ 2 = 63504, value >> 9 = 124
+        dw      125     ; 253 ^ 2 = 64009, value >> 9 = 125
+        dw      126     ; 254 ^ 2 = 64516, value >> 9 = 126
+        dw      127     ; 255 ^ 2 = 65025, value >> 9 = 127
+        dw      128     ; 256 ^ 2 = 65536, value >> 9 = 128
+        dw      129     ; 257 ^ 2 = 66049, value >> 9 = 129
+        dw      130     ; 258 ^ 2 = 66564, value >> 9 = 130
+        dw      131     ; 259 ^ 2 = 67081, value >> 9 = 131
+        dw      132     ; 260 ^ 2 = 67600, value >> 9 = 132
+        dw      133     ; 261 ^ 2 = 68121, value >> 9 = 133
+        dw      134     ; 262 ^ 2 = 68644, value >> 9 = 134
+        dw      135     ; 263 ^ 2 = 69169, value >> 9 = 135
+        dw      136     ; 264 ^ 2 = 69696, value >> 9 = 136
+        dw      137     ; 265 ^ 2 = 70225, value >> 9 = 137
+        dw      138     ; 266 ^ 2 = 70756, value >> 9 = 138
+        dw      139     ; 267 ^ 2 = 71289, value >> 9 = 139
+        dw      140     ; 268 ^ 2 = 71824, value >> 9 = 140
+        dw      141     ; 269 ^ 2 = 72361, value >> 9 = 141
+        dw      142     ; 270 ^ 2 = 72900, value >> 9 = 142
+        dw      143     ; 271 ^ 2 = 73441, value >> 9 = 143
+        dw      144     ; 272 ^ 2 = 73984, value >> 9 = 144
+        dw      145     ; 273 ^ 2 = 74529, value >> 9 = 145
+        dw      146     ; 274 ^ 2 = 75076, value >> 9 = 146
+        dw      147     ; 275 ^ 2 = 75625, value >> 9 = 147
+        dw      148     ; 276 ^ 2 = 76176, value >> 9 = 148
+        dw      149     ; 277 ^ 2 = 76729, value >> 9 = 149
+        dw      150     ; 278 ^ 2 = 77284, value >> 9 = 150
+        dw      152     ; 279 ^ 2 = 77841, value >> 9 = 152
+        dw      153     ; 280 ^ 2 = 78400, value >> 9 = 153
+        dw      154     ; 281 ^ 2 = 78961, value >> 9 = 154
+        dw      155     ; 282 ^ 2 = 79524, value >> 9 = 155
+        dw      156     ; 283 ^ 2 = 80089, value >> 9 = 156
+        dw      157     ; 284 ^ 2 = 80656, value >> 9 = 157
+        dw      158     ; 285 ^ 2 = 81225, value >> 9 = 158
+        dw      159     ; 286 ^ 2 = 81796, value >> 9 = 159
+        dw      160     ; 287 ^ 2 = 82369, value >> 9 = 160
+        dw      162     ; 288 ^ 2 = 82944, value >> 9 = 162
+        dw      163     ; 289 ^ 2 = 83521, value >> 9 = 163
+        dw      164     ; 290 ^ 2 = 84100, value >> 9 = 164
+        dw      165     ; 291 ^ 2 = 84681, value >> 9 = 165
+        dw      166     ; 292 ^ 2 = 85264, value >> 9 = 166
+        dw      167     ; 293 ^ 2 = 85849, value >> 9 = 167
+        dw      168     ; 294 ^ 2 = 86436, value >> 9 = 168
+        dw      169     ; 295 ^ 2 = 87025, value >> 9 = 169
+        dw      171     ; 296 ^ 2 = 87616, value >> 9 = 171
+        dw      172     ; 297 ^ 2 = 88209, value >> 9 = 172
+        dw      173     ; 298 ^ 2 = 88804, value >> 9 = 173
+        dw      174     ; 299 ^ 2 = 89401, value >> 9 = 174
+        dw      175     ; 300 ^ 2 = 90000, value >> 9 = 175
+        dw      176     ; 301 ^ 2 = 90601, value >> 9 = 176
+        dw      178     ; 302 ^ 2 = 91204, value >> 9 = 178
+        dw      179     ; 303 ^ 2 = 91809, value >> 9 = 179
+        dw      180     ; 304 ^ 2 = 92416, value >> 9 = 180
+        dw      181     ; 305 ^ 2 = 93025, value >> 9 = 181
+        dw      182     ; 306 ^ 2 = 93636, value >> 9 = 182
+        dw      184     ; 307 ^ 2 = 94249, value >> 9 = 184
+        dw      185     ; 308 ^ 2 = 94864, value >> 9 = 185
+        dw      186     ; 309 ^ 2 = 95481, value >> 9 = 186
+        dw      187     ; 310 ^ 2 = 96100, value >> 9 = 187
+        dw      188     ; 311 ^ 2 = 96721, value >> 9 = 188
+        dw      190     ; 312 ^ 2 = 97344, value >> 9 = 190
+        dw      191     ; 313 ^ 2 = 97969, value >> 9 = 191
+        dw      192     ; 314 ^ 2 = 98596, value >> 9 = 192
+        dw      193     ; 315 ^ 2 = 99225, value >> 9 = 193
+        dw      195     ; 316 ^ 2 = 99856, value >> 9 = 195
+        dw      196     ; 317 ^ 2 = 100489, value >> 9 = 196
+        dw      197     ; 318 ^ 2 = 101124, value >> 9 = 197
+        dw      198     ; 319 ^ 2 = 101761, value >> 9 = 198
+        dw      200     ; 320 ^ 2 = 102400, value >> 9 = 200
+        dw      201     ; 321 ^ 2 = 103041, value >> 9 = 201
+        dw      202     ; 322 ^ 2 = 103684, value >> 9 = 202
+        dw      203     ; 323 ^ 2 = 104329, value >> 9 = 203
+        dw      205     ; 324 ^ 2 = 104976, value >> 9 = 205
+        dw      206     ; 325 ^ 2 = 105625, value >> 9 = 206
+        dw      207     ; 326 ^ 2 = 106276, value >> 9 = 207
+        dw      208     ; 327 ^ 2 = 106929, value >> 9 = 208
+        dw      210     ; 328 ^ 2 = 107584, value >> 9 = 210
+        dw      211     ; 329 ^ 2 = 108241, value >> 9 = 211
+        dw      212     ; 330 ^ 2 = 108900, value >> 9 = 212
+        dw      213     ; 331 ^ 2 = 109561, value >> 9 = 213
+        dw      215     ; 332 ^ 2 = 110224, value >> 9 = 215
+        dw      216     ; 333 ^ 2 = 110889, value >> 9 = 216
+        dw      217     ; 334 ^ 2 = 111556, value >> 9 = 217
+        dw      219     ; 335 ^ 2 = 112225, value >> 9 = 219
+        dw      220     ; 336 ^ 2 = 112896, value >> 9 = 220
+        dw      221     ; 337 ^ 2 = 113569, value >> 9 = 221
+        dw      223     ; 338 ^ 2 = 114244, value >> 9 = 223
+        dw      224     ; 339 ^ 2 = 114921, value >> 9 = 224
+        dw      225     ; 340 ^ 2 = 115600, value >> 9 = 225
+        dw      227     ; 341 ^ 2 = 116281, value >> 9 = 227
+        dw      228     ; 342 ^ 2 = 116964, value >> 9 = 228
+        dw      229     ; 343 ^ 2 = 117649, value >> 9 = 229
+        dw      231     ; 344 ^ 2 = 118336, value >> 9 = 231
+        dw      232     ; 345 ^ 2 = 119025, value >> 9 = 232
+        dw      233     ; 346 ^ 2 = 119716, value >> 9 = 233
+        dw      235     ; 347 ^ 2 = 120409, value >> 9 = 235
+        dw      236     ; 348 ^ 2 = 121104, value >> 9 = 236
+        dw      237     ; 349 ^ 2 = 121801, value >> 9 = 237
+        dw      239     ; 350 ^ 2 = 122500, value >> 9 = 239
+        dw      240     ; 351 ^ 2 = 123201, value >> 9 = 240
+        dw      242     ; 352 ^ 2 = 123904, value >> 9 = 242
+        dw      243     ; 353 ^ 2 = 124609, value >> 9 = 243
+        dw      244     ; 354 ^ 2 = 125316, value >> 9 = 244
+        dw      246     ; 355 ^ 2 = 126025, value >> 9 = 246
+        dw      247     ; 356 ^ 2 = 126736, value >> 9 = 247
+        dw      248     ; 357 ^ 2 = 127449, value >> 9 = 248
+        dw      250     ; 358 ^ 2 = 128164, value >> 9 = 250
+        dw      251     ; 359 ^ 2 = 128881, value >> 9 = 251
+        dw      253     ; 360 ^ 2 = 129600, value >> 9 = 253
+        dw      254     ; 361 ^ 2 = 130321, value >> 9 = 254
+        dw      255     ; 362 ^ 2 = 131044, value >> 9 = 255
+        dw      257     ; 363 ^ 2 = 131769, value >> 9 = 257
+        dw      258     ; 364 ^ 2 = 132496, value >> 9 = 258
+        dw      260     ; 365 ^ 2 = 133225, value >> 9 = 260
+        dw      261     ; 366 ^ 2 = 133956, value >> 9 = 261
+        dw      263     ; 367 ^ 2 = 134689, value >> 9 = 263
+        dw      264     ; 368 ^ 2 = 135424, value >> 9 = 264
+        dw      265     ; 369 ^ 2 = 136161, value >> 9 = 265
+        dw      267     ; 370 ^ 2 = 136900, value >> 9 = 267
+        dw      268     ; 371 ^ 2 = 137641, value >> 9 = 268
+        dw      270     ; 372 ^ 2 = 138384, value >> 9 = 270
+        dw      271     ; 373 ^ 2 = 139129, value >> 9 = 271
+        dw      273     ; 374 ^ 2 = 139876, value >> 9 = 273
+        dw      274     ; 375 ^ 2 = 140625, value >> 9 = 274
+        dw      276     ; 376 ^ 2 = 141376, value >> 9 = 276
+        dw      277     ; 377 ^ 2 = 142129, value >> 9 = 277
+        dw      279     ; 378 ^ 2 = 142884, value >> 9 = 279
+        dw      280     ; 379 ^ 2 = 143641, value >> 9 = 280
+        dw      282     ; 380 ^ 2 = 144400, value >> 9 = 282
+        dw      283     ; 381 ^ 2 = 145161, value >> 9 = 283
+        dw      285     ; 382 ^ 2 = 145924, value >> 9 = 285
+        dw      286     ; 383 ^ 2 = 146689, value >> 9 = 286
+        dw      288     ; 384 ^ 2 = 147456, value >> 9 = 288
+        dw      289     ; 385 ^ 2 = 148225, value >> 9 = 289
+        dw      291     ; 386 ^ 2 = 148996, value >> 9 = 291
+        dw      292     ; 387 ^ 2 = 149769, value >> 9 = 292
+        dw      294     ; 388 ^ 2 = 150544, value >> 9 = 294
+        dw      295     ; 389 ^ 2 = 151321, value >> 9 = 295
+        dw      297     ; 390 ^ 2 = 152100, value >> 9 = 297
+        dw      298     ; 391 ^ 2 = 152881, value >> 9 = 298
+        dw      300     ; 392 ^ 2 = 153664, value >> 9 = 300
+        dw      301     ; 393 ^ 2 = 154449, value >> 9 = 301
+        dw      303     ; 394 ^ 2 = 155236, value >> 9 = 303
+        dw      304     ; 395 ^ 2 = 156025, value >> 9 = 304
+        dw      306     ; 396 ^ 2 = 156816, value >> 9 = 306
+        dw      307     ; 397 ^ 2 = 157609, value >> 9 = 307
+        dw      309     ; 398 ^ 2 = 158404, value >> 9 = 309
+        dw      310     ; 399 ^ 2 = 159201, value >> 9 = 310
+        dw      312     ; 400 ^ 2 = 160000, value >> 9 = 312
+        dw      314     ; 401 ^ 2 = 160801, value >> 9 = 314
+        dw      315     ; 402 ^ 2 = 161604, value >> 9 = 315
+        dw      317     ; 403 ^ 2 = 162409, value >> 9 = 317
+        dw      318     ; 404 ^ 2 = 163216, value >> 9 = 318
+        dw      320     ; 405 ^ 2 = 164025, value >> 9 = 320
+        dw      321     ; 406 ^ 2 = 164836, value >> 9 = 321
+        dw      323     ; 407 ^ 2 = 165649, value >> 9 = 323
+        dw      325     ; 408 ^ 2 = 166464, value >> 9 = 325
+        dw      326     ; 409 ^ 2 = 167281, value >> 9 = 326
+        dw      328     ; 410 ^ 2 = 168100, value >> 9 = 328
+        dw      329     ; 411 ^ 2 = 168921, value >> 9 = 329
+        dw      331     ; 412 ^ 2 = 169744, value >> 9 = 331
+        dw      333     ; 413 ^ 2 = 170569, value >> 9 = 333
+        dw      334     ; 414 ^ 2 = 171396, value >> 9 = 334
+        dw      336     ; 415 ^ 2 = 172225, value >> 9 = 336
+        dw      338     ; 416 ^ 2 = 173056, value >> 9 = 338
+        dw      339     ; 417 ^ 2 = 173889, value >> 9 = 339
+        dw      341     ; 418 ^ 2 = 174724, value >> 9 = 341
+        dw      342     ; 419 ^ 2 = 175561, value >> 9 = 342
+        dw      344     ; 420 ^ 2 = 176400, value >> 9 = 344
+        dw      346     ; 421 ^ 2 = 177241, value >> 9 = 346
+        dw      347     ; 422 ^ 2 = 178084, value >> 9 = 347
+        dw      349     ; 423 ^ 2 = 178929, value >> 9 = 349
+        dw      351     ; 424 ^ 2 = 179776, value >> 9 = 351
+        dw      352     ; 425 ^ 2 = 180625, value >> 9 = 352
+        dw      354     ; 426 ^ 2 = 181476, value >> 9 = 354
+        dw      356     ; 427 ^ 2 = 182329, value >> 9 = 356
+        dw      357     ; 428 ^ 2 = 183184, value >> 9 = 357
+        dw      359     ; 429 ^ 2 = 184041, value >> 9 = 359
+        dw      361     ; 430 ^ 2 = 184900, value >> 9 = 361
+        dw      362     ; 431 ^ 2 = 185761, value >> 9 = 362
+        dw      364     ; 432 ^ 2 = 186624, value >> 9 = 364
+        dw      366     ; 433 ^ 2 = 187489, value >> 9 = 366
+        dw      367     ; 434 ^ 2 = 188356, value >> 9 = 367
+        dw      369     ; 435 ^ 2 = 189225, value >> 9 = 369
+        dw      371     ; 436 ^ 2 = 190096, value >> 9 = 371
+        dw      372     ; 437 ^ 2 = 190969, value >> 9 = 372
+        dw      374     ; 438 ^ 2 = 191844, value >> 9 = 374
+        dw      376     ; 439 ^ 2 = 192721, value >> 9 = 376
+        dw      378     ; 440 ^ 2 = 193600, value >> 9 = 378
+        dw      379     ; 441 ^ 2 = 194481, value >> 9 = 379
+        dw      381     ; 442 ^ 2 = 195364, value >> 9 = 381
+        dw      383     ; 443 ^ 2 = 196249, value >> 9 = 383
+        dw      385     ; 444 ^ 2 = 197136, value >> 9 = 385
+        dw      386     ; 445 ^ 2 = 198025, value >> 9 = 386
+        dw      388     ; 446 ^ 2 = 198916, value >> 9 = 388
+        dw      390     ; 447 ^ 2 = 199809, value >> 9 = 390
+        dw      392     ; 448 ^ 2 = 200704, value >> 9 = 392
+        dw      393     ; 449 ^ 2 = 201601, value >> 9 = 393
+        dw      395     ; 450 ^ 2 = 202500, value >> 9 = 395
+        dw      397     ; 451 ^ 2 = 203401, value >> 9 = 397
+        dw      399     ; 452 ^ 2 = 204304, value >> 9 = 399
+        dw      400     ; 453 ^ 2 = 205209, value >> 9 = 400
+        dw      402     ; 454 ^ 2 = 206116, value >> 9 = 402
+        dw      404     ; 455 ^ 2 = 207025, value >> 9 = 404
+        dw      406     ; 456 ^ 2 = 207936, value >> 9 = 406
+        dw      407     ; 457 ^ 2 = 208849, value >> 9 = 407
+        dw      409     ; 458 ^ 2 = 209764, value >> 9 = 409
+        dw      411     ; 459 ^ 2 = 210681, value >> 9 = 411
+        dw      413     ; 460 ^ 2 = 211600, value >> 9 = 413
+        dw      415     ; 461 ^ 2 = 212521, value >> 9 = 415
+        dw      416     ; 462 ^ 2 = 213444, value >> 9 = 416
+        dw      418     ; 463 ^ 2 = 214369, value >> 9 = 418
+        dw      420     ; 464 ^ 2 = 215296, value >> 9 = 420
+        dw      422     ; 465 ^ 2 = 216225, value >> 9 = 422
+        dw      424     ; 466 ^ 2 = 217156, value >> 9 = 424
+        dw      425     ; 467 ^ 2 = 218089, value >> 9 = 425
+        dw      427     ; 468 ^ 2 = 219024, value >> 9 = 427
+        dw      429     ; 469 ^ 2 = 219961, value >> 9 = 429
+        dw      431     ; 470 ^ 2 = 220900, value >> 9 = 431
+        dw      433     ; 471 ^ 2 = 221841, value >> 9 = 433
+        dw      435     ; 472 ^ 2 = 222784, value >> 9 = 435
+        dw      436     ; 473 ^ 2 = 223729, value >> 9 = 436
+        dw      438     ; 474 ^ 2 = 224676, value >> 9 = 438
+        dw      440     ; 475 ^ 2 = 225625, value >> 9 = 440
+        dw      442     ; 476 ^ 2 = 226576, value >> 9 = 442
+        dw      444     ; 477 ^ 2 = 227529, value >> 9 = 444
+        dw      446     ; 478 ^ 2 = 228484, value >> 9 = 446
+        dw      448     ; 479 ^ 2 = 229441, value >> 9 = 448
+        dw      450     ; 480 ^ 2 = 230400, value >> 9 = 450
+        dw      451     ; 481 ^ 2 = 231361, value >> 9 = 451
+        dw      453     ; 482 ^ 2 = 232324, value >> 9 = 453
+        dw      455     ; 483 ^ 2 = 233289, value >> 9 = 455
+        dw      457     ; 484 ^ 2 = 234256, value >> 9 = 457
+        dw      459     ; 485 ^ 2 = 235225, value >> 9 = 459
+        dw      461     ; 486 ^ 2 = 236196, value >> 9 = 461
+        dw      463     ; 487 ^ 2 = 237169, value >> 9 = 463
+        dw      465     ; 488 ^ 2 = 238144, value >> 9 = 465
+        dw      467     ; 489 ^ 2 = 239121, value >> 9 = 467
+        dw      468     ; 490 ^ 2 = 240100, value >> 9 = 468
+        dw      470     ; 491 ^ 2 = 241081, value >> 9 = 470
+        dw      472     ; 492 ^ 2 = 242064, value >> 9 = 472
+        dw      474     ; 493 ^ 2 = 243049, value >> 9 = 474
+        dw      476     ; 494 ^ 2 = 244036, value >> 9 = 476
+        dw      478     ; 495 ^ 2 = 245025, value >> 9 = 478
+        dw      480     ; 496 ^ 2 = 246016, value >> 9 = 480
+        dw      482     ; 497 ^ 2 = 247009, value >> 9 = 482
+        dw      484     ; 498 ^ 2 = 248004, value >> 9 = 484
+        dw      486     ; 499 ^ 2 = 249001, value >> 9 = 486
+        dw      488     ; 500 ^ 2 = 250000, value >> 9 = 488
+        dw      490     ; 501 ^ 2 = 251001, value >> 9 = 490
+        dw      492     ; 502 ^ 2 = 252004, value >> 9 = 492
+        dw      494     ; 503 ^ 2 = 253009, value >> 9 = 494
+        dw      496     ; 504 ^ 2 = 254016, value >> 9 = 496
+        dw      498     ; 505 ^ 2 = 255025, value >> 9 = 498
+        dw      500     ; 506 ^ 2 = 256036, value >> 9 = 500
+        dw      502     ; 507 ^ 2 = 257049, value >> 9 = 502
+        dw      504     ; 508 ^ 2 = 258064, value >> 9 = 504
+        dw      506     ; 509 ^ 2 = 259081, value >> 9 = 506
+        dw      508     ; 510 ^ 2 = 260100, value >> 9 = 508
+        dw      510     ; 511 ^ 2 = 261121, value >> 9 = 510
+        dw      512     ; 512 ^ 2 = 262144, value >> 9 = 512
+        dw      514     ; 513 ^ 2 = 263169, value >> 9 = 514
+        dw      516     ; 514 ^ 2 = 264196, value >> 9 = 516
+        dw      518     ; 515 ^ 2 = 265225, value >> 9 = 518
+        dw      520     ; 516 ^ 2 = 266256, value >> 9 = 520
+        dw      522     ; 517 ^ 2 = 267289, value >> 9 = 522
+        dw      524     ; 518 ^ 2 = 268324, value >> 9 = 524
+        dw      526     ; 519 ^ 2 = 269361, value >> 9 = 526
+        dw      528     ; 520 ^ 2 = 270400, value >> 9 = 528
+        dw      530     ; 521 ^ 2 = 271441, value >> 9 = 530
+        dw      532     ; 522 ^ 2 = 272484, value >> 9 = 532
+        dw      534     ; 523 ^ 2 = 273529, value >> 9 = 534
+        dw      536     ; 524 ^ 2 = 274576, value >> 9 = 536
+        dw      538     ; 525 ^ 2 = 275625, value >> 9 = 538
+        dw      540     ; 526 ^ 2 = 276676, value >> 9 = 540
+        dw      542     ; 527 ^ 2 = 277729, value >> 9 = 542
+        dw      544     ; 528 ^ 2 = 278784, value >> 9 = 544
+        dw      546     ; 529 ^ 2 = 279841, value >> 9 = 546
+        dw      548     ; 530 ^ 2 = 280900, value >> 9 = 548
+        dw      550     ; 531 ^ 2 = 281961, value >> 9 = 550
+        dw      552     ; 532 ^ 2 = 283024, value >> 9 = 552
+        dw      554     ; 533 ^ 2 = 284089, value >> 9 = 554
+        dw      556     ; 534 ^ 2 = 285156, value >> 9 = 556
+        dw      559     ; 535 ^ 2 = 286225, value >> 9 = 559
+        dw      561     ; 536 ^ 2 = 287296, value >> 9 = 561
+        dw      563     ; 537 ^ 2 = 288369, value >> 9 = 563
+        dw      565     ; 538 ^ 2 = 289444, value >> 9 = 565
+        dw      567     ; 539 ^ 2 = 290521, value >> 9 = 567
+        dw      569     ; 540 ^ 2 = 291600, value >> 9 = 569
+        dw      571     ; 541 ^ 2 = 292681, value >> 9 = 571
+        dw      573     ; 542 ^ 2 = 293764, value >> 9 = 573
+        dw      575     ; 543 ^ 2 = 294849, value >> 9 = 575
+        dw      578     ; 544 ^ 2 = 295936, value >> 9 = 578
+        dw      580     ; 545 ^ 2 = 297025, value >> 9 = 580
+        dw      582     ; 546 ^ 2 = 298116, value >> 9 = 582
+        dw      584     ; 547 ^ 2 = 299209, value >> 9 = 584
+        dw      586     ; 548 ^ 2 = 300304, value >> 9 = 586
+        dw      588     ; 549 ^ 2 = 301401, value >> 9 = 588
+        dw      590     ; 550 ^ 2 = 302500, value >> 9 = 590
+        dw      592     ; 551 ^ 2 = 303601, value >> 9 = 592
+        dw      595     ; 552 ^ 2 = 304704, value >> 9 = 595
+        dw      597     ; 553 ^ 2 = 305809, value >> 9 = 597
+        dw      599     ; 554 ^ 2 = 306916, value >> 9 = 599
+        dw      601     ; 555 ^ 2 = 308025, value >> 9 = 601
+        dw      603     ; 556 ^ 2 = 309136, value >> 9 = 603
+        dw      605     ; 557 ^ 2 = 310249, value >> 9 = 605
+        dw      608     ; 558 ^ 2 = 311364, value >> 9 = 608
+        dw      610     ; 559 ^ 2 = 312481, value >> 9 = 610
+        dw      612     ; 560 ^ 2 = 313600, value >> 9 = 612
+        dw      614     ; 561 ^ 2 = 314721, value >> 9 = 614
+        dw      616     ; 562 ^ 2 = 315844, value >> 9 = 616
+        dw      619     ; 563 ^ 2 = 316969, value >> 9 = 619
+        dw      621     ; 564 ^ 2 = 318096, value >> 9 = 621
+        dw      623     ; 565 ^ 2 = 319225, value >> 9 = 623
+        dw      625     ; 566 ^ 2 = 320356, value >> 9 = 625
+        dw      627     ; 567 ^ 2 = 321489, value >> 9 = 627
+        dw      630     ; 568 ^ 2 = 322624, value >> 9 = 630
+        dw      632     ; 569 ^ 2 = 323761, value >> 9 = 632
+        dw      634     ; 570 ^ 2 = 324900, value >> 9 = 634
+        dw      636     ; 571 ^ 2 = 326041, value >> 9 = 636
+        dw      639     ; 572 ^ 2 = 327184, value >> 9 = 639
+        dw      641     ; 573 ^ 2 = 328329, value >> 9 = 641
+        dw      643     ; 574 ^ 2 = 329476, value >> 9 = 643
+        dw      645     ; 575 ^ 2 = 330625, value >> 9 = 645
+        dw      648     ; 576 ^ 2 = 331776, value >> 9 = 648
+        dw      650     ; 577 ^ 2 = 332929, value >> 9 = 650
+        dw      652     ; 578 ^ 2 = 334084, value >> 9 = 652
+        dw      654     ; 579 ^ 2 = 335241, value >> 9 = 654
+        dw      657     ; 580 ^ 2 = 336400, value >> 9 = 657
+        dw      659     ; 581 ^ 2 = 337561, value >> 9 = 659
+        dw      661     ; 582 ^ 2 = 338724, value >> 9 = 661
+        dw      663     ; 583 ^ 2 = 339889, value >> 9 = 663
+        dw      666     ; 584 ^ 2 = 341056, value >> 9 = 666
+        dw      668     ; 585 ^ 2 = 342225, value >> 9 = 668
+        dw      670     ; 586 ^ 2 = 343396, value >> 9 = 670
+        dw      672     ; 587 ^ 2 = 344569, value >> 9 = 672
+        dw      675     ; 588 ^ 2 = 345744, value >> 9 = 675
+        dw      677     ; 589 ^ 2 = 346921, value >> 9 = 677
+        dw      679     ; 590 ^ 2 = 348100, value >> 9 = 679
+        dw      682     ; 591 ^ 2 = 349281, value >> 9 = 682
+        dw      684     ; 592 ^ 2 = 350464, value >> 9 = 684
+        dw      686     ; 593 ^ 2 = 351649, value >> 9 = 686
+        dw      689     ; 594 ^ 2 = 352836, value >> 9 = 689
+        dw      691     ; 595 ^ 2 = 354025, value >> 9 = 691
+        dw      693     ; 596 ^ 2 = 355216, value >> 9 = 693
+        dw      696     ; 597 ^ 2 = 356409, value >> 9 = 696
+        dw      698     ; 598 ^ 2 = 357604, value >> 9 = 698
+        dw      700     ; 599 ^ 2 = 358801, value >> 9 = 700
+        dw      703     ; 600 ^ 2 = 360000, value >> 9 = 703
+        dw      705     ; 601 ^ 2 = 361201, value >> 9 = 705
+        dw      707     ; 602 ^ 2 = 362404, value >> 9 = 707
+        dw      710     ; 603 ^ 2 = 363609, value >> 9 = 710
+        dw      712     ; 604 ^ 2 = 364816, value >> 9 = 712
+        dw      714     ; 605 ^ 2 = 366025, value >> 9 = 714
+        dw      717     ; 606 ^ 2 = 367236, value >> 9 = 717
+        dw      719     ; 607 ^ 2 = 368449, value >> 9 = 719
+        dw      722     ; 608 ^ 2 = 369664, value >> 9 = 722
+        dw      724     ; 609 ^ 2 = 370881, value >> 9 = 724
+        dw      726     ; 610 ^ 2 = 372100, value >> 9 = 726
+        dw      729     ; 611 ^ 2 = 373321, value >> 9 = 729
+        dw      731     ; 612 ^ 2 = 374544, value >> 9 = 731
+        dw      733     ; 613 ^ 2 = 375769, value >> 9 = 733
+        dw      736     ; 614 ^ 2 = 376996, value >> 9 = 736
+        dw      738     ; 615 ^ 2 = 378225, value >> 9 = 738
+        dw      741     ; 616 ^ 2 = 379456, value >> 9 = 741
+        dw      743     ; 617 ^ 2 = 380689, value >> 9 = 743
+        dw      745     ; 618 ^ 2 = 381924, value >> 9 = 745
+        dw      748     ; 619 ^ 2 = 383161, value >> 9 = 748
+        dw      750     ; 620 ^ 2 = 384400, value >> 9 = 750
+        dw      753     ; 621 ^ 2 = 385641, value >> 9 = 753
+        dw      755     ; 622 ^ 2 = 386884, value >> 9 = 755
+        dw      758     ; 623 ^ 2 = 388129, value >> 9 = 758
+        dw      760     ; 624 ^ 2 = 389376, value >> 9 = 760
+        dw      762     ; 625 ^ 2 = 390625, value >> 9 = 762
+        dw      765     ; 626 ^ 2 = 391876, value >> 9 = 765
+        dw      767     ; 627 ^ 2 = 393129, value >> 9 = 767
+        dw      770     ; 628 ^ 2 = 394384, value >> 9 = 770
+        dw      772     ; 629 ^ 2 = 395641, value >> 9 = 772
+        dw      775     ; 630 ^ 2 = 396900, value >> 9 = 775
+        dw      777     ; 631 ^ 2 = 398161, value >> 9 = 777
+        dw      780     ; 632 ^ 2 = 399424, value >> 9 = 780
+        dw      782     ; 633 ^ 2 = 400689, value >> 9 = 782
+        dw      785     ; 634 ^ 2 = 401956, value >> 9 = 785
+        dw      787     ; 635 ^ 2 = 403225, value >> 9 = 787
+        dw      790     ; 636 ^ 2 = 404496, value >> 9 = 790
+        dw      792     ; 637 ^ 2 = 405769, value >> 9 = 792
+        dw      795     ; 638 ^ 2 = 407044, value >> 9 = 795
+        dw      797     ; 639 ^ 2 = 408321, value >> 9 = 797
+        dw      800     ; 640 ^ 2 = 409600, value >> 9 = 800
+        dw      802     ; 641 ^ 2 = 410881, value >> 9 = 802
+        dw      805     ; 642 ^ 2 = 412164, value >> 9 = 805
+        dw      807     ; 643 ^ 2 = 413449, value >> 9 = 807
+        dw      810     ; 644 ^ 2 = 414736, value >> 9 = 810
+        dw      812     ; 645 ^ 2 = 416025, value >> 9 = 812
+        dw      815     ; 646 ^ 2 = 417316, value >> 9 = 815
+        dw      817     ; 647 ^ 2 = 418609, value >> 9 = 817
+        dw      820     ; 648 ^ 2 = 419904, value >> 9 = 820
+        dw      822     ; 649 ^ 2 = 421201, value >> 9 = 822
+        dw      825     ; 650 ^ 2 = 422500, value >> 9 = 825
+        dw      827     ; 651 ^ 2 = 423801, value >> 9 = 827
+        dw      830     ; 652 ^ 2 = 425104, value >> 9 = 830
+        dw      832     ; 653 ^ 2 = 426409, value >> 9 = 832
+        dw      835     ; 654 ^ 2 = 427716, value >> 9 = 835
+        dw      837     ; 655 ^ 2 = 429025, value >> 9 = 837
+        dw      840     ; 656 ^ 2 = 430336, value >> 9 = 840
+        dw      843     ; 657 ^ 2 = 431649, value >> 9 = 843
+        dw      845     ; 658 ^ 2 = 432964, value >> 9 = 845
+        dw      848     ; 659 ^ 2 = 434281, value >> 9 = 848
+        dw      850     ; 660 ^ 2 = 435600, value >> 9 = 850
+        dw      853     ; 661 ^ 2 = 436921, value >> 9 = 853
+        dw      855     ; 662 ^ 2 = 438244, value >> 9 = 855
+        dw      858     ; 663 ^ 2 = 439569, value >> 9 = 858
+        dw      861     ; 664 ^ 2 = 440896, value >> 9 = 861
+        dw      863     ; 665 ^ 2 = 442225, value >> 9 = 863
+        dw      866     ; 666 ^ 2 = 443556, value >> 9 = 866
+        dw      868     ; 667 ^ 2 = 444889, value >> 9 = 868
+        dw      871     ; 668 ^ 2 = 446224, value >> 9 = 871
+        dw      874     ; 669 ^ 2 = 447561, value >> 9 = 874
+        dw      876     ; 670 ^ 2 = 448900, value >> 9 = 876
+        dw      879     ; 671 ^ 2 = 450241, value >> 9 = 879
+        dw      882     ; 672 ^ 2 = 451584, value >> 9 = 882
+        dw      884     ; 673 ^ 2 = 452929, value >> 9 = 884
+        dw      887     ; 674 ^ 2 = 454276, value >> 9 = 887
+        dw      889     ; 675 ^ 2 = 455625, value >> 9 = 889
+        dw      892     ; 676 ^ 2 = 456976, value >> 9 = 892
+        dw      895     ; 677 ^ 2 = 458329, value >> 9 = 895
+        dw      897     ; 678 ^ 2 = 459684, value >> 9 = 897
+        dw      900     ; 679 ^ 2 = 461041, value >> 9 = 900
+        dw      903     ; 680 ^ 2 = 462400, value >> 9 = 903
+        dw      905     ; 681 ^ 2 = 463761, value >> 9 = 905
+        dw      908     ; 682 ^ 2 = 465124, value >> 9 = 908
+        dw      911     ; 683 ^ 2 = 466489, value >> 9 = 911
+        dw      913     ; 684 ^ 2 = 467856, value >> 9 = 913
+        dw      916     ; 685 ^ 2 = 469225, value >> 9 = 916
+        dw      919     ; 686 ^ 2 = 470596, value >> 9 = 919
+        dw      921     ; 687 ^ 2 = 471969, value >> 9 = 921
+        dw      924     ; 688 ^ 2 = 473344, value >> 9 = 924
+        dw      927     ; 689 ^ 2 = 474721, value >> 9 = 927
+        dw      929     ; 690 ^ 2 = 476100, value >> 9 = 929
+        dw      932     ; 691 ^ 2 = 477481, value >> 9 = 932
+        dw      935     ; 692 ^ 2 = 478864, value >> 9 = 935
+        dw      937     ; 693 ^ 2 = 480249, value >> 9 = 937
+        dw      940     ; 694 ^ 2 = 481636, value >> 9 = 940
+        dw      943     ; 695 ^ 2 = 483025, value >> 9 = 943
+        dw      946     ; 696 ^ 2 = 484416, value >> 9 = 946
+        dw      948     ; 697 ^ 2 = 485809, value >> 9 = 948
+        dw      951     ; 698 ^ 2 = 487204, value >> 9 = 951
+        dw      954     ; 699 ^ 2 = 488601, value >> 9 = 954
+        dw      957     ; 700 ^ 2 = 490000, value >> 9 = 957
+        dw      959     ; 701 ^ 2 = 491401, value >> 9 = 959
+        dw      962     ; 702 ^ 2 = 492804, value >> 9 = 962
+        dw      965     ; 703 ^ 2 = 494209, value >> 9 = 965
+        dw      968     ; 704 ^ 2 = 495616, value >> 9 = 968
+        dw      970     ; 705 ^ 2 = 497025, value >> 9 = 970
+        dw      973     ; 706 ^ 2 = 498436, value >> 9 = 973
+        dw      976     ; 707 ^ 2 = 499849, value >> 9 = 976
+        dw      979     ; 708 ^ 2 = 501264, value >> 9 = 979
+        dw      981     ; 709 ^ 2 = 502681, value >> 9 = 981
+        dw      984     ; 710 ^ 2 = 504100, value >> 9 = 984
+        dw      987     ; 711 ^ 2 = 505521, value >> 9 = 987
+        dw      990     ; 712 ^ 2 = 506944, value >> 9 = 990
+        dw      992     ; 713 ^ 2 = 508369, value >> 9 = 992
+        dw      995     ; 714 ^ 2 = 509796, value >> 9 = 995
+        dw      998     ; 715 ^ 2 = 511225, value >> 9 = 998
+        dw      1001    ; 716 ^ 2 = 512656, value >> 9 = 1001
+        dw      1004    ; 717 ^ 2 = 514089, value >> 9 = 1004
+        dw      1006    ; 718 ^ 2 = 515524, value >> 9 = 1006
+        dw      1009    ; 719 ^ 2 = 516961, value >> 9 = 1009
+        dw      1012    ; 720 ^ 2 = 518400, value >> 9 = 1012
+        dw      1015    ; 721 ^ 2 = 519841, value >> 9 = 1015
+        dw      1018    ; 722 ^ 2 = 521284, value >> 9 = 1018
+        dw      1020    ; 723 ^ 2 = 522729, value >> 9 = 1020
+        dw      1023    ; 724 ^ 2 = 524176, value >> 9 = 1023
+        dw      1026    ; 725 ^ 2 = 525625, value >> 9 = 1026
+        dw      1029    ; 726 ^ 2 = 527076, value >> 9 = 1029
+        dw      1032    ; 727 ^ 2 = 528529, value >> 9 = 1032
+        dw      1035    ; 728 ^ 2 = 529984, value >> 9 = 1035
+        dw      1037    ; 729 ^ 2 = 531441, value >> 9 = 1037
+        dw      1040    ; 730 ^ 2 = 532900, value >> 9 = 1040
+        dw      1043    ; 731 ^ 2 = 534361, value >> 9 = 1043
+        dw      1046    ; 732 ^ 2 = 535824, value >> 9 = 1046
+        dw      1049    ; 733 ^ 2 = 537289, value >> 9 = 1049
+        dw      1052    ; 734 ^ 2 = 538756, value >> 9 = 1052
+        dw      1055    ; 735 ^ 2 = 540225, value >> 9 = 1055
+        dw      1058    ; 736 ^ 2 = 541696, value >> 9 = 1058
+        dw      1060    ; 737 ^ 2 = 543169, value >> 9 = 1060
+        dw      1063    ; 738 ^ 2 = 544644, value >> 9 = 1063
+        dw      1066    ; 739 ^ 2 = 546121, value >> 9 = 1066
+        dw      1069    ; 740 ^ 2 = 547600, value >> 9 = 1069
+        dw      1072    ; 741 ^ 2 = 549081, value >> 9 = 1072
+        dw      1075    ; 742 ^ 2 = 550564, value >> 9 = 1075
+        dw      1078    ; 743 ^ 2 = 552049, value >> 9 = 1078
+        dw      1081    ; 744 ^ 2 = 553536, value >> 9 = 1081
+        dw      1084    ; 745 ^ 2 = 555025, value >> 9 = 1084
+        dw      1086    ; 746 ^ 2 = 556516, value >> 9 = 1086
+        dw      1089    ; 747 ^ 2 = 558009, value >> 9 = 1089
+        dw      1092    ; 748 ^ 2 = 559504, value >> 9 = 1092
+        dw      1095    ; 749 ^ 2 = 561001, value >> 9 = 1095
+        dw      1098    ; 750 ^ 2 = 562500, value >> 9 = 1098
+        dw      1101    ; 751 ^ 2 = 564001, value >> 9 = 1101
+        dw      1104    ; 752 ^ 2 = 565504, value >> 9 = 1104
+        dw      1107    ; 753 ^ 2 = 567009, value >> 9 = 1107
+        dw      1110    ; 754 ^ 2 = 568516, value >> 9 = 1110
+        dw      1113    ; 755 ^ 2 = 570025, value >> 9 = 1113
+        dw      1116    ; 756 ^ 2 = 571536, value >> 9 = 1116
+        dw      1119    ; 757 ^ 2 = 573049, value >> 9 = 1119
+        dw      1122    ; 758 ^ 2 = 574564, value >> 9 = 1122
+        dw      1125    ; 759 ^ 2 = 576081, value >> 9 = 1125
+        dw      1128    ; 760 ^ 2 = 577600, value >> 9 = 1128
+        dw      1131    ; 761 ^ 2 = 579121, value >> 9 = 1131
+        dw      1134    ; 762 ^ 2 = 580644, value >> 9 = 1134
+        dw      1137    ; 763 ^ 2 = 582169, value >> 9 = 1137
+        dw      1140    ; 764 ^ 2 = 583696, value >> 9 = 1140
+        dw      1143    ; 765 ^ 2 = 585225, value >> 9 = 1143
+        dw      1146    ; 766 ^ 2 = 586756, value >> 9 = 1146
+        dw      1149    ; 767 ^ 2 = 588289, value >> 9 = 1149
+        dw      1152    ; 768 ^ 2 = 589824, value >> 9 = 1152
+        dw      1155    ; 769 ^ 2 = 591361, value >> 9 = 1155
+        dw      1158    ; 770 ^ 2 = 592900, value >> 9 = 1158
+        dw      1161    ; 771 ^ 2 = 594441, value >> 9 = 1161
+        dw      1164    ; 772 ^ 2 = 595984, value >> 9 = 1164
+        dw      1167    ; 773 ^ 2 = 597529, value >> 9 = 1167
+        dw      1170    ; 774 ^ 2 = 599076, value >> 9 = 1170
+        dw      1173    ; 775 ^ 2 = 600625, value >> 9 = 1173
+        dw      1176    ; 776 ^ 2 = 602176, value >> 9 = 1176
+        dw      1179    ; 777 ^ 2 = 603729, value >> 9 = 1179
+        dw      1182    ; 778 ^ 2 = 605284, value >> 9 = 1182
+        dw      1185    ; 779 ^ 2 = 606841, value >> 9 = 1185
+        dw      1188    ; 780 ^ 2 = 608400, value >> 9 = 1188
+        dw      1191    ; 781 ^ 2 = 609961, value >> 9 = 1191
+        dw      1194    ; 782 ^ 2 = 611524, value >> 9 = 1194
+        dw      1197    ; 783 ^ 2 = 613089, value >> 9 = 1197
+        dw      1200    ; 784 ^ 2 = 614656, value >> 9 = 1200
+        dw      1203    ; 785 ^ 2 = 616225, value >> 9 = 1203
+        dw      1206    ; 786 ^ 2 = 617796, value >> 9 = 1206
+        dw      1209    ; 787 ^ 2 = 619369, value >> 9 = 1209
+        dw      1212    ; 788 ^ 2 = 620944, value >> 9 = 1212
+        dw      1215    ; 789 ^ 2 = 622521, value >> 9 = 1215
+        dw      1218    ; 790 ^ 2 = 624100, value >> 9 = 1218
+        dw      1222    ; 791 ^ 2 = 625681, value >> 9 = 1222
+        dw      1225    ; 792 ^ 2 = 627264, value >> 9 = 1225
+        dw      1228    ; 793 ^ 2 = 628849, value >> 9 = 1228
+        dw      1231    ; 794 ^ 2 = 630436, value >> 9 = 1231
+        dw      1234    ; 795 ^ 2 = 632025, value >> 9 = 1234
+        dw      1237    ; 796 ^ 2 = 633616, value >> 9 = 1237
+        dw      1240    ; 797 ^ 2 = 635209, value >> 9 = 1240
+        dw      1243    ; 798 ^ 2 = 636804, value >> 9 = 1243
+        dw      1246    ; 799 ^ 2 = 638401, value >> 9 = 1246
+        dw      1250    ; 800 ^ 2 = 640000, value >> 9 = 1250
+        dw      1253    ; 801 ^ 2 = 641601, value >> 9 = 1253
+        dw      1256    ; 802 ^ 2 = 643204, value >> 9 = 1256
+        dw      1259    ; 803 ^ 2 = 644809, value >> 9 = 1259
+        dw      1262    ; 804 ^ 2 = 646416, value >> 9 = 1262
+        dw      1265    ; 805 ^ 2 = 648025, value >> 9 = 1265
+        dw      1268    ; 806 ^ 2 = 649636, value >> 9 = 1268
+        dw      1271    ; 807 ^ 2 = 651249, value >> 9 = 1271
+        dw      1275    ; 808 ^ 2 = 652864, value >> 9 = 1275
+        dw      1278    ; 809 ^ 2 = 654481, value >> 9 = 1278
+        dw      1281    ; 810 ^ 2 = 656100, value >> 9 = 1281
+        dw      1284    ; 811 ^ 2 = 657721, value >> 9 = 1284
+        dw      1287    ; 812 ^ 2 = 659344, value >> 9 = 1287
+        dw      1290    ; 813 ^ 2 = 660969, value >> 9 = 1290
+        dw      1294    ; 814 ^ 2 = 662596, value >> 9 = 1294
+        dw      1297    ; 815 ^ 2 = 664225, value >> 9 = 1297
+        dw      1300    ; 816 ^ 2 = 665856, value >> 9 = 1300
+        dw      1303    ; 817 ^ 2 = 667489, value >> 9 = 1303
+        dw      1306    ; 818 ^ 2 = 669124, value >> 9 = 1306
+        dw      1310    ; 819 ^ 2 = 670761, value >> 9 = 1310
+        dw      1313    ; 820 ^ 2 = 672400, value >> 9 = 1313
+        dw      1316    ; 821 ^ 2 = 674041, value >> 9 = 1316
+        dw      1319    ; 822 ^ 2 = 675684, value >> 9 = 1319
+        dw      1322    ; 823 ^ 2 = 677329, value >> 9 = 1322
+        dw      1326    ; 824 ^ 2 = 678976, value >> 9 = 1326
+        dw      1329    ; 825 ^ 2 = 680625, value >> 9 = 1329
+        dw      1332    ; 826 ^ 2 = 682276, value >> 9 = 1332
+        dw      1335    ; 827 ^ 2 = 683929, value >> 9 = 1335
+        dw      1339    ; 828 ^ 2 = 685584, value >> 9 = 1339
+        dw      1342    ; 829 ^ 2 = 687241, value >> 9 = 1342
+        dw      1345    ; 830 ^ 2 = 688900, value >> 9 = 1345
+        dw      1348    ; 831 ^ 2 = 690561, value >> 9 = 1348
+        dw      1352    ; 832 ^ 2 = 692224, value >> 9 = 1352
+        dw      1355    ; 833 ^ 2 = 693889, value >> 9 = 1355
+        dw      1358    ; 834 ^ 2 = 695556, value >> 9 = 1358
+        dw      1361    ; 835 ^ 2 = 697225, value >> 9 = 1361
+        dw      1365    ; 836 ^ 2 = 698896, value >> 9 = 1365
+        dw      1368    ; 837 ^ 2 = 700569, value >> 9 = 1368
+        dw      1371    ; 838 ^ 2 = 702244, value >> 9 = 1371
+        dw      1374    ; 839 ^ 2 = 703921, value >> 9 = 1374
+        dw      1378    ; 840 ^ 2 = 705600, value >> 9 = 1378
+        dw      1381    ; 841 ^ 2 = 707281, value >> 9 = 1381
+        dw      1384    ; 842 ^ 2 = 708964, value >> 9 = 1384
+        dw      1387    ; 843 ^ 2 = 710649, value >> 9 = 1387
+        dw      1391    ; 844 ^ 2 = 712336, value >> 9 = 1391
+        dw      1394    ; 845 ^ 2 = 714025, value >> 9 = 1394
+        dw      1397    ; 846 ^ 2 = 715716, value >> 9 = 1397
+        dw      1401    ; 847 ^ 2 = 717409, value >> 9 = 1401
+        dw      1404    ; 848 ^ 2 = 719104, value >> 9 = 1404
+        dw      1407    ; 849 ^ 2 = 720801, value >> 9 = 1407
+        dw      1411    ; 850 ^ 2 = 722500, value >> 9 = 1411
+        dw      1414    ; 851 ^ 2 = 724201, value >> 9 = 1414
+        dw      1417    ; 852 ^ 2 = 725904, value >> 9 = 1417
+        dw      1421    ; 853 ^ 2 = 727609, value >> 9 = 1421
+        dw      1424    ; 854 ^ 2 = 729316, value >> 9 = 1424
+        dw      1427    ; 855 ^ 2 = 731025, value >> 9 = 1427
+        dw      1431    ; 856 ^ 2 = 732736, value >> 9 = 1431
+        dw      1434    ; 857 ^ 2 = 734449, value >> 9 = 1434
+        dw      1437    ; 858 ^ 2 = 736164, value >> 9 = 1437
+        dw      1441    ; 859 ^ 2 = 737881, value >> 9 = 1441
+        dw      1444    ; 860 ^ 2 = 739600, value >> 9 = 1444
+        dw      1447    ; 861 ^ 2 = 741321, value >> 9 = 1447
+        dw      1451    ; 862 ^ 2 = 743044, value >> 9 = 1451
+        dw      1454    ; 863 ^ 2 = 744769, value >> 9 = 1454
+        dw      1458    ; 864 ^ 2 = 746496, value >> 9 = 1458
+        dw      1461    ; 865 ^ 2 = 748225, value >> 9 = 1461
+        dw      1464    ; 866 ^ 2 = 749956, value >> 9 = 1464
+        dw      1468    ; 867 ^ 2 = 751689, value >> 9 = 1468
+        dw      1471    ; 868 ^ 2 = 753424, value >> 9 = 1471
+        dw      1474    ; 869 ^ 2 = 755161, value >> 9 = 1474
+        dw      1478    ; 870 ^ 2 = 756900, value >> 9 = 1478
+        dw      1481    ; 871 ^ 2 = 758641, value >> 9 = 1481
+        dw      1485    ; 872 ^ 2 = 760384, value >> 9 = 1485
+        dw      1488    ; 873 ^ 2 = 762129, value >> 9 = 1488
+        dw      1491    ; 874 ^ 2 = 763876, value >> 9 = 1491
+        dw      1495    ; 875 ^ 2 = 765625, value >> 9 = 1495
+        dw      1498    ; 876 ^ 2 = 767376, value >> 9 = 1498
+        dw      1502    ; 877 ^ 2 = 769129, value >> 9 = 1502
+        dw      1505    ; 878 ^ 2 = 770884, value >> 9 = 1505
+        dw      1509    ; 879 ^ 2 = 772641, value >> 9 = 1509
+        dw      1512    ; 880 ^ 2 = 774400, value >> 9 = 1512
+        dw      1515    ; 881 ^ 2 = 776161, value >> 9 = 1515
+        dw      1519    ; 882 ^ 2 = 777924, value >> 9 = 1519
+        dw      1522    ; 883 ^ 2 = 779689, value >> 9 = 1522
+        dw      1526    ; 884 ^ 2 = 781456, value >> 9 = 1526
+        dw      1529    ; 885 ^ 2 = 783225, value >> 9 = 1529
+        dw      1533    ; 886 ^ 2 = 784996, value >> 9 = 1533
+        dw      1536    ; 887 ^ 2 = 786769, value >> 9 = 1536
+        dw      1540    ; 888 ^ 2 = 788544, value >> 9 = 1540
+        dw      1543    ; 889 ^ 2 = 790321, value >> 9 = 1543
+        dw      1547    ; 890 ^ 2 = 792100, value >> 9 = 1547
+        dw      1550    ; 891 ^ 2 = 793881, value >> 9 = 1550
+        dw      1554    ; 892 ^ 2 = 795664, value >> 9 = 1554
+        dw      1557    ; 893 ^ 2 = 797449, value >> 9 = 1557
+        dw      1561    ; 894 ^ 2 = 799236, value >> 9 = 1561
+        dw      1564    ; 895 ^ 2 = 801025, value >> 9 = 1564
+        dw      1568    ; 896 ^ 2 = 802816, value >> 9 = 1568
+        dw      1571    ; 897 ^ 2 = 804609, value >> 9 = 1571
+        dw      1575    ; 898 ^ 2 = 806404, value >> 9 = 1575
+        dw      1578    ; 899 ^ 2 = 808201, value >> 9 = 1578
+        dw      1582    ; 900 ^ 2 = 810000, value >> 9 = 1582
+        dw      1585    ; 901 ^ 2 = 811801, value >> 9 = 1585
+        dw      1589    ; 902 ^ 2 = 813604, value >> 9 = 1589
+        dw      1592    ; 903 ^ 2 = 815409, value >> 9 = 1592
+        dw      1596    ; 904 ^ 2 = 817216, value >> 9 = 1596
+        dw      1599    ; 905 ^ 2 = 819025, value >> 9 = 1599
+        dw      1603    ; 906 ^ 2 = 820836, value >> 9 = 1603
+        dw      1606    ; 907 ^ 2 = 822649, value >> 9 = 1606
+        dw      1610    ; 908 ^ 2 = 824464, value >> 9 = 1610
+        dw      1613    ; 909 ^ 2 = 826281, value >> 9 = 1613
+        dw      1617    ; 910 ^ 2 = 828100, value >> 9 = 1617
+        dw      1620    ; 911 ^ 2 = 829921, value >> 9 = 1620
+        dw      1624    ; 912 ^ 2 = 831744, value >> 9 = 1624
+        dw      1628    ; 913 ^ 2 = 833569, value >> 9 = 1628
+        dw      1631    ; 914 ^ 2 = 835396, value >> 9 = 1631
+        dw      1635    ; 915 ^ 2 = 837225, value >> 9 = 1635
+        dw      1638    ; 916 ^ 2 = 839056, value >> 9 = 1638
+        dw      1642    ; 917 ^ 2 = 840889, value >> 9 = 1642
+        dw      1645    ; 918 ^ 2 = 842724, value >> 9 = 1645
+        dw      1649    ; 919 ^ 2 = 844561, value >> 9 = 1649
+        dw      1653    ; 920 ^ 2 = 846400, value >> 9 = 1653
+        dw      1656    ; 921 ^ 2 = 848241, value >> 9 = 1656
+        dw      1660    ; 922 ^ 2 = 850084, value >> 9 = 1660
+        dw      1663    ; 923 ^ 2 = 851929, value >> 9 = 1663
+        dw      1667    ; 924 ^ 2 = 853776, value >> 9 = 1667
+        dw      1671    ; 925 ^ 2 = 855625, value >> 9 = 1671
+        dw      1674    ; 926 ^ 2 = 857476, value >> 9 = 1674
+        dw      1678    ; 927 ^ 2 = 859329, value >> 9 = 1678
+        dw      1682    ; 928 ^ 2 = 861184, value >> 9 = 1682
+        dw      1685    ; 929 ^ 2 = 863041, value >> 9 = 1685
+        dw      1689    ; 930 ^ 2 = 864900, value >> 9 = 1689
+        dw      1692    ; 931 ^ 2 = 866761, value >> 9 = 1692
+        dw      1696    ; 932 ^ 2 = 868624, value >> 9 = 1696
+        dw      1700    ; 933 ^ 2 = 870489, value >> 9 = 1700
+        dw      1703    ; 934 ^ 2 = 872356, value >> 9 = 1703
+        dw      1707    ; 935 ^ 2 = 874225, value >> 9 = 1707
+        dw      1711    ; 936 ^ 2 = 876096, value >> 9 = 1711
+        dw      1714    ; 937 ^ 2 = 877969, value >> 9 = 1714
+        dw      1718    ; 938 ^ 2 = 879844, value >> 9 = 1718
+        dw      1722    ; 939 ^ 2 = 881721, value >> 9 = 1722
+        dw      1725    ; 940 ^ 2 = 883600, value >> 9 = 1725
+        dw      1729    ; 941 ^ 2 = 885481, value >> 9 = 1729
+        dw      1733    ; 942 ^ 2 = 887364, value >> 9 = 1733
+        dw      1736    ; 943 ^ 2 = 889249, value >> 9 = 1736
+        dw      1740    ; 944 ^ 2 = 891136, value >> 9 = 1740
+        dw      1744    ; 945 ^ 2 = 893025, value >> 9 = 1744
+        dw      1747    ; 946 ^ 2 = 894916, value >> 9 = 1747
+        dw      1751    ; 947 ^ 2 = 896809, value >> 9 = 1751
+        dw      1755    ; 948 ^ 2 = 898704, value >> 9 = 1755
+        dw      1758    ; 949 ^ 2 = 900601, value >> 9 = 1758
+        dw      1762    ; 950 ^ 2 = 902500, value >> 9 = 1762
+        dw      1766    ; 951 ^ 2 = 904401, value >> 9 = 1766
+        dw      1770    ; 952 ^ 2 = 906304, value >> 9 = 1770
+        dw      1773    ; 953 ^ 2 = 908209, value >> 9 = 1773
+        dw      1777    ; 954 ^ 2 = 910116, value >> 9 = 1777
+        dw      1781    ; 955 ^ 2 = 912025, value >> 9 = 1781
+        dw      1785    ; 956 ^ 2 = 913936, value >> 9 = 1785
+        dw      1788    ; 957 ^ 2 = 915849, value >> 9 = 1788
+        dw      1792    ; 958 ^ 2 = 917764, value >> 9 = 1792
+        dw      1796    ; 959 ^ 2 = 919681, value >> 9 = 1796
+        dw      1800    ; 960 ^ 2 = 921600, value >> 9 = 1800
+        dw      1803    ; 961 ^ 2 = 923521, value >> 9 = 1803
+        dw      1807    ; 962 ^ 2 = 925444, value >> 9 = 1807
+        dw      1811    ; 963 ^ 2 = 927369, value >> 9 = 1811
+        dw      1815    ; 964 ^ 2 = 929296, value >> 9 = 1815
+        dw      1818    ; 965 ^ 2 = 931225, value >> 9 = 1818
+        dw      1822    ; 966 ^ 2 = 933156, value >> 9 = 1822
+        dw      1826    ; 967 ^ 2 = 935089, value >> 9 = 1826
+        dw      1830    ; 968 ^ 2 = 937024, value >> 9 = 1830
+        dw      1833    ; 969 ^ 2 = 938961, value >> 9 = 1833
+        dw      1837    ; 970 ^ 2 = 940900, value >> 9 = 1837
+        dw      1841    ; 971 ^ 2 = 942841, value >> 9 = 1841
+        dw      1845    ; 972 ^ 2 = 944784, value >> 9 = 1845
+        dw      1849    ; 973 ^ 2 = 946729, value >> 9 = 1849
+        dw      1852    ; 974 ^ 2 = 948676, value >> 9 = 1852
+        dw      1856    ; 975 ^ 2 = 950625, value >> 9 = 1856
+        dw      1860    ; 976 ^ 2 = 952576, value >> 9 = 1860
+        dw      1864    ; 977 ^ 2 = 954529, value >> 9 = 1864
+        dw      1868    ; 978 ^ 2 = 956484, value >> 9 = 1868
+        dw      1871    ; 979 ^ 2 = 958441, value >> 9 = 1871
+        dw      1875    ; 980 ^ 2 = 960400, value >> 9 = 1875
+        dw      1879    ; 981 ^ 2 = 962361, value >> 9 = 1879
+        dw      1883    ; 982 ^ 2 = 964324, value >> 9 = 1883
+        dw      1887    ; 983 ^ 2 = 966289, value >> 9 = 1887
+        dw      1891    ; 984 ^ 2 = 968256, value >> 9 = 1891
+        dw      1894    ; 985 ^ 2 = 970225, value >> 9 = 1894
+        dw      1898    ; 986 ^ 2 = 972196, value >> 9 = 1898
+        dw      1902    ; 987 ^ 2 = 974169, value >> 9 = 1902
+        dw      1906    ; 988 ^ 2 = 976144, value >> 9 = 1906
+        dw      1910    ; 989 ^ 2 = 978121, value >> 9 = 1910
+        dw      1914    ; 990 ^ 2 = 980100, value >> 9 = 1914
+        dw      1918    ; 991 ^ 2 = 982081, value >> 9 = 1918
+        dw      1922    ; 992 ^ 2 = 984064, value >> 9 = 1922
+        dw      1925    ; 993 ^ 2 = 986049, value >> 9 = 1925
+        dw      1929    ; 994 ^ 2 = 988036, value >> 9 = 1929
+        dw      1933    ; 995 ^ 2 = 990025, value >> 9 = 1933
+        dw      1937    ; 996 ^ 2 = 992016, value >> 9 = 1937
+        dw      1941    ; 997 ^ 2 = 994009, value >> 9 = 1941
+        dw      1945    ; 998 ^ 2 = 996004, value >> 9 = 1945
+        dw      1949    ; 999 ^ 2 = 998001, value >> 9 = 1949
+        dw      1953    ; 1000 ^ 2 = 1000000, value >> 9 = 1953
+        dw      1957    ; 1001 ^ 2 = 1002001, value >> 9 = 1957
+        dw      1960    ; 1002 ^ 2 = 1004004, value >> 9 = 1960
+        dw      1964    ; 1003 ^ 2 = 1006009, value >> 9 = 1964
+        dw      1968    ; 1004 ^ 2 = 1008016, value >> 9 = 1968
+        dw      1972    ; 1005 ^ 2 = 1010025, value >> 9 = 1972
+        dw      1976    ; 1006 ^ 2 = 1012036, value >> 9 = 1976
+        dw      1980    ; 1007 ^ 2 = 1014049, value >> 9 = 1980
+        dw      1984    ; 1008 ^ 2 = 1016064, value >> 9 = 1984
+        dw      1988    ; 1009 ^ 2 = 1018081, value >> 9 = 1988
+        dw      1992    ; 1010 ^ 2 = 1020100, value >> 9 = 1992
+        dw      1996    ; 1011 ^ 2 = 1022121, value >> 9 = 1996
+        dw      2000    ; 1012 ^ 2 = 1024144, value >> 9 = 2000
+        dw      2004    ; 1013 ^ 2 = 1026169, value >> 9 = 2004
+        dw      2008    ; 1014 ^ 2 = 1028196, value >> 9 = 2008
+        dw      2012    ; 1015 ^ 2 = 1030225, value >> 9 = 2012
+        dw      2016    ; 1016 ^ 2 = 1032256, value >> 9 = 2016
+        dw      2020    ; 1017 ^ 2 = 1034289, value >> 9 = 2020
+        dw      2024    ; 1018 ^ 2 = 1036324, value >> 9 = 2024
+        dw      2028    ; 1019 ^ 2 = 1038361, value >> 9 = 2028
+        dw      2032    ; 1020 ^ 2 = 1040400, value >> 9 = 2032
+        dw      2036    ; 1021 ^ 2 = 1042441, value >> 9 = 2036
+        dw      2040    ; 1022 ^ 2 = 1044484, value >> 9 = 2040
+        dw      2044    ; 1023 ^ 2 = 1046529, value >> 9 = 2044
+        dw      2048    ; 1024 ^ 2 = 1048576, value >> 9 = 2048
+        dw      2052    ; 1025 ^ 2 = 1050625, value >> 9 = 2052
+        dw      2056    ; 1026 ^ 2 = 1052676, value >> 9 = 2056
+        dw      2060    ; 1027 ^ 2 = 1054729, value >> 9 = 2060
+        dw      2064    ; 1028 ^ 2 = 1056784, value >> 9 = 2064
+        dw      2068    ; 1029 ^ 2 = 1058841, value >> 9 = 2068
+        dw      2072    ; 1030 ^ 2 = 1060900, value >> 9 = 2072
+        dw      2076    ; 1031 ^ 2 = 1062961, value >> 9 = 2076
+        dw      2080    ; 1032 ^ 2 = 1065024, value >> 9 = 2080
+        dw      2084    ; 1033 ^ 2 = 1067089, value >> 9 = 2084
+        dw      2088    ; 1034 ^ 2 = 1069156, value >> 9 = 2088
+        dw      2092    ; 1035 ^ 2 = 1071225, value >> 9 = 2092
+        dw      2096    ; 1036 ^ 2 = 1073296, value >> 9 = 2096
+        dw      2100    ; 1037 ^ 2 = 1075369, value >> 9 = 2100
+        dw      2104    ; 1038 ^ 2 = 1077444, value >> 9 = 2104
+        dw      2108    ; 1039 ^ 2 = 1079521, value >> 9 = 2108
+        dw      2112    ; 1040 ^ 2 = 1081600, value >> 9 = 2112
+        dw      2116    ; 1041 ^ 2 = 1083681, value >> 9 = 2116
+        dw      2120    ; 1042 ^ 2 = 1085764, value >> 9 = 2120
+        dw      2124    ; 1043 ^ 2 = 1087849, value >> 9 = 2124
+        dw      2128    ; 1044 ^ 2 = 1089936, value >> 9 = 2128
+        dw      2132    ; 1045 ^ 2 = 1092025, value >> 9 = 2132
+        dw      2136    ; 1046 ^ 2 = 1094116, value >> 9 = 2136
+        dw      2141    ; 1047 ^ 2 = 1096209, value >> 9 = 2141
+        dw      2145    ; 1048 ^ 2 = 1098304, value >> 9 = 2145
+        dw      2149    ; 1049 ^ 2 = 1100401, value >> 9 = 2149
+        dw      2153    ; 1050 ^ 2 = 1102500, value >> 9 = 2153
+        dw      2157    ; 1051 ^ 2 = 1104601, value >> 9 = 2157
+        dw      2161    ; 1052 ^ 2 = 1106704, value >> 9 = 2161
+        dw      2165    ; 1053 ^ 2 = 1108809, value >> 9 = 2165
+        dw      2169    ; 1054 ^ 2 = 1110916, value >> 9 = 2169
+        dw      2173    ; 1055 ^ 2 = 1113025, value >> 9 = 2173
+        dw      2178    ; 1056 ^ 2 = 1115136, value >> 9 = 2178
+        dw      2182    ; 1057 ^ 2 = 1117249, value >> 9 = 2182
+        dw      2186    ; 1058 ^ 2 = 1119364, value >> 9 = 2186
+        dw      2190    ; 1059 ^ 2 = 1121481, value >> 9 = 2190
+        dw      2194    ; 1060 ^ 2 = 1123600, value >> 9 = 2194
+        dw      2198    ; 1061 ^ 2 = 1125721, value >> 9 = 2198
+        dw      2202    ; 1062 ^ 2 = 1127844, value >> 9 = 2202
+        dw      2206    ; 1063 ^ 2 = 1129969, value >> 9 = 2206
+        dw      2211    ; 1064 ^ 2 = 1132096, value >> 9 = 2211
+        dw      2215    ; 1065 ^ 2 = 1134225, value >> 9 = 2215
+        dw      2219    ; 1066 ^ 2 = 1136356, value >> 9 = 2219
+        dw      2223    ; 1067 ^ 2 = 1138489, value >> 9 = 2223
+        dw      2227    ; 1068 ^ 2 = 1140624, value >> 9 = 2227
+        dw      2231    ; 1069 ^ 2 = 1142761, value >> 9 = 2231
+        dw      2236    ; 1070 ^ 2 = 1144900, value >> 9 = 2236
+        dw      2240    ; 1071 ^ 2 = 1147041, value >> 9 = 2240
+        dw      2244    ; 1072 ^ 2 = 1149184, value >> 9 = 2244
+        dw      2248    ; 1073 ^ 2 = 1151329, value >> 9 = 2248
+        dw      2252    ; 1074 ^ 2 = 1153476, value >> 9 = 2252
+        dw      2257    ; 1075 ^ 2 = 1155625, value >> 9 = 2257
+        dw      2261    ; 1076 ^ 2 = 1157776, value >> 9 = 2261
+        dw      2265    ; 1077 ^ 2 = 1159929, value >> 9 = 2265
+        dw      2269    ; 1078 ^ 2 = 1162084, value >> 9 = 2269
+        dw      2273    ; 1079 ^ 2 = 1164241, value >> 9 = 2273
+        dw      2278    ; 1080 ^ 2 = 1166400, value >> 9 = 2278
+        dw      2282    ; 1081 ^ 2 = 1168561, value >> 9 = 2282
+        dw      2286    ; 1082 ^ 2 = 1170724, value >> 9 = 2286
+        dw      2290    ; 1083 ^ 2 = 1172889, value >> 9 = 2290
+        dw      2295    ; 1084 ^ 2 = 1175056, value >> 9 = 2295
+        dw      2299    ; 1085 ^ 2 = 1177225, value >> 9 = 2299
+        dw      2303    ; 1086 ^ 2 = 1179396, value >> 9 = 2303
+        dw      2307    ; 1087 ^ 2 = 1181569, value >> 9 = 2307
+        dw      2312    ; 1088 ^ 2 = 1183744, value >> 9 = 2312
+        dw      2316    ; 1089 ^ 2 = 1185921, value >> 9 = 2316
+        dw      2320    ; 1090 ^ 2 = 1188100, value >> 9 = 2320
+        dw      2324    ; 1091 ^ 2 = 1190281, value >> 9 = 2324
+        dw      2329    ; 1092 ^ 2 = 1192464, value >> 9 = 2329
+        dw      2333    ; 1093 ^ 2 = 1194649, value >> 9 = 2333
+        dw      2337    ; 1094 ^ 2 = 1196836, value >> 9 = 2337
+        dw      2341    ; 1095 ^ 2 = 1199025, value >> 9 = 2341
+        dw      2346    ; 1096 ^ 2 = 1201216, value >> 9 = 2346
+        dw      2350    ; 1097 ^ 2 = 1203409, value >> 9 = 2350
+        dw      2354    ; 1098 ^ 2 = 1205604, value >> 9 = 2354
+        dw      2358    ; 1099 ^ 2 = 1207801, value >> 9 = 2358
+        dw      2363    ; 1100 ^ 2 = 1210000, value >> 9 = 2363
+        dw      2367    ; 1101 ^ 2 = 1212201, value >> 9 = 2367
+        dw      2371    ; 1102 ^ 2 = 1214404, value >> 9 = 2371
+        dw      2376    ; 1103 ^ 2 = 1216609, value >> 9 = 2376
+        dw      2380    ; 1104 ^ 2 = 1218816, value >> 9 = 2380
+        dw      2384    ; 1105 ^ 2 = 1221025, value >> 9 = 2384
+        dw      2389    ; 1106 ^ 2 = 1223236, value >> 9 = 2389
+        dw      2393    ; 1107 ^ 2 = 1225449, value >> 9 = 2393
+        dw      2397    ; 1108 ^ 2 = 1227664, value >> 9 = 2397
+        dw      2402    ; 1109 ^ 2 = 1229881, value >> 9 = 2402
+        dw      2406    ; 1110 ^ 2 = 1232100, value >> 9 = 2406
+        dw      2410    ; 1111 ^ 2 = 1234321, value >> 9 = 2410
+        dw      2415    ; 1112 ^ 2 = 1236544, value >> 9 = 2415
+        dw      2419    ; 1113 ^ 2 = 1238769, value >> 9 = 2419
+        dw      2423    ; 1114 ^ 2 = 1240996, value >> 9 = 2423
+        dw      2428    ; 1115 ^ 2 = 1243225, value >> 9 = 2428
+        dw      2432    ; 1116 ^ 2 = 1245456, value >> 9 = 2432
+        dw      2436    ; 1117 ^ 2 = 1247689, value >> 9 = 2436
+        dw      2441    ; 1118 ^ 2 = 1249924, value >> 9 = 2441
+        dw      2445    ; 1119 ^ 2 = 1252161, value >> 9 = 2445
+        dw      2450    ; 1120 ^ 2 = 1254400, value >> 9 = 2450
+        dw      2454    ; 1121 ^ 2 = 1256641, value >> 9 = 2454
+        dw      2458    ; 1122 ^ 2 = 1258884, value >> 9 = 2458
+        dw      2463    ; 1123 ^ 2 = 1261129, value >> 9 = 2463
+        dw      2467    ; 1124 ^ 2 = 1263376, value >> 9 = 2467
+        dw      2471    ; 1125 ^ 2 = 1265625, value >> 9 = 2471
+        dw      2476    ; 1126 ^ 2 = 1267876, value >> 9 = 2476
+        dw      2480    ; 1127 ^ 2 = 1270129, value >> 9 = 2480
+        dw      2485    ; 1128 ^ 2 = 1272384, value >> 9 = 2485
+        dw      2489    ; 1129 ^ 2 = 1274641, value >> 9 = 2489
+        dw      2493    ; 1130 ^ 2 = 1276900, value >> 9 = 2493
+        dw      2498    ; 1131 ^ 2 = 1279161, value >> 9 = 2498
+        dw      2502    ; 1132 ^ 2 = 1281424, value >> 9 = 2502
+        dw      2507    ; 1133 ^ 2 = 1283689, value >> 9 = 2507
+        dw      2511    ; 1134 ^ 2 = 1285956, value >> 9 = 2511
+        dw      2516    ; 1135 ^ 2 = 1288225, value >> 9 = 2516
+        dw      2520    ; 1136 ^ 2 = 1290496, value >> 9 = 2520
+        dw      2524    ; 1137 ^ 2 = 1292769, value >> 9 = 2524
+        dw      2529    ; 1138 ^ 2 = 1295044, value >> 9 = 2529
+        dw      2533    ; 1139 ^ 2 = 1297321, value >> 9 = 2533
+        dw      2538    ; 1140 ^ 2 = 1299600, value >> 9 = 2538
+        dw      2542    ; 1141 ^ 2 = 1301881, value >> 9 = 2542
+        dw      2547    ; 1142 ^ 2 = 1304164, value >> 9 = 2547
+        dw      2551    ; 1143 ^ 2 = 1306449, value >> 9 = 2551
+        dw      2556    ; 1144 ^ 2 = 1308736, value >> 9 = 2556
+        dw      2560    ; 1145 ^ 2 = 1311025, value >> 9 = 2560
+        dw      2565    ; 1146 ^ 2 = 1313316, value >> 9 = 2565
+        dw      2569    ; 1147 ^ 2 = 1315609, value >> 9 = 2569
+        dw      2574    ; 1148 ^ 2 = 1317904, value >> 9 = 2574
+        dw      2578    ; 1149 ^ 2 = 1320201, value >> 9 = 2578
+        dw      2583    ; 1150 ^ 2 = 1322500, value >> 9 = 2583
+        dw      2587    ; 1151 ^ 2 = 1324801, value >> 9 = 2587
+        dw      2592    ; 1152 ^ 2 = 1327104, value >> 9 = 2592
+        dw      2596    ; 1153 ^ 2 = 1329409, value >> 9 = 2596
+        dw      2601    ; 1154 ^ 2 = 1331716, value >> 9 = 2601
+        dw      2605    ; 1155 ^ 2 = 1334025, value >> 9 = 2605
+        dw      2610    ; 1156 ^ 2 = 1336336, value >> 9 = 2610
+        dw      2614    ; 1157 ^ 2 = 1338649, value >> 9 = 2614
+        dw      2619    ; 1158 ^ 2 = 1340964, value >> 9 = 2619
+        dw      2623    ; 1159 ^ 2 = 1343281, value >> 9 = 2623
+        dw      2628    ; 1160 ^ 2 = 1345600, value >> 9 = 2628
+        dw      2632    ; 1161 ^ 2 = 1347921, value >> 9 = 2632
+        dw      2637    ; 1162 ^ 2 = 1350244, value >> 9 = 2637
+        dw      2641    ; 1163 ^ 2 = 1352569, value >> 9 = 2641
+        dw      2646    ; 1164 ^ 2 = 1354896, value >> 9 = 2646
+        dw      2650    ; 1165 ^ 2 = 1357225, value >> 9 = 2650
+        dw      2655    ; 1166 ^ 2 = 1359556, value >> 9 = 2655
+        dw      2659    ; 1167 ^ 2 = 1361889, value >> 9 = 2659
+        dw      2664    ; 1168 ^ 2 = 1364224, value >> 9 = 2664
+        dw      2669    ; 1169 ^ 2 = 1366561, value >> 9 = 2669
+        dw      2673    ; 1170 ^ 2 = 1368900, value >> 9 = 2673
+        dw      2678    ; 1171 ^ 2 = 1371241, value >> 9 = 2678
+        dw      2682    ; 1172 ^ 2 = 1373584, value >> 9 = 2682
+        dw      2687    ; 1173 ^ 2 = 1375929, value >> 9 = 2687
+        dw      2691    ; 1174 ^ 2 = 1378276, value >> 9 = 2691
+        dw      2696    ; 1175 ^ 2 = 1380625, value >> 9 = 2696
+        dw      2701    ; 1176 ^ 2 = 1382976, value >> 9 = 2701
+        dw      2705    ; 1177 ^ 2 = 1385329, value >> 9 = 2705
+        dw      2710    ; 1178 ^ 2 = 1387684, value >> 9 = 2710
+        dw      2714    ; 1179 ^ 2 = 1390041, value >> 9 = 2714
+        dw      2719    ; 1180 ^ 2 = 1392400, value >> 9 = 2719
+        dw      2724    ; 1181 ^ 2 = 1394761, value >> 9 = 2724
+        dw      2728    ; 1182 ^ 2 = 1397124, value >> 9 = 2728
+        dw      2733    ; 1183 ^ 2 = 1399489, value >> 9 = 2733
+        dw      2738    ; 1184 ^ 2 = 1401856, value >> 9 = 2738
+        dw      2742    ; 1185 ^ 2 = 1404225, value >> 9 = 2742
+        dw      2747    ; 1186 ^ 2 = 1406596, value >> 9 = 2747
+        dw      2751    ; 1187 ^ 2 = 1408969, value >> 9 = 2751
+        dw      2756    ; 1188 ^ 2 = 1411344, value >> 9 = 2756
+        dw      2761    ; 1189 ^ 2 = 1413721, value >> 9 = 2761
+        dw      2765    ; 1190 ^ 2 = 1416100, value >> 9 = 2765
+        dw      2770    ; 1191 ^ 2 = 1418481, value >> 9 = 2770
+        dw      2775    ; 1192 ^ 2 = 1420864, value >> 9 = 2775
+        dw      2779    ; 1193 ^ 2 = 1423249, value >> 9 = 2779
+        dw      2784    ; 1194 ^ 2 = 1425636, value >> 9 = 2784
+        dw      2789    ; 1195 ^ 2 = 1428025, value >> 9 = 2789
+        dw      2793    ; 1196 ^ 2 = 1430416, value >> 9 = 2793
+        dw      2798    ; 1197 ^ 2 = 1432809, value >> 9 = 2798
+        dw      2803    ; 1198 ^ 2 = 1435204, value >> 9 = 2803
+        dw      2807    ; 1199 ^ 2 = 1437601, value >> 9 = 2807
+        dw      2812    ; 1200 ^ 2 = 1440000, value >> 9 = 2812
+        dw      2817    ; 1201 ^ 2 = 1442401, value >> 9 = 2817
+        dw      2821    ; 1202 ^ 2 = 1444804, value >> 9 = 2821
+        dw      2826    ; 1203 ^ 2 = 1447209, value >> 9 = 2826
+        dw      2831    ; 1204 ^ 2 = 1449616, value >> 9 = 2831
+        dw      2835    ; 1205 ^ 2 = 1452025, value >> 9 = 2835
+        dw      2840    ; 1206 ^ 2 = 1454436, value >> 9 = 2840
+        dw      2845    ; 1207 ^ 2 = 1456849, value >> 9 = 2845
+        dw      2850    ; 1208 ^ 2 = 1459264, value >> 9 = 2850
+        dw      2854    ; 1209 ^ 2 = 1461681, value >> 9 = 2854
+        dw      2859    ; 1210 ^ 2 = 1464100, value >> 9 = 2859
+        dw      2864    ; 1211 ^ 2 = 1466521, value >> 9 = 2864
+        dw      2869    ; 1212 ^ 2 = 1468944, value >> 9 = 2869
+        dw      2873    ; 1213 ^ 2 = 1471369, value >> 9 = 2873
+        dw      2878    ; 1214 ^ 2 = 1473796, value >> 9 = 2878
+        dw      2883    ; 1215 ^ 2 = 1476225, value >> 9 = 2883
+        dw      2888    ; 1216 ^ 2 = 1478656, value >> 9 = 2888
+        dw      2892    ; 1217 ^ 2 = 1481089, value >> 9 = 2892
+        dw      2897    ; 1218 ^ 2 = 1483524, value >> 9 = 2897
+        dw      2902    ; 1219 ^ 2 = 1485961, value >> 9 = 2902
+        dw      2907    ; 1220 ^ 2 = 1488400, value >> 9 = 2907
+        dw      2911    ; 1221 ^ 2 = 1490841, value >> 9 = 2911
+        dw      2916    ; 1222 ^ 2 = 1493284, value >> 9 = 2916
+        dw      2921    ; 1223 ^ 2 = 1495729, value >> 9 = 2921
+        dw      2926    ; 1224 ^ 2 = 1498176, value >> 9 = 2926
+        dw      2930    ; 1225 ^ 2 = 1500625, value >> 9 = 2930
+        dw      2935    ; 1226 ^ 2 = 1503076, value >> 9 = 2935
+        dw      2940    ; 1227 ^ 2 = 1505529, value >> 9 = 2940
+        dw      2945    ; 1228 ^ 2 = 1507984, value >> 9 = 2945
+        dw      2950    ; 1229 ^ 2 = 1510441, value >> 9 = 2950
+        dw      2954    ; 1230 ^ 2 = 1512900, value >> 9 = 2954
+        dw      2959    ; 1231 ^ 2 = 1515361, value >> 9 = 2959
+        dw      2964    ; 1232 ^ 2 = 1517824, value >> 9 = 2964
+        dw      2969    ; 1233 ^ 2 = 1520289, value >> 9 = 2969
+        dw      2974    ; 1234 ^ 2 = 1522756, value >> 9 = 2974
+        dw      2978    ; 1235 ^ 2 = 1525225, value >> 9 = 2978
+        dw      2983    ; 1236 ^ 2 = 1527696, value >> 9 = 2983
+        dw      2988    ; 1237 ^ 2 = 1530169, value >> 9 = 2988
+        dw      2993    ; 1238 ^ 2 = 1532644, value >> 9 = 2993
+        dw      2998    ; 1239 ^ 2 = 1535121, value >> 9 = 2998
+        dw      3003    ; 1240 ^ 2 = 1537600, value >> 9 = 3003
+        dw      3007    ; 1241 ^ 2 = 1540081, value >> 9 = 3007
+        dw      3012    ; 1242 ^ 2 = 1542564, value >> 9 = 3012
+        dw      3017    ; 1243 ^ 2 = 1545049, value >> 9 = 3017
+        dw      3022    ; 1244 ^ 2 = 1547536, value >> 9 = 3022
+        dw      3027    ; 1245 ^ 2 = 1550025, value >> 9 = 3027
+        dw      3032    ; 1246 ^ 2 = 1552516, value >> 9 = 3032
+        dw      3037    ; 1247 ^ 2 = 1555009, value >> 9 = 3037
+        dw      3042    ; 1248 ^ 2 = 1557504, value >> 9 = 3042
+        dw      3046    ; 1249 ^ 2 = 1560001, value >> 9 = 3046
+        dw      3051    ; 1250 ^ 2 = 1562500, value >> 9 = 3051
+        dw      3056    ; 1251 ^ 2 = 1565001, value >> 9 = 3056
+        dw      3061    ; 1252 ^ 2 = 1567504, value >> 9 = 3061
+        dw      3066    ; 1253 ^ 2 = 1570009, value >> 9 = 3066
+        dw      3071    ; 1254 ^ 2 = 1572516, value >> 9 = 3071
+        dw      3076    ; 1255 ^ 2 = 1575025, value >> 9 = 3076
+        dw      3081    ; 1256 ^ 2 = 1577536, value >> 9 = 3081
+        dw      3086    ; 1257 ^ 2 = 1580049, value >> 9 = 3086
+        dw      3090    ; 1258 ^ 2 = 1582564, value >> 9 = 3090
+        dw      3095    ; 1259 ^ 2 = 1585081, value >> 9 = 3095
+        dw      3100    ; 1260 ^ 2 = 1587600, value >> 9 = 3100
+        dw      3105    ; 1261 ^ 2 = 1590121, value >> 9 = 3105
+        dw      3110    ; 1262 ^ 2 = 1592644, value >> 9 = 3110
+        dw      3115    ; 1263 ^ 2 = 1595169, value >> 9 = 3115
+        dw      3120    ; 1264 ^ 2 = 1597696, value >> 9 = 3120
+        dw      3125    ; 1265 ^ 2 = 1600225, value >> 9 = 3125
+        dw      3130    ; 1266 ^ 2 = 1602756, value >> 9 = 3130
+        dw      3135    ; 1267 ^ 2 = 1605289, value >> 9 = 3135
+        dw      3140    ; 1268 ^ 2 = 1607824, value >> 9 = 3140
+        dw      3145    ; 1269 ^ 2 = 1610361, value >> 9 = 3145
+        dw      3150    ; 1270 ^ 2 = 1612900, value >> 9 = 3150
+        dw      3155    ; 1271 ^ 2 = 1615441, value >> 9 = 3155
+        dw      3160    ; 1272 ^ 2 = 1617984, value >> 9 = 3160
+        dw      3165    ; 1273 ^ 2 = 1620529, value >> 9 = 3165
+        dw      3170    ; 1274 ^ 2 = 1623076, value >> 9 = 3170
+        dw      3175    ; 1275 ^ 2 = 1625625, value >> 9 = 3175
+        dw      3180    ; 1276 ^ 2 = 1628176, value >> 9 = 3180
+        dw      3185    ; 1277 ^ 2 = 1630729, value >> 9 = 3185
+        dw      3190    ; 1278 ^ 2 = 1633284, value >> 9 = 3190
+        dw      3195    ; 1279 ^ 2 = 1635841, value >> 9 = 3195
+        dw      3200    ; 1280 ^ 2 = 1638400, value >> 9 = 3200
+        dw      3205    ; 1281 ^ 2 = 1640961, value >> 9 = 3205
+        dw      3210    ; 1282 ^ 2 = 1643524, value >> 9 = 3210
+        dw      3215    ; 1283 ^ 2 = 1646089, value >> 9 = 3215
+        dw      3220    ; 1284 ^ 2 = 1648656, value >> 9 = 3220
+        dw      3225    ; 1285 ^ 2 = 1651225, value >> 9 = 3225
+        dw      3230    ; 1286 ^ 2 = 1653796, value >> 9 = 3230
+        dw      3235    ; 1287 ^ 2 = 1656369, value >> 9 = 3235
+        dw      3240    ; 1288 ^ 2 = 1658944, value >> 9 = 3240
+        dw      3245    ; 1289 ^ 2 = 1661521, value >> 9 = 3245
+        dw      3250    ; 1290 ^ 2 = 1664100, value >> 9 = 3250
+        dw      3255    ; 1291 ^ 2 = 1666681, value >> 9 = 3255
+        dw      3260    ; 1292 ^ 2 = 1669264, value >> 9 = 3260
+        dw      3265    ; 1293 ^ 2 = 1671849, value >> 9 = 3265
+        dw      3270    ; 1294 ^ 2 = 1674436, value >> 9 = 3270
+        dw      3275    ; 1295 ^ 2 = 1677025, value >> 9 = 3275
+        dw      3280    ; 1296 ^ 2 = 1679616, value >> 9 = 3280
+        dw      3285    ; 1297 ^ 2 = 1682209, value >> 9 = 3285
+        dw      3290    ; 1298 ^ 2 = 1684804, value >> 9 = 3290
+        dw      3295    ; 1299 ^ 2 = 1687401, value >> 9 = 3295
+        dw      3300    ; 1300 ^ 2 = 1690000, value >> 9 = 3300
+        dw      3305    ; 1301 ^ 2 = 1692601, value >> 9 = 3305
+        dw      3310    ; 1302 ^ 2 = 1695204, value >> 9 = 3310
+        dw      3316    ; 1303 ^ 2 = 1697809, value >> 9 = 3316
+        dw      3321    ; 1304 ^ 2 = 1700416, value >> 9 = 3321
+        dw      3326    ; 1305 ^ 2 = 1703025, value >> 9 = 3326
+        dw      3331    ; 1306 ^ 2 = 1705636, value >> 9 = 3331
+        dw      3336    ; 1307 ^ 2 = 1708249, value >> 9 = 3336
+        dw      3341    ; 1308 ^ 2 = 1710864, value >> 9 = 3341
+        dw      3346    ; 1309 ^ 2 = 1713481, value >> 9 = 3346
+        dw      3351    ; 1310 ^ 2 = 1716100, value >> 9 = 3351
+        dw      3356    ; 1311 ^ 2 = 1718721, value >> 9 = 3356
+        dw      3362    ; 1312 ^ 2 = 1721344, value >> 9 = 3362
+        dw      3367    ; 1313 ^ 2 = 1723969, value >> 9 = 3367
+        dw      3372    ; 1314 ^ 2 = 1726596, value >> 9 = 3372
+        dw      3377    ; 1315 ^ 2 = 1729225, value >> 9 = 3377
+        dw      3382    ; 1316 ^ 2 = 1731856, value >> 9 = 3382
+        dw      3387    ; 1317 ^ 2 = 1734489, value >> 9 = 3387
+        dw      3392    ; 1318 ^ 2 = 1737124, value >> 9 = 3392
+        dw      3397    ; 1319 ^ 2 = 1739761, value >> 9 = 3397
+        dw      3403    ; 1320 ^ 2 = 1742400, value >> 9 = 3403
+        dw      3408    ; 1321 ^ 2 = 1745041, value >> 9 = 3408
+        dw      3413    ; 1322 ^ 2 = 1747684, value >> 9 = 3413
+        dw      3418    ; 1323 ^ 2 = 1750329, value >> 9 = 3418
+        dw      3423    ; 1324 ^ 2 = 1752976, value >> 9 = 3423
+        dw      3428    ; 1325 ^ 2 = 1755625, value >> 9 = 3428
+        dw      3434    ; 1326 ^ 2 = 1758276, value >> 9 = 3434
+        dw      3439    ; 1327 ^ 2 = 1760929, value >> 9 = 3439
+        dw      3444    ; 1328 ^ 2 = 1763584, value >> 9 = 3444
+        dw      3449    ; 1329 ^ 2 = 1766241, value >> 9 = 3449
+        dw      3454    ; 1330 ^ 2 = 1768900, value >> 9 = 3454
+        dw      3460    ; 1331 ^ 2 = 1771561, value >> 9 = 3460
+        dw      3465    ; 1332 ^ 2 = 1774224, value >> 9 = 3465
+        dw      3470    ; 1333 ^ 2 = 1776889, value >> 9 = 3470
+        dw      3475    ; 1334 ^ 2 = 1779556, value >> 9 = 3475
+        dw      3480    ; 1335 ^ 2 = 1782225, value >> 9 = 3480
+        dw      3486    ; 1336 ^ 2 = 1784896, value >> 9 = 3486
+        dw      3491    ; 1337 ^ 2 = 1787569, value >> 9 = 3491
+        dw      3496    ; 1338 ^ 2 = 1790244, value >> 9 = 3496
+        dw      3501    ; 1339 ^ 2 = 1792921, value >> 9 = 3501
+        dw      3507    ; 1340 ^ 2 = 1795600, value >> 9 = 3507
+        dw      3512    ; 1341 ^ 2 = 1798281, value >> 9 = 3512
+        dw      3517    ; 1342 ^ 2 = 1800964, value >> 9 = 3517
+        dw      3522    ; 1343 ^ 2 = 1803649, value >> 9 = 3522
+        dw      3528    ; 1344 ^ 2 = 1806336, value >> 9 = 3528
+        dw      3533    ; 1345 ^ 2 = 1809025, value >> 9 = 3533
+        dw      3538    ; 1346 ^ 2 = 1811716, value >> 9 = 3538
+        dw      3543    ; 1347 ^ 2 = 1814409, value >> 9 = 3543
+        dw      3549    ; 1348 ^ 2 = 1817104, value >> 9 = 3549
+        dw      3554    ; 1349 ^ 2 = 1819801, value >> 9 = 3554
+        dw      3559    ; 1350 ^ 2 = 1822500, value >> 9 = 3559
+        dw      3564    ; 1351 ^ 2 = 1825201, value >> 9 = 3564
+        dw      3570    ; 1352 ^ 2 = 1827904, value >> 9 = 3570
+        dw      3575    ; 1353 ^ 2 = 1830609, value >> 9 = 3575
+        dw      3580    ; 1354 ^ 2 = 1833316, value >> 9 = 3580
+        dw      3585    ; 1355 ^ 2 = 1836025, value >> 9 = 3585
+        dw      3591    ; 1356 ^ 2 = 1838736, value >> 9 = 3591
+        dw      3596    ; 1357 ^ 2 = 1841449, value >> 9 = 3596
+        dw      3601    ; 1358 ^ 2 = 1844164, value >> 9 = 3601
+        dw      3607    ; 1359 ^ 2 = 1846881, value >> 9 = 3607
+        dw      3612    ; 1360 ^ 2 = 1849600, value >> 9 = 3612
+        dw      3617    ; 1361 ^ 2 = 1852321, value >> 9 = 3617
+        dw      3623    ; 1362 ^ 2 = 1855044, value >> 9 = 3623
+        dw      3628    ; 1363 ^ 2 = 1857769, value >> 9 = 3628
+        dw      3633    ; 1364 ^ 2 = 1860496, value >> 9 = 3633
+        dw      3639    ; 1365 ^ 2 = 1863225, value >> 9 = 3639
+        dw      3644    ; 1366 ^ 2 = 1865956, value >> 9 = 3644
+        dw      3649    ; 1367 ^ 2 = 1868689, value >> 9 = 3649
+        dw      3655    ; 1368 ^ 2 = 1871424, value >> 9 = 3655
+        dw      3660    ; 1369 ^ 2 = 1874161, value >> 9 = 3660
+        dw      3665    ; 1370 ^ 2 = 1876900, value >> 9 = 3665
+        dw      3671    ; 1371 ^ 2 = 1879641, value >> 9 = 3671
+        dw      3676    ; 1372 ^ 2 = 1882384, value >> 9 = 3676
+        dw      3681    ; 1373 ^ 2 = 1885129, value >> 9 = 3681
+        dw      3687    ; 1374 ^ 2 = 1887876, value >> 9 = 3687
+        dw      3692    ; 1375 ^ 2 = 1890625, value >> 9 = 3692
+        dw      3698    ; 1376 ^ 2 = 1893376, value >> 9 = 3698
+        dw      3703    ; 1377 ^ 2 = 1896129, value >> 9 = 3703
+        dw      3708    ; 1378 ^ 2 = 1898884, value >> 9 = 3708
+        dw      3714    ; 1379 ^ 2 = 1901641, value >> 9 = 3714
+        dw      3719    ; 1380 ^ 2 = 1904400, value >> 9 = 3719
+        dw      3724    ; 1381 ^ 2 = 1907161, value >> 9 = 3724
+        dw      3730    ; 1382 ^ 2 = 1909924, value >> 9 = 3730
+        dw      3735    ; 1383 ^ 2 = 1912689, value >> 9 = 3735
+        dw      3741    ; 1384 ^ 2 = 1915456, value >> 9 = 3741
+        dw      3746    ; 1385 ^ 2 = 1918225, value >> 9 = 3746
+        dw      3751    ; 1386 ^ 2 = 1920996, value >> 9 = 3751
+        dw      3757    ; 1387 ^ 2 = 1923769, value >> 9 = 3757
+        dw      3762    ; 1388 ^ 2 = 1926544, value >> 9 = 3762
+        dw      3768    ; 1389 ^ 2 = 1929321, value >> 9 = 3768
+        dw      3773    ; 1390 ^ 2 = 1932100, value >> 9 = 3773
+        dw      3779    ; 1391 ^ 2 = 1934881, value >> 9 = 3779
+        dw      3784    ; 1392 ^ 2 = 1937664, value >> 9 = 3784
+        dw      3789    ; 1393 ^ 2 = 1940449, value >> 9 = 3789
+        dw      3795    ; 1394 ^ 2 = 1943236, value >> 9 = 3795
+        dw      3800    ; 1395 ^ 2 = 1946025, value >> 9 = 3800
+        dw      3806    ; 1396 ^ 2 = 1948816, value >> 9 = 3806
+        dw      3811    ; 1397 ^ 2 = 1951609, value >> 9 = 3811
+        dw      3817    ; 1398 ^ 2 = 1954404, value >> 9 = 3817
+        dw      3822    ; 1399 ^ 2 = 1957201, value >> 9 = 3822
+        dw      3828    ; 1400 ^ 2 = 1960000, value >> 9 = 3828
+        dw      3833    ; 1401 ^ 2 = 1962801, value >> 9 = 3833
+        dw      3839    ; 1402 ^ 2 = 1965604, value >> 9 = 3839
+        dw      3844    ; 1403 ^ 2 = 1968409, value >> 9 = 3844
+        dw      3850    ; 1404 ^ 2 = 1971216, value >> 9 = 3850
+        dw      3855    ; 1405 ^ 2 = 1974025, value >> 9 = 3855
+        dw      3861    ; 1406 ^ 2 = 1976836, value >> 9 = 3861
+        dw      3866    ; 1407 ^ 2 = 1979649, value >> 9 = 3866
+        dw      3872    ; 1408 ^ 2 = 1982464, value >> 9 = 3872
+        dw      3877    ; 1409 ^ 2 = 1985281, value >> 9 = 3877
+        dw      3883    ; 1410 ^ 2 = 1988100, value >> 9 = 3883
+        dw      3888    ; 1411 ^ 2 = 1990921, value >> 9 = 3888
+        dw      3894    ; 1412 ^ 2 = 1993744, value >> 9 = 3894
+        dw      3899    ; 1413 ^ 2 = 1996569, value >> 9 = 3899
+        dw      3905    ; 1414 ^ 2 = 1999396, value >> 9 = 3905
+        dw      3910    ; 1415 ^ 2 = 2002225, value >> 9 = 3910
+        dw      3916    ; 1416 ^ 2 = 2005056, value >> 9 = 3916
+        dw      3921    ; 1417 ^ 2 = 2007889, value >> 9 = 3921
+        dw      3927    ; 1418 ^ 2 = 2010724, value >> 9 = 3927
+        dw      3932    ; 1419 ^ 2 = 2013561, value >> 9 = 3932
+        dw      3938    ; 1420 ^ 2 = 2016400, value >> 9 = 3938
+        dw      3943    ; 1421 ^ 2 = 2019241, value >> 9 = 3943
+        dw      3949    ; 1422 ^ 2 = 2022084, value >> 9 = 3949
+        dw      3954    ; 1423 ^ 2 = 2024929, value >> 9 = 3954
+        dw      3960    ; 1424 ^ 2 = 2027776, value >> 9 = 3960
+        dw      3966    ; 1425 ^ 2 = 2030625, value >> 9 = 3966
+        dw      3971    ; 1426 ^ 2 = 2033476, value >> 9 = 3971
+        dw      3977    ; 1427 ^ 2 = 2036329, value >> 9 = 3977
+        dw      3982    ; 1428 ^ 2 = 2039184, value >> 9 = 3982
+        dw      3988    ; 1429 ^ 2 = 2042041, value >> 9 = 3988
+        dw      3993    ; 1430 ^ 2 = 2044900, value >> 9 = 3993
+        dw      3999    ; 1431 ^ 2 = 2047761, value >> 9 = 3999
+        dw      4005    ; 1432 ^ 2 = 2050624, value >> 9 = 4005
+        dw      4010    ; 1433 ^ 2 = 2053489, value >> 9 = 4010
+        dw      4016    ; 1434 ^ 2 = 2056356, value >> 9 = 4016
+        dw      4021    ; 1435 ^ 2 = 2059225, value >> 9 = 4021
+        dw      4027    ; 1436 ^ 2 = 2062096, value >> 9 = 4027
+        dw      4033    ; 1437 ^ 2 = 2064969, value >> 9 = 4033
+        dw      4038    ; 1438 ^ 2 = 2067844, value >> 9 = 4038
+        dw      4044    ; 1439 ^ 2 = 2070721, value >> 9 = 4044
+        dw      4050    ; 1440 ^ 2 = 2073600, value >> 9 = 4050
+        dw      4055    ; 1441 ^ 2 = 2076481, value >> 9 = 4055
+        dw      4061    ; 1442 ^ 2 = 2079364, value >> 9 = 4061
+        dw      4066    ; 1443 ^ 2 = 2082249, value >> 9 = 4066
+        dw      4072    ; 1444 ^ 2 = 2085136, value >> 9 = 4072
+        dw      4078    ; 1445 ^ 2 = 2088025, value >> 9 = 4078
+        dw      4083    ; 1446 ^ 2 = 2090916, value >> 9 = 4083
+        dw      4089    ; 1447 ^ 2 = 2093809, value >> 9 = 4089
+        dw      4095    ; 1448 ^ 2 = 2096704, value >> 9 = 4095
+        dw      4100    ; 1449 ^ 2 = 2099601, value >> 9 = 4100
+        dw      4106    ; 1450 ^ 2 = 2102500, value >> 9 = 4106
+        dw      4112    ; 1451 ^ 2 = 2105401, value >> 9 = 4112
+        dw      4117    ; 1452 ^ 2 = 2108304, value >> 9 = 4117
+        dw      4123    ; 1453 ^ 2 = 2111209, value >> 9 = 4123
+        dw      4129    ; 1454 ^ 2 = 2114116, value >> 9 = 4129
+        dw      4134    ; 1455 ^ 2 = 2117025, value >> 9 = 4134
+        dw      4140    ; 1456 ^ 2 = 2119936, value >> 9 = 4140
+        dw      4146    ; 1457 ^ 2 = 2122849, value >> 9 = 4146
+        dw      4151    ; 1458 ^ 2 = 2125764, value >> 9 = 4151
+        dw      4157    ; 1459 ^ 2 = 2128681, value >> 9 = 4157
+        dw      4163    ; 1460 ^ 2 = 2131600, value >> 9 = 4163
+        dw      4168    ; 1461 ^ 2 = 2134521, value >> 9 = 4168
+        dw      4174    ; 1462 ^ 2 = 2137444, value >> 9 = 4174
+        dw      4180    ; 1463 ^ 2 = 2140369, value >> 9 = 4180
+        dw      4186    ; 1464 ^ 2 = 2143296, value >> 9 = 4186
+        dw      4191    ; 1465 ^ 2 = 2146225, value >> 9 = 4191
+        dw      4197    ; 1466 ^ 2 = 2149156, value >> 9 = 4197
+        dw      4203    ; 1467 ^ 2 = 2152089, value >> 9 = 4203
+        dw      4209    ; 1468 ^ 2 = 2155024, value >> 9 = 4209
+        dw      4214    ; 1469 ^ 2 = 2157961, value >> 9 = 4214
+        dw      4220    ; 1470 ^ 2 = 2160900, value >> 9 = 4220
+        dw      4226    ; 1471 ^ 2 = 2163841, value >> 9 = 4226
+        dw      4232    ; 1472 ^ 2 = 2166784, value >> 9 = 4232
+        dw      4237    ; 1473 ^ 2 = 2169729, value >> 9 = 4237
+        dw      4243    ; 1474 ^ 2 = 2172676, value >> 9 = 4243
+        dw      4249    ; 1475 ^ 2 = 2175625, value >> 9 = 4249
+        dw      4255    ; 1476 ^ 2 = 2178576, value >> 9 = 4255
+        dw      4260    ; 1477 ^ 2 = 2181529, value >> 9 = 4260
+        dw      4266    ; 1478 ^ 2 = 2184484, value >> 9 = 4266
+        dw      4272    ; 1479 ^ 2 = 2187441, value >> 9 = 4272
+        dw      4278    ; 1480 ^ 2 = 2190400, value >> 9 = 4278
+        dw      4283    ; 1481 ^ 2 = 2193361, value >> 9 = 4283
+        dw      4289    ; 1482 ^ 2 = 2196324, value >> 9 = 4289
+        dw      4295    ; 1483 ^ 2 = 2199289, value >> 9 = 4295
+        dw      4301    ; 1484 ^ 2 = 2202256, value >> 9 = 4301
+        dw      4307    ; 1485 ^ 2 = 2205225, value >> 9 = 4307
+        dw      4312    ; 1486 ^ 2 = 2208196, value >> 9 = 4312
+        dw      4318    ; 1487 ^ 2 = 2211169, value >> 9 = 4318
+        dw      4324    ; 1488 ^ 2 = 2214144, value >> 9 = 4324
+        dw      4330    ; 1489 ^ 2 = 2217121, value >> 9 = 4330
+        dw      4336    ; 1490 ^ 2 = 2220100, value >> 9 = 4336
+        dw      4341    ; 1491 ^ 2 = 2223081, value >> 9 = 4341
+        dw      4347    ; 1492 ^ 2 = 2226064, value >> 9 = 4347
+        dw      4353    ; 1493 ^ 2 = 2229049, value >> 9 = 4353
+        dw      4359    ; 1494 ^ 2 = 2232036, value >> 9 = 4359
+        dw      4365    ; 1495 ^ 2 = 2235025, value >> 9 = 4365
+        dw      4371    ; 1496 ^ 2 = 2238016, value >> 9 = 4371
+        dw      4376    ; 1497 ^ 2 = 2241009, value >> 9 = 4376
+        dw      4382    ; 1498 ^ 2 = 2244004, value >> 9 = 4382
+        dw      4388    ; 1499 ^ 2 = 2247001, value >> 9 = 4388
+        dw      4394    ; 1500 ^ 2 = 2250000, value >> 9 = 4394
+        dw      4400    ; 1501 ^ 2 = 2253001, value >> 9 = 4400
+        dw      4406    ; 1502 ^ 2 = 2256004, value >> 9 = 4406
+        dw      4412    ; 1503 ^ 2 = 2259009, value >> 9 = 4412
+        dw      4418    ; 1504 ^ 2 = 2262016, value >> 9 = 4418
+        dw      4423    ; 1505 ^ 2 = 2265025, value >> 9 = 4423
+        dw      4429    ; 1506 ^ 2 = 2268036, value >> 9 = 4429
+        dw      4435    ; 1507 ^ 2 = 2271049, value >> 9 = 4435
+        dw      4441    ; 1508 ^ 2 = 2274064, value >> 9 = 4441
+        dw      4447    ; 1509 ^ 2 = 2277081, value >> 9 = 4447
+        dw      4453    ; 1510 ^ 2 = 2280100, value >> 9 = 4453
+        dw      4459    ; 1511 ^ 2 = 2283121, value >> 9 = 4459
+        dw      4465    ; 1512 ^ 2 = 2286144, value >> 9 = 4465
+        dw      4471    ; 1513 ^ 2 = 2289169, value >> 9 = 4471
+        dw      4476    ; 1514 ^ 2 = 2292196, value >> 9 = 4476
+        dw      4482    ; 1515 ^ 2 = 2295225, value >> 9 = 4482
+        dw      4488    ; 1516 ^ 2 = 2298256, value >> 9 = 4488
+        dw      4494    ; 1517 ^ 2 = 2301289, value >> 9 = 4494
+        dw      4500    ; 1518 ^ 2 = 2304324, value >> 9 = 4500
+        dw      4506    ; 1519 ^ 2 = 2307361, value >> 9 = 4506
+        dw      4512    ; 1520 ^ 2 = 2310400, value >> 9 = 4512
+        dw      4518    ; 1521 ^ 2 = 2313441, value >> 9 = 4518
+        dw      4524    ; 1522 ^ 2 = 2316484, value >> 9 = 4524
+        dw      4530    ; 1523 ^ 2 = 2319529, value >> 9 = 4530
+        dw      4536    ; 1524 ^ 2 = 2322576, value >> 9 = 4536
+        dw      4542    ; 1525 ^ 2 = 2325625, value >> 9 = 4542
+        dw      4548    ; 1526 ^ 2 = 2328676, value >> 9 = 4548
+        dw      4554    ; 1527 ^ 2 = 2331729, value >> 9 = 4554
+        dw      4560    ; 1528 ^ 2 = 2334784, value >> 9 = 4560
+        dw      4566    ; 1529 ^ 2 = 2337841, value >> 9 = 4566
+        dw      4572    ; 1530 ^ 2 = 2340900, value >> 9 = 4572
+        dw      4578    ; 1531 ^ 2 = 2343961, value >> 9 = 4578
+        dw      4584    ; 1532 ^ 2 = 2347024, value >> 9 = 4584
+        dw      4590    ; 1533 ^ 2 = 2350089, value >> 9 = 4590
+        dw      4596    ; 1534 ^ 2 = 2353156, value >> 9 = 4596
+        dw      4602    ; 1535 ^ 2 = 2356225, value >> 9 = 4602
+        dw      4608    ; 1536 ^ 2 = 2359296, value >> 9 = 4608
+        dw      4614    ; 1537 ^ 2 = 2362369, value >> 9 = 4614
+        dw      4620    ; 1538 ^ 2 = 2365444, value >> 9 = 4620
+        dw      4626    ; 1539 ^ 2 = 2368521, value >> 9 = 4626
+        dw      4632    ; 1540 ^ 2 = 2371600, value >> 9 = 4632
+        dw      4638    ; 1541 ^ 2 = 2374681, value >> 9 = 4638
+        dw      4644    ; 1542 ^ 2 = 2377764, value >> 9 = 4644
+        dw      4650    ; 1543 ^ 2 = 2380849, value >> 9 = 4650
+        dw      4656    ; 1544 ^ 2 = 2383936, value >> 9 = 4656
+        dw      4662    ; 1545 ^ 2 = 2387025, value >> 9 = 4662
+        dw      4668    ; 1546 ^ 2 = 2390116, value >> 9 = 4668
+        dw      4674    ; 1547 ^ 2 = 2393209, value >> 9 = 4674
+        dw      4680    ; 1548 ^ 2 = 2396304, value >> 9 = 4680
+        dw      4686    ; 1549 ^ 2 = 2399401, value >> 9 = 4686
+        dw      4692    ; 1550 ^ 2 = 2402500, value >> 9 = 4692
+        dw      4698    ; 1551 ^ 2 = 2405601, value >> 9 = 4698
+        dw      4704    ; 1552 ^ 2 = 2408704, value >> 9 = 4704
+        dw      4710    ; 1553 ^ 2 = 2411809, value >> 9 = 4710
+        dw      4716    ; 1554 ^ 2 = 2414916, value >> 9 = 4716
+        dw      4722    ; 1555 ^ 2 = 2418025, value >> 9 = 4722
+        dw      4728    ; 1556 ^ 2 = 2421136, value >> 9 = 4728
+        dw      4734    ; 1557 ^ 2 = 2424249, value >> 9 = 4734
+        dw      4740    ; 1558 ^ 2 = 2427364, value >> 9 = 4740
+        dw      4747    ; 1559 ^ 2 = 2430481, value >> 9 = 4747
+        dw      4753    ; 1560 ^ 2 = 2433600, value >> 9 = 4753
+        dw      4759    ; 1561 ^ 2 = 2436721, value >> 9 = 4759
+        dw      4765    ; 1562 ^ 2 = 2439844, value >> 9 = 4765
+        dw      4771    ; 1563 ^ 2 = 2442969, value >> 9 = 4771
+        dw      4777    ; 1564 ^ 2 = 2446096, value >> 9 = 4777
+        dw      4783    ; 1565 ^ 2 = 2449225, value >> 9 = 4783
+        dw      4789    ; 1566 ^ 2 = 2452356, value >> 9 = 4789
+        dw      4795    ; 1567 ^ 2 = 2455489, value >> 9 = 4795
+        dw      4802    ; 1568 ^ 2 = 2458624, value >> 9 = 4802
+        dw      4808    ; 1569 ^ 2 = 2461761, value >> 9 = 4808
+        dw      4814    ; 1570 ^ 2 = 2464900, value >> 9 = 4814
+        dw      4820    ; 1571 ^ 2 = 2468041, value >> 9 = 4820
+        dw      4826    ; 1572 ^ 2 = 2471184, value >> 9 = 4826
+        dw      4832    ; 1573 ^ 2 = 2474329, value >> 9 = 4832
+        dw      4838    ; 1574 ^ 2 = 2477476, value >> 9 = 4838
+        dw      4844    ; 1575 ^ 2 = 2480625, value >> 9 = 4844
+        dw      4851    ; 1576 ^ 2 = 2483776, value >> 9 = 4851
+        dw      4857    ; 1577 ^ 2 = 2486929, value >> 9 = 4857
+        dw      4863    ; 1578 ^ 2 = 2490084, value >> 9 = 4863
+        dw      4869    ; 1579 ^ 2 = 2493241, value >> 9 = 4869
+        dw      4875    ; 1580 ^ 2 = 2496400, value >> 9 = 4875
+        dw      4881    ; 1581 ^ 2 = 2499561, value >> 9 = 4881
+        dw      4888    ; 1582 ^ 2 = 2502724, value >> 9 = 4888
+        dw      4894    ; 1583 ^ 2 = 2505889, value >> 9 = 4894
+        dw      4900    ; 1584 ^ 2 = 2509056, value >> 9 = 4900
+        dw      4906    ; 1585 ^ 2 = 2512225, value >> 9 = 4906
+        dw      4912    ; 1586 ^ 2 = 2515396, value >> 9 = 4912
+        dw      4919    ; 1587 ^ 2 = 2518569, value >> 9 = 4919
+        dw      4925    ; 1588 ^ 2 = 2521744, value >> 9 = 4925
+        dw      4931    ; 1589 ^ 2 = 2524921, value >> 9 = 4931
+        dw      4937    ; 1590 ^ 2 = 2528100, value >> 9 = 4937
+        dw      4943    ; 1591 ^ 2 = 2531281, value >> 9 = 4943
+        dw      4950    ; 1592 ^ 2 = 2534464, value >> 9 = 4950
+        dw      4956    ; 1593 ^ 2 = 2537649, value >> 9 = 4956
+        dw      4962    ; 1594 ^ 2 = 2540836, value >> 9 = 4962
+        dw      4968    ; 1595 ^ 2 = 2544025, value >> 9 = 4968
+        dw      4975    ; 1596 ^ 2 = 2547216, value >> 9 = 4975
+        dw      4981    ; 1597 ^ 2 = 2550409, value >> 9 = 4981
+        dw      4987    ; 1598 ^ 2 = 2553604, value >> 9 = 4987
+        dw      4993    ; 1599 ^ 2 = 2556801, value >> 9 = 4993
+        dw      5000    ; 1600 ^ 2 = 2560000, value >> 9 = 5000
+        dw      5006    ; 1601 ^ 2 = 2563201, value >> 9 = 5006
+        dw      5012    ; 1602 ^ 2 = 2566404, value >> 9 = 5012
+        dw      5018    ; 1603 ^ 2 = 2569609, value >> 9 = 5018
+        dw      5025    ; 1604 ^ 2 = 2572816, value >> 9 = 5025
+        dw      5031    ; 1605 ^ 2 = 2576025, value >> 9 = 5031
+        dw      5037    ; 1606 ^ 2 = 2579236, value >> 9 = 5037
+        dw      5043    ; 1607 ^ 2 = 2582449, value >> 9 = 5043
+        dw      5050    ; 1608 ^ 2 = 2585664, value >> 9 = 5050
+        dw      5056    ; 1609 ^ 2 = 2588881, value >> 9 = 5056
+        dw      5062    ; 1610 ^ 2 = 2592100, value >> 9 = 5062
+        dw      5068    ; 1611 ^ 2 = 2595321, value >> 9 = 5068
+        dw      5075    ; 1612 ^ 2 = 2598544, value >> 9 = 5075
+        dw      5081    ; 1613 ^ 2 = 2601769, value >> 9 = 5081
+        dw      5087    ; 1614 ^ 2 = 2604996, value >> 9 = 5087
+        dw      5094    ; 1615 ^ 2 = 2608225, value >> 9 = 5094
+        dw      5100    ; 1616 ^ 2 = 2611456, value >> 9 = 5100
+        dw      5106    ; 1617 ^ 2 = 2614689, value >> 9 = 5106
+        dw      5113    ; 1618 ^ 2 = 2617924, value >> 9 = 5113
+        dw      5119    ; 1619 ^ 2 = 2621161, value >> 9 = 5119
+        dw      5125    ; 1620 ^ 2 = 2624400, value >> 9 = 5125
+        dw      5132    ; 1621 ^ 2 = 2627641, value >> 9 = 5132
+        dw      5138    ; 1622 ^ 2 = 2630884, value >> 9 = 5138
+        dw      5144    ; 1623 ^ 2 = 2634129, value >> 9 = 5144
+        dw      5151    ; 1624 ^ 2 = 2637376, value >> 9 = 5151
+        dw      5157    ; 1625 ^ 2 = 2640625, value >> 9 = 5157
+        dw      5163    ; 1626 ^ 2 = 2643876, value >> 9 = 5163
+        dw      5170    ; 1627 ^ 2 = 2647129, value >> 9 = 5170
+        dw      5176    ; 1628 ^ 2 = 2650384, value >> 9 = 5176
+        dw      5182    ; 1629 ^ 2 = 2653641, value >> 9 = 5182
+        dw      5189    ; 1630 ^ 2 = 2656900, value >> 9 = 5189
+        dw      5195    ; 1631 ^ 2 = 2660161, value >> 9 = 5195
+        dw      5202    ; 1632 ^ 2 = 2663424, value >> 9 = 5202
+        dw      5208    ; 1633 ^ 2 = 2666689, value >> 9 = 5208
+        dw      5214    ; 1634 ^ 2 = 2669956, value >> 9 = 5214
+        dw      5221    ; 1635 ^ 2 = 2673225, value >> 9 = 5221
+        dw      5227    ; 1636 ^ 2 = 2676496, value >> 9 = 5227
+        dw      5233    ; 1637 ^ 2 = 2679769, value >> 9 = 5233
+        dw      5240    ; 1638 ^ 2 = 2683044, value >> 9 = 5240
+        dw      5246    ; 1639 ^ 2 = 2686321, value >> 9 = 5246
+        dw      5253    ; 1640 ^ 2 = 2689600, value >> 9 = 5253
+        dw      5259    ; 1641 ^ 2 = 2692881, value >> 9 = 5259
+        dw      5265    ; 1642 ^ 2 = 2696164, value >> 9 = 5265
+        dw      5272    ; 1643 ^ 2 = 2699449, value >> 9 = 5272
+        dw      5278    ; 1644 ^ 2 = 2702736, value >> 9 = 5278
+        dw      5285    ; 1645 ^ 2 = 2706025, value >> 9 = 5285
+        dw      5291    ; 1646 ^ 2 = 2709316, value >> 9 = 5291
+        dw      5298    ; 1647 ^ 2 = 2712609, value >> 9 = 5298
+        dw      5304    ; 1648 ^ 2 = 2715904, value >> 9 = 5304
+        dw      5310    ; 1649 ^ 2 = 2719201, value >> 9 = 5310
+        dw      5317    ; 1650 ^ 2 = 2722500, value >> 9 = 5317
+        dw      5323    ; 1651 ^ 2 = 2725801, value >> 9 = 5323
+        dw      5330    ; 1652 ^ 2 = 2729104, value >> 9 = 5330
+        dw      5336    ; 1653 ^ 2 = 2732409, value >> 9 = 5336
+        dw      5343    ; 1654 ^ 2 = 2735716, value >> 9 = 5343
+        dw      5349    ; 1655 ^ 2 = 2739025, value >> 9 = 5349
+        dw      5356    ; 1656 ^ 2 = 2742336, value >> 9 = 5356
+        dw      5362    ; 1657 ^ 2 = 2745649, value >> 9 = 5362
+        dw      5369    ; 1658 ^ 2 = 2748964, value >> 9 = 5369
+        dw      5375    ; 1659 ^ 2 = 2752281, value >> 9 = 5375
+        dw      5382    ; 1660 ^ 2 = 2755600, value >> 9 = 5382
+        dw      5388    ; 1661 ^ 2 = 2758921, value >> 9 = 5388
+        dw      5395    ; 1662 ^ 2 = 2762244, value >> 9 = 5395
+        dw      5401    ; 1663 ^ 2 = 2765569, value >> 9 = 5401
+        dw      5408    ; 1664 ^ 2 = 2768896, value >> 9 = 5408
+        dw      5414    ; 1665 ^ 2 = 2772225, value >> 9 = 5414
+        dw      5421    ; 1666 ^ 2 = 2775556, value >> 9 = 5421
+        dw      5427    ; 1667 ^ 2 = 2778889, value >> 9 = 5427
+        dw      5434    ; 1668 ^ 2 = 2782224, value >> 9 = 5434
+        dw      5440    ; 1669 ^ 2 = 2785561, value >> 9 = 5440
+        dw      5447    ; 1670 ^ 2 = 2788900, value >> 9 = 5447
+        dw      5453    ; 1671 ^ 2 = 2792241, value >> 9 = 5453
+        dw      5460    ; 1672 ^ 2 = 2795584, value >> 9 = 5460
+        dw      5466    ; 1673 ^ 2 = 2798929, value >> 9 = 5466
+        dw      5473    ; 1674 ^ 2 = 2802276, value >> 9 = 5473
+        dw      5479    ; 1675 ^ 2 = 2805625, value >> 9 = 5479
+        dw      5486    ; 1676 ^ 2 = 2808976, value >> 9 = 5486
+        dw      5492    ; 1677 ^ 2 = 2812329, value >> 9 = 5492
+        dw      5499    ; 1678 ^ 2 = 2815684, value >> 9 = 5499
+        dw      5505    ; 1679 ^ 2 = 2819041, value >> 9 = 5505
+        dw      5512    ; 1680 ^ 2 = 2822400, value >> 9 = 5512
+        dw      5519    ; 1681 ^ 2 = 2825761, value >> 9 = 5519
+        dw      5525    ; 1682 ^ 2 = 2829124, value >> 9 = 5525
+        dw      5532    ; 1683 ^ 2 = 2832489, value >> 9 = 5532
+        dw      5538    ; 1684 ^ 2 = 2835856, value >> 9 = 5538
+        dw      5545    ; 1685 ^ 2 = 2839225, value >> 9 = 5545
+        dw      5551    ; 1686 ^ 2 = 2842596, value >> 9 = 5551
+        dw      5558    ; 1687 ^ 2 = 2845969, value >> 9 = 5558
+        dw      5565    ; 1688 ^ 2 = 2849344, value >> 9 = 5565
+        dw      5571    ; 1689 ^ 2 = 2852721, value >> 9 = 5571
+        dw      5578    ; 1690 ^ 2 = 2856100, value >> 9 = 5578
+        dw      5584    ; 1691 ^ 2 = 2859481, value >> 9 = 5584
+        dw      5591    ; 1692 ^ 2 = 2862864, value >> 9 = 5591
+        dw      5598    ; 1693 ^ 2 = 2866249, value >> 9 = 5598
+        dw      5604    ; 1694 ^ 2 = 2869636, value >> 9 = 5604
+        dw      5611    ; 1695 ^ 2 = 2873025, value >> 9 = 5611
+        dw      5618    ; 1696 ^ 2 = 2876416, value >> 9 = 5618
+        dw      5624    ; 1697 ^ 2 = 2879809, value >> 9 = 5624
+        dw      5631    ; 1698 ^ 2 = 2883204, value >> 9 = 5631
+        dw      5637    ; 1699 ^ 2 = 2886601, value >> 9 = 5637
+        dw      5644    ; 1700 ^ 2 = 2890000, value >> 9 = 5644
+        dw      5651    ; 1701 ^ 2 = 2893401, value >> 9 = 5651
+        dw      5657    ; 1702 ^ 2 = 2896804, value >> 9 = 5657
+        dw      5664    ; 1703 ^ 2 = 2900209, value >> 9 = 5664
+        dw      5671    ; 1704 ^ 2 = 2903616, value >> 9 = 5671
+        dw      5677    ; 1705 ^ 2 = 2907025, value >> 9 = 5677
+        dw      5684    ; 1706 ^ 2 = 2910436, value >> 9 = 5684
+        dw      5691    ; 1707 ^ 2 = 2913849, value >> 9 = 5691
+        dw      5697    ; 1708 ^ 2 = 2917264, value >> 9 = 5697
+        dw      5704    ; 1709 ^ 2 = 2920681, value >> 9 = 5704
+        dw      5711    ; 1710 ^ 2 = 2924100, value >> 9 = 5711
+        dw      5717    ; 1711 ^ 2 = 2927521, value >> 9 = 5717
+        dw      5724    ; 1712 ^ 2 = 2930944, value >> 9 = 5724
+        dw      5731    ; 1713 ^ 2 = 2934369, value >> 9 = 5731
+        dw      5737    ; 1714 ^ 2 = 2937796, value >> 9 = 5737
+        dw      5744    ; 1715 ^ 2 = 2941225, value >> 9 = 5744
+        dw      5751    ; 1716 ^ 2 = 2944656, value >> 9 = 5751
+        dw      5757    ; 1717 ^ 2 = 2948089, value >> 9 = 5757
+        dw      5764    ; 1718 ^ 2 = 2951524, value >> 9 = 5764
+        dw      5771    ; 1719 ^ 2 = 2954961, value >> 9 = 5771
+        dw      5778    ; 1720 ^ 2 = 2958400, value >> 9 = 5778
+        dw      5784    ; 1721 ^ 2 = 2961841, value >> 9 = 5784
+        dw      5791    ; 1722 ^ 2 = 2965284, value >> 9 = 5791
+        dw      5798    ; 1723 ^ 2 = 2968729, value >> 9 = 5798
+        dw      5805    ; 1724 ^ 2 = 2972176, value >> 9 = 5805
+        dw      5811    ; 1725 ^ 2 = 2975625, value >> 9 = 5811
+        dw      5818    ; 1726 ^ 2 = 2979076, value >> 9 = 5818
+        dw      5825    ; 1727 ^ 2 = 2982529, value >> 9 = 5825
+        dw      5832    ; 1728 ^ 2 = 2985984, value >> 9 = 5832
+        dw      5838    ; 1729 ^ 2 = 2989441, value >> 9 = 5838
+        dw      5845    ; 1730 ^ 2 = 2992900, value >> 9 = 5845
+        dw      5852    ; 1731 ^ 2 = 2996361, value >> 9 = 5852
+        dw      5859    ; 1732 ^ 2 = 2999824, value >> 9 = 5859
+        dw      5865    ; 1733 ^ 2 = 3003289, value >> 9 = 5865
+        dw      5872    ; 1734 ^ 2 = 3006756, value >> 9 = 5872
+        dw      5879    ; 1735 ^ 2 = 3010225, value >> 9 = 5879
+        dw      5886    ; 1736 ^ 2 = 3013696, value >> 9 = 5886
+        dw      5892    ; 1737 ^ 2 = 3017169, value >> 9 = 5892
+        dw      5899    ; 1738 ^ 2 = 3020644, value >> 9 = 5899
+        dw      5906    ; 1739 ^ 2 = 3024121, value >> 9 = 5906
+        dw      5913    ; 1740 ^ 2 = 3027600, value >> 9 = 5913
+        dw      5920    ; 1741 ^ 2 = 3031081, value >> 9 = 5920
+        dw      5926    ; 1742 ^ 2 = 3034564, value >> 9 = 5926
+        dw      5933    ; 1743 ^ 2 = 3038049, value >> 9 = 5933
+        dw      5940    ; 1744 ^ 2 = 3041536, value >> 9 = 5940
+        dw      5947    ; 1745 ^ 2 = 3045025, value >> 9 = 5947
+        dw      5954    ; 1746 ^ 2 = 3048516, value >> 9 = 5954
+        dw      5960    ; 1747 ^ 2 = 3052009, value >> 9 = 5960
+        dw      5967    ; 1748 ^ 2 = 3055504, value >> 9 = 5967
+        dw      5974    ; 1749 ^ 2 = 3059001, value >> 9 = 5974
+        dw      5981    ; 1750 ^ 2 = 3062500, value >> 9 = 5981
+        dw      5988    ; 1751 ^ 2 = 3066001, value >> 9 = 5988
+        dw      5995    ; 1752 ^ 2 = 3069504, value >> 9 = 5995
+        dw      6001    ; 1753 ^ 2 = 3073009, value >> 9 = 6001
+        dw      6008    ; 1754 ^ 2 = 3076516, value >> 9 = 6008
+        dw      6015    ; 1755 ^ 2 = 3080025, value >> 9 = 6015
+        dw      6022    ; 1756 ^ 2 = 3083536, value >> 9 = 6022
+        dw      6029    ; 1757 ^ 2 = 3087049, value >> 9 = 6029
+        dw      6036    ; 1758 ^ 2 = 3090564, value >> 9 = 6036
+        dw      6043    ; 1759 ^ 2 = 3094081, value >> 9 = 6043
+        dw      6050    ; 1760 ^ 2 = 3097600, value >> 9 = 6050
+        dw      6056    ; 1761 ^ 2 = 3101121, value >> 9 = 6056
+        dw      6063    ; 1762 ^ 2 = 3104644, value >> 9 = 6063
+        dw      6070    ; 1763 ^ 2 = 3108169, value >> 9 = 6070
+        dw      6077    ; 1764 ^ 2 = 3111696, value >> 9 = 6077
+        dw      6084    ; 1765 ^ 2 = 3115225, value >> 9 = 6084
+        dw      6091    ; 1766 ^ 2 = 3118756, value >> 9 = 6091
+        dw      6098    ; 1767 ^ 2 = 3122289, value >> 9 = 6098
+        dw      6105    ; 1768 ^ 2 = 3125824, value >> 9 = 6105
+        dw      6112    ; 1769 ^ 2 = 3129361, value >> 9 = 6112
+        dw      6118    ; 1770 ^ 2 = 3132900, value >> 9 = 6118
+        dw      6125    ; 1771 ^ 2 = 3136441, value >> 9 = 6125
+        dw      6132    ; 1772 ^ 2 = 3139984, value >> 9 = 6132
+        dw      6139    ; 1773 ^ 2 = 3143529, value >> 9 = 6139
+        dw      6146    ; 1774 ^ 2 = 3147076, value >> 9 = 6146
+        dw      6153    ; 1775 ^ 2 = 3150625, value >> 9 = 6153
+        dw      6160    ; 1776 ^ 2 = 3154176, value >> 9 = 6160
+        dw      6167    ; 1777 ^ 2 = 3157729, value >> 9 = 6167
+        dw      6174    ; 1778 ^ 2 = 3161284, value >> 9 = 6174
+        dw      6181    ; 1779 ^ 2 = 3164841, value >> 9 = 6181
+        dw      6188    ; 1780 ^ 2 = 3168400, value >> 9 = 6188
+        dw      6195    ; 1781 ^ 2 = 3171961, value >> 9 = 6195
+        dw      6202    ; 1782 ^ 2 = 3175524, value >> 9 = 6202
+        dw      6209    ; 1783 ^ 2 = 3179089, value >> 9 = 6209
+        dw      6216    ; 1784 ^ 2 = 3182656, value >> 9 = 6216
+        dw      6223    ; 1785 ^ 2 = 3186225, value >> 9 = 6223
+        dw      6230    ; 1786 ^ 2 = 3189796, value >> 9 = 6230
+        dw      6237    ; 1787 ^ 2 = 3193369, value >> 9 = 6237
+        dw      6244    ; 1788 ^ 2 = 3196944, value >> 9 = 6244
+        dw      6251    ; 1789 ^ 2 = 3200521, value >> 9 = 6251
+        dw      6258    ; 1790 ^ 2 = 3204100, value >> 9 = 6258
+        dw      6265    ; 1791 ^ 2 = 3207681, value >> 9 = 6265
+        dw      6272    ; 1792 ^ 2 = 3211264, value >> 9 = 6272
+        dw      6279    ; 1793 ^ 2 = 3214849, value >> 9 = 6279
+        dw      6286    ; 1794 ^ 2 = 3218436, value >> 9 = 6286
+        dw      6293    ; 1795 ^ 2 = 3222025, value >> 9 = 6293
+        dw      6300    ; 1796 ^ 2 = 3225616, value >> 9 = 6300
+        dw      6307    ; 1797 ^ 2 = 3229209, value >> 9 = 6307
+        dw      6314    ; 1798 ^ 2 = 3232804, value >> 9 = 6314
+        dw      6321    ; 1799 ^ 2 = 3236401, value >> 9 = 6321
+        dw      6328    ; 1800 ^ 2 = 3240000, value >> 9 = 6328
+        dw      6335    ; 1801 ^ 2 = 3243601, value >> 9 = 6335
+        dw      6342    ; 1802 ^ 2 = 3247204, value >> 9 = 6342
+        dw      6349    ; 1803 ^ 2 = 3250809, value >> 9 = 6349
+        dw      6356    ; 1804 ^ 2 = 3254416, value >> 9 = 6356
+        dw      6363    ; 1805 ^ 2 = 3258025, value >> 9 = 6363
+        dw      6370    ; 1806 ^ 2 = 3261636, value >> 9 = 6370
+        dw      6377    ; 1807 ^ 2 = 3265249, value >> 9 = 6377
+        dw      6384    ; 1808 ^ 2 = 3268864, value >> 9 = 6384
+        dw      6391    ; 1809 ^ 2 = 3272481, value >> 9 = 6391
+        dw      6398    ; 1810 ^ 2 = 3276100, value >> 9 = 6398
+        dw      6405    ; 1811 ^ 2 = 3279721, value >> 9 = 6405
+        dw      6412    ; 1812 ^ 2 = 3283344, value >> 9 = 6412
+        dw      6419    ; 1813 ^ 2 = 3286969, value >> 9 = 6419
+        dw      6426    ; 1814 ^ 2 = 3290596, value >> 9 = 6426
+        dw      6434    ; 1815 ^ 2 = 3294225, value >> 9 = 6434
+        dw      6441    ; 1816 ^ 2 = 3297856, value >> 9 = 6441
+        dw      6448    ; 1817 ^ 2 = 3301489, value >> 9 = 6448
+        dw      6455    ; 1818 ^ 2 = 3305124, value >> 9 = 6455
+        dw      6462    ; 1819 ^ 2 = 3308761, value >> 9 = 6462
+        dw      6469    ; 1820 ^ 2 = 3312400, value >> 9 = 6469
+        dw      6476    ; 1821 ^ 2 = 3316041, value >> 9 = 6476
+        dw      6483    ; 1822 ^ 2 = 3319684, value >> 9 = 6483
+        dw      6490    ; 1823 ^ 2 = 3323329, value >> 9 = 6490
+        dw      6498    ; 1824 ^ 2 = 3326976, value >> 9 = 6498
+        dw      6505    ; 1825 ^ 2 = 3330625, value >> 9 = 6505
+        dw      6512    ; 1826 ^ 2 = 3334276, value >> 9 = 6512
+        dw      6519    ; 1827 ^ 2 = 3337929, value >> 9 = 6519
+        dw      6526    ; 1828 ^ 2 = 3341584, value >> 9 = 6526
+        dw      6533    ; 1829 ^ 2 = 3345241, value >> 9 = 6533
+        dw      6540    ; 1830 ^ 2 = 3348900, value >> 9 = 6540
+        dw      6547    ; 1831 ^ 2 = 3352561, value >> 9 = 6547
+        dw      6555    ; 1832 ^ 2 = 3356224, value >> 9 = 6555
+        dw      6562    ; 1833 ^ 2 = 3359889, value >> 9 = 6562
+        dw      6569    ; 1834 ^ 2 = 3363556, value >> 9 = 6569
+        dw      6576    ; 1835 ^ 2 = 3367225, value >> 9 = 6576
+        dw      6583    ; 1836 ^ 2 = 3370896, value >> 9 = 6583
+        dw      6590    ; 1837 ^ 2 = 3374569, value >> 9 = 6590
+        dw      6598    ; 1838 ^ 2 = 3378244, value >> 9 = 6598
+        dw      6605    ; 1839 ^ 2 = 3381921, value >> 9 = 6605
+        dw      6612    ; 1840 ^ 2 = 3385600, value >> 9 = 6612
+        dw      6619    ; 1841 ^ 2 = 3389281, value >> 9 = 6619
+        dw      6626    ; 1842 ^ 2 = 3392964, value >> 9 = 6626
+        dw      6634    ; 1843 ^ 2 = 3396649, value >> 9 = 6634
+        dw      6641    ; 1844 ^ 2 = 3400336, value >> 9 = 6641
+        dw      6648    ; 1845 ^ 2 = 3404025, value >> 9 = 6648
+        dw      6655    ; 1846 ^ 2 = 3407716, value >> 9 = 6655
+        dw      6662    ; 1847 ^ 2 = 3411409, value >> 9 = 6662
+        dw      6670    ; 1848 ^ 2 = 3415104, value >> 9 = 6670
+        dw      6677    ; 1849 ^ 2 = 3418801, value >> 9 = 6677
+        dw      6684    ; 1850 ^ 2 = 3422500, value >> 9 = 6684
+        dw      6691    ; 1851 ^ 2 = 3426201, value >> 9 = 6691
+        dw      6699    ; 1852 ^ 2 = 3429904, value >> 9 = 6699
+        dw      6706    ; 1853 ^ 2 = 3433609, value >> 9 = 6706
+        dw      6713    ; 1854 ^ 2 = 3437316, value >> 9 = 6713
+        dw      6720    ; 1855 ^ 2 = 3441025, value >> 9 = 6720
+        dw      6728    ; 1856 ^ 2 = 3444736, value >> 9 = 6728
+        dw      6735    ; 1857 ^ 2 = 3448449, value >> 9 = 6735
+        dw      6742    ; 1858 ^ 2 = 3452164, value >> 9 = 6742
+        dw      6749    ; 1859 ^ 2 = 3455881, value >> 9 = 6749
+        dw      6757    ; 1860 ^ 2 = 3459600, value >> 9 = 6757
+        dw      6764    ; 1861 ^ 2 = 3463321, value >> 9 = 6764
+        dw      6771    ; 1862 ^ 2 = 3467044, value >> 9 = 6771
+        dw      6778    ; 1863 ^ 2 = 3470769, value >> 9 = 6778
+        dw      6786    ; 1864 ^ 2 = 3474496, value >> 9 = 6786
+        dw      6793    ; 1865 ^ 2 = 3478225, value >> 9 = 6793
+        dw      6800    ; 1866 ^ 2 = 3481956, value >> 9 = 6800
+        dw      6807    ; 1867 ^ 2 = 3485689, value >> 9 = 6807
+        dw      6815    ; 1868 ^ 2 = 3489424, value >> 9 = 6815
+        dw      6822    ; 1869 ^ 2 = 3493161, value >> 9 = 6822
+        dw      6829    ; 1870 ^ 2 = 3496900, value >> 9 = 6829
+        dw      6837    ; 1871 ^ 2 = 3500641, value >> 9 = 6837
+        dw      6844    ; 1872 ^ 2 = 3504384, value >> 9 = 6844
+        dw      6851    ; 1873 ^ 2 = 3508129, value >> 9 = 6851
+        dw      6859    ; 1874 ^ 2 = 3511876, value >> 9 = 6859
+        dw      6866    ; 1875 ^ 2 = 3515625, value >> 9 = 6866
+        dw      6873    ; 1876 ^ 2 = 3519376, value >> 9 = 6873
+        dw      6881    ; 1877 ^ 2 = 3523129, value >> 9 = 6881
+        dw      6888    ; 1878 ^ 2 = 3526884, value >> 9 = 6888
+        dw      6895    ; 1879 ^ 2 = 3530641, value >> 9 = 6895
+        dw      6903    ; 1880 ^ 2 = 3534400, value >> 9 = 6903
+        dw      6910    ; 1881 ^ 2 = 3538161, value >> 9 = 6910
+        dw      6917    ; 1882 ^ 2 = 3541924, value >> 9 = 6917
+        dw      6925    ; 1883 ^ 2 = 3545689, value >> 9 = 6925
+        dw      6932    ; 1884 ^ 2 = 3549456, value >> 9 = 6932
+        dw      6939    ; 1885 ^ 2 = 3553225, value >> 9 = 6939
+        dw      6947    ; 1886 ^ 2 = 3556996, value >> 9 = 6947
+        dw      6954    ; 1887 ^ 2 = 3560769, value >> 9 = 6954
+        dw      6962    ; 1888 ^ 2 = 3564544, value >> 9 = 6962
+        dw      6969    ; 1889 ^ 2 = 3568321, value >> 9 = 6969
+        dw      6976    ; 1890 ^ 2 = 3572100, value >> 9 = 6976
+        dw      6984    ; 1891 ^ 2 = 3575881, value >> 9 = 6984
+        dw      6991    ; 1892 ^ 2 = 3579664, value >> 9 = 6991
+        dw      6998    ; 1893 ^ 2 = 3583449, value >> 9 = 6998
+        dw      7006    ; 1894 ^ 2 = 3587236, value >> 9 = 7006
+        dw      7013    ; 1895 ^ 2 = 3591025, value >> 9 = 7013
+        dw      7021    ; 1896 ^ 2 = 3594816, value >> 9 = 7021
+        dw      7028    ; 1897 ^ 2 = 3598609, value >> 9 = 7028
+        dw      7035    ; 1898 ^ 2 = 3602404, value >> 9 = 7035
+        dw      7043    ; 1899 ^ 2 = 3606201, value >> 9 = 7043
+        dw      7050    ; 1900 ^ 2 = 3610000, value >> 9 = 7050
+        dw      7058    ; 1901 ^ 2 = 3613801, value >> 9 = 7058
+        dw      7065    ; 1902 ^ 2 = 3617604, value >> 9 = 7065
+        dw      7073    ; 1903 ^ 2 = 3621409, value >> 9 = 7073
+        dw      7080    ; 1904 ^ 2 = 3625216, value >> 9 = 7080
+        dw      7087    ; 1905 ^ 2 = 3629025, value >> 9 = 7087
+        dw      7095    ; 1906 ^ 2 = 3632836, value >> 9 = 7095
+        dw      7102    ; 1907 ^ 2 = 3636649, value >> 9 = 7102
+        dw      7110    ; 1908 ^ 2 = 3640464, value >> 9 = 7110
+        dw      7117    ; 1909 ^ 2 = 3644281, value >> 9 = 7117
+        dw      7125    ; 1910 ^ 2 = 3648100, value >> 9 = 7125
+        dw      7132    ; 1911 ^ 2 = 3651921, value >> 9 = 7132
+        dw      7140    ; 1912 ^ 2 = 3655744, value >> 9 = 7140
+        dw      7147    ; 1913 ^ 2 = 3659569, value >> 9 = 7147
+        dw      7155    ; 1914 ^ 2 = 3663396, value >> 9 = 7155
+        dw      7162    ; 1915 ^ 2 = 3667225, value >> 9 = 7162
+        dw      7170    ; 1916 ^ 2 = 3671056, value >> 9 = 7170
+        dw      7177    ; 1917 ^ 2 = 3674889, value >> 9 = 7177
+        dw      7185    ; 1918 ^ 2 = 3678724, value >> 9 = 7185
+        dw      7192    ; 1919 ^ 2 = 3682561, value >> 9 = 7192
+        dw      7200    ; 1920 ^ 2 = 3686400, value >> 9 = 7200
+        dw      7207    ; 1921 ^ 2 = 3690241, value >> 9 = 7207
+        dw      7215    ; 1922 ^ 2 = 3694084, value >> 9 = 7215
+        dw      7222    ; 1923 ^ 2 = 3697929, value >> 9 = 7222
+        dw      7230    ; 1924 ^ 2 = 3701776, value >> 9 = 7230
+        dw      7237    ; 1925 ^ 2 = 3705625, value >> 9 = 7237
+        dw      7245    ; 1926 ^ 2 = 3709476, value >> 9 = 7245
+        dw      7252    ; 1927 ^ 2 = 3713329, value >> 9 = 7252
+        dw      7260    ; 1928 ^ 2 = 3717184, value >> 9 = 7260
+        dw      7267    ; 1929 ^ 2 = 3721041, value >> 9 = 7267
+        dw      7275    ; 1930 ^ 2 = 3724900, value >> 9 = 7275
+        dw      7282    ; 1931 ^ 2 = 3728761, value >> 9 = 7282
+        dw      7290    ; 1932 ^ 2 = 3732624, value >> 9 = 7290
+        dw      7297    ; 1933 ^ 2 = 3736489, value >> 9 = 7297
+        dw      7305    ; 1934 ^ 2 = 3740356, value >> 9 = 7305
+        dw      7312    ; 1935 ^ 2 = 3744225, value >> 9 = 7312
+        dw      7320    ; 1936 ^ 2 = 3748096, value >> 9 = 7320
+        dw      7328    ; 1937 ^ 2 = 3751969, value >> 9 = 7328
+        dw      7335    ; 1938 ^ 2 = 3755844, value >> 9 = 7335
+        dw      7343    ; 1939 ^ 2 = 3759721, value >> 9 = 7343
+        dw      7350    ; 1940 ^ 2 = 3763600, value >> 9 = 7350
+        dw      7358    ; 1941 ^ 2 = 3767481, value >> 9 = 7358
+        dw      7365    ; 1942 ^ 2 = 3771364, value >> 9 = 7365
+        dw      7373    ; 1943 ^ 2 = 3775249, value >> 9 = 7373
+        dw      7381    ; 1944 ^ 2 = 3779136, value >> 9 = 7381
+        dw      7388    ; 1945 ^ 2 = 3783025, value >> 9 = 7388
+        dw      7396    ; 1946 ^ 2 = 3786916, value >> 9 = 7396
+        dw      7403    ; 1947 ^ 2 = 3790809, value >> 9 = 7403
+        dw      7411    ; 1948 ^ 2 = 3794704, value >> 9 = 7411
+        dw      7419    ; 1949 ^ 2 = 3798601, value >> 9 = 7419
+        dw      7426    ; 1950 ^ 2 = 3802500, value >> 9 = 7426
+        dw      7434    ; 1951 ^ 2 = 3806401, value >> 9 = 7434
+        dw      7442    ; 1952 ^ 2 = 3810304, value >> 9 = 7442
+        dw      7449    ; 1953 ^ 2 = 3814209, value >> 9 = 7449
+        dw      7457    ; 1954 ^ 2 = 3818116, value >> 9 = 7457
+        dw      7464    ; 1955 ^ 2 = 3822025, value >> 9 = 7464
+        dw      7472    ; 1956 ^ 2 = 3825936, value >> 9 = 7472
+        dw      7480    ; 1957 ^ 2 = 3829849, value >> 9 = 7480
+        dw      7487    ; 1958 ^ 2 = 3833764, value >> 9 = 7487
+        dw      7495    ; 1959 ^ 2 = 3837681, value >> 9 = 7495
+        dw      7503    ; 1960 ^ 2 = 3841600, value >> 9 = 7503
+        dw      7510    ; 1961 ^ 2 = 3845521, value >> 9 = 7510
+        dw      7518    ; 1962 ^ 2 = 3849444, value >> 9 = 7518
+        dw      7526    ; 1963 ^ 2 = 3853369, value >> 9 = 7526
+        dw      7533    ; 1964 ^ 2 = 3857296, value >> 9 = 7533
+        dw      7541    ; 1965 ^ 2 = 3861225, value >> 9 = 7541
+        dw      7549    ; 1966 ^ 2 = 3865156, value >> 9 = 7549
+        dw      7556    ; 1967 ^ 2 = 3869089, value >> 9 = 7556
+        dw      7564    ; 1968 ^ 2 = 3873024, value >> 9 = 7564
+        dw      7572    ; 1969 ^ 2 = 3876961, value >> 9 = 7572
+        dw      7579    ; 1970 ^ 2 = 3880900, value >> 9 = 7579
+        dw      7587    ; 1971 ^ 2 = 3884841, value >> 9 = 7587
+        dw      7595    ; 1972 ^ 2 = 3888784, value >> 9 = 7595
+        dw      7602    ; 1973 ^ 2 = 3892729, value >> 9 = 7602
+        dw      7610    ; 1974 ^ 2 = 3896676, value >> 9 = 7610
+        dw      7618    ; 1975 ^ 2 = 3900625, value >> 9 = 7618
+        dw      7626    ; 1976 ^ 2 = 3904576, value >> 9 = 7626
+        dw      7633    ; 1977 ^ 2 = 3908529, value >> 9 = 7633
+        dw      7641    ; 1978 ^ 2 = 3912484, value >> 9 = 7641
+        dw      7649    ; 1979 ^ 2 = 3916441, value >> 9 = 7649
+        dw      7657    ; 1980 ^ 2 = 3920400, value >> 9 = 7657
+        dw      7664    ; 1981 ^ 2 = 3924361, value >> 9 = 7664
+        dw      7672    ; 1982 ^ 2 = 3928324, value >> 9 = 7672
+        dw      7680    ; 1983 ^ 2 = 3932289, value >> 9 = 7680
+        dw      7688    ; 1984 ^ 2 = 3936256, value >> 9 = 7688
+        dw      7695    ; 1985 ^ 2 = 3940225, value >> 9 = 7695
+        dw      7703    ; 1986 ^ 2 = 3944196, value >> 9 = 7703
+        dw      7711    ; 1987 ^ 2 = 3948169, value >> 9 = 7711
+        dw      7719    ; 1988 ^ 2 = 3952144, value >> 9 = 7719
+        dw      7726    ; 1989 ^ 2 = 3956121, value >> 9 = 7726
+        dw      7734    ; 1990 ^ 2 = 3960100, value >> 9 = 7734
+        dw      7742    ; 1991 ^ 2 = 3964081, value >> 9 = 7742
+        dw      7750    ; 1992 ^ 2 = 3968064, value >> 9 = 7750
+        dw      7757    ; 1993 ^ 2 = 3972049, value >> 9 = 7757
+        dw      7765    ; 1994 ^ 2 = 3976036, value >> 9 = 7765
+        dw      7773    ; 1995 ^ 2 = 3980025, value >> 9 = 7773
+        dw      7781    ; 1996 ^ 2 = 3984016, value >> 9 = 7781
+        dw      7789    ; 1997 ^ 2 = 3988009, value >> 9 = 7789
+        dw      7796    ; 1998 ^ 2 = 3992004, value >> 9 = 7796
+        dw      7804    ; 1999 ^ 2 = 3996001, value >> 9 = 7804
+        dw      7812    ; 2000 ^ 2 = 4000000, value >> 9 = 7812
+        dw      7820    ; 2001 ^ 2 = 4004001, value >> 9 = 7820
+        dw      7828    ; 2002 ^ 2 = 4008004, value >> 9 = 7828
+        dw      7835    ; 2003 ^ 2 = 4012009, value >> 9 = 7835
+        dw      7843    ; 2004 ^ 2 = 4016016, value >> 9 = 7843
+        dw      7851    ; 2005 ^ 2 = 4020025, value >> 9 = 7851
+        dw      7859    ; 2006 ^ 2 = 4024036, value >> 9 = 7859
+        dw      7867    ; 2007 ^ 2 = 4028049, value >> 9 = 7867
+        dw      7875    ; 2008 ^ 2 = 4032064, value >> 9 = 7875
+        dw      7882    ; 2009 ^ 2 = 4036081, value >> 9 = 7882
+        dw      7890    ; 2010 ^ 2 = 4040100, value >> 9 = 7890
+        dw      7898    ; 2011 ^ 2 = 4044121, value >> 9 = 7898
+        dw      7906    ; 2012 ^ 2 = 4048144, value >> 9 = 7906
+        dw      7914    ; 2013 ^ 2 = 4052169, value >> 9 = 7914
+        dw      7922    ; 2014 ^ 2 = 4056196, value >> 9 = 7922
+        dw      7930    ; 2015 ^ 2 = 4060225, value >> 9 = 7930
+        dw      7938    ; 2016 ^ 2 = 4064256, value >> 9 = 7938
+        dw      7945    ; 2017 ^ 2 = 4068289, value >> 9 = 7945
+        dw      7953    ; 2018 ^ 2 = 4072324, value >> 9 = 7953
+        dw      7961    ; 2019 ^ 2 = 4076361, value >> 9 = 7961
+        dw      7969    ; 2020 ^ 2 = 4080400, value >> 9 = 7969
+        dw      7977    ; 2021 ^ 2 = 4084441, value >> 9 = 7977
+        dw      7985    ; 2022 ^ 2 = 4088484, value >> 9 = 7985
+        dw      7993    ; 2023 ^ 2 = 4092529, value >> 9 = 7993
+        dw      8001    ; 2024 ^ 2 = 4096576, value >> 9 = 8001
+        dw      8009    ; 2025 ^ 2 = 4100625, value >> 9 = 8009
+        dw      8016    ; 2026 ^ 2 = 4104676, value >> 9 = 8016
+        dw      8024    ; 2027 ^ 2 = 4108729, value >> 9 = 8024
+        dw      8032    ; 2028 ^ 2 = 4112784, value >> 9 = 8032
+        dw      8040    ; 2029 ^ 2 = 4116841, value >> 9 = 8040
+        dw      8048    ; 2030 ^ 2 = 4120900, value >> 9 = 8048
+        dw      8056    ; 2031 ^ 2 = 4124961, value >> 9 = 8056
+        dw      8064    ; 2032 ^ 2 = 4129024, value >> 9 = 8064
+        dw      8072    ; 2033 ^ 2 = 4133089, value >> 9 = 8072
+        dw      8080    ; 2034 ^ 2 = 4137156, value >> 9 = 8080
+        dw      8088    ; 2035 ^ 2 = 4141225, value >> 9 = 8088
+        dw      8096    ; 2036 ^ 2 = 4145296, value >> 9 = 8096
+        dw      8104    ; 2037 ^ 2 = 4149369, value >> 9 = 8104
+        dw      8112    ; 2038 ^ 2 = 4153444, value >> 9 = 8112
+        dw      8120    ; 2039 ^ 2 = 4157521, value >> 9 = 8120
+        dw      8128    ; 2040 ^ 2 = 4161600, value >> 9 = 8128
+        dw      8136    ; 2041 ^ 2 = 4165681, value >> 9 = 8136
+        dw      8144    ; 2042 ^ 2 = 4169764, value >> 9 = 8144
+        dw      8152    ; 2043 ^ 2 = 4173849, value >> 9 = 8152
+        dw      8160    ; 2044 ^ 2 = 4177936, value >> 9 = 8160
+        dw      8168    ; 2045 ^ 2 = 4182025, value >> 9 = 8168
+        dw      8176    ; 2046 ^ 2 = 4186116, value >> 9 = 8176
+        dw      8184    ; 2047 ^ 2 = 4190209, value >> 9 = 8184
+        dw      8192    ; 2048 ^ 2 = 4194304, value >> 9 = 8192
+        dw      8200    ; 2049 ^ 2 = 4198401, value >> 9 = 8200
+        dw      8208    ; 2050 ^ 2 = 4202500, value >> 9 = 8208
+        dw      8216    ; 2051 ^ 2 = 4206601, value >> 9 = 8216
+        dw      8224    ; 2052 ^ 2 = 4210704, value >> 9 = 8224
+        dw      8232    ; 2053 ^ 2 = 4214809, value >> 9 = 8232
+        dw      8240    ; 2054 ^ 2 = 4218916, value >> 9 = 8240
+        dw      8248    ; 2055 ^ 2 = 4223025, value >> 9 = 8248
+        dw      8256    ; 2056 ^ 2 = 4227136, value >> 9 = 8256
+        dw      8264    ; 2057 ^ 2 = 4231249, value >> 9 = 8264
+        dw      8272    ; 2058 ^ 2 = 4235364, value >> 9 = 8272
+        dw      8280    ; 2059 ^ 2 = 4239481, value >> 9 = 8280
+        dw      8288    ; 2060 ^ 2 = 4243600, value >> 9 = 8288
+        dw      8296    ; 2061 ^ 2 = 4247721, value >> 9 = 8296
+        dw      8304    ; 2062 ^ 2 = 4251844, value >> 9 = 8304
+        dw      8312    ; 2063 ^ 2 = 4255969, value >> 9 = 8312
+        dw      8320    ; 2064 ^ 2 = 4260096, value >> 9 = 8320
+        dw      8328    ; 2065 ^ 2 = 4264225, value >> 9 = 8328
+        dw      8336    ; 2066 ^ 2 = 4268356, value >> 9 = 8336
+        dw      8344    ; 2067 ^ 2 = 4272489, value >> 9 = 8344
+        dw      8352    ; 2068 ^ 2 = 4276624, value >> 9 = 8352
+        dw      8360    ; 2069 ^ 2 = 4280761, value >> 9 = 8360
+        dw      8368    ; 2070 ^ 2 = 4284900, value >> 9 = 8368
+        dw      8377    ; 2071 ^ 2 = 4289041, value >> 9 = 8377
+        dw      8385    ; 2072 ^ 2 = 4293184, value >> 9 = 8385
+        dw      8393    ; 2073 ^ 2 = 4297329, value >> 9 = 8393
+        dw      8401    ; 2074 ^ 2 = 4301476, value >> 9 = 8401
+        dw      8409    ; 2075 ^ 2 = 4305625, value >> 9 = 8409
+        dw      8417    ; 2076 ^ 2 = 4309776, value >> 9 = 8417
+        dw      8425    ; 2077 ^ 2 = 4313929, value >> 9 = 8425
+        dw      8433    ; 2078 ^ 2 = 4318084, value >> 9 = 8433
+        dw      8441    ; 2079 ^ 2 = 4322241, value >> 9 = 8441
+        dw      8450    ; 2080 ^ 2 = 4326400, value >> 9 = 8450
+        dw      8458    ; 2081 ^ 2 = 4330561, value >> 9 = 8458
+        dw      8466    ; 2082 ^ 2 = 4334724, value >> 9 = 8466
+        dw      8474    ; 2083 ^ 2 = 4338889, value >> 9 = 8474
+        dw      8482    ; 2084 ^ 2 = 4343056, value >> 9 = 8482
+        dw      8490    ; 2085 ^ 2 = 4347225, value >> 9 = 8490
+        dw      8498    ; 2086 ^ 2 = 4351396, value >> 9 = 8498
+        dw      8506    ; 2087 ^ 2 = 4355569, value >> 9 = 8506
+        dw      8515    ; 2088 ^ 2 = 4359744, value >> 9 = 8515
+        dw      8523    ; 2089 ^ 2 = 4363921, value >> 9 = 8523
+        dw      8531    ; 2090 ^ 2 = 4368100, value >> 9 = 8531
+        dw      8539    ; 2091 ^ 2 = 4372281, value >> 9 = 8539
+        dw      8547    ; 2092 ^ 2 = 4376464, value >> 9 = 8547
+        dw      8555    ; 2093 ^ 2 = 4380649, value >> 9 = 8555
+        dw      8564    ; 2094 ^ 2 = 4384836, value >> 9 = 8564
+        dw      8572    ; 2095 ^ 2 = 4389025, value >> 9 = 8572
+        dw      8580    ; 2096 ^ 2 = 4393216, value >> 9 = 8580
+        dw      8588    ; 2097 ^ 2 = 4397409, value >> 9 = 8588
+        dw      8596    ; 2098 ^ 2 = 4401604, value >> 9 = 8596
+        dw      8605    ; 2099 ^ 2 = 4405801, value >> 9 = 8605
+        dw      8613    ; 2100 ^ 2 = 4410000, value >> 9 = 8613
+        dw      8621    ; 2101 ^ 2 = 4414201, value >> 9 = 8621
+        dw      8629    ; 2102 ^ 2 = 4418404, value >> 9 = 8629
+        dw      8637    ; 2103 ^ 2 = 4422609, value >> 9 = 8637
+        dw      8646    ; 2104 ^ 2 = 4426816, value >> 9 = 8646
+        dw      8654    ; 2105 ^ 2 = 4431025, value >> 9 = 8654
+        dw      8662    ; 2106 ^ 2 = 4435236, value >> 9 = 8662
+        dw      8670    ; 2107 ^ 2 = 4439449, value >> 9 = 8670
+        dw      8679    ; 2108 ^ 2 = 4443664, value >> 9 = 8679
+        dw      8687    ; 2109 ^ 2 = 4447881, value >> 9 = 8687
+        dw      8695    ; 2110 ^ 2 = 4452100, value >> 9 = 8695
+        dw      8703    ; 2111 ^ 2 = 4456321, value >> 9 = 8703
+        dw      8712    ; 2112 ^ 2 = 4460544, value >> 9 = 8712
+        dw      8720    ; 2113 ^ 2 = 4464769, value >> 9 = 8720
+        dw      8728    ; 2114 ^ 2 = 4468996, value >> 9 = 8728
+        dw      8736    ; 2115 ^ 2 = 4473225, value >> 9 = 8736
+        dw      8745    ; 2116 ^ 2 = 4477456, value >> 9 = 8745
+        dw      8753    ; 2117 ^ 2 = 4481689, value >> 9 = 8753
+        dw      8761    ; 2118 ^ 2 = 4485924, value >> 9 = 8761
+        dw      8769    ; 2119 ^ 2 = 4490161, value >> 9 = 8769
+        dw      8778    ; 2120 ^ 2 = 4494400, value >> 9 = 8778
+        dw      8786    ; 2121 ^ 2 = 4498641, value >> 9 = 8786
+        dw      8794    ; 2122 ^ 2 = 4502884, value >> 9 = 8794
+        dw      8802    ; 2123 ^ 2 = 4507129, value >> 9 = 8802
+        dw      8811    ; 2124 ^ 2 = 4511376, value >> 9 = 8811
+        dw      8819    ; 2125 ^ 2 = 4515625, value >> 9 = 8819
+        dw      8827    ; 2126 ^ 2 = 4519876, value >> 9 = 8827
+        dw      8836    ; 2127 ^ 2 = 4524129, value >> 9 = 8836
+        dw      8844    ; 2128 ^ 2 = 4528384, value >> 9 = 8844
+        dw      8852    ; 2129 ^ 2 = 4532641, value >> 9 = 8852
+        dw      8861    ; 2130 ^ 2 = 4536900, value >> 9 = 8861
+        dw      8869    ; 2131 ^ 2 = 4541161, value >> 9 = 8869
+        dw      8877    ; 2132 ^ 2 = 4545424, value >> 9 = 8877
+        dw      8886    ; 2133 ^ 2 = 4549689, value >> 9 = 8886
+        dw      8894    ; 2134 ^ 2 = 4553956, value >> 9 = 8894
+        dw      8902    ; 2135 ^ 2 = 4558225, value >> 9 = 8902
+        dw      8911    ; 2136 ^ 2 = 4562496, value >> 9 = 8911
+        dw      8919    ; 2137 ^ 2 = 4566769, value >> 9 = 8919
+        dw      8927    ; 2138 ^ 2 = 4571044, value >> 9 = 8927
+        dw      8936    ; 2139 ^ 2 = 4575321, value >> 9 = 8936
+        dw      8944    ; 2140 ^ 2 = 4579600, value >> 9 = 8944
+        dw      8952    ; 2141 ^ 2 = 4583881, value >> 9 = 8952
+        dw      8961    ; 2142 ^ 2 = 4588164, value >> 9 = 8961
+        dw      8969    ; 2143 ^ 2 = 4592449, value >> 9 = 8969
+        dw      8978    ; 2144 ^ 2 = 4596736, value >> 9 = 8978
+        dw      8986    ; 2145 ^ 2 = 4601025, value >> 9 = 8986
+        dw      8994    ; 2146 ^ 2 = 4605316, value >> 9 = 8994
+        dw      9003    ; 2147 ^ 2 = 4609609, value >> 9 = 9003
+        dw      9011    ; 2148 ^ 2 = 4613904, value >> 9 = 9011
+        dw      9019    ; 2149 ^ 2 = 4618201, value >> 9 = 9019
+        dw      9028    ; 2150 ^ 2 = 4622500, value >> 9 = 9028
+        dw      9036    ; 2151 ^ 2 = 4626801, value >> 9 = 9036
+        dw      9045    ; 2152 ^ 2 = 4631104, value >> 9 = 9045
+        dw      9053    ; 2153 ^ 2 = 4635409, value >> 9 = 9053
+        dw      9061    ; 2154 ^ 2 = 4639716, value >> 9 = 9061
+        dw      9070    ; 2155 ^ 2 = 4644025, value >> 9 = 9070
+        dw      9078    ; 2156 ^ 2 = 4648336, value >> 9 = 9078
+        dw      9087    ; 2157 ^ 2 = 4652649, value >> 9 = 9087
+        dw      9095    ; 2158 ^ 2 = 4656964, value >> 9 = 9095
+        dw      9104    ; 2159 ^ 2 = 4661281, value >> 9 = 9104
+        dw      9112    ; 2160 ^ 2 = 4665600, value >> 9 = 9112
+        dw      9120    ; 2161 ^ 2 = 4669921, value >> 9 = 9120
+        dw      9129    ; 2162 ^ 2 = 4674244, value >> 9 = 9129
+        dw      9137    ; 2163 ^ 2 = 4678569, value >> 9 = 9137
+        dw      9146    ; 2164 ^ 2 = 4682896, value >> 9 = 9146
+        dw      9154    ; 2165 ^ 2 = 4687225, value >> 9 = 9154
+        dw      9163    ; 2166 ^ 2 = 4691556, value >> 9 = 9163
+        dw      9171    ; 2167 ^ 2 = 4695889, value >> 9 = 9171
+        dw      9180    ; 2168 ^ 2 = 4700224, value >> 9 = 9180
+        dw      9188    ; 2169 ^ 2 = 4704561, value >> 9 = 9188
+        dw      9197    ; 2170 ^ 2 = 4708900, value >> 9 = 9197
+        dw      9205    ; 2171 ^ 2 = 4713241, value >> 9 = 9205
+        dw      9214    ; 2172 ^ 2 = 4717584, value >> 9 = 9214
+        dw      9222    ; 2173 ^ 2 = 4721929, value >> 9 = 9222
+        dw      9231    ; 2174 ^ 2 = 4726276, value >> 9 = 9231
+        dw      9239    ; 2175 ^ 2 = 4730625, value >> 9 = 9239
+        dw      9248    ; 2176 ^ 2 = 4734976, value >> 9 = 9248
+        dw      9256    ; 2177 ^ 2 = 4739329, value >> 9 = 9256
+        dw      9265    ; 2178 ^ 2 = 4743684, value >> 9 = 9265
+        dw      9273    ; 2179 ^ 2 = 4748041, value >> 9 = 9273
+        dw      9282    ; 2180 ^ 2 = 4752400, value >> 9 = 9282
+        dw      9290    ; 2181 ^ 2 = 4756761, value >> 9 = 9290
+        dw      9299    ; 2182 ^ 2 = 4761124, value >> 9 = 9299
+        dw      9307    ; 2183 ^ 2 = 4765489, value >> 9 = 9307
+        dw      9316    ; 2184 ^ 2 = 4769856, value >> 9 = 9316
+        dw      9324    ; 2185 ^ 2 = 4774225, value >> 9 = 9324
+        dw      9333    ; 2186 ^ 2 = 4778596, value >> 9 = 9333
+        dw      9341    ; 2187 ^ 2 = 4782969, value >> 9 = 9341
+        dw      9350    ; 2188 ^ 2 = 4787344, value >> 9 = 9350
+        dw      9358    ; 2189 ^ 2 = 4791721, value >> 9 = 9358
+        dw      9367    ; 2190 ^ 2 = 4796100, value >> 9 = 9367
+        dw      9375    ; 2191 ^ 2 = 4800481, value >> 9 = 9375
+        dw      9384    ; 2192 ^ 2 = 4804864, value >> 9 = 9384
+        dw      9393    ; 2193 ^ 2 = 4809249, value >> 9 = 9393
+        dw      9401    ; 2194 ^ 2 = 4813636, value >> 9 = 9401
+        dw      9410    ; 2195 ^ 2 = 4818025, value >> 9 = 9410
+        dw      9418    ; 2196 ^ 2 = 4822416, value >> 9 = 9418
+        dw      9427    ; 2197 ^ 2 = 4826809, value >> 9 = 9427
+        dw      9435    ; 2198 ^ 2 = 4831204, value >> 9 = 9435
+        dw      9444    ; 2199 ^ 2 = 4835601, value >> 9 = 9444
+        dw      9453    ; 2200 ^ 2 = 4840000, value >> 9 = 9453
+        dw      9461    ; 2201 ^ 2 = 4844401, value >> 9 = 9461
+        dw      9470    ; 2202 ^ 2 = 4848804, value >> 9 = 9470
+        dw      9478    ; 2203 ^ 2 = 4853209, value >> 9 = 9478
+        dw      9487    ; 2204 ^ 2 = 4857616, value >> 9 = 9487
+        dw      9496    ; 2205 ^ 2 = 4862025, value >> 9 = 9496
+        dw      9504    ; 2206 ^ 2 = 4866436, value >> 9 = 9504
+        dw      9513    ; 2207 ^ 2 = 4870849, value >> 9 = 9513
+        dw      9522    ; 2208 ^ 2 = 4875264, value >> 9 = 9522
+        dw      9530    ; 2209 ^ 2 = 4879681, value >> 9 = 9530
+        dw      9539    ; 2210 ^ 2 = 4884100, value >> 9 = 9539
+        dw      9547    ; 2211 ^ 2 = 4888521, value >> 9 = 9547
+        dw      9556    ; 2212 ^ 2 = 4892944, value >> 9 = 9556
+        dw      9565    ; 2213 ^ 2 = 4897369, value >> 9 = 9565
+        dw      9573    ; 2214 ^ 2 = 4901796, value >> 9 = 9573
+        dw      9582    ; 2215 ^ 2 = 4906225, value >> 9 = 9582
+        dw      9591    ; 2216 ^ 2 = 4910656, value >> 9 = 9591
+        dw      9599    ; 2217 ^ 2 = 4915089, value >> 9 = 9599
+        dw      9608    ; 2218 ^ 2 = 4919524, value >> 9 = 9608
+        dw      9617    ; 2219 ^ 2 = 4923961, value >> 9 = 9617
+        dw      9625    ; 2220 ^ 2 = 4928400, value >> 9 = 9625
+        dw      9634    ; 2221 ^ 2 = 4932841, value >> 9 = 9634
+        dw      9643    ; 2222 ^ 2 = 4937284, value >> 9 = 9643
+        dw      9651    ; 2223 ^ 2 = 4941729, value >> 9 = 9651
+        dw      9660    ; 2224 ^ 2 = 4946176, value >> 9 = 9660
+        dw      9669    ; 2225 ^ 2 = 4950625, value >> 9 = 9669
+        dw      9677    ; 2226 ^ 2 = 4955076, value >> 9 = 9677
+        dw      9686    ; 2227 ^ 2 = 4959529, value >> 9 = 9686
+        dw      9695    ; 2228 ^ 2 = 4963984, value >> 9 = 9695
+        dw      9703    ; 2229 ^ 2 = 4968441, value >> 9 = 9703
+        dw      9712    ; 2230 ^ 2 = 4972900, value >> 9 = 9712
+        dw      9721    ; 2231 ^ 2 = 4977361, value >> 9 = 9721
+        dw      9730    ; 2232 ^ 2 = 4981824, value >> 9 = 9730
+        dw      9738    ; 2233 ^ 2 = 4986289, value >> 9 = 9738
+        dw      9747    ; 2234 ^ 2 = 4990756, value >> 9 = 9747
+        dw      9756    ; 2235 ^ 2 = 4995225, value >> 9 = 9756
+        dw      9765    ; 2236 ^ 2 = 4999696, value >> 9 = 9765
+        dw      9773    ; 2237 ^ 2 = 5004169, value >> 9 = 9773
+        dw      9782    ; 2238 ^ 2 = 5008644, value >> 9 = 9782
+        dw      9791    ; 2239 ^ 2 = 5013121, value >> 9 = 9791
+        dw      9800    ; 2240 ^ 2 = 5017600, value >> 9 = 9800
+        dw      9808    ; 2241 ^ 2 = 5022081, value >> 9 = 9808
+        dw      9817    ; 2242 ^ 2 = 5026564, value >> 9 = 9817
+        dw      9826    ; 2243 ^ 2 = 5031049, value >> 9 = 9826
+        dw      9835    ; 2244 ^ 2 = 5035536, value >> 9 = 9835
+        dw      9843    ; 2245 ^ 2 = 5040025, value >> 9 = 9843
+        dw      9852    ; 2246 ^ 2 = 5044516, value >> 9 = 9852
+        dw      9861    ; 2247 ^ 2 = 5049009, value >> 9 = 9861
+        dw      9870    ; 2248 ^ 2 = 5053504, value >> 9 = 9870
+        dw      9878    ; 2249 ^ 2 = 5058001, value >> 9 = 9878
+        dw      9887    ; 2250 ^ 2 = 5062500, value >> 9 = 9887
+        dw      9896    ; 2251 ^ 2 = 5067001, value >> 9 = 9896
+        dw      9905    ; 2252 ^ 2 = 5071504, value >> 9 = 9905
+        dw      9914    ; 2253 ^ 2 = 5076009, value >> 9 = 9914
+        dw      9922    ; 2254 ^ 2 = 5080516, value >> 9 = 9922
+        dw      9931    ; 2255 ^ 2 = 5085025, value >> 9 = 9931
+        dw      9940    ; 2256 ^ 2 = 5089536, value >> 9 = 9940
+        dw      9949    ; 2257 ^ 2 = 5094049, value >> 9 = 9949
+        dw      9958    ; 2258 ^ 2 = 5098564, value >> 9 = 9958
+        dw      9966    ; 2259 ^ 2 = 5103081, value >> 9 = 9966
+        dw      9975    ; 2260 ^ 2 = 5107600, value >> 9 = 9975
+        dw      9984    ; 2261 ^ 2 = 5112121, value >> 9 = 9984
+        dw      9993    ; 2262 ^ 2 = 5116644, value >> 9 = 9993
+        dw      10002   ; 2263 ^ 2 = 5121169, value >> 9 = 10002
+        dw      10011   ; 2264 ^ 2 = 5125696, value >> 9 = 10011
+        dw      10019   ; 2265 ^ 2 = 5130225, value >> 9 = 10019
+        dw      10028   ; 2266 ^ 2 = 5134756, value >> 9 = 10028
+        dw      10037   ; 2267 ^ 2 = 5139289, value >> 9 = 10037
+        dw      10046   ; 2268 ^ 2 = 5143824, value >> 9 = 10046
+        dw      10055   ; 2269 ^ 2 = 5148361, value >> 9 = 10055
+        dw      10064   ; 2270 ^ 2 = 5152900, value >> 9 = 10064
+        dw      10073   ; 2271 ^ 2 = 5157441, value >> 9 = 10073
+        dw      10082   ; 2272 ^ 2 = 5161984, value >> 9 = 10082
+        dw      10090   ; 2273 ^ 2 = 5166529, value >> 9 = 10090
+        dw      10099   ; 2274 ^ 2 = 5171076, value >> 9 = 10099
+        dw      10108   ; 2275 ^ 2 = 5175625, value >> 9 = 10108
+        dw      10117   ; 2276 ^ 2 = 5180176, value >> 9 = 10117
+        dw      10126   ; 2277 ^ 2 = 5184729, value >> 9 = 10126
+        dw      10135   ; 2278 ^ 2 = 5189284, value >> 9 = 10135
+        dw      10144   ; 2279 ^ 2 = 5193841, value >> 9 = 10144
+        dw      10153   ; 2280 ^ 2 = 5198400, value >> 9 = 10153
+        dw      10162   ; 2281 ^ 2 = 5202961, value >> 9 = 10162
+        dw      10170   ; 2282 ^ 2 = 5207524, value >> 9 = 10170
+        dw      10179   ; 2283 ^ 2 = 5212089, value >> 9 = 10179
+        dw      10188   ; 2284 ^ 2 = 5216656, value >> 9 = 10188
+        dw      10197   ; 2285 ^ 2 = 5221225, value >> 9 = 10197
+        dw      10206   ; 2286 ^ 2 = 5225796, value >> 9 = 10206
+        dw      10215   ; 2287 ^ 2 = 5230369, value >> 9 = 10215
+        dw      10224   ; 2288 ^ 2 = 5234944, value >> 9 = 10224
+        dw      10233   ; 2289 ^ 2 = 5239521, value >> 9 = 10233
+        dw      10242   ; 2290 ^ 2 = 5244100, value >> 9 = 10242
+        dw      10251   ; 2291 ^ 2 = 5248681, value >> 9 = 10251
+        dw      10260   ; 2292 ^ 2 = 5253264, value >> 9 = 10260
+        dw      10269   ; 2293 ^ 2 = 5257849, value >> 9 = 10269
+        dw      10278   ; 2294 ^ 2 = 5262436, value >> 9 = 10278
+        dw      10287   ; 2295 ^ 2 = 5267025, value >> 9 = 10287
+        dw      10296   ; 2296 ^ 2 = 5271616, value >> 9 = 10296
+        dw      10305   ; 2297 ^ 2 = 5276209, value >> 9 = 10305
+        dw      10314   ; 2298 ^ 2 = 5280804, value >> 9 = 10314
+        dw      10323   ; 2299 ^ 2 = 5285401, value >> 9 = 10323
+        dw      10332   ; 2300 ^ 2 = 5290000, value >> 9 = 10332
+        dw      10341   ; 2301 ^ 2 = 5294601, value >> 9 = 10341
+        dw      10350   ; 2302 ^ 2 = 5299204, value >> 9 = 10350
+        dw      10359   ; 2303 ^ 2 = 5303809, value >> 9 = 10359
+        dw      10368   ; 2304 ^ 2 = 5308416, value >> 9 = 10368
+        dw      10377   ; 2305 ^ 2 = 5313025, value >> 9 = 10377
+        dw      10386   ; 2306 ^ 2 = 5317636, value >> 9 = 10386
+        dw      10395   ; 2307 ^ 2 = 5322249, value >> 9 = 10395
+        dw      10404   ; 2308 ^ 2 = 5326864, value >> 9 = 10404
+        dw      10413   ; 2309 ^ 2 = 5331481, value >> 9 = 10413
+        dw      10422   ; 2310 ^ 2 = 5336100, value >> 9 = 10422
+        dw      10431   ; 2311 ^ 2 = 5340721, value >> 9 = 10431
+        dw      10440   ; 2312 ^ 2 = 5345344, value >> 9 = 10440
+        dw      10449   ; 2313 ^ 2 = 5349969, value >> 9 = 10449
+        dw      10458   ; 2314 ^ 2 = 5354596, value >> 9 = 10458
+        dw      10467   ; 2315 ^ 2 = 5359225, value >> 9 = 10467
+        dw      10476   ; 2316 ^ 2 = 5363856, value >> 9 = 10476
+        dw      10485   ; 2317 ^ 2 = 5368489, value >> 9 = 10485
+        dw      10494   ; 2318 ^ 2 = 5373124, value >> 9 = 10494
+        dw      10503   ; 2319 ^ 2 = 5377761, value >> 9 = 10503
+        dw      10512   ; 2320 ^ 2 = 5382400, value >> 9 = 10512
+        dw      10521   ; 2321 ^ 2 = 5387041, value >> 9 = 10521
+        dw      10530   ; 2322 ^ 2 = 5391684, value >> 9 = 10530
+        dw      10539   ; 2323 ^ 2 = 5396329, value >> 9 = 10539
+        dw      10548   ; 2324 ^ 2 = 5400976, value >> 9 = 10548
+        dw      10557   ; 2325 ^ 2 = 5405625, value >> 9 = 10557
+        dw      10566   ; 2326 ^ 2 = 5410276, value >> 9 = 10566
+        dw      10576   ; 2327 ^ 2 = 5414929, value >> 9 = 10576
+        dw      10585   ; 2328 ^ 2 = 5419584, value >> 9 = 10585
+        dw      10594   ; 2329 ^ 2 = 5424241, value >> 9 = 10594
+        dw      10603   ; 2330 ^ 2 = 5428900, value >> 9 = 10603
+        dw      10612   ; 2331 ^ 2 = 5433561, value >> 9 = 10612
+        dw      10621   ; 2332 ^ 2 = 5438224, value >> 9 = 10621
+        dw      10630   ; 2333 ^ 2 = 5442889, value >> 9 = 10630
+        dw      10639   ; 2334 ^ 2 = 5447556, value >> 9 = 10639
+        dw      10648   ; 2335 ^ 2 = 5452225, value >> 9 = 10648
+        dw      10658   ; 2336 ^ 2 = 5456896, value >> 9 = 10658
+        dw      10667   ; 2337 ^ 2 = 5461569, value >> 9 = 10667
+        dw      10676   ; 2338 ^ 2 = 5466244, value >> 9 = 10676
+        dw      10685   ; 2339 ^ 2 = 5470921, value >> 9 = 10685
+        dw      10694   ; 2340 ^ 2 = 5475600, value >> 9 = 10694
+        dw      10703   ; 2341 ^ 2 = 5480281, value >> 9 = 10703
+        dw      10712   ; 2342 ^ 2 = 5484964, value >> 9 = 10712
+        dw      10721   ; 2343 ^ 2 = 5489649, value >> 9 = 10721
+        dw      10731   ; 2344 ^ 2 = 5494336, value >> 9 = 10731
+        dw      10740   ; 2345 ^ 2 = 5499025, value >> 9 = 10740
+        dw      10749   ; 2346 ^ 2 = 5503716, value >> 9 = 10749
+        dw      10758   ; 2347 ^ 2 = 5508409, value >> 9 = 10758
+        dw      10767   ; 2348 ^ 2 = 5513104, value >> 9 = 10767
+        dw      10776   ; 2349 ^ 2 = 5517801, value >> 9 = 10776
+        dw      10786   ; 2350 ^ 2 = 5522500, value >> 9 = 10786
+        dw      10795   ; 2351 ^ 2 = 5527201, value >> 9 = 10795
+        dw      10804   ; 2352 ^ 2 = 5531904, value >> 9 = 10804
+        dw      10813   ; 2353 ^ 2 = 5536609, value >> 9 = 10813
+        dw      10822   ; 2354 ^ 2 = 5541316, value >> 9 = 10822
+        dw      10832   ; 2355 ^ 2 = 5546025, value >> 9 = 10832
+        dw      10841   ; 2356 ^ 2 = 5550736, value >> 9 = 10841
+        dw      10850   ; 2357 ^ 2 = 5555449, value >> 9 = 10850
+        dw      10859   ; 2358 ^ 2 = 5560164, value >> 9 = 10859
+        dw      10868   ; 2359 ^ 2 = 5564881, value >> 9 = 10868
+        dw      10878   ; 2360 ^ 2 = 5569600, value >> 9 = 10878
+        dw      10887   ; 2361 ^ 2 = 5574321, value >> 9 = 10887
+        dw      10896   ; 2362 ^ 2 = 5579044, value >> 9 = 10896
+        dw      10905   ; 2363 ^ 2 = 5583769, value >> 9 = 10905
+        dw      10915   ; 2364 ^ 2 = 5588496, value >> 9 = 10915
+        dw      10924   ; 2365 ^ 2 = 5593225, value >> 9 = 10924
+        dw      10933   ; 2366 ^ 2 = 5597956, value >> 9 = 10933
+        dw      10942   ; 2367 ^ 2 = 5602689, value >> 9 = 10942
+        dw      10952   ; 2368 ^ 2 = 5607424, value >> 9 = 10952
+        dw      10961   ; 2369 ^ 2 = 5612161, value >> 9 = 10961
+        dw      10970   ; 2370 ^ 2 = 5616900, value >> 9 = 10970
+        dw      10979   ; 2371 ^ 2 = 5621641, value >> 9 = 10979
+        dw      10989   ; 2372 ^ 2 = 5626384, value >> 9 = 10989
+        dw      10998   ; 2373 ^ 2 = 5631129, value >> 9 = 10998
+        dw      11007   ; 2374 ^ 2 = 5635876, value >> 9 = 11007
+        dw      11016   ; 2375 ^ 2 = 5640625, value >> 9 = 11016
+        dw      11026   ; 2376 ^ 2 = 5645376, value >> 9 = 11026
+        dw      11035   ; 2377 ^ 2 = 5650129, value >> 9 = 11035
+        dw      11044   ; 2378 ^ 2 = 5654884, value >> 9 = 11044
+        dw      11053   ; 2379 ^ 2 = 5659641, value >> 9 = 11053
+        dw      11063   ; 2380 ^ 2 = 5664400, value >> 9 = 11063
+        dw      11072   ; 2381 ^ 2 = 5669161, value >> 9 = 11072
+        dw      11081   ; 2382 ^ 2 = 5673924, value >> 9 = 11081
+        dw      11091   ; 2383 ^ 2 = 5678689, value >> 9 = 11091
+        dw      11100   ; 2384 ^ 2 = 5683456, value >> 9 = 11100
+        dw      11109   ; 2385 ^ 2 = 5688225, value >> 9 = 11109
+        dw      11119   ; 2386 ^ 2 = 5692996, value >> 9 = 11119
+        dw      11128   ; 2387 ^ 2 = 5697769, value >> 9 = 11128
+        dw      11137   ; 2388 ^ 2 = 5702544, value >> 9 = 11137
+        dw      11147   ; 2389 ^ 2 = 5707321, value >> 9 = 11147
+        dw      11156   ; 2390 ^ 2 = 5712100, value >> 9 = 11156
+        dw      11165   ; 2391 ^ 2 = 5716881, value >> 9 = 11165
+        dw      11175   ; 2392 ^ 2 = 5721664, value >> 9 = 11175
+        dw      11184   ; 2393 ^ 2 = 5726449, value >> 9 = 11184
+        dw      11193   ; 2394 ^ 2 = 5731236, value >> 9 = 11193
+        dw      11203   ; 2395 ^ 2 = 5736025, value >> 9 = 11203
+        dw      11212   ; 2396 ^ 2 = 5740816, value >> 9 = 11212
+        dw      11221   ; 2397 ^ 2 = 5745609, value >> 9 = 11221
+        dw      11231   ; 2398 ^ 2 = 5750404, value >> 9 = 11231
+        dw      11240   ; 2399 ^ 2 = 5755201, value >> 9 = 11240
+        dw      11250   ; 2400 ^ 2 = 5760000, value >> 9 = 11250
+        dw      11259   ; 2401 ^ 2 = 5764801, value >> 9 = 11259
+        dw      11268   ; 2402 ^ 2 = 5769604, value >> 9 = 11268
+        dw      11278   ; 2403 ^ 2 = 5774409, value >> 9 = 11278
+        dw      11287   ; 2404 ^ 2 = 5779216, value >> 9 = 11287
+        dw      11296   ; 2405 ^ 2 = 5784025, value >> 9 = 11296
+        dw      11306   ; 2406 ^ 2 = 5788836, value >> 9 = 11306
+        dw      11315   ; 2407 ^ 2 = 5793649, value >> 9 = 11315
+        dw      11325   ; 2408 ^ 2 = 5798464, value >> 9 = 11325
+        dw      11334   ; 2409 ^ 2 = 5803281, value >> 9 = 11334
+        dw      11343   ; 2410 ^ 2 = 5808100, value >> 9 = 11343
+        dw      11353   ; 2411 ^ 2 = 5812921, value >> 9 = 11353
+        dw      11362   ; 2412 ^ 2 = 5817744, value >> 9 = 11362
+        dw      11372   ; 2413 ^ 2 = 5822569, value >> 9 = 11372
+        dw      11381   ; 2414 ^ 2 = 5827396, value >> 9 = 11381
+        dw      11391   ; 2415 ^ 2 = 5832225, value >> 9 = 11391
+        dw      11400   ; 2416 ^ 2 = 5837056, value >> 9 = 11400
+        dw      11409   ; 2417 ^ 2 = 5841889, value >> 9 = 11409
+        dw      11419   ; 2418 ^ 2 = 5846724, value >> 9 = 11419
+        dw      11428   ; 2419 ^ 2 = 5851561, value >> 9 = 11428
+        dw      11438   ; 2420 ^ 2 = 5856400, value >> 9 = 11438
+        dw      11447   ; 2421 ^ 2 = 5861241, value >> 9 = 11447
+        dw      11457   ; 2422 ^ 2 = 5866084, value >> 9 = 11457
+        dw      11466   ; 2423 ^ 2 = 5870929, value >> 9 = 11466
+        dw      11476   ; 2424 ^ 2 = 5875776, value >> 9 = 11476
+        dw      11485   ; 2425 ^ 2 = 5880625, value >> 9 = 11485
+        dw      11495   ; 2426 ^ 2 = 5885476, value >> 9 = 11495
+        dw      11504   ; 2427 ^ 2 = 5890329, value >> 9 = 11504
+        dw      11514   ; 2428 ^ 2 = 5895184, value >> 9 = 11514
+        dw      11523   ; 2429 ^ 2 = 5900041, value >> 9 = 11523
+        dw      11533   ; 2430 ^ 2 = 5904900, value >> 9 = 11533
+        dw      11542   ; 2431 ^ 2 = 5909761, value >> 9 = 11542
+        dw      11552   ; 2432 ^ 2 = 5914624, value >> 9 = 11552
+        dw      11561   ; 2433 ^ 2 = 5919489, value >> 9 = 11561
+        dw      11571   ; 2434 ^ 2 = 5924356, value >> 9 = 11571
+        dw      11580   ; 2435 ^ 2 = 5929225, value >> 9 = 11580
+        dw      11590   ; 2436 ^ 2 = 5934096, value >> 9 = 11590
+        dw      11599   ; 2437 ^ 2 = 5938969, value >> 9 = 11599
+        dw      11609   ; 2438 ^ 2 = 5943844, value >> 9 = 11609
+        dw      11618   ; 2439 ^ 2 = 5948721, value >> 9 = 11618
+        dw      11628   ; 2440 ^ 2 = 5953600, value >> 9 = 11628
+        dw      11637   ; 2441 ^ 2 = 5958481, value >> 9 = 11637
+        dw      11647   ; 2442 ^ 2 = 5963364, value >> 9 = 11647
+        dw      11656   ; 2443 ^ 2 = 5968249, value >> 9 = 11656
+        dw      11666   ; 2444 ^ 2 = 5973136, value >> 9 = 11666
+        dw      11675   ; 2445 ^ 2 = 5978025, value >> 9 = 11675
+        dw      11685   ; 2446 ^ 2 = 5982916, value >> 9 = 11685
+        dw      11694   ; 2447 ^ 2 = 5987809, value >> 9 = 11694
+        dw      11704   ; 2448 ^ 2 = 5992704, value >> 9 = 11704
+        dw      11714   ; 2449 ^ 2 = 5997601, value >> 9 = 11714
+        dw      11723   ; 2450 ^ 2 = 6002500, value >> 9 = 11723
+        dw      11733   ; 2451 ^ 2 = 6007401, value >> 9 = 11733
+        dw      11742   ; 2452 ^ 2 = 6012304, value >> 9 = 11742
+        dw      11752   ; 2453 ^ 2 = 6017209, value >> 9 = 11752
+        dw      11761   ; 2454 ^ 2 = 6022116, value >> 9 = 11761
+        dw      11771   ; 2455 ^ 2 = 6027025, value >> 9 = 11771
+        dw      11781   ; 2456 ^ 2 = 6031936, value >> 9 = 11781
+        dw      11790   ; 2457 ^ 2 = 6036849, value >> 9 = 11790
+        dw      11800   ; 2458 ^ 2 = 6041764, value >> 9 = 11800
+        dw      11809   ; 2459 ^ 2 = 6046681, value >> 9 = 11809
+        dw      11819   ; 2460 ^ 2 = 6051600, value >> 9 = 11819
+        dw      11829   ; 2461 ^ 2 = 6056521, value >> 9 = 11829
+        dw      11838   ; 2462 ^ 2 = 6061444, value >> 9 = 11838
+        dw      11848   ; 2463 ^ 2 = 6066369, value >> 9 = 11848
+        dw      11858   ; 2464 ^ 2 = 6071296, value >> 9 = 11858
+        dw      11867   ; 2465 ^ 2 = 6076225, value >> 9 = 11867
+        dw      11877   ; 2466 ^ 2 = 6081156, value >> 9 = 11877
+        dw      11886   ; 2467 ^ 2 = 6086089, value >> 9 = 11886
+        dw      11896   ; 2468 ^ 2 = 6091024, value >> 9 = 11896
+        dw      11906   ; 2469 ^ 2 = 6095961, value >> 9 = 11906
+        dw      11915   ; 2470 ^ 2 = 6100900, value >> 9 = 11915
+        dw      11925   ; 2471 ^ 2 = 6105841, value >> 9 = 11925
+        dw      11935   ; 2472 ^ 2 = 6110784, value >> 9 = 11935
+        dw      11944   ; 2473 ^ 2 = 6115729, value >> 9 = 11944
+        dw      11954   ; 2474 ^ 2 = 6120676, value >> 9 = 11954
+        dw      11964   ; 2475 ^ 2 = 6125625, value >> 9 = 11964
+        dw      11973   ; 2476 ^ 2 = 6130576, value >> 9 = 11973
+        dw      11983   ; 2477 ^ 2 = 6135529, value >> 9 = 11983
+        dw      11993   ; 2478 ^ 2 = 6140484, value >> 9 = 11993
+        dw      12002   ; 2479 ^ 2 = 6145441, value >> 9 = 12002
+        dw      12012   ; 2480 ^ 2 = 6150400, value >> 9 = 12012
+        dw      12022   ; 2481 ^ 2 = 6155361, value >> 9 = 12022
+        dw      12031   ; 2482 ^ 2 = 6160324, value >> 9 = 12031
+        dw      12041   ; 2483 ^ 2 = 6165289, value >> 9 = 12041
+        dw      12051   ; 2484 ^ 2 = 6170256, value >> 9 = 12051
+        dw      12060   ; 2485 ^ 2 = 6175225, value >> 9 = 12060
+        dw      12070   ; 2486 ^ 2 = 6180196, value >> 9 = 12070
+        dw      12080   ; 2487 ^ 2 = 6185169, value >> 9 = 12080
+        dw      12090   ; 2488 ^ 2 = 6190144, value >> 9 = 12090
+        dw      12099   ; 2489 ^ 2 = 6195121, value >> 9 = 12099
+        dw      12109   ; 2490 ^ 2 = 6200100, value >> 9 = 12109
+        dw      12119   ; 2491 ^ 2 = 6205081, value >> 9 = 12119
+        dw      12129   ; 2492 ^ 2 = 6210064, value >> 9 = 12129
+        dw      12138   ; 2493 ^ 2 = 6215049, value >> 9 = 12138
+        dw      12148   ; 2494 ^ 2 = 6220036, value >> 9 = 12148
+        dw      12158   ; 2495 ^ 2 = 6225025, value >> 9 = 12158
+        dw      12168   ; 2496 ^ 2 = 6230016, value >> 9 = 12168
+        dw      12177   ; 2497 ^ 2 = 6235009, value >> 9 = 12177
+        dw      12187   ; 2498 ^ 2 = 6240004, value >> 9 = 12187
+        dw      12197   ; 2499 ^ 2 = 6245001, value >> 9 = 12197
+        dw      12207   ; 2500 ^ 2 = 6250000, value >> 9 = 12207
+        dw      12216   ; 2501 ^ 2 = 6255001, value >> 9 = 12216
+        dw      12226   ; 2502 ^ 2 = 6260004, value >> 9 = 12226
+        dw      12236   ; 2503 ^ 2 = 6265009, value >> 9 = 12236
+        dw      12246   ; 2504 ^ 2 = 6270016, value >> 9 = 12246
+        dw      12255   ; 2505 ^ 2 = 6275025, value >> 9 = 12255
+        dw      12265   ; 2506 ^ 2 = 6280036, value >> 9 = 12265
+        dw      12275   ; 2507 ^ 2 = 6285049, value >> 9 = 12275
+        dw      12285   ; 2508 ^ 2 = 6290064, value >> 9 = 12285
+        dw      12295   ; 2509 ^ 2 = 6295081, value >> 9 = 12295
+        dw      12304   ; 2510 ^ 2 = 6300100, value >> 9 = 12304
+        dw      12314   ; 2511 ^ 2 = 6305121, value >> 9 = 12314
+        dw      12324   ; 2512 ^ 2 = 6310144, value >> 9 = 12324
+        dw      12334   ; 2513 ^ 2 = 6315169, value >> 9 = 12334
+        dw      12344   ; 2514 ^ 2 = 6320196, value >> 9 = 12344
+        dw      12353   ; 2515 ^ 2 = 6325225, value >> 9 = 12353
+        dw      12363   ; 2516 ^ 2 = 6330256, value >> 9 = 12363
+        dw      12373   ; 2517 ^ 2 = 6335289, value >> 9 = 12373
+        dw      12383   ; 2518 ^ 2 = 6340324, value >> 9 = 12383
+        dw      12393   ; 2519 ^ 2 = 6345361, value >> 9 = 12393
+        dw      12403   ; 2520 ^ 2 = 6350400, value >> 9 = 12403
+        dw      12412   ; 2521 ^ 2 = 6355441, value >> 9 = 12412
+        dw      12422   ; 2522 ^ 2 = 6360484, value >> 9 = 12422
+        dw      12432   ; 2523 ^ 2 = 6365529, value >> 9 = 12432
+        dw      12442   ; 2524 ^ 2 = 6370576, value >> 9 = 12442
+        dw      12452   ; 2525 ^ 2 = 6375625, value >> 9 = 12452
+        dw      12462   ; 2526 ^ 2 = 6380676, value >> 9 = 12462
+        dw      12472   ; 2527 ^ 2 = 6385729, value >> 9 = 12472
+        dw      12482   ; 2528 ^ 2 = 6390784, value >> 9 = 12482
+        dw      12491   ; 2529 ^ 2 = 6395841, value >> 9 = 12491
+        dw      12501   ; 2530 ^ 2 = 6400900, value >> 9 = 12501
+        dw      12511   ; 2531 ^ 2 = 6405961, value >> 9 = 12511
+        dw      12521   ; 2532 ^ 2 = 6411024, value >> 9 = 12521
+        dw      12531   ; 2533 ^ 2 = 6416089, value >> 9 = 12531
+        dw      12541   ; 2534 ^ 2 = 6421156, value >> 9 = 12541
+        dw      12551   ; 2535 ^ 2 = 6426225, value >> 9 = 12551
+        dw      12561   ; 2536 ^ 2 = 6431296, value >> 9 = 12561
+        dw      12571   ; 2537 ^ 2 = 6436369, value >> 9 = 12571
+        dw      12580   ; 2538 ^ 2 = 6441444, value >> 9 = 12580
+        dw      12590   ; 2539 ^ 2 = 6446521, value >> 9 = 12590
+        dw      12600   ; 2540 ^ 2 = 6451600, value >> 9 = 12600
+        dw      12610   ; 2541 ^ 2 = 6456681, value >> 9 = 12610
+        dw      12620   ; 2542 ^ 2 = 6461764, value >> 9 = 12620
+        dw      12630   ; 2543 ^ 2 = 6466849, value >> 9 = 12630
+        dw      12640   ; 2544 ^ 2 = 6471936, value >> 9 = 12640
+        dw      12650   ; 2545 ^ 2 = 6477025, value >> 9 = 12650
+        dw      12660   ; 2546 ^ 2 = 6482116, value >> 9 = 12660
+        dw      12670   ; 2547 ^ 2 = 6487209, value >> 9 = 12670
+        dw      12680   ; 2548 ^ 2 = 6492304, value >> 9 = 12680
+        dw      12690   ; 2549 ^ 2 = 6497401, value >> 9 = 12690
+        dw      12700   ; 2550 ^ 2 = 6502500, value >> 9 = 12700
+        dw      12710   ; 2551 ^ 2 = 6507601, value >> 9 = 12710
+        dw      12720   ; 2552 ^ 2 = 6512704, value >> 9 = 12720
+        dw      12730   ; 2553 ^ 2 = 6517809, value >> 9 = 12730
+        dw      12740   ; 2554 ^ 2 = 6522916, value >> 9 = 12740
+        dw      12750   ; 2555 ^ 2 = 6528025, value >> 9 = 12750
+        dw      12760   ; 2556 ^ 2 = 6533136, value >> 9 = 12760
+        dw      12770   ; 2557 ^ 2 = 6538249, value >> 9 = 12770
+        dw      12780   ; 2558 ^ 2 = 6543364, value >> 9 = 12780
+        dw      12790   ; 2559 ^ 2 = 6548481, value >> 9 = 12790
+        dw      12800   ; 2560 ^ 2 = 6553600, value >> 9 = 12800
+        dw      12810   ; 2561 ^ 2 = 6558721, value >> 9 = 12810
+        dw      12820   ; 2562 ^ 2 = 6563844, value >> 9 = 12820
+        dw      12830   ; 2563 ^ 2 = 6568969, value >> 9 = 12830
+        dw      12840   ; 2564 ^ 2 = 6574096, value >> 9 = 12840
+        dw      12850   ; 2565 ^ 2 = 6579225, value >> 9 = 12850
+        dw      12860   ; 2566 ^ 2 = 6584356, value >> 9 = 12860
+        dw      12870   ; 2567 ^ 2 = 6589489, value >> 9 = 12870
+        dw      12880   ; 2568 ^ 2 = 6594624, value >> 9 = 12880
+        dw      12890   ; 2569 ^ 2 = 6599761, value >> 9 = 12890
+        dw      12900   ; 2570 ^ 2 = 6604900, value >> 9 = 12900
+        dw      12910   ; 2571 ^ 2 = 6610041, value >> 9 = 12910
+        dw      12920   ; 2572 ^ 2 = 6615184, value >> 9 = 12920
+        dw      12930   ; 2573 ^ 2 = 6620329, value >> 9 = 12930
+        dw      12940   ; 2574 ^ 2 = 6625476, value >> 9 = 12940
+        dw      12950   ; 2575 ^ 2 = 6630625, value >> 9 = 12950
+        dw      12960   ; 2576 ^ 2 = 6635776, value >> 9 = 12960
+        dw      12970   ; 2577 ^ 2 = 6640929, value >> 9 = 12970
+        dw      12980   ; 2578 ^ 2 = 6646084, value >> 9 = 12980
+        dw      12990   ; 2579 ^ 2 = 6651241, value >> 9 = 12990
+        dw      13000   ; 2580 ^ 2 = 6656400, value >> 9 = 13000
+        dw      13010   ; 2581 ^ 2 = 6661561, value >> 9 = 13010
+        dw      13020   ; 2582 ^ 2 = 6666724, value >> 9 = 13020
+        dw      13031   ; 2583 ^ 2 = 6671889, value >> 9 = 13031
+        dw      13041   ; 2584 ^ 2 = 6677056, value >> 9 = 13041
+        dw      13051   ; 2585 ^ 2 = 6682225, value >> 9 = 13051
+        dw      13061   ; 2586 ^ 2 = 6687396, value >> 9 = 13061
+        dw      13071   ; 2587 ^ 2 = 6692569, value >> 9 = 13071
+        dw      13081   ; 2588 ^ 2 = 6697744, value >> 9 = 13081
+        dw      13091   ; 2589 ^ 2 = 6702921, value >> 9 = 13091
+        dw      13101   ; 2590 ^ 2 = 6708100, value >> 9 = 13101
+        dw      13111   ; 2591 ^ 2 = 6713281, value >> 9 = 13111
+        dw      13122   ; 2592 ^ 2 = 6718464, value >> 9 = 13122
+        dw      13132   ; 2593 ^ 2 = 6723649, value >> 9 = 13132
+        dw      13142   ; 2594 ^ 2 = 6728836, value >> 9 = 13142
+        dw      13152   ; 2595 ^ 2 = 6734025, value >> 9 = 13152
+        dw      13162   ; 2596 ^ 2 = 6739216, value >> 9 = 13162
+        dw      13172   ; 2597 ^ 2 = 6744409, value >> 9 = 13172
+        dw      13182   ; 2598 ^ 2 = 6749604, value >> 9 = 13182
+        dw      13192   ; 2599 ^ 2 = 6754801, value >> 9 = 13192
+        dw      13203   ; 2600 ^ 2 = 6760000, value >> 9 = 13203
+        dw      13213   ; 2601 ^ 2 = 6765201, value >> 9 = 13213
+        dw      13223   ; 2602 ^ 2 = 6770404, value >> 9 = 13223
+        dw      13233   ; 2603 ^ 2 = 6775609, value >> 9 = 13233
+        dw      13243   ; 2604 ^ 2 = 6780816, value >> 9 = 13243
+        dw      13253   ; 2605 ^ 2 = 6786025, value >> 9 = 13253
+        dw      13264   ; 2606 ^ 2 = 6791236, value >> 9 = 13264
+        dw      13274   ; 2607 ^ 2 = 6796449, value >> 9 = 13274
+        dw      13284   ; 2608 ^ 2 = 6801664, value >> 9 = 13284
+        dw      13294   ; 2609 ^ 2 = 6806881, value >> 9 = 13294
+        dw      13304   ; 2610 ^ 2 = 6812100, value >> 9 = 13304
+        dw      13315   ; 2611 ^ 2 = 6817321, value >> 9 = 13315
+        dw      13325   ; 2612 ^ 2 = 6822544, value >> 9 = 13325
+        dw      13335   ; 2613 ^ 2 = 6827769, value >> 9 = 13335
+        dw      13345   ; 2614 ^ 2 = 6832996, value >> 9 = 13345
+        dw      13355   ; 2615 ^ 2 = 6838225, value >> 9 = 13355
+        dw      13366   ; 2616 ^ 2 = 6843456, value >> 9 = 13366
+        dw      13376   ; 2617 ^ 2 = 6848689, value >> 9 = 13376
+        dw      13386   ; 2618 ^ 2 = 6853924, value >> 9 = 13386
+        dw      13396   ; 2619 ^ 2 = 6859161, value >> 9 = 13396
+        dw      13407   ; 2620 ^ 2 = 6864400, value >> 9 = 13407
+        dw      13417   ; 2621 ^ 2 = 6869641, value >> 9 = 13417
+        dw      13427   ; 2622 ^ 2 = 6874884, value >> 9 = 13427
+        dw      13437   ; 2623 ^ 2 = 6880129, value >> 9 = 13437
+        dw      13448   ; 2624 ^ 2 = 6885376, value >> 9 = 13448
+        dw      13458   ; 2625 ^ 2 = 6890625, value >> 9 = 13458
+        dw      13468   ; 2626 ^ 2 = 6895876, value >> 9 = 13468
+        dw      13478   ; 2627 ^ 2 = 6901129, value >> 9 = 13478
+        dw      13489   ; 2628 ^ 2 = 6906384, value >> 9 = 13489
+        dw      13499   ; 2629 ^ 2 = 6911641, value >> 9 = 13499
+        dw      13509   ; 2630 ^ 2 = 6916900, value >> 9 = 13509
+        dw      13519   ; 2631 ^ 2 = 6922161, value >> 9 = 13519
+        dw      13530   ; 2632 ^ 2 = 6927424, value >> 9 = 13530
+        dw      13540   ; 2633 ^ 2 = 6932689, value >> 9 = 13540
+        dw      13550   ; 2634 ^ 2 = 6937956, value >> 9 = 13550
+        dw      13560   ; 2635 ^ 2 = 6943225, value >> 9 = 13560
+        dw      13571   ; 2636 ^ 2 = 6948496, value >> 9 = 13571
+        dw      13581   ; 2637 ^ 2 = 6953769, value >> 9 = 13581
+        dw      13591   ; 2638 ^ 2 = 6959044, value >> 9 = 13591
+        dw      13602   ; 2639 ^ 2 = 6964321, value >> 9 = 13602
+        dw      13612   ; 2640 ^ 2 = 6969600, value >> 9 = 13612
+        dw      13622   ; 2641 ^ 2 = 6974881, value >> 9 = 13622
+        dw      13633   ; 2642 ^ 2 = 6980164, value >> 9 = 13633
+        dw      13643   ; 2643 ^ 2 = 6985449, value >> 9 = 13643
+        dw      13653   ; 2644 ^ 2 = 6990736, value >> 9 = 13653
+        dw      13664   ; 2645 ^ 2 = 6996025, value >> 9 = 13664
+        dw      13674   ; 2646 ^ 2 = 7001316, value >> 9 = 13674
+        dw      13684   ; 2647 ^ 2 = 7006609, value >> 9 = 13684
+        dw      13695   ; 2648 ^ 2 = 7011904, value >> 9 = 13695
+        dw      13705   ; 2649 ^ 2 = 7017201, value >> 9 = 13705
+        dw      13715   ; 2650 ^ 2 = 7022500, value >> 9 = 13715
+        dw      13726   ; 2651 ^ 2 = 7027801, value >> 9 = 13726
+        dw      13736   ; 2652 ^ 2 = 7033104, value >> 9 = 13736
+        dw      13746   ; 2653 ^ 2 = 7038409, value >> 9 = 13746
+        dw      13757   ; 2654 ^ 2 = 7043716, value >> 9 = 13757
+        dw      13767   ; 2655 ^ 2 = 7049025, value >> 9 = 13767
+        dw      13778   ; 2656 ^ 2 = 7054336, value >> 9 = 13778
+        dw      13788   ; 2657 ^ 2 = 7059649, value >> 9 = 13788
+        dw      13798   ; 2658 ^ 2 = 7064964, value >> 9 = 13798
+        dw      13809   ; 2659 ^ 2 = 7070281, value >> 9 = 13809
+        dw      13819   ; 2660 ^ 2 = 7075600, value >> 9 = 13819
+        dw      13829   ; 2661 ^ 2 = 7080921, value >> 9 = 13829
+        dw      13840   ; 2662 ^ 2 = 7086244, value >> 9 = 13840
+        dw      13850   ; 2663 ^ 2 = 7091569, value >> 9 = 13850
+        dw      13861   ; 2664 ^ 2 = 7096896, value >> 9 = 13861
+        dw      13871   ; 2665 ^ 2 = 7102225, value >> 9 = 13871
+        dw      13881   ; 2666 ^ 2 = 7107556, value >> 9 = 13881
+        dw      13892   ; 2667 ^ 2 = 7112889, value >> 9 = 13892
+        dw      13902   ; 2668 ^ 2 = 7118224, value >> 9 = 13902
+        dw      13913   ; 2669 ^ 2 = 7123561, value >> 9 = 13913
+        dw      13923   ; 2670 ^ 2 = 7128900, value >> 9 = 13923
+        dw      13934   ; 2671 ^ 2 = 7134241, value >> 9 = 13934
+        dw      13944   ; 2672 ^ 2 = 7139584, value >> 9 = 13944
+        dw      13954   ; 2673 ^ 2 = 7144929, value >> 9 = 13954
+        dw      13965   ; 2674 ^ 2 = 7150276, value >> 9 = 13965
+        dw      13975   ; 2675 ^ 2 = 7155625, value >> 9 = 13975
+        dw      13986   ; 2676 ^ 2 = 7160976, value >> 9 = 13986
+        dw      13996   ; 2677 ^ 2 = 7166329, value >> 9 = 13996
+        dw      14007   ; 2678 ^ 2 = 7171684, value >> 9 = 14007
+        dw      14017   ; 2679 ^ 2 = 7177041, value >> 9 = 14017
+        dw      14028   ; 2680 ^ 2 = 7182400, value >> 9 = 14028
+        dw      14038   ; 2681 ^ 2 = 7187761, value >> 9 = 14038
+        dw      14049   ; 2682 ^ 2 = 7193124, value >> 9 = 14049
+        dw      14059   ; 2683 ^ 2 = 7198489, value >> 9 = 14059
+        dw      14070   ; 2684 ^ 2 = 7203856, value >> 9 = 14070
+        dw      14080   ; 2685 ^ 2 = 7209225, value >> 9 = 14080
+        dw      14091   ; 2686 ^ 2 = 7214596, value >> 9 = 14091
+        dw      14101   ; 2687 ^ 2 = 7219969, value >> 9 = 14101
+        dw      14112   ; 2688 ^ 2 = 7225344, value >> 9 = 14112
+        dw      14122   ; 2689 ^ 2 = 7230721, value >> 9 = 14122
+        dw      14133   ; 2690 ^ 2 = 7236100, value >> 9 = 14133
+        dw      14143   ; 2691 ^ 2 = 7241481, value >> 9 = 14143
+        dw      14154   ; 2692 ^ 2 = 7246864, value >> 9 = 14154
+        dw      14164   ; 2693 ^ 2 = 7252249, value >> 9 = 14164
+        dw      14175   ; 2694 ^ 2 = 7257636, value >> 9 = 14175
+        dw      14185   ; 2695 ^ 2 = 7263025, value >> 9 = 14185
+        dw      14196   ; 2696 ^ 2 = 7268416, value >> 9 = 14196
+        dw      14206   ; 2697 ^ 2 = 7273809, value >> 9 = 14206
+        dw      14217   ; 2698 ^ 2 = 7279204, value >> 9 = 14217
+        dw      14227   ; 2699 ^ 2 = 7284601, value >> 9 = 14227
+        dw      14238   ; 2700 ^ 2 = 7290000, value >> 9 = 14238
+        dw      14248   ; 2701 ^ 2 = 7295401, value >> 9 = 14248
+        dw      14259   ; 2702 ^ 2 = 7300804, value >> 9 = 14259
+        dw      14269   ; 2703 ^ 2 = 7306209, value >> 9 = 14269
+        dw      14280   ; 2704 ^ 2 = 7311616, value >> 9 = 14280
+        dw      14291   ; 2705 ^ 2 = 7317025, value >> 9 = 14291
+        dw      14301   ; 2706 ^ 2 = 7322436, value >> 9 = 14301
+        dw      14312   ; 2707 ^ 2 = 7327849, value >> 9 = 14312
+        dw      14322   ; 2708 ^ 2 = 7333264, value >> 9 = 14322
+        dw      14333   ; 2709 ^ 2 = 7338681, value >> 9 = 14333
+        dw      14343   ; 2710 ^ 2 = 7344100, value >> 9 = 14343
+        dw      14354   ; 2711 ^ 2 = 7349521, value >> 9 = 14354
+        dw      14365   ; 2712 ^ 2 = 7354944, value >> 9 = 14365
+        dw      14375   ; 2713 ^ 2 = 7360369, value >> 9 = 14375
+        dw      14386   ; 2714 ^ 2 = 7365796, value >> 9 = 14386
+        dw      14396   ; 2715 ^ 2 = 7371225, value >> 9 = 14396
+        dw      14407   ; 2716 ^ 2 = 7376656, value >> 9 = 14407
+        dw      14418   ; 2717 ^ 2 = 7382089, value >> 9 = 14418
+        dw      14428   ; 2718 ^ 2 = 7387524, value >> 9 = 14428
+        dw      14439   ; 2719 ^ 2 = 7392961, value >> 9 = 14439
+        dw      14450   ; 2720 ^ 2 = 7398400, value >> 9 = 14450
+        dw      14460   ; 2721 ^ 2 = 7403841, value >> 9 = 14460
+        dw      14471   ; 2722 ^ 2 = 7409284, value >> 9 = 14471
+        dw      14481   ; 2723 ^ 2 = 7414729, value >> 9 = 14481
+        dw      14492   ; 2724 ^ 2 = 7420176, value >> 9 = 14492
+        dw      14503   ; 2725 ^ 2 = 7425625, value >> 9 = 14503
+        dw      14513   ; 2726 ^ 2 = 7431076, value >> 9 = 14513
+        dw      14524   ; 2727 ^ 2 = 7436529, value >> 9 = 14524
+        dw      14535   ; 2728 ^ 2 = 7441984, value >> 9 = 14535
+        dw      14545   ; 2729 ^ 2 = 7447441, value >> 9 = 14545
+        dw      14556   ; 2730 ^ 2 = 7452900, value >> 9 = 14556
+        dw      14567   ; 2731 ^ 2 = 7458361, value >> 9 = 14567
+        dw      14577   ; 2732 ^ 2 = 7463824, value >> 9 = 14577
+        dw      14588   ; 2733 ^ 2 = 7469289, value >> 9 = 14588
+        dw      14599   ; 2734 ^ 2 = 7474756, value >> 9 = 14599
+        dw      14609   ; 2735 ^ 2 = 7480225, value >> 9 = 14609
+        dw      14620   ; 2736 ^ 2 = 7485696, value >> 9 = 14620
+        dw      14631   ; 2737 ^ 2 = 7491169, value >> 9 = 14631
+        dw      14641   ; 2738 ^ 2 = 7496644, value >> 9 = 14641
+        dw      14652   ; 2739 ^ 2 = 7502121, value >> 9 = 14652
+        dw      14663   ; 2740 ^ 2 = 7507600, value >> 9 = 14663
+        dw      14673   ; 2741 ^ 2 = 7513081, value >> 9 = 14673
+        dw      14684   ; 2742 ^ 2 = 7518564, value >> 9 = 14684
+        dw      14695   ; 2743 ^ 2 = 7524049, value >> 9 = 14695
+        dw      14706   ; 2744 ^ 2 = 7529536, value >> 9 = 14706
+        dw      14716   ; 2745 ^ 2 = 7535025, value >> 9 = 14716
+        dw      14727   ; 2746 ^ 2 = 7540516, value >> 9 = 14727
+        dw      14738   ; 2747 ^ 2 = 7546009, value >> 9 = 14738
+        dw      14749   ; 2748 ^ 2 = 7551504, value >> 9 = 14749
+        dw      14759   ; 2749 ^ 2 = 7557001, value >> 9 = 14759
+        dw      14770   ; 2750 ^ 2 = 7562500, value >> 9 = 14770
+        dw      14781   ; 2751 ^ 2 = 7568001, value >> 9 = 14781
+        dw      14792   ; 2752 ^ 2 = 7573504, value >> 9 = 14792
+        dw      14802   ; 2753 ^ 2 = 7579009, value >> 9 = 14802
+        dw      14813   ; 2754 ^ 2 = 7584516, value >> 9 = 14813
+        dw      14824   ; 2755 ^ 2 = 7590025, value >> 9 = 14824
+        dw      14835   ; 2756 ^ 2 = 7595536, value >> 9 = 14835
+        dw      14845   ; 2757 ^ 2 = 7601049, value >> 9 = 14845
+        dw      14856   ; 2758 ^ 2 = 7606564, value >> 9 = 14856
+        dw      14867   ; 2759 ^ 2 = 7612081, value >> 9 = 14867
+        dw      14878   ; 2760 ^ 2 = 7617600, value >> 9 = 14878
+        dw      14888   ; 2761 ^ 2 = 7623121, value >> 9 = 14888
+        dw      14899   ; 2762 ^ 2 = 7628644, value >> 9 = 14899
+        dw      14910   ; 2763 ^ 2 = 7634169, value >> 9 = 14910
+        dw      14921   ; 2764 ^ 2 = 7639696, value >> 9 = 14921
+        dw      14932   ; 2765 ^ 2 = 7645225, value >> 9 = 14932
+        dw      14942   ; 2766 ^ 2 = 7650756, value >> 9 = 14942
+        dw      14953   ; 2767 ^ 2 = 7656289, value >> 9 = 14953
+        dw      14964   ; 2768 ^ 2 = 7661824, value >> 9 = 14964
+        dw      14975   ; 2769 ^ 2 = 7667361, value >> 9 = 14975
+        dw      14986   ; 2770 ^ 2 = 7672900, value >> 9 = 14986
+        dw      14996   ; 2771 ^ 2 = 7678441, value >> 9 = 14996
+        dw      15007   ; 2772 ^ 2 = 7683984, value >> 9 = 15007
+        dw      15018   ; 2773 ^ 2 = 7689529, value >> 9 = 15018
+        dw      15029   ; 2774 ^ 2 = 7695076, value >> 9 = 15029
+        dw      15040   ; 2775 ^ 2 = 7700625, value >> 9 = 15040
+        dw      15051   ; 2776 ^ 2 = 7706176, value >> 9 = 15051
+        dw      15061   ; 2777 ^ 2 = 7711729, value >> 9 = 15061
+        dw      15072   ; 2778 ^ 2 = 7717284, value >> 9 = 15072
+        dw      15083   ; 2779 ^ 2 = 7722841, value >> 9 = 15083
+        dw      15094   ; 2780 ^ 2 = 7728400, value >> 9 = 15094
+        dw      15105   ; 2781 ^ 2 = 7733961, value >> 9 = 15105
+        dw      15116   ; 2782 ^ 2 = 7739524, value >> 9 = 15116
+        dw      15127   ; 2783 ^ 2 = 7745089, value >> 9 = 15127
+        dw      15138   ; 2784 ^ 2 = 7750656, value >> 9 = 15138
+        dw      15148   ; 2785 ^ 2 = 7756225, value >> 9 = 15148
+        dw      15159   ; 2786 ^ 2 = 7761796, value >> 9 = 15159
+        dw      15170   ; 2787 ^ 2 = 7767369, value >> 9 = 15170
+        dw      15181   ; 2788 ^ 2 = 7772944, value >> 9 = 15181
+        dw      15192   ; 2789 ^ 2 = 7778521, value >> 9 = 15192
+        dw      15203   ; 2790 ^ 2 = 7784100, value >> 9 = 15203
+        dw      15214   ; 2791 ^ 2 = 7789681, value >> 9 = 15214
+        dw      15225   ; 2792 ^ 2 = 7795264, value >> 9 = 15225
+        dw      15236   ; 2793 ^ 2 = 7800849, value >> 9 = 15236
+        dw      15246   ; 2794 ^ 2 = 7806436, value >> 9 = 15246
+        dw      15257   ; 2795 ^ 2 = 7812025, value >> 9 = 15257
+        dw      15268   ; 2796 ^ 2 = 7817616, value >> 9 = 15268
+        dw      15279   ; 2797 ^ 2 = 7823209, value >> 9 = 15279
+        dw      15290   ; 2798 ^ 2 = 7828804, value >> 9 = 15290
+        dw      15301   ; 2799 ^ 2 = 7834401, value >> 9 = 15301
+        dw      15312   ; 2800 ^ 2 = 7840000, value >> 9 = 15312
+        dw      15323   ; 2801 ^ 2 = 7845601, value >> 9 = 15323
+        dw      15334   ; 2802 ^ 2 = 7851204, value >> 9 = 15334
+        dw      15345   ; 2803 ^ 2 = 7856809, value >> 9 = 15345
+        dw      15356   ; 2804 ^ 2 = 7862416, value >> 9 = 15356
+        dw      15367   ; 2805 ^ 2 = 7868025, value >> 9 = 15367
+        dw      15378   ; 2806 ^ 2 = 7873636, value >> 9 = 15378
+        dw      15389   ; 2807 ^ 2 = 7879249, value >> 9 = 15389
+        dw      15400   ; 2808 ^ 2 = 7884864, value >> 9 = 15400
+        dw      15411   ; 2809 ^ 2 = 7890481, value >> 9 = 15411
+        dw      15422   ; 2810 ^ 2 = 7896100, value >> 9 = 15422
+        dw      15433   ; 2811 ^ 2 = 7901721, value >> 9 = 15433
+        dw      15444   ; 2812 ^ 2 = 7907344, value >> 9 = 15444
+        dw      15455   ; 2813 ^ 2 = 7912969, value >> 9 = 15455
+        dw      15466   ; 2814 ^ 2 = 7918596, value >> 9 = 15466
+        dw      15477   ; 2815 ^ 2 = 7924225, value >> 9 = 15477
+        dw      15488   ; 2816 ^ 2 = 7929856, value >> 9 = 15488
+        dw      15499   ; 2817 ^ 2 = 7935489, value >> 9 = 15499
+        dw      15510   ; 2818 ^ 2 = 7941124, value >> 9 = 15510
+        dw      15521   ; 2819 ^ 2 = 7946761, value >> 9 = 15521
+        dw      15532   ; 2820 ^ 2 = 7952400, value >> 9 = 15532
+        dw      15543   ; 2821 ^ 2 = 7958041, value >> 9 = 15543
+        dw      15554   ; 2822 ^ 2 = 7963684, value >> 9 = 15554
+        dw      15565   ; 2823 ^ 2 = 7969329, value >> 9 = 15565
+        dw      15576   ; 2824 ^ 2 = 7974976, value >> 9 = 15576
+        dw      15587   ; 2825 ^ 2 = 7980625, value >> 9 = 15587
+        dw      15598   ; 2826 ^ 2 = 7986276, value >> 9 = 15598
+        dw      15609   ; 2827 ^ 2 = 7991929, value >> 9 = 15609
+        dw      15620   ; 2828 ^ 2 = 7997584, value >> 9 = 15620
+        dw      15631   ; 2829 ^ 2 = 8003241, value >> 9 = 15631
+        dw      15642   ; 2830 ^ 2 = 8008900, value >> 9 = 15642
+        dw      15653   ; 2831 ^ 2 = 8014561, value >> 9 = 15653
+        dw      15664   ; 2832 ^ 2 = 8020224, value >> 9 = 15664
+        dw      15675   ; 2833 ^ 2 = 8025889, value >> 9 = 15675
+        dw      15686   ; 2834 ^ 2 = 8031556, value >> 9 = 15686
+        dw      15697   ; 2835 ^ 2 = 8037225, value >> 9 = 15697
+        dw      15708   ; 2836 ^ 2 = 8042896, value >> 9 = 15708
+        dw      15719   ; 2837 ^ 2 = 8048569, value >> 9 = 15719
+        dw      15730   ; 2838 ^ 2 = 8054244, value >> 9 = 15730
+        dw      15742   ; 2839 ^ 2 = 8059921, value >> 9 = 15742
+        dw      15753   ; 2840 ^ 2 = 8065600, value >> 9 = 15753
+        dw      15764   ; 2841 ^ 2 = 8071281, value >> 9 = 15764
+        dw      15775   ; 2842 ^ 2 = 8076964, value >> 9 = 15775
+        dw      15786   ; 2843 ^ 2 = 8082649, value >> 9 = 15786
+        dw      15797   ; 2844 ^ 2 = 8088336, value >> 9 = 15797
+        dw      15808   ; 2845 ^ 2 = 8094025, value >> 9 = 15808
+        dw      15819   ; 2846 ^ 2 = 8099716, value >> 9 = 15819
+        dw      15830   ; 2847 ^ 2 = 8105409, value >> 9 = 15830
+        dw      15842   ; 2848 ^ 2 = 8111104, value >> 9 = 15842
+        dw      15853   ; 2849 ^ 2 = 8116801, value >> 9 = 15853
+        dw      15864   ; 2850 ^ 2 = 8122500, value >> 9 = 15864
+        dw      15875   ; 2851 ^ 2 = 8128201, value >> 9 = 15875
+        dw      15886   ; 2852 ^ 2 = 8133904, value >> 9 = 15886
+        dw      15897   ; 2853 ^ 2 = 8139609, value >> 9 = 15897
+        dw      15908   ; 2854 ^ 2 = 8145316, value >> 9 = 15908
+        dw      15919   ; 2855 ^ 2 = 8151025, value >> 9 = 15919
+        dw      15931   ; 2856 ^ 2 = 8156736, value >> 9 = 15931
+        dw      15942   ; 2857 ^ 2 = 8162449, value >> 9 = 15942
+        dw      15953   ; 2858 ^ 2 = 8168164, value >> 9 = 15953
+        dw      15964   ; 2859 ^ 2 = 8173881, value >> 9 = 15964
+        dw      15975   ; 2860 ^ 2 = 8179600, value >> 9 = 15975
+        dw      15986   ; 2861 ^ 2 = 8185321, value >> 9 = 15986
+        dw      15998   ; 2862 ^ 2 = 8191044, value >> 9 = 15998
+        dw      16009   ; 2863 ^ 2 = 8196769, value >> 9 = 16009
+        dw      16020   ; 2864 ^ 2 = 8202496, value >> 9 = 16020
+        dw      16031   ; 2865 ^ 2 = 8208225, value >> 9 = 16031
+        dw      16042   ; 2866 ^ 2 = 8213956, value >> 9 = 16042
+        dw      16054   ; 2867 ^ 2 = 8219689, value >> 9 = 16054
+        dw      16065   ; 2868 ^ 2 = 8225424, value >> 9 = 16065
+        dw      16076   ; 2869 ^ 2 = 8231161, value >> 9 = 16076
+        dw      16087   ; 2870 ^ 2 = 8236900, value >> 9 = 16087
+        dw      16098   ; 2871 ^ 2 = 8242641, value >> 9 = 16098
+        dw      16110   ; 2872 ^ 2 = 8248384, value >> 9 = 16110
+        dw      16121   ; 2873 ^ 2 = 8254129, value >> 9 = 16121
+        dw      16132   ; 2874 ^ 2 = 8259876, value >> 9 = 16132
+        dw      16143   ; 2875 ^ 2 = 8265625, value >> 9 = 16143
+        dw      16155   ; 2876 ^ 2 = 8271376, value >> 9 = 16155
+        dw      16166   ; 2877 ^ 2 = 8277129, value >> 9 = 16166
+        dw      16177   ; 2878 ^ 2 = 8282884, value >> 9 = 16177
+        dw      16188   ; 2879 ^ 2 = 8288641, value >> 9 = 16188
+        dw      16200   ; 2880 ^ 2 = 8294400, value >> 9 = 16200
+        dw      16211   ; 2881 ^ 2 = 8300161, value >> 9 = 16211
+        dw      16222   ; 2882 ^ 2 = 8305924, value >> 9 = 16222
+        dw      16233   ; 2883 ^ 2 = 8311689, value >> 9 = 16233
+        dw      16245   ; 2884 ^ 2 = 8317456, value >> 9 = 16245
+        dw      16256   ; 2885 ^ 2 = 8323225, value >> 9 = 16256
+        dw      16267   ; 2886 ^ 2 = 8328996, value >> 9 = 16267
+        dw      16278   ; 2887 ^ 2 = 8334769, value >> 9 = 16278
+        dw      16290   ; 2888 ^ 2 = 8340544, value >> 9 = 16290
+        dw      16301   ; 2889 ^ 2 = 8346321, value >> 9 = 16301
+        dw      16312   ; 2890 ^ 2 = 8352100, value >> 9 = 16312
+        dw      16323   ; 2891 ^ 2 = 8357881, value >> 9 = 16323
+        dw      16335   ; 2892 ^ 2 = 8363664, value >> 9 = 16335
+        dw      16346   ; 2893 ^ 2 = 8369449, value >> 9 = 16346
+        dw      16357   ; 2894 ^ 2 = 8375236, value >> 9 = 16357
+        dw      16369   ; 2895 ^ 2 = 8381025, value >> 9 = 16369
+        dw      16380   ; 2896 ^ 2 = 8386816, value >> 9 = 16380
+        dw      16391   ; 2897 ^ 2 = 8392609, value >> 9 = 16391
+        dw      16403   ; 2898 ^ 2 = 8398404, value >> 9 = 16403
+        dw      16414   ; 2899 ^ 2 = 8404201, value >> 9 = 16414
+        dw      16425   ; 2900 ^ 2 = 8410000, value >> 9 = 16425
+        dw      16437   ; 2901 ^ 2 = 8415801, value >> 9 = 16437
+        dw      16448   ; 2902 ^ 2 = 8421604, value >> 9 = 16448
+        dw      16459   ; 2903 ^ 2 = 8427409, value >> 9 = 16459
+        dw      16471   ; 2904 ^ 2 = 8433216, value >> 9 = 16471
+        dw      16482   ; 2905 ^ 2 = 8439025, value >> 9 = 16482
+        dw      16493   ; 2906 ^ 2 = 8444836, value >> 9 = 16493
+        dw      16505   ; 2907 ^ 2 = 8450649, value >> 9 = 16505
+        dw      16516   ; 2908 ^ 2 = 8456464, value >> 9 = 16516
+        dw      16527   ; 2909 ^ 2 = 8462281, value >> 9 = 16527
+        dw      16539   ; 2910 ^ 2 = 8468100, value >> 9 = 16539
+        dw      16550   ; 2911 ^ 2 = 8473921, value >> 9 = 16550
+        dw      16562   ; 2912 ^ 2 = 8479744, value >> 9 = 16562
+        dw      16573   ; 2913 ^ 2 = 8485569, value >> 9 = 16573
+        dw      16584   ; 2914 ^ 2 = 8491396, value >> 9 = 16584
+        dw      16596   ; 2915 ^ 2 = 8497225, value >> 9 = 16596
+        dw      16607   ; 2916 ^ 2 = 8503056, value >> 9 = 16607
+        dw      16618   ; 2917 ^ 2 = 8508889, value >> 9 = 16618
+        dw      16630   ; 2918 ^ 2 = 8514724, value >> 9 = 16630
+        dw      16641   ; 2919 ^ 2 = 8520561, value >> 9 = 16641
+        dw      16653   ; 2920 ^ 2 = 8526400, value >> 9 = 16653
+        dw      16664   ; 2921 ^ 2 = 8532241, value >> 9 = 16664
+        dw      16675   ; 2922 ^ 2 = 8538084, value >> 9 = 16675
+        dw      16687   ; 2923 ^ 2 = 8543929, value >> 9 = 16687
+        dw      16698   ; 2924 ^ 2 = 8549776, value >> 9 = 16698
+        dw      16710   ; 2925 ^ 2 = 8555625, value >> 9 = 16710
+        dw      16721   ; 2926 ^ 2 = 8561476, value >> 9 = 16721
+        dw      16733   ; 2927 ^ 2 = 8567329, value >> 9 = 16733
+        dw      16744   ; 2928 ^ 2 = 8573184, value >> 9 = 16744
+        dw      16755   ; 2929 ^ 2 = 8579041, value >> 9 = 16755
+        dw      16767   ; 2930 ^ 2 = 8584900, value >> 9 = 16767
+        dw      16778   ; 2931 ^ 2 = 8590761, value >> 9 = 16778
+        dw      16790   ; 2932 ^ 2 = 8596624, value >> 9 = 16790
+        dw      16801   ; 2933 ^ 2 = 8602489, value >> 9 = 16801
+        dw      16813   ; 2934 ^ 2 = 8608356, value >> 9 = 16813
+        dw      16824   ; 2935 ^ 2 = 8614225, value >> 9 = 16824
+        dw      16836   ; 2936 ^ 2 = 8620096, value >> 9 = 16836
+        dw      16847   ; 2937 ^ 2 = 8625969, value >> 9 = 16847
+        dw      16859   ; 2938 ^ 2 = 8631844, value >> 9 = 16859
+        dw      16870   ; 2939 ^ 2 = 8637721, value >> 9 = 16870
+        dw      16882   ; 2940 ^ 2 = 8643600, value >> 9 = 16882
+        dw      16893   ; 2941 ^ 2 = 8649481, value >> 9 = 16893
+        dw      16905   ; 2942 ^ 2 = 8655364, value >> 9 = 16905
+        dw      16916   ; 2943 ^ 2 = 8661249, value >> 9 = 16916
+        dw      16928   ; 2944 ^ 2 = 8667136, value >> 9 = 16928
+        dw      16939   ; 2945 ^ 2 = 8673025, value >> 9 = 16939
+        dw      16951   ; 2946 ^ 2 = 8678916, value >> 9 = 16951
+        dw      16962   ; 2947 ^ 2 = 8684809, value >> 9 = 16962
+        dw      16974   ; 2948 ^ 2 = 8690704, value >> 9 = 16974
+        dw      16985   ; 2949 ^ 2 = 8696601, value >> 9 = 16985
+        dw      16997   ; 2950 ^ 2 = 8702500, value >> 9 = 16997
+        dw      17008   ; 2951 ^ 2 = 8708401, value >> 9 = 17008
+        dw      17020   ; 2952 ^ 2 = 8714304, value >> 9 = 17020
+        dw      17031   ; 2953 ^ 2 = 8720209, value >> 9 = 17031
+        dw      17043   ; 2954 ^ 2 = 8726116, value >> 9 = 17043
+        dw      17054   ; 2955 ^ 2 = 8732025, value >> 9 = 17054
+        dw      17066   ; 2956 ^ 2 = 8737936, value >> 9 = 17066
+        dw      17077   ; 2957 ^ 2 = 8743849, value >> 9 = 17077
+        dw      17089   ; 2958 ^ 2 = 8749764, value >> 9 = 17089
+        dw      17100   ; 2959 ^ 2 = 8755681, value >> 9 = 17100
+        dw      17112   ; 2960 ^ 2 = 8761600, value >> 9 = 17112
+        dw      17124   ; 2961 ^ 2 = 8767521, value >> 9 = 17124
+        dw      17135   ; 2962 ^ 2 = 8773444, value >> 9 = 17135
+        dw      17147   ; 2963 ^ 2 = 8779369, value >> 9 = 17147
+        dw      17158   ; 2964 ^ 2 = 8785296, value >> 9 = 17158
+        dw      17170   ; 2965 ^ 2 = 8791225, value >> 9 = 17170
+        dw      17181   ; 2966 ^ 2 = 8797156, value >> 9 = 17181
+        dw      17193   ; 2967 ^ 2 = 8803089, value >> 9 = 17193
+        dw      17205   ; 2968 ^ 2 = 8809024, value >> 9 = 17205
+        dw      17216   ; 2969 ^ 2 = 8814961, value >> 9 = 17216
+        dw      17228   ; 2970 ^ 2 = 8820900, value >> 9 = 17228
+        dw      17239   ; 2971 ^ 2 = 8826841, value >> 9 = 17239
+        dw      17251   ; 2972 ^ 2 = 8832784, value >> 9 = 17251
+        dw      17263   ; 2973 ^ 2 = 8838729, value >> 9 = 17263
+        dw      17274   ; 2974 ^ 2 = 8844676, value >> 9 = 17274
+        dw      17286   ; 2975 ^ 2 = 8850625, value >> 9 = 17286
+        dw      17298   ; 2976 ^ 2 = 8856576, value >> 9 = 17298
+        dw      17309   ; 2977 ^ 2 = 8862529, value >> 9 = 17309
+        dw      17321   ; 2978 ^ 2 = 8868484, value >> 9 = 17321
+        dw      17332   ; 2979 ^ 2 = 8874441, value >> 9 = 17332
+        dw      17344   ; 2980 ^ 2 = 8880400, value >> 9 = 17344
+        dw      17356   ; 2981 ^ 2 = 8886361, value >> 9 = 17356
+        dw      17367   ; 2982 ^ 2 = 8892324, value >> 9 = 17367
+        dw      17379   ; 2983 ^ 2 = 8898289, value >> 9 = 17379
+        dw      17391   ; 2984 ^ 2 = 8904256, value >> 9 = 17391
+        dw      17402   ; 2985 ^ 2 = 8910225, value >> 9 = 17402
+        dw      17414   ; 2986 ^ 2 = 8916196, value >> 9 = 17414
+        dw      17426   ; 2987 ^ 2 = 8922169, value >> 9 = 17426
+        dw      17437   ; 2988 ^ 2 = 8928144, value >> 9 = 17437
+        dw      17449   ; 2989 ^ 2 = 8934121, value >> 9 = 17449
+        dw      17461   ; 2990 ^ 2 = 8940100, value >> 9 = 17461
+        dw      17472   ; 2991 ^ 2 = 8946081, value >> 9 = 17472
+        dw      17484   ; 2992 ^ 2 = 8952064, value >> 9 = 17484
+        dw      17496   ; 2993 ^ 2 = 8958049, value >> 9 = 17496
+        dw      17507   ; 2994 ^ 2 = 8964036, value >> 9 = 17507
+        dw      17519   ; 2995 ^ 2 = 8970025, value >> 9 = 17519
+        dw      17531   ; 2996 ^ 2 = 8976016, value >> 9 = 17531
+        dw      17542   ; 2997 ^ 2 = 8982009, value >> 9 = 17542
+        dw      17554   ; 2998 ^ 2 = 8988004, value >> 9 = 17554
+        dw      17566   ; 2999 ^ 2 = 8994001, value >> 9 = 17566
+        dw      17578   ; 3000 ^ 2 = 9000000, value >> 9 = 17578
+        dw      17589   ; 3001 ^ 2 = 9006001, value >> 9 = 17589
+        dw      17601   ; 3002 ^ 2 = 9012004, value >> 9 = 17601
+        dw      17613   ; 3003 ^ 2 = 9018009, value >> 9 = 17613
+        dw      17625   ; 3004 ^ 2 = 9024016, value >> 9 = 17625
+        dw      17636   ; 3005 ^ 2 = 9030025, value >> 9 = 17636
+        dw      17648   ; 3006 ^ 2 = 9036036, value >> 9 = 17648
+        dw      17660   ; 3007 ^ 2 = 9042049, value >> 9 = 17660
+        dw      17672   ; 3008 ^ 2 = 9048064, value >> 9 = 17672
+        dw      17683   ; 3009 ^ 2 = 9054081, value >> 9 = 17683
+        dw      17695   ; 3010 ^ 2 = 9060100, value >> 9 = 17695
+        dw      17707   ; 3011 ^ 2 = 9066121, value >> 9 = 17707
+        dw      17719   ; 3012 ^ 2 = 9072144, value >> 9 = 17719
+        dw      17730   ; 3013 ^ 2 = 9078169, value >> 9 = 17730
+        dw      17742   ; 3014 ^ 2 = 9084196, value >> 9 = 17742
+        dw      17754   ; 3015 ^ 2 = 9090225, value >> 9 = 17754
+        dw      17766   ; 3016 ^ 2 = 9096256, value >> 9 = 17766
+        dw      17777   ; 3017 ^ 2 = 9102289, value >> 9 = 17777
+        dw      17789   ; 3018 ^ 2 = 9108324, value >> 9 = 17789
+        dw      17801   ; 3019 ^ 2 = 9114361, value >> 9 = 17801
+        dw      17813   ; 3020 ^ 2 = 9120400, value >> 9 = 17813
+        dw      17825   ; 3021 ^ 2 = 9126441, value >> 9 = 17825
+        dw      17836   ; 3022 ^ 2 = 9132484, value >> 9 = 17836
+        dw      17848   ; 3023 ^ 2 = 9138529, value >> 9 = 17848
+        dw      17860   ; 3024 ^ 2 = 9144576, value >> 9 = 17860
+        dw      17872   ; 3025 ^ 2 = 9150625, value >> 9 = 17872
+        dw      17884   ; 3026 ^ 2 = 9156676, value >> 9 = 17884
+        dw      17895   ; 3027 ^ 2 = 9162729, value >> 9 = 17895
+        dw      17907   ; 3028 ^ 2 = 9168784, value >> 9 = 17907
+        dw      17919   ; 3029 ^ 2 = 9174841, value >> 9 = 17919
+        dw      17931   ; 3030 ^ 2 = 9180900, value >> 9 = 17931
+        dw      17943   ; 3031 ^ 2 = 9186961, value >> 9 = 17943
+        dw      17955   ; 3032 ^ 2 = 9193024, value >> 9 = 17955
+        dw      17966   ; 3033 ^ 2 = 9199089, value >> 9 = 17966
+        dw      17978   ; 3034 ^ 2 = 9205156, value >> 9 = 17978
+        dw      17990   ; 3035 ^ 2 = 9211225, value >> 9 = 17990
+        dw      18002   ; 3036 ^ 2 = 9217296, value >> 9 = 18002
+        dw      18014   ; 3037 ^ 2 = 9223369, value >> 9 = 18014
+        dw      18026   ; 3038 ^ 2 = 9229444, value >> 9 = 18026
+        dw      18038   ; 3039 ^ 2 = 9235521, value >> 9 = 18038
+        dw      18050   ; 3040 ^ 2 = 9241600, value >> 9 = 18050
+        dw      18061   ; 3041 ^ 2 = 9247681, value >> 9 = 18061
+        dw      18073   ; 3042 ^ 2 = 9253764, value >> 9 = 18073
+        dw      18085   ; 3043 ^ 2 = 9259849, value >> 9 = 18085
+        dw      18097   ; 3044 ^ 2 = 9265936, value >> 9 = 18097
+        dw      18109   ; 3045 ^ 2 = 9272025, value >> 9 = 18109
+        dw      18121   ; 3046 ^ 2 = 9278116, value >> 9 = 18121
+        dw      18133   ; 3047 ^ 2 = 9284209, value >> 9 = 18133
+        dw      18145   ; 3048 ^ 2 = 9290304, value >> 9 = 18145
+        dw      18157   ; 3049 ^ 2 = 9296401, value >> 9 = 18157
+        dw      18168   ; 3050 ^ 2 = 9302500, value >> 9 = 18168
+        dw      18180   ; 3051 ^ 2 = 9308601, value >> 9 = 18180
+        dw      18192   ; 3052 ^ 2 = 9314704, value >> 9 = 18192
+        dw      18204   ; 3053 ^ 2 = 9320809, value >> 9 = 18204
+        dw      18216   ; 3054 ^ 2 = 9326916, value >> 9 = 18216
+        dw      18228   ; 3055 ^ 2 = 9333025, value >> 9 = 18228
+        dw      18240   ; 3056 ^ 2 = 9339136, value >> 9 = 18240
+        dw      18252   ; 3057 ^ 2 = 9345249, value >> 9 = 18252
+        dw      18264   ; 3058 ^ 2 = 9351364, value >> 9 = 18264
+        dw      18276   ; 3059 ^ 2 = 9357481, value >> 9 = 18276
+        dw      18288   ; 3060 ^ 2 = 9363600, value >> 9 = 18288
+        dw      18300   ; 3061 ^ 2 = 9369721, value >> 9 = 18300
+        dw      18312   ; 3062 ^ 2 = 9375844, value >> 9 = 18312
+        dw      18324   ; 3063 ^ 2 = 9381969, value >> 9 = 18324
+        dw      18336   ; 3064 ^ 2 = 9388096, value >> 9 = 18336
+        dw      18348   ; 3065 ^ 2 = 9394225, value >> 9 = 18348
+        dw      18360   ; 3066 ^ 2 = 9400356, value >> 9 = 18360
+        dw      18372   ; 3067 ^ 2 = 9406489, value >> 9 = 18372
+        dw      18384   ; 3068 ^ 2 = 9412624, value >> 9 = 18384
+        dw      18396   ; 3069 ^ 2 = 9418761, value >> 9 = 18396
+        dw      18408   ; 3070 ^ 2 = 9424900, value >> 9 = 18408
+        dw      18420   ; 3071 ^ 2 = 9431041, value >> 9 = 18420
+        dw      18432   ; 3072 ^ 2 = 9437184, value >> 9 = 18432
+        dw      18444   ; 3073 ^ 2 = 9443329, value >> 9 = 18444
+        dw      18456   ; 3074 ^ 2 = 9449476, value >> 9 = 18456
+        dw      18468   ; 3075 ^ 2 = 9455625, value >> 9 = 18468
+        dw      18480   ; 3076 ^ 2 = 9461776, value >> 9 = 18480
+        dw      18492   ; 3077 ^ 2 = 9467929, value >> 9 = 18492
+        dw      18504   ; 3078 ^ 2 = 9474084, value >> 9 = 18504
+        dw      18516   ; 3079 ^ 2 = 9480241, value >> 9 = 18516
+        dw      18528   ; 3080 ^ 2 = 9486400, value >> 9 = 18528
+        dw      18540   ; 3081 ^ 2 = 9492561, value >> 9 = 18540
+        dw      18552   ; 3082 ^ 2 = 9498724, value >> 9 = 18552
+        dw      18564   ; 3083 ^ 2 = 9504889, value >> 9 = 18564
+        dw      18576   ; 3084 ^ 2 = 9511056, value >> 9 = 18576
+        dw      18588   ; 3085 ^ 2 = 9517225, value >> 9 = 18588
+        dw      18600   ; 3086 ^ 2 = 9523396, value >> 9 = 18600
+        dw      18612   ; 3087 ^ 2 = 9529569, value >> 9 = 18612
+        dw      18624   ; 3088 ^ 2 = 9535744, value >> 9 = 18624
+        dw      18636   ; 3089 ^ 2 = 9541921, value >> 9 = 18636
+        dw      18648   ; 3090 ^ 2 = 9548100, value >> 9 = 18648
+        dw      18660   ; 3091 ^ 2 = 9554281, value >> 9 = 18660
+        dw      18672   ; 3092 ^ 2 = 9560464, value >> 9 = 18672
+        dw      18684   ; 3093 ^ 2 = 9566649, value >> 9 = 18684
+        dw      18696   ; 3094 ^ 2 = 9572836, value >> 9 = 18696
+        dw      18709   ; 3095 ^ 2 = 9579025, value >> 9 = 18709
+        dw      18721   ; 3096 ^ 2 = 9585216, value >> 9 = 18721
+        dw      18733   ; 3097 ^ 2 = 9591409, value >> 9 = 18733
+        dw      18745   ; 3098 ^ 2 = 9597604, value >> 9 = 18745
+        dw      18757   ; 3099 ^ 2 = 9603801, value >> 9 = 18757
+        dw      18769   ; 3100 ^ 2 = 9610000, value >> 9 = 18769
+        dw      18781   ; 3101 ^ 2 = 9616201, value >> 9 = 18781
+        dw      18793   ; 3102 ^ 2 = 9622404, value >> 9 = 18793
+        dw      18805   ; 3103 ^ 2 = 9628609, value >> 9 = 18805
+        dw      18818   ; 3104 ^ 2 = 9634816, value >> 9 = 18818
+        dw      18830   ; 3105 ^ 2 = 9641025, value >> 9 = 18830
+        dw      18842   ; 3106 ^ 2 = 9647236, value >> 9 = 18842
+        dw      18854   ; 3107 ^ 2 = 9653449, value >> 9 = 18854
+        dw      18866   ; 3108 ^ 2 = 9659664, value >> 9 = 18866
+        dw      18878   ; 3109 ^ 2 = 9665881, value >> 9 = 18878
+        dw      18890   ; 3110 ^ 2 = 9672100, value >> 9 = 18890
+        dw      18902   ; 3111 ^ 2 = 9678321, value >> 9 = 18902
+        dw      18915   ; 3112 ^ 2 = 9684544, value >> 9 = 18915
+        dw      18927   ; 3113 ^ 2 = 9690769, value >> 9 = 18927
+        dw      18939   ; 3114 ^ 2 = 9696996, value >> 9 = 18939
+        dw      18951   ; 3115 ^ 2 = 9703225, value >> 9 = 18951
+        dw      18963   ; 3116 ^ 2 = 9709456, value >> 9 = 18963
+        dw      18975   ; 3117 ^ 2 = 9715689, value >> 9 = 18975
+        dw      18988   ; 3118 ^ 2 = 9721924, value >> 9 = 18988
+        dw      19000   ; 3119 ^ 2 = 9728161, value >> 9 = 19000
+        dw      19012   ; 3120 ^ 2 = 9734400, value >> 9 = 19012
+        dw      19024   ; 3121 ^ 2 = 9740641, value >> 9 = 19024
+        dw      19036   ; 3122 ^ 2 = 9746884, value >> 9 = 19036
+        dw      19049   ; 3123 ^ 2 = 9753129, value >> 9 = 19049
+        dw      19061   ; 3124 ^ 2 = 9759376, value >> 9 = 19061
+        dw      19073   ; 3125 ^ 2 = 9765625, value >> 9 = 19073
+        dw      19085   ; 3126 ^ 2 = 9771876, value >> 9 = 19085
+        dw      19097   ; 3127 ^ 2 = 9778129, value >> 9 = 19097
+        dw      19110   ; 3128 ^ 2 = 9784384, value >> 9 = 19110
+        dw      19122   ; 3129 ^ 2 = 9790641, value >> 9 = 19122
+        dw      19134   ; 3130 ^ 2 = 9796900, value >> 9 = 19134
+        dw      19146   ; 3131 ^ 2 = 9803161, value >> 9 = 19146
+        dw      19159   ; 3132 ^ 2 = 9809424, value >> 9 = 19159
+        dw      19171   ; 3133 ^ 2 = 9815689, value >> 9 = 19171
+        dw      19183   ; 3134 ^ 2 = 9821956, value >> 9 = 19183
+        dw      19195   ; 3135 ^ 2 = 9828225, value >> 9 = 19195
+        dw      19208   ; 3136 ^ 2 = 9834496, value >> 9 = 19208
+        dw      19220   ; 3137 ^ 2 = 9840769, value >> 9 = 19220
+        dw      19232   ; 3138 ^ 2 = 9847044, value >> 9 = 19232
+        dw      19244   ; 3139 ^ 2 = 9853321, value >> 9 = 19244
+        dw      19257   ; 3140 ^ 2 = 9859600, value >> 9 = 19257
+        dw      19269   ; 3141 ^ 2 = 9865881, value >> 9 = 19269
+        dw      19281   ; 3142 ^ 2 = 9872164, value >> 9 = 19281
+        dw      19293   ; 3143 ^ 2 = 9878449, value >> 9 = 19293
+        dw      19306   ; 3144 ^ 2 = 9884736, value >> 9 = 19306
+        dw      19318   ; 3145 ^ 2 = 9891025, value >> 9 = 19318
+        dw      19330   ; 3146 ^ 2 = 9897316, value >> 9 = 19330
+        dw      19342   ; 3147 ^ 2 = 9903609, value >> 9 = 19342
+        dw      19355   ; 3148 ^ 2 = 9909904, value >> 9 = 19355
+        dw      19367   ; 3149 ^ 2 = 9916201, value >> 9 = 19367
+        dw      19379   ; 3150 ^ 2 = 9922500, value >> 9 = 19379
+        dw      19392   ; 3151 ^ 2 = 9928801, value >> 9 = 19392
+        dw      19404   ; 3152 ^ 2 = 9935104, value >> 9 = 19404
+        dw      19416   ; 3153 ^ 2 = 9941409, value >> 9 = 19416
+        dw      19429   ; 3154 ^ 2 = 9947716, value >> 9 = 19429
+        dw      19441   ; 3155 ^ 2 = 9954025, value >> 9 = 19441
+        dw      19453   ; 3156 ^ 2 = 9960336, value >> 9 = 19453
+        dw      19466   ; 3157 ^ 2 = 9966649, value >> 9 = 19466
+        dw      19478   ; 3158 ^ 2 = 9972964, value >> 9 = 19478
+        dw      19490   ; 3159 ^ 2 = 9979281, value >> 9 = 19490
+        dw      19503   ; 3160 ^ 2 = 9985600, value >> 9 = 19503
+        dw      19515   ; 3161 ^ 2 = 9991921, value >> 9 = 19515
+        dw      19527   ; 3162 ^ 2 = 9998244, value >> 9 = 19527
+        dw      19540   ; 3163 ^ 2 = 10004569, value >> 9 = 19540
+        dw      19552   ; 3164 ^ 2 = 10010896, value >> 9 = 19552
+        dw      19564   ; 3165 ^ 2 = 10017225, value >> 9 = 19564
+        dw      19577   ; 3166 ^ 2 = 10023556, value >> 9 = 19577
+        dw      19589   ; 3167 ^ 2 = 10029889, value >> 9 = 19589
+        dw      19602   ; 3168 ^ 2 = 10036224, value >> 9 = 19602
+        dw      19614   ; 3169 ^ 2 = 10042561, value >> 9 = 19614
+        dw      19626   ; 3170 ^ 2 = 10048900, value >> 9 = 19626
+        dw      19639   ; 3171 ^ 2 = 10055241, value >> 9 = 19639
+        dw      19651   ; 3172 ^ 2 = 10061584, value >> 9 = 19651
+        dw      19663   ; 3173 ^ 2 = 10067929, value >> 9 = 19663
+        dw      19676   ; 3174 ^ 2 = 10074276, value >> 9 = 19676
+        dw      19688   ; 3175 ^ 2 = 10080625, value >> 9 = 19688
+        dw      19701   ; 3176 ^ 2 = 10086976, value >> 9 = 19701
+        dw      19713   ; 3177 ^ 2 = 10093329, value >> 9 = 19713
+        dw      19725   ; 3178 ^ 2 = 10099684, value >> 9 = 19725
+        dw      19738   ; 3179 ^ 2 = 10106041, value >> 9 = 19738
+        dw      19750   ; 3180 ^ 2 = 10112400, value >> 9 = 19750
+        dw      19763   ; 3181 ^ 2 = 10118761, value >> 9 = 19763
+        dw      19775   ; 3182 ^ 2 = 10125124, value >> 9 = 19775
+        dw      19788   ; 3183 ^ 2 = 10131489, value >> 9 = 19788
+        dw      19800   ; 3184 ^ 2 = 10137856, value >> 9 = 19800
+        dw      19812   ; 3185 ^ 2 = 10144225, value >> 9 = 19812
+        dw      19825   ; 3186 ^ 2 = 10150596, value >> 9 = 19825
+        dw      19837   ; 3187 ^ 2 = 10156969, value >> 9 = 19837
+        dw      19850   ; 3188 ^ 2 = 10163344, value >> 9 = 19850
+        dw      19862   ; 3189 ^ 2 = 10169721, value >> 9 = 19862
+        dw      19875   ; 3190 ^ 2 = 10176100, value >> 9 = 19875
+        dw      19887   ; 3191 ^ 2 = 10182481, value >> 9 = 19887
+        dw      19900   ; 3192 ^ 2 = 10188864, value >> 9 = 19900
+        dw      19912   ; 3193 ^ 2 = 10195249, value >> 9 = 19912
+        dw      19925   ; 3194 ^ 2 = 10201636, value >> 9 = 19925
+        dw      19937   ; 3195 ^ 2 = 10208025, value >> 9 = 19937
+        dw      19950   ; 3196 ^ 2 = 10214416, value >> 9 = 19950
+        dw      19962   ; 3197 ^ 2 = 10220809, value >> 9 = 19962
+        dw      19975   ; 3198 ^ 2 = 10227204, value >> 9 = 19975
+        dw      19987   ; 3199 ^ 2 = 10233601, value >> 9 = 19987
+        dw      20000   ; 3200 ^ 2 = 10240000, value >> 9 = 20000
+        dw      20012   ; 3201 ^ 2 = 10246401, value >> 9 = 20012
+        dw      20025   ; 3202 ^ 2 = 10252804, value >> 9 = 20025
+        dw      20037   ; 3203 ^ 2 = 10259209, value >> 9 = 20037
+        dw      20050   ; 3204 ^ 2 = 10265616, value >> 9 = 20050
+        dw      20062   ; 3205 ^ 2 = 10272025, value >> 9 = 20062
+        dw      20075   ; 3206 ^ 2 = 10278436, value >> 9 = 20075
+        dw      20087   ; 3207 ^ 2 = 10284849, value >> 9 = 20087
+        dw      20100   ; 3208 ^ 2 = 10291264, value >> 9 = 20100
+        dw      20112   ; 3209 ^ 2 = 10297681, value >> 9 = 20112
+        dw      20125   ; 3210 ^ 2 = 10304100, value >> 9 = 20125
+        dw      20137   ; 3211 ^ 2 = 10310521, value >> 9 = 20137
+        dw      20150   ; 3212 ^ 2 = 10316944, value >> 9 = 20150
+        dw      20162   ; 3213 ^ 2 = 10323369, value >> 9 = 20162
+        dw      20175   ; 3214 ^ 2 = 10329796, value >> 9 = 20175
+        dw      20187   ; 3215 ^ 2 = 10336225, value >> 9 = 20187
+        dw      20200   ; 3216 ^ 2 = 10342656, value >> 9 = 20200
+        dw      20213   ; 3217 ^ 2 = 10349089, value >> 9 = 20213
+        dw      20225   ; 3218 ^ 2 = 10355524, value >> 9 = 20225
+        dw      20238   ; 3219 ^ 2 = 10361961, value >> 9 = 20238
+        dw      20250   ; 3220 ^ 2 = 10368400, value >> 9 = 20250
+        dw      20263   ; 3221 ^ 2 = 10374841, value >> 9 = 20263
+        dw      20275   ; 3222 ^ 2 = 10381284, value >> 9 = 20275
+        dw      20288   ; 3223 ^ 2 = 10387729, value >> 9 = 20288
+        dw      20301   ; 3224 ^ 2 = 10394176, value >> 9 = 20301
+        dw      20313   ; 3225 ^ 2 = 10400625, value >> 9 = 20313
+        dw      20326   ; 3226 ^ 2 = 10407076, value >> 9 = 20326
+        dw      20338   ; 3227 ^ 2 = 10413529, value >> 9 = 20338
+        dw      20351   ; 3228 ^ 2 = 10419984, value >> 9 = 20351
+        dw      20364   ; 3229 ^ 2 = 10426441, value >> 9 = 20364
+        dw      20376   ; 3230 ^ 2 = 10432900, value >> 9 = 20376
+        dw      20389   ; 3231 ^ 2 = 10439361, value >> 9 = 20389
+        dw      20402   ; 3232 ^ 2 = 10445824, value >> 9 = 20402
+        dw      20414   ; 3233 ^ 2 = 10452289, value >> 9 = 20414
+        dw      20427   ; 3234 ^ 2 = 10458756, value >> 9 = 20427
+        dw      20439   ; 3235 ^ 2 = 10465225, value >> 9 = 20439
+        dw      20452   ; 3236 ^ 2 = 10471696, value >> 9 = 20452
+        dw      20465   ; 3237 ^ 2 = 10478169, value >> 9 = 20465
+        dw      20477   ; 3238 ^ 2 = 10484644, value >> 9 = 20477
+        dw      20490   ; 3239 ^ 2 = 10491121, value >> 9 = 20490
+        dw      20503   ; 3240 ^ 2 = 10497600, value >> 9 = 20503
+        dw      20515   ; 3241 ^ 2 = 10504081, value >> 9 = 20515
+        dw      20528   ; 3242 ^ 2 = 10510564, value >> 9 = 20528
+        dw      20541   ; 3243 ^ 2 = 10517049, value >> 9 = 20541
+        dw      20553   ; 3244 ^ 2 = 10523536, value >> 9 = 20553
+        dw      20566   ; 3245 ^ 2 = 10530025, value >> 9 = 20566
+        dw      20579   ; 3246 ^ 2 = 10536516, value >> 9 = 20579
+        dw      20591   ; 3247 ^ 2 = 10543009, value >> 9 = 20591
+        dw      20604   ; 3248 ^ 2 = 10549504, value >> 9 = 20604
+        dw      20617   ; 3249 ^ 2 = 10556001, value >> 9 = 20617
+        dw      20629   ; 3250 ^ 2 = 10562500, value >> 9 = 20629
+        dw      20642   ; 3251 ^ 2 = 10569001, value >> 9 = 20642
+        dw      20655   ; 3252 ^ 2 = 10575504, value >> 9 = 20655
+        dw      20667   ; 3253 ^ 2 = 10582009, value >> 9 = 20667
+        dw      20680   ; 3254 ^ 2 = 10588516, value >> 9 = 20680
+        dw      20693   ; 3255 ^ 2 = 10595025, value >> 9 = 20693
+        dw      20706   ; 3256 ^ 2 = 10601536, value >> 9 = 20706
+        dw      20718   ; 3257 ^ 2 = 10608049, value >> 9 = 20718
+        dw      20731   ; 3258 ^ 2 = 10614564, value >> 9 = 20731
+        dw      20744   ; 3259 ^ 2 = 10621081, value >> 9 = 20744
+        dw      20757   ; 3260 ^ 2 = 10627600, value >> 9 = 20757
+        dw      20769   ; 3261 ^ 2 = 10634121, value >> 9 = 20769
+        dw      20782   ; 3262 ^ 2 = 10640644, value >> 9 = 20782
+        dw      20795   ; 3263 ^ 2 = 10647169, value >> 9 = 20795
+        dw      20808   ; 3264 ^ 2 = 10653696, value >> 9 = 20808
+        dw      20820   ; 3265 ^ 2 = 10660225, value >> 9 = 20820
+        dw      20833   ; 3266 ^ 2 = 10666756, value >> 9 = 20833
+        dw      20846   ; 3267 ^ 2 = 10673289, value >> 9 = 20846
+        dw      20859   ; 3268 ^ 2 = 10679824, value >> 9 = 20859
+        dw      20871   ; 3269 ^ 2 = 10686361, value >> 9 = 20871
+        dw      20884   ; 3270 ^ 2 = 10692900, value >> 9 = 20884
+        dw      20897   ; 3271 ^ 2 = 10699441, value >> 9 = 20897
+        dw      20910   ; 3272 ^ 2 = 10705984, value >> 9 = 20910
+        dw      20922   ; 3273 ^ 2 = 10712529, value >> 9 = 20922
+        dw      20935   ; 3274 ^ 2 = 10719076, value >> 9 = 20935
+        dw      20948   ; 3275 ^ 2 = 10725625, value >> 9 = 20948
+        dw      20961   ; 3276 ^ 2 = 10732176, value >> 9 = 20961
+        dw      20974   ; 3277 ^ 2 = 10738729, value >> 9 = 20974
+        dw      20986   ; 3278 ^ 2 = 10745284, value >> 9 = 20986
+        dw      20999   ; 3279 ^ 2 = 10751841, value >> 9 = 20999
+        dw      21012   ; 3280 ^ 2 = 10758400, value >> 9 = 21012
+        dw      21025   ; 3281 ^ 2 = 10764961, value >> 9 = 21025
+        dw      21038   ; 3282 ^ 2 = 10771524, value >> 9 = 21038
+        dw      21050   ; 3283 ^ 2 = 10778089, value >> 9 = 21050
+        dw      21063   ; 3284 ^ 2 = 10784656, value >> 9 = 21063
+        dw      21076   ; 3285 ^ 2 = 10791225, value >> 9 = 21076
+        dw      21089   ; 3286 ^ 2 = 10797796, value >> 9 = 21089
+        dw      21102   ; 3287 ^ 2 = 10804369, value >> 9 = 21102
+        dw      21115   ; 3288 ^ 2 = 10810944, value >> 9 = 21115
+        dw      21127   ; 3289 ^ 2 = 10817521, value >> 9 = 21127
+        dw      21140   ; 3290 ^ 2 = 10824100, value >> 9 = 21140
+        dw      21153   ; 3291 ^ 2 = 10830681, value >> 9 = 21153
+        dw      21166   ; 3292 ^ 2 = 10837264, value >> 9 = 21166
+        dw      21179   ; 3293 ^ 2 = 10843849, value >> 9 = 21179
+        dw      21192   ; 3294 ^ 2 = 10850436, value >> 9 = 21192
+        dw      21205   ; 3295 ^ 2 = 10857025, value >> 9 = 21205
+        dw      21218   ; 3296 ^ 2 = 10863616, value >> 9 = 21218
+        dw      21230   ; 3297 ^ 2 = 10870209, value >> 9 = 21230
+        dw      21243   ; 3298 ^ 2 = 10876804, value >> 9 = 21243
+        dw      21256   ; 3299 ^ 2 = 10883401, value >> 9 = 21256
+        dw      21269   ; 3300 ^ 2 = 10890000, value >> 9 = 21269
+        dw      21282   ; 3301 ^ 2 = 10896601, value >> 9 = 21282
+        dw      21295   ; 3302 ^ 2 = 10903204, value >> 9 = 21295
+        dw      21308   ; 3303 ^ 2 = 10909809, value >> 9 = 21308
+        dw      21321   ; 3304 ^ 2 = 10916416, value >> 9 = 21321
+        dw      21334   ; 3305 ^ 2 = 10923025, value >> 9 = 21334
+        dw      21346   ; 3306 ^ 2 = 10929636, value >> 9 = 21346
+        dw      21359   ; 3307 ^ 2 = 10936249, value >> 9 = 21359
+        dw      21372   ; 3308 ^ 2 = 10942864, value >> 9 = 21372
+        dw      21385   ; 3309 ^ 2 = 10949481, value >> 9 = 21385
+        dw      21398   ; 3310 ^ 2 = 10956100, value >> 9 = 21398
+        dw      21411   ; 3311 ^ 2 = 10962721, value >> 9 = 21411
+        dw      21424   ; 3312 ^ 2 = 10969344, value >> 9 = 21424
+        dw      21437   ; 3313 ^ 2 = 10975969, value >> 9 = 21437
+        dw      21450   ; 3314 ^ 2 = 10982596, value >> 9 = 21450
+        dw      21463   ; 3315 ^ 2 = 10989225, value >> 9 = 21463
+        dw      21476   ; 3316 ^ 2 = 10995856, value >> 9 = 21476
+        dw      21489   ; 3317 ^ 2 = 11002489, value >> 9 = 21489
+        dw      21502   ; 3318 ^ 2 = 11009124, value >> 9 = 21502
+        dw      21515   ; 3319 ^ 2 = 11015761, value >> 9 = 21515
+        dw      21528   ; 3320 ^ 2 = 11022400, value >> 9 = 21528
+        dw      21541   ; 3321 ^ 2 = 11029041, value >> 9 = 21541
+        dw      21554   ; 3322 ^ 2 = 11035684, value >> 9 = 21554
+        dw      21567   ; 3323 ^ 2 = 11042329, value >> 9 = 21567
+        dw      21580   ; 3324 ^ 2 = 11048976, value >> 9 = 21580
+        dw      21593   ; 3325 ^ 2 = 11055625, value >> 9 = 21593
+        dw      21606   ; 3326 ^ 2 = 11062276, value >> 9 = 21606
+        dw      21619   ; 3327 ^ 2 = 11068929, value >> 9 = 21619
+        dw      21632   ; 3328 ^ 2 = 11075584, value >> 9 = 21632
+        dw      21645   ; 3329 ^ 2 = 11082241, value >> 9 = 21645
+        dw      21658   ; 3330 ^ 2 = 11088900, value >> 9 = 21658
+        dw      21671   ; 3331 ^ 2 = 11095561, value >> 9 = 21671
+        dw      21684   ; 3332 ^ 2 = 11102224, value >> 9 = 21684
+        dw      21697   ; 3333 ^ 2 = 11108889, value >> 9 = 21697
+        dw      21710   ; 3334 ^ 2 = 11115556, value >> 9 = 21710
+        dw      21723   ; 3335 ^ 2 = 11122225, value >> 9 = 21723
+        dw      21736   ; 3336 ^ 2 = 11128896, value >> 9 = 21736
+        dw      21749   ; 3337 ^ 2 = 11135569, value >> 9 = 21749
+        dw      21762   ; 3338 ^ 2 = 11142244, value >> 9 = 21762
+        dw      21775   ; 3339 ^ 2 = 11148921, value >> 9 = 21775
+        dw      21788   ; 3340 ^ 2 = 11155600, value >> 9 = 21788
+        dw      21801   ; 3341 ^ 2 = 11162281, value >> 9 = 21801
+        dw      21814   ; 3342 ^ 2 = 11168964, value >> 9 = 21814
+        dw      21827   ; 3343 ^ 2 = 11175649, value >> 9 = 21827
+        dw      21840   ; 3344 ^ 2 = 11182336, value >> 9 = 21840
+        dw      21853   ; 3345 ^ 2 = 11189025, value >> 9 = 21853
+        dw      21866   ; 3346 ^ 2 = 11195716, value >> 9 = 21866
+        dw      21879   ; 3347 ^ 2 = 11202409, value >> 9 = 21879
+        dw      21892   ; 3348 ^ 2 = 11209104, value >> 9 = 21892
+        dw      21905   ; 3349 ^ 2 = 11215801, value >> 9 = 21905
+        dw      21918   ; 3350 ^ 2 = 11222500, value >> 9 = 21918
+        dw      21932   ; 3351 ^ 2 = 11229201, value >> 9 = 21932
+        dw      21945   ; 3352 ^ 2 = 11235904, value >> 9 = 21945
+        dw      21958   ; 3353 ^ 2 = 11242609, value >> 9 = 21958
+        dw      21971   ; 3354 ^ 2 = 11249316, value >> 9 = 21971
+        dw      21984   ; 3355 ^ 2 = 11256025, value >> 9 = 21984
+        dw      21997   ; 3356 ^ 2 = 11262736, value >> 9 = 21997
+        dw      22010   ; 3357 ^ 2 = 11269449, value >> 9 = 22010
+        dw      22023   ; 3358 ^ 2 = 11276164, value >> 9 = 22023
+        dw      22036   ; 3359 ^ 2 = 11282881, value >> 9 = 22036
+        dw      22050   ; 3360 ^ 2 = 11289600, value >> 9 = 22050
+        dw      22063   ; 3361 ^ 2 = 11296321, value >> 9 = 22063
+        dw      22076   ; 3362 ^ 2 = 11303044, value >> 9 = 22076
+        dw      22089   ; 3363 ^ 2 = 11309769, value >> 9 = 22089
+        dw      22102   ; 3364 ^ 2 = 11316496, value >> 9 = 22102
+        dw      22115   ; 3365 ^ 2 = 11323225, value >> 9 = 22115
+        dw      22128   ; 3366 ^ 2 = 11329956, value >> 9 = 22128
+        dw      22141   ; 3367 ^ 2 = 11336689, value >> 9 = 22141
+        dw      22155   ; 3368 ^ 2 = 11343424, value >> 9 = 22155
+        dw      22168   ; 3369 ^ 2 = 11350161, value >> 9 = 22168
+        dw      22181   ; 3370 ^ 2 = 11356900, value >> 9 = 22181
+        dw      22194   ; 3371 ^ 2 = 11363641, value >> 9 = 22194
+        dw      22207   ; 3372 ^ 2 = 11370384, value >> 9 = 22207
+        dw      22220   ; 3373 ^ 2 = 11377129, value >> 9 = 22220
+        dw      22234   ; 3374 ^ 2 = 11383876, value >> 9 = 22234
+        dw      22247   ; 3375 ^ 2 = 11390625, value >> 9 = 22247
+        dw      22260   ; 3376 ^ 2 = 11397376, value >> 9 = 22260
+        dw      22273   ; 3377 ^ 2 = 11404129, value >> 9 = 22273
+        dw      22286   ; 3378 ^ 2 = 11410884, value >> 9 = 22286
+        dw      22300   ; 3379 ^ 2 = 11417641, value >> 9 = 22300
+        dw      22313   ; 3380 ^ 2 = 11424400, value >> 9 = 22313
+        dw      22326   ; 3381 ^ 2 = 11431161, value >> 9 = 22326
+        dw      22339   ; 3382 ^ 2 = 11437924, value >> 9 = 22339
+        dw      22352   ; 3383 ^ 2 = 11444689, value >> 9 = 22352
+        dw      22366   ; 3384 ^ 2 = 11451456, value >> 9 = 22366
+        dw      22379   ; 3385 ^ 2 = 11458225, value >> 9 = 22379
+        dw      22392   ; 3386 ^ 2 = 11464996, value >> 9 = 22392
+        dw      22405   ; 3387 ^ 2 = 11471769, value >> 9 = 22405
+        dw      22419   ; 3388 ^ 2 = 11478544, value >> 9 = 22419
+        dw      22432   ; 3389 ^ 2 = 11485321, value >> 9 = 22432
+        dw      22445   ; 3390 ^ 2 = 11492100, value >> 9 = 22445
+        dw      22458   ; 3391 ^ 2 = 11498881, value >> 9 = 22458
+        dw      22472   ; 3392 ^ 2 = 11505664, value >> 9 = 22472
+        dw      22485   ; 3393 ^ 2 = 11512449, value >> 9 = 22485
+        dw      22498   ; 3394 ^ 2 = 11519236, value >> 9 = 22498
+        dw      22511   ; 3395 ^ 2 = 11526025, value >> 9 = 22511
+        dw      22525   ; 3396 ^ 2 = 11532816, value >> 9 = 22525
+        dw      22538   ; 3397 ^ 2 = 11539609, value >> 9 = 22538
+        dw      22551   ; 3398 ^ 2 = 11546404, value >> 9 = 22551
+        dw      22564   ; 3399 ^ 2 = 11553201, value >> 9 = 22564
+        dw      22578   ; 3400 ^ 2 = 11560000, value >> 9 = 22578
+        dw      22591   ; 3401 ^ 2 = 11566801, value >> 9 = 22591
+        dw      22604   ; 3402 ^ 2 = 11573604, value >> 9 = 22604
+        dw      22617   ; 3403 ^ 2 = 11580409, value >> 9 = 22617
+        dw      22631   ; 3404 ^ 2 = 11587216, value >> 9 = 22631
+        dw      22644   ; 3405 ^ 2 = 11594025, value >> 9 = 22644
+        dw      22657   ; 3406 ^ 2 = 11600836, value >> 9 = 22657
+        dw      22671   ; 3407 ^ 2 = 11607649, value >> 9 = 22671
+        dw      22684   ; 3408 ^ 2 = 11614464, value >> 9 = 22684
+        dw      22697   ; 3409 ^ 2 = 11621281, value >> 9 = 22697
+        dw      22711   ; 3410 ^ 2 = 11628100, value >> 9 = 22711
+        dw      22724   ; 3411 ^ 2 = 11634921, value >> 9 = 22724
+        dw      22737   ; 3412 ^ 2 = 11641744, value >> 9 = 22737
+        dw      22751   ; 3413 ^ 2 = 11648569, value >> 9 = 22751
+        dw      22764   ; 3414 ^ 2 = 11655396, value >> 9 = 22764
+        dw      22777   ; 3415 ^ 2 = 11662225, value >> 9 = 22777
+        dw      22791   ; 3416 ^ 2 = 11669056, value >> 9 = 22791
+        dw      22804   ; 3417 ^ 2 = 11675889, value >> 9 = 22804
+        dw      22817   ; 3418 ^ 2 = 11682724, value >> 9 = 22817
+        dw      22831   ; 3419 ^ 2 = 11689561, value >> 9 = 22831
+        dw      22844   ; 3420 ^ 2 = 11696400, value >> 9 = 22844
+        dw      22857   ; 3421 ^ 2 = 11703241, value >> 9 = 22857
+        dw      22871   ; 3422 ^ 2 = 11710084, value >> 9 = 22871
+        dw      22884   ; 3423 ^ 2 = 11716929, value >> 9 = 22884
+        dw      22898   ; 3424 ^ 2 = 11723776, value >> 9 = 22898
+        dw      22911   ; 3425 ^ 2 = 11730625, value >> 9 = 22911
+        dw      22924   ; 3426 ^ 2 = 11737476, value >> 9 = 22924
+        dw      22938   ; 3427 ^ 2 = 11744329, value >> 9 = 22938
+        dw      22951   ; 3428 ^ 2 = 11751184, value >> 9 = 22951
+        dw      22964   ; 3429 ^ 2 = 11758041, value >> 9 = 22964
+        dw      22978   ; 3430 ^ 2 = 11764900, value >> 9 = 22978
+        dw      22991   ; 3431 ^ 2 = 11771761, value >> 9 = 22991
+        dw      23005   ; 3432 ^ 2 = 11778624, value >> 9 = 23005
+        dw      23018   ; 3433 ^ 2 = 11785489, value >> 9 = 23018
+        dw      23031   ; 3434 ^ 2 = 11792356, value >> 9 = 23031
+        dw      23045   ; 3435 ^ 2 = 11799225, value >> 9 = 23045
+        dw      23058   ; 3436 ^ 2 = 11806096, value >> 9 = 23058
+        dw      23072   ; 3437 ^ 2 = 11812969, value >> 9 = 23072
+        dw      23085   ; 3438 ^ 2 = 11819844, value >> 9 = 23085
+        dw      23099   ; 3439 ^ 2 = 11826721, value >> 9 = 23099
+        dw      23112   ; 3440 ^ 2 = 11833600, value >> 9 = 23112
+        dw      23125   ; 3441 ^ 2 = 11840481, value >> 9 = 23125
+        dw      23139   ; 3442 ^ 2 = 11847364, value >> 9 = 23139
+        dw      23152   ; 3443 ^ 2 = 11854249, value >> 9 = 23152
+        dw      23166   ; 3444 ^ 2 = 11861136, value >> 9 = 23166
+        dw      23179   ; 3445 ^ 2 = 11868025, value >> 9 = 23179
+        dw      23193   ; 3446 ^ 2 = 11874916, value >> 9 = 23193
+        dw      23206   ; 3447 ^ 2 = 11881809, value >> 9 = 23206
+        dw      23220   ; 3448 ^ 2 = 11888704, value >> 9 = 23220
+        dw      23233   ; 3449 ^ 2 = 11895601, value >> 9 = 23233
+        dw      23247   ; 3450 ^ 2 = 11902500, value >> 9 = 23247
+        dw      23260   ; 3451 ^ 2 = 11909401, value >> 9 = 23260
+        dw      23274   ; 3452 ^ 2 = 11916304, value >> 9 = 23274
+        dw      23287   ; 3453 ^ 2 = 11923209, value >> 9 = 23287
+        dw      23301   ; 3454 ^ 2 = 11930116, value >> 9 = 23301
+        dw      23314   ; 3455 ^ 2 = 11937025, value >> 9 = 23314
+        dw      23328   ; 3456 ^ 2 = 11943936, value >> 9 = 23328
+        dw      23341   ; 3457 ^ 2 = 11950849, value >> 9 = 23341
+        dw      23355   ; 3458 ^ 2 = 11957764, value >> 9 = 23355
+        dw      23368   ; 3459 ^ 2 = 11964681, value >> 9 = 23368
+        dw      23382   ; 3460 ^ 2 = 11971600, value >> 9 = 23382
+        dw      23395   ; 3461 ^ 2 = 11978521, value >> 9 = 23395
+        dw      23409   ; 3462 ^ 2 = 11985444, value >> 9 = 23409
+        dw      23422   ; 3463 ^ 2 = 11992369, value >> 9 = 23422
+        dw      23436   ; 3464 ^ 2 = 11999296, value >> 9 = 23436
+        dw      23449   ; 3465 ^ 2 = 12006225, value >> 9 = 23449
+        dw      23463   ; 3466 ^ 2 = 12013156, value >> 9 = 23463
+        dw      23476   ; 3467 ^ 2 = 12020089, value >> 9 = 23476
+        dw      23490   ; 3468 ^ 2 = 12027024, value >> 9 = 23490
+        dw      23503   ; 3469 ^ 2 = 12033961, value >> 9 = 23503
+        dw      23517   ; 3470 ^ 2 = 12040900, value >> 9 = 23517
+        dw      23530   ; 3471 ^ 2 = 12047841, value >> 9 = 23530
+        dw      23544   ; 3472 ^ 2 = 12054784, value >> 9 = 23544
+        dw      23558   ; 3473 ^ 2 = 12061729, value >> 9 = 23558
+        dw      23571   ; 3474 ^ 2 = 12068676, value >> 9 = 23571
+        dw      23585   ; 3475 ^ 2 = 12075625, value >> 9 = 23585
+        dw      23598   ; 3476 ^ 2 = 12082576, value >> 9 = 23598
+        dw      23612   ; 3477 ^ 2 = 12089529, value >> 9 = 23612
+        dw      23625   ; 3478 ^ 2 = 12096484, value >> 9 = 23625
+        dw      23639   ; 3479 ^ 2 = 12103441, value >> 9 = 23639
+        dw      23653   ; 3480 ^ 2 = 12110400, value >> 9 = 23653
+        dw      23666   ; 3481 ^ 2 = 12117361, value >> 9 = 23666
+        dw      23680   ; 3482 ^ 2 = 12124324, value >> 9 = 23680
+        dw      23693   ; 3483 ^ 2 = 12131289, value >> 9 = 23693
+        dw      23707   ; 3484 ^ 2 = 12138256, value >> 9 = 23707
+        dw      23721   ; 3485 ^ 2 = 12145225, value >> 9 = 23721
+        dw      23734   ; 3486 ^ 2 = 12152196, value >> 9 = 23734
+        dw      23748   ; 3487 ^ 2 = 12159169, value >> 9 = 23748
+        dw      23762   ; 3488 ^ 2 = 12166144, value >> 9 = 23762
+        dw      23775   ; 3489 ^ 2 = 12173121, value >> 9 = 23775
+        dw      23789   ; 3490 ^ 2 = 12180100, value >> 9 = 23789
+        dw      23802   ; 3491 ^ 2 = 12187081, value >> 9 = 23802
+        dw      23816   ; 3492 ^ 2 = 12194064, value >> 9 = 23816
+        dw      23830   ; 3493 ^ 2 = 12201049, value >> 9 = 23830
+        dw      23843   ; 3494 ^ 2 = 12208036, value >> 9 = 23843
+        dw      23857   ; 3495 ^ 2 = 12215025, value >> 9 = 23857
+        dw      23871   ; 3496 ^ 2 = 12222016, value >> 9 = 23871
+        dw      23884   ; 3497 ^ 2 = 12229009, value >> 9 = 23884
+        dw      23898   ; 3498 ^ 2 = 12236004, value >> 9 = 23898
+        dw      23912   ; 3499 ^ 2 = 12243001, value >> 9 = 23912
+        dw      23925   ; 3500 ^ 2 = 12250000, value >> 9 = 23925
+        dw      23939   ; 3501 ^ 2 = 12257001, value >> 9 = 23939
+        dw      23953   ; 3502 ^ 2 = 12264004, value >> 9 = 23953
+        dw      23966   ; 3503 ^ 2 = 12271009, value >> 9 = 23966
+        dw      23980   ; 3504 ^ 2 = 12278016, value >> 9 = 23980
+        dw      23994   ; 3505 ^ 2 = 12285025, value >> 9 = 23994
+        dw      24007   ; 3506 ^ 2 = 12292036, value >> 9 = 24007
+        dw      24021   ; 3507 ^ 2 = 12299049, value >> 9 = 24021
+        dw      24035   ; 3508 ^ 2 = 12306064, value >> 9 = 24035
+        dw      24048   ; 3509 ^ 2 = 12313081, value >> 9 = 24048
+        dw      24062   ; 3510 ^ 2 = 12320100, value >> 9 = 24062
+        dw      24076   ; 3511 ^ 2 = 12327121, value >> 9 = 24076
+        dw      24090   ; 3512 ^ 2 = 12334144, value >> 9 = 24090
+        dw      24103   ; 3513 ^ 2 = 12341169, value >> 9 = 24103
+        dw      24117   ; 3514 ^ 2 = 12348196, value >> 9 = 24117
+        dw      24131   ; 3515 ^ 2 = 12355225, value >> 9 = 24131
+        dw      24145   ; 3516 ^ 2 = 12362256, value >> 9 = 24145
+        dw      24158   ; 3517 ^ 2 = 12369289, value >> 9 = 24158
+        dw      24172   ; 3518 ^ 2 = 12376324, value >> 9 = 24172
+        dw      24186   ; 3519 ^ 2 = 12383361, value >> 9 = 24186
+        dw      24200   ; 3520 ^ 2 = 12390400, value >> 9 = 24200
+        dw      24213   ; 3521 ^ 2 = 12397441, value >> 9 = 24213
+        dw      24227   ; 3522 ^ 2 = 12404484, value >> 9 = 24227
+        dw      24241   ; 3523 ^ 2 = 12411529, value >> 9 = 24241
+        dw      24255   ; 3524 ^ 2 = 12418576, value >> 9 = 24255
+        dw      24268   ; 3525 ^ 2 = 12425625, value >> 9 = 24268
+        dw      24282   ; 3526 ^ 2 = 12432676, value >> 9 = 24282
+        dw      24296   ; 3527 ^ 2 = 12439729, value >> 9 = 24296
+        dw      24310   ; 3528 ^ 2 = 12446784, value >> 9 = 24310
+        dw      24323   ; 3529 ^ 2 = 12453841, value >> 9 = 24323
+        dw      24337   ; 3530 ^ 2 = 12460900, value >> 9 = 24337
+        dw      24351   ; 3531 ^ 2 = 12467961, value >> 9 = 24351
+        dw      24365   ; 3532 ^ 2 = 12475024, value >> 9 = 24365
+        dw      24379   ; 3533 ^ 2 = 12482089, value >> 9 = 24379
+        dw      24392   ; 3534 ^ 2 = 12489156, value >> 9 = 24392
+        dw      24406   ; 3535 ^ 2 = 12496225, value >> 9 = 24406
+        dw      24420   ; 3536 ^ 2 = 12503296, value >> 9 = 24420
+        dw      24434   ; 3537 ^ 2 = 12510369, value >> 9 = 24434
+        dw      24448   ; 3538 ^ 2 = 12517444, value >> 9 = 24448
+        dw      24461   ; 3539 ^ 2 = 12524521, value >> 9 = 24461
+        dw      24475   ; 3540 ^ 2 = 12531600, value >> 9 = 24475
+        dw      24489   ; 3541 ^ 2 = 12538681, value >> 9 = 24489
+        dw      24503   ; 3542 ^ 2 = 12545764, value >> 9 = 24503
+        dw      24517   ; 3543 ^ 2 = 12552849, value >> 9 = 24517
+        dw      24531   ; 3544 ^ 2 = 12559936, value >> 9 = 24531
+        dw      24544   ; 3545 ^ 2 = 12567025, value >> 9 = 24544
+        dw      24558   ; 3546 ^ 2 = 12574116, value >> 9 = 24558
+        dw      24572   ; 3547 ^ 2 = 12581209, value >> 9 = 24572
+        dw      24586   ; 3548 ^ 2 = 12588304, value >> 9 = 24586
+        dw      24600   ; 3549 ^ 2 = 12595401, value >> 9 = 24600
+        dw      24614   ; 3550 ^ 2 = 12602500, value >> 9 = 24614
+        dw      24628   ; 3551 ^ 2 = 12609601, value >> 9 = 24628
+        dw      24642   ; 3552 ^ 2 = 12616704, value >> 9 = 24642
+        dw      24655   ; 3553 ^ 2 = 12623809, value >> 9 = 24655
+        dw      24669   ; 3554 ^ 2 = 12630916, value >> 9 = 24669
+        dw      24683   ; 3555 ^ 2 = 12638025, value >> 9 = 24683
+        dw      24697   ; 3556 ^ 2 = 12645136, value >> 9 = 24697
+        dw      24711   ; 3557 ^ 2 = 12652249, value >> 9 = 24711
+        dw      24725   ; 3558 ^ 2 = 12659364, value >> 9 = 24725
+        dw      24739   ; 3559 ^ 2 = 12666481, value >> 9 = 24739
+        dw      24753   ; 3560 ^ 2 = 12673600, value >> 9 = 24753
+        dw      24767   ; 3561 ^ 2 = 12680721, value >> 9 = 24767
+        dw      24780   ; 3562 ^ 2 = 12687844, value >> 9 = 24780
+        dw      24794   ; 3563 ^ 2 = 12694969, value >> 9 = 24794
+        dw      24808   ; 3564 ^ 2 = 12702096, value >> 9 = 24808
+        dw      24822   ; 3565 ^ 2 = 12709225, value >> 9 = 24822
+        dw      24836   ; 3566 ^ 2 = 12716356, value >> 9 = 24836
+        dw      24850   ; 3567 ^ 2 = 12723489, value >> 9 = 24850
+        dw      24864   ; 3568 ^ 2 = 12730624, value >> 9 = 24864
+        dw      24878   ; 3569 ^ 2 = 12737761, value >> 9 = 24878
+        dw      24892   ; 3570 ^ 2 = 12744900, value >> 9 = 24892
+        dw      24906   ; 3571 ^ 2 = 12752041, value >> 9 = 24906
+        dw      24920   ; 3572 ^ 2 = 12759184, value >> 9 = 24920
+        dw      24934   ; 3573 ^ 2 = 12766329, value >> 9 = 24934
+        dw      24948   ; 3574 ^ 2 = 12773476, value >> 9 = 24948
+        dw      24962   ; 3575 ^ 2 = 12780625, value >> 9 = 24962
+        dw      24976   ; 3576 ^ 2 = 12787776, value >> 9 = 24976
+        dw      24990   ; 3577 ^ 2 = 12794929, value >> 9 = 24990
+        dw      25004   ; 3578 ^ 2 = 12802084, value >> 9 = 25004
+        dw      25018   ; 3579 ^ 2 = 12809241, value >> 9 = 25018
+        dw      25032   ; 3580 ^ 2 = 12816400, value >> 9 = 25032
+        dw      25046   ; 3581 ^ 2 = 12823561, value >> 9 = 25046
+        dw      25060   ; 3582 ^ 2 = 12830724, value >> 9 = 25060
+        dw      25074   ; 3583 ^ 2 = 12837889, value >> 9 = 25074
+        dw      25088   ; 3584 ^ 2 = 12845056, value >> 9 = 25088
+        dw      25102   ; 3585 ^ 2 = 12852225, value >> 9 = 25102
+        dw      25116   ; 3586 ^ 2 = 12859396, value >> 9 = 25116
+        dw      25130   ; 3587 ^ 2 = 12866569, value >> 9 = 25130
+        dw      25144   ; 3588 ^ 2 = 12873744, value >> 9 = 25144
+        dw      25158   ; 3589 ^ 2 = 12880921, value >> 9 = 25158
+        dw      25172   ; 3590 ^ 2 = 12888100, value >> 9 = 25172
+        dw      25186   ; 3591 ^ 2 = 12895281, value >> 9 = 25186
+        dw      25200   ; 3592 ^ 2 = 12902464, value >> 9 = 25200
+        dw      25214   ; 3593 ^ 2 = 12909649, value >> 9 = 25214
+        dw      25228   ; 3594 ^ 2 = 12916836, value >> 9 = 25228
+        dw      25242   ; 3595 ^ 2 = 12924025, value >> 9 = 25242
+        dw      25256   ; 3596 ^ 2 = 12931216, value >> 9 = 25256
+        dw      25270   ; 3597 ^ 2 = 12938409, value >> 9 = 25270
+        dw      25284   ; 3598 ^ 2 = 12945604, value >> 9 = 25284
+        dw      25298   ; 3599 ^ 2 = 12952801, value >> 9 = 25298
+        dw      25312   ; 3600 ^ 2 = 12960000, value >> 9 = 25312
+        dw      25326   ; 3601 ^ 2 = 12967201, value >> 9 = 25326
+        dw      25340   ; 3602 ^ 2 = 12974404, value >> 9 = 25340
+        dw      25354   ; 3603 ^ 2 = 12981609, value >> 9 = 25354
+        dw      25368   ; 3604 ^ 2 = 12988816, value >> 9 = 25368
+        dw      25382   ; 3605 ^ 2 = 12996025, value >> 9 = 25382
+        dw      25396   ; 3606 ^ 2 = 13003236, value >> 9 = 25396
+        dw      25411   ; 3607 ^ 2 = 13010449, value >> 9 = 25411
+        dw      25425   ; 3608 ^ 2 = 13017664, value >> 9 = 25425
+        dw      25439   ; 3609 ^ 2 = 13024881, value >> 9 = 25439
+        dw      25453   ; 3610 ^ 2 = 13032100, value >> 9 = 25453
+        dw      25467   ; 3611 ^ 2 = 13039321, value >> 9 = 25467
+        dw      25481   ; 3612 ^ 2 = 13046544, value >> 9 = 25481
+        dw      25495   ; 3613 ^ 2 = 13053769, value >> 9 = 25495
+        dw      25509   ; 3614 ^ 2 = 13060996, value >> 9 = 25509
+        dw      25523   ; 3615 ^ 2 = 13068225, value >> 9 = 25523
+        dw      25538   ; 3616 ^ 2 = 13075456, value >> 9 = 25538
+        dw      25552   ; 3617 ^ 2 = 13082689, value >> 9 = 25552
+        dw      25566   ; 3618 ^ 2 = 13089924, value >> 9 = 25566
+        dw      25580   ; 3619 ^ 2 = 13097161, value >> 9 = 25580
+        dw      25594   ; 3620 ^ 2 = 13104400, value >> 9 = 25594
+        dw      25608   ; 3621 ^ 2 = 13111641, value >> 9 = 25608
+        dw      25622   ; 3622 ^ 2 = 13118884, value >> 9 = 25622
+        dw      25636   ; 3623 ^ 2 = 13126129, value >> 9 = 25636
+        dw      25651   ; 3624 ^ 2 = 13133376, value >> 9 = 25651
+        dw      25665   ; 3625 ^ 2 = 13140625, value >> 9 = 25665
+        dw      25679   ; 3626 ^ 2 = 13147876, value >> 9 = 25679
+        dw      25693   ; 3627 ^ 2 = 13155129, value >> 9 = 25693
+        dw      25707   ; 3628 ^ 2 = 13162384, value >> 9 = 25707
+        dw      25721   ; 3629 ^ 2 = 13169641, value >> 9 = 25721
+        dw      25736   ; 3630 ^ 2 = 13176900, value >> 9 = 25736
+        dw      25750   ; 3631 ^ 2 = 13184161, value >> 9 = 25750
+        dw      25764   ; 3632 ^ 2 = 13191424, value >> 9 = 25764
+        dw      25778   ; 3633 ^ 2 = 13198689, value >> 9 = 25778
+        dw      25792   ; 3634 ^ 2 = 13205956, value >> 9 = 25792
+        dw      25807   ; 3635 ^ 2 = 13213225, value >> 9 = 25807
+        dw      25821   ; 3636 ^ 2 = 13220496, value >> 9 = 25821
+        dw      25835   ; 3637 ^ 2 = 13227769, value >> 9 = 25835
+        dw      25849   ; 3638 ^ 2 = 13235044, value >> 9 = 25849
+        dw      25863   ; 3639 ^ 2 = 13242321, value >> 9 = 25863
+        dw      25878   ; 3640 ^ 2 = 13249600, value >> 9 = 25878
+        dw      25892   ; 3641 ^ 2 = 13256881, value >> 9 = 25892
+        dw      25906   ; 3642 ^ 2 = 13264164, value >> 9 = 25906
+        dw      25920   ; 3643 ^ 2 = 13271449, value >> 9 = 25920
+        dw      25935   ; 3644 ^ 2 = 13278736, value >> 9 = 25935
+        dw      25949   ; 3645 ^ 2 = 13286025, value >> 9 = 25949
+        dw      25963   ; 3646 ^ 2 = 13293316, value >> 9 = 25963
+        dw      25977   ; 3647 ^ 2 = 13300609, value >> 9 = 25977
+        dw      25992   ; 3648 ^ 2 = 13307904, value >> 9 = 25992
+        dw      26006   ; 3649 ^ 2 = 13315201, value >> 9 = 26006
+        dw      26020   ; 3650 ^ 2 = 13322500, value >> 9 = 26020
+        dw      26034   ; 3651 ^ 2 = 13329801, value >> 9 = 26034
+        dw      26049   ; 3652 ^ 2 = 13337104, value >> 9 = 26049
+        dw      26063   ; 3653 ^ 2 = 13344409, value >> 9 = 26063
+        dw      26077   ; 3654 ^ 2 = 13351716, value >> 9 = 26077
+        dw      26091   ; 3655 ^ 2 = 13359025, value >> 9 = 26091
+        dw      26106   ; 3656 ^ 2 = 13366336, value >> 9 = 26106
+        dw      26120   ; 3657 ^ 2 = 13373649, value >> 9 = 26120
+        dw      26134   ; 3658 ^ 2 = 13380964, value >> 9 = 26134
+        dw      26148   ; 3659 ^ 2 = 13388281, value >> 9 = 26148
+        dw      26163   ; 3660 ^ 2 = 13395600, value >> 9 = 26163
+        dw      26177   ; 3661 ^ 2 = 13402921, value >> 9 = 26177
+        dw      26191   ; 3662 ^ 2 = 13410244, value >> 9 = 26191
+        dw      26206   ; 3663 ^ 2 = 13417569, value >> 9 = 26206
+        dw      26220   ; 3664 ^ 2 = 13424896, value >> 9 = 26220
+        dw      26234   ; 3665 ^ 2 = 13432225, value >> 9 = 26234
+        dw      26249   ; 3666 ^ 2 = 13439556, value >> 9 = 26249
+        dw      26263   ; 3667 ^ 2 = 13446889, value >> 9 = 26263
+        dw      26277   ; 3668 ^ 2 = 13454224, value >> 9 = 26277
+        dw      26292   ; 3669 ^ 2 = 13461561, value >> 9 = 26292
+        dw      26306   ; 3670 ^ 2 = 13468900, value >> 9 = 26306
+        dw      26320   ; 3671 ^ 2 = 13476241, value >> 9 = 26320
+        dw      26335   ; 3672 ^ 2 = 13483584, value >> 9 = 26335
+        dw      26349   ; 3673 ^ 2 = 13490929, value >> 9 = 26349
+        dw      26363   ; 3674 ^ 2 = 13498276, value >> 9 = 26363
+        dw      26378   ; 3675 ^ 2 = 13505625, value >> 9 = 26378
+        dw      26392   ; 3676 ^ 2 = 13512976, value >> 9 = 26392
+        dw      26406   ; 3677 ^ 2 = 13520329, value >> 9 = 26406
+        dw      26421   ; 3678 ^ 2 = 13527684, value >> 9 = 26421
+        dw      26435   ; 3679 ^ 2 = 13535041, value >> 9 = 26435
+        dw      26450   ; 3680 ^ 2 = 13542400, value >> 9 = 26450
+        dw      26464   ; 3681 ^ 2 = 13549761, value >> 9 = 26464
+        dw      26478   ; 3682 ^ 2 = 13557124, value >> 9 = 26478
+        dw      26493   ; 3683 ^ 2 = 13564489, value >> 9 = 26493
+        dw      26507   ; 3684 ^ 2 = 13571856, value >> 9 = 26507
+        dw      26521   ; 3685 ^ 2 = 13579225, value >> 9 = 26521
+        dw      26536   ; 3686 ^ 2 = 13586596, value >> 9 = 26536
+        dw      26550   ; 3687 ^ 2 = 13593969, value >> 9 = 26550
+        dw      26565   ; 3688 ^ 2 = 13601344, value >> 9 = 26565
+        dw      26579   ; 3689 ^ 2 = 13608721, value >> 9 = 26579
+        dw      26593   ; 3690 ^ 2 = 13616100, value >> 9 = 26593
+        dw      26608   ; 3691 ^ 2 = 13623481, value >> 9 = 26608
+        dw      26622   ; 3692 ^ 2 = 13630864, value >> 9 = 26622
+        dw      26637   ; 3693 ^ 2 = 13638249, value >> 9 = 26637
+        dw      26651   ; 3694 ^ 2 = 13645636, value >> 9 = 26651
+        dw      26666   ; 3695 ^ 2 = 13653025, value >> 9 = 26666
+        dw      26680   ; 3696 ^ 2 = 13660416, value >> 9 = 26680
+        dw      26694   ; 3697 ^ 2 = 13667809, value >> 9 = 26694
+        dw      26709   ; 3698 ^ 2 = 13675204, value >> 9 = 26709
+        dw      26723   ; 3699 ^ 2 = 13682601, value >> 9 = 26723
+        dw      26738   ; 3700 ^ 2 = 13690000, value >> 9 = 26738
+        dw      26752   ; 3701 ^ 2 = 13697401, value >> 9 = 26752
+        dw      26767   ; 3702 ^ 2 = 13704804, value >> 9 = 26767
+        dw      26781   ; 3703 ^ 2 = 13712209, value >> 9 = 26781
+        dw      26796   ; 3704 ^ 2 = 13719616, value >> 9 = 26796
+        dw      26810   ; 3705 ^ 2 = 13727025, value >> 9 = 26810
+        dw      26825   ; 3706 ^ 2 = 13734436, value >> 9 = 26825
+        dw      26839   ; 3707 ^ 2 = 13741849, value >> 9 = 26839
+        dw      26854   ; 3708 ^ 2 = 13749264, value >> 9 = 26854
+        dw      26868   ; 3709 ^ 2 = 13756681, value >> 9 = 26868
+        dw      26883   ; 3710 ^ 2 = 13764100, value >> 9 = 26883
+        dw      26897   ; 3711 ^ 2 = 13771521, value >> 9 = 26897
+        dw      26912   ; 3712 ^ 2 = 13778944, value >> 9 = 26912
+        dw      26926   ; 3713 ^ 2 = 13786369, value >> 9 = 26926
+        dw      26941   ; 3714 ^ 2 = 13793796, value >> 9 = 26941
+        dw      26955   ; 3715 ^ 2 = 13801225, value >> 9 = 26955
+        dw      26970   ; 3716 ^ 2 = 13808656, value >> 9 = 26970
+        dw      26984   ; 3717 ^ 2 = 13816089, value >> 9 = 26984
+        dw      26999   ; 3718 ^ 2 = 13823524, value >> 9 = 26999
+        dw      27013   ; 3719 ^ 2 = 13830961, value >> 9 = 27013
+        dw      27028   ; 3720 ^ 2 = 13838400, value >> 9 = 27028
+        dw      27042   ; 3721 ^ 2 = 13845841, value >> 9 = 27042
+        dw      27057   ; 3722 ^ 2 = 13853284, value >> 9 = 27057
+        dw      27071   ; 3723 ^ 2 = 13860729, value >> 9 = 27071
+        dw      27086   ; 3724 ^ 2 = 13868176, value >> 9 = 27086
+        dw      27100   ; 3725 ^ 2 = 13875625, value >> 9 = 27100
+        dw      27115   ; 3726 ^ 2 = 13883076, value >> 9 = 27115
+        dw      27129   ; 3727 ^ 2 = 13890529, value >> 9 = 27129
+        dw      27144   ; 3728 ^ 2 = 13897984, value >> 9 = 27144
+        dw      27159   ; 3729 ^ 2 = 13905441, value >> 9 = 27159
+        dw      27173   ; 3730 ^ 2 = 13912900, value >> 9 = 27173
+        dw      27188   ; 3731 ^ 2 = 13920361, value >> 9 = 27188
+        dw      27202   ; 3732 ^ 2 = 13927824, value >> 9 = 27202
+        dw      27217   ; 3733 ^ 2 = 13935289, value >> 9 = 27217
+        dw      27231   ; 3734 ^ 2 = 13942756, value >> 9 = 27231
+        dw      27246   ; 3735 ^ 2 = 13950225, value >> 9 = 27246
+        dw      27261   ; 3736 ^ 2 = 13957696, value >> 9 = 27261
+        dw      27275   ; 3737 ^ 2 = 13965169, value >> 9 = 27275
+        dw      27290   ; 3738 ^ 2 = 13972644, value >> 9 = 27290
+        dw      27304   ; 3739 ^ 2 = 13980121, value >> 9 = 27304
+        dw      27319   ; 3740 ^ 2 = 13987600, value >> 9 = 27319
+        dw      27334   ; 3741 ^ 2 = 13995081, value >> 9 = 27334
+        dw      27348   ; 3742 ^ 2 = 14002564, value >> 9 = 27348
+        dw      27363   ; 3743 ^ 2 = 14010049, value >> 9 = 27363
+        dw      27378   ; 3744 ^ 2 = 14017536, value >> 9 = 27378
+        dw      27392   ; 3745 ^ 2 = 14025025, value >> 9 = 27392
+        dw      27407   ; 3746 ^ 2 = 14032516, value >> 9 = 27407
+        dw      27421   ; 3747 ^ 2 = 14040009, value >> 9 = 27421
+        dw      27436   ; 3748 ^ 2 = 14047504, value >> 9 = 27436
+        dw      27451   ; 3749 ^ 2 = 14055001, value >> 9 = 27451
+        dw      27465   ; 3750 ^ 2 = 14062500, value >> 9 = 27465
+        dw      27480   ; 3751 ^ 2 = 14070001, value >> 9 = 27480
+        dw      27495   ; 3752 ^ 2 = 14077504, value >> 9 = 27495
+        dw      27509   ; 3753 ^ 2 = 14085009, value >> 9 = 27509
+        dw      27524   ; 3754 ^ 2 = 14092516, value >> 9 = 27524
+        dw      27539   ; 3755 ^ 2 = 14100025, value >> 9 = 27539
+        dw      27553   ; 3756 ^ 2 = 14107536, value >> 9 = 27553
+        dw      27568   ; 3757 ^ 2 = 14115049, value >> 9 = 27568
+        dw      27583   ; 3758 ^ 2 = 14122564, value >> 9 = 27583
+        dw      27597   ; 3759 ^ 2 = 14130081, value >> 9 = 27597
+        dw      27612   ; 3760 ^ 2 = 14137600, value >> 9 = 27612
+        dw      27627   ; 3761 ^ 2 = 14145121, value >> 9 = 27627
+        dw      27641   ; 3762 ^ 2 = 14152644, value >> 9 = 27641
+        dw      27656   ; 3763 ^ 2 = 14160169, value >> 9 = 27656
+        dw      27671   ; 3764 ^ 2 = 14167696, value >> 9 = 27671
+        dw      27685   ; 3765 ^ 2 = 14175225, value >> 9 = 27685
+        dw      27700   ; 3766 ^ 2 = 14182756, value >> 9 = 27700
+        dw      27715   ; 3767 ^ 2 = 14190289, value >> 9 = 27715
+        dw      27730   ; 3768 ^ 2 = 14197824, value >> 9 = 27730
+        dw      27744   ; 3769 ^ 2 = 14205361, value >> 9 = 27744
+        dw      27759   ; 3770 ^ 2 = 14212900, value >> 9 = 27759
+        dw      27774   ; 3771 ^ 2 = 14220441, value >> 9 = 27774
+        dw      27789   ; 3772 ^ 2 = 14227984, value >> 9 = 27789
+        dw      27803   ; 3773 ^ 2 = 14235529, value >> 9 = 27803
+        dw      27818   ; 3774 ^ 2 = 14243076, value >> 9 = 27818
+        dw      27833   ; 3775 ^ 2 = 14250625, value >> 9 = 27833
+        dw      27848   ; 3776 ^ 2 = 14258176, value >> 9 = 27848
+        dw      27862   ; 3777 ^ 2 = 14265729, value >> 9 = 27862
+        dw      27877   ; 3778 ^ 2 = 14273284, value >> 9 = 27877
+        dw      27892   ; 3779 ^ 2 = 14280841, value >> 9 = 27892
+        dw      27907   ; 3780 ^ 2 = 14288400, value >> 9 = 27907
+        dw      27921   ; 3781 ^ 2 = 14295961, value >> 9 = 27921
+        dw      27936   ; 3782 ^ 2 = 14303524, value >> 9 = 27936
+        dw      27951   ; 3783 ^ 2 = 14311089, value >> 9 = 27951
+        dw      27966   ; 3784 ^ 2 = 14318656, value >> 9 = 27966
+        dw      27980   ; 3785 ^ 2 = 14326225, value >> 9 = 27980
+        dw      27995   ; 3786 ^ 2 = 14333796, value >> 9 = 27995
+        dw      28010   ; 3787 ^ 2 = 14341369, value >> 9 = 28010
+        dw      28025   ; 3788 ^ 2 = 14348944, value >> 9 = 28025
+        dw      28040   ; 3789 ^ 2 = 14356521, value >> 9 = 28040
+        dw      28054   ; 3790 ^ 2 = 14364100, value >> 9 = 28054
+        dw      28069   ; 3791 ^ 2 = 14371681, value >> 9 = 28069
+        dw      28084   ; 3792 ^ 2 = 14379264, value >> 9 = 28084
+        dw      28099   ; 3793 ^ 2 = 14386849, value >> 9 = 28099
+        dw      28114   ; 3794 ^ 2 = 14394436, value >> 9 = 28114
+        dw      28128   ; 3795 ^ 2 = 14402025, value >> 9 = 28128
+        dw      28143   ; 3796 ^ 2 = 14409616, value >> 9 = 28143
+        dw      28158   ; 3797 ^ 2 = 14417209, value >> 9 = 28158
+        dw      28173   ; 3798 ^ 2 = 14424804, value >> 9 = 28173
+        dw      28188   ; 3799 ^ 2 = 14432401, value >> 9 = 28188
+        dw      28203   ; 3800 ^ 2 = 14440000, value >> 9 = 28203
+        dw      28217   ; 3801 ^ 2 = 14447601, value >> 9 = 28217
+        dw      28232   ; 3802 ^ 2 = 14455204, value >> 9 = 28232
+        dw      28247   ; 3803 ^ 2 = 14462809, value >> 9 = 28247
+        dw      28262   ; 3804 ^ 2 = 14470416, value >> 9 = 28262
+        dw      28277   ; 3805 ^ 2 = 14478025, value >> 9 = 28277
+        dw      28292   ; 3806 ^ 2 = 14485636, value >> 9 = 28292
+        dw      28307   ; 3807 ^ 2 = 14493249, value >> 9 = 28307
+        dw      28322   ; 3808 ^ 2 = 14500864, value >> 9 = 28322
+        dw      28336   ; 3809 ^ 2 = 14508481, value >> 9 = 28336
+        dw      28351   ; 3810 ^ 2 = 14516100, value >> 9 = 28351
+        dw      28366   ; 3811 ^ 2 = 14523721, value >> 9 = 28366
+        dw      28381   ; 3812 ^ 2 = 14531344, value >> 9 = 28381
+        dw      28396   ; 3813 ^ 2 = 14538969, value >> 9 = 28396
+        dw      28411   ; 3814 ^ 2 = 14546596, value >> 9 = 28411
+        dw      28426   ; 3815 ^ 2 = 14554225, value >> 9 = 28426
+        dw      28441   ; 3816 ^ 2 = 14561856, value >> 9 = 28441
+        dw      28456   ; 3817 ^ 2 = 14569489, value >> 9 = 28456
+        dw      28470   ; 3818 ^ 2 = 14577124, value >> 9 = 28470
+        dw      28485   ; 3819 ^ 2 = 14584761, value >> 9 = 28485
+        dw      28500   ; 3820 ^ 2 = 14592400, value >> 9 = 28500
+        dw      28515   ; 3821 ^ 2 = 14600041, value >> 9 = 28515
+        dw      28530   ; 3822 ^ 2 = 14607684, value >> 9 = 28530
+        dw      28545   ; 3823 ^ 2 = 14615329, value >> 9 = 28545
+        dw      28560   ; 3824 ^ 2 = 14622976, value >> 9 = 28560
+        dw      28575   ; 3825 ^ 2 = 14630625, value >> 9 = 28575
+        dw      28590   ; 3826 ^ 2 = 14638276, value >> 9 = 28590
+        dw      28605   ; 3827 ^ 2 = 14645929, value >> 9 = 28605
+        dw      28620   ; 3828 ^ 2 = 14653584, value >> 9 = 28620
+        dw      28635   ; 3829 ^ 2 = 14661241, value >> 9 = 28635
+        dw      28650   ; 3830 ^ 2 = 14668900, value >> 9 = 28650
+        dw      28665   ; 3831 ^ 2 = 14676561, value >> 9 = 28665
+        dw      28680   ; 3832 ^ 2 = 14684224, value >> 9 = 28680
+        dw      28695   ; 3833 ^ 2 = 14691889, value >> 9 = 28695
+        dw      28710   ; 3834 ^ 2 = 14699556, value >> 9 = 28710
+        dw      28725   ; 3835 ^ 2 = 14707225, value >> 9 = 28725
+        dw      28740   ; 3836 ^ 2 = 14714896, value >> 9 = 28740
+        dw      28755   ; 3837 ^ 2 = 14722569, value >> 9 = 28755
+        dw      28770   ; 3838 ^ 2 = 14730244, value >> 9 = 28770
+        dw      28785   ; 3839 ^ 2 = 14737921, value >> 9 = 28785
+        dw      28800   ; 3840 ^ 2 = 14745600, value >> 9 = 28800
+        dw      28815   ; 3841 ^ 2 = 14753281, value >> 9 = 28815
+        dw      28830   ; 3842 ^ 2 = 14760964, value >> 9 = 28830
+        dw      28845   ; 3843 ^ 2 = 14768649, value >> 9 = 28845
+        dw      28860   ; 3844 ^ 2 = 14776336, value >> 9 = 28860
+        dw      28875   ; 3845 ^ 2 = 14784025, value >> 9 = 28875
+        dw      28890   ; 3846 ^ 2 = 14791716, value >> 9 = 28890
+        dw      28905   ; 3847 ^ 2 = 14799409, value >> 9 = 28905
+        dw      28920   ; 3848 ^ 2 = 14807104, value >> 9 = 28920
+        dw      28935   ; 3849 ^ 2 = 14814801, value >> 9 = 28935
+        dw      28950   ; 3850 ^ 2 = 14822500, value >> 9 = 28950
+        dw      28965   ; 3851 ^ 2 = 14830201, value >> 9 = 28965
+        dw      28980   ; 3852 ^ 2 = 14837904, value >> 9 = 28980
+        dw      28995   ; 3853 ^ 2 = 14845609, value >> 9 = 28995
+        dw      29010   ; 3854 ^ 2 = 14853316, value >> 9 = 29010
+        dw      29025   ; 3855 ^ 2 = 14861025, value >> 9 = 29025
+        dw      29040   ; 3856 ^ 2 = 14868736, value >> 9 = 29040
+        dw      29055   ; 3857 ^ 2 = 14876449, value >> 9 = 29055
+        dw      29070   ; 3858 ^ 2 = 14884164, value >> 9 = 29070
+        dw      29085   ; 3859 ^ 2 = 14891881, value >> 9 = 29085
+        dw      29100   ; 3860 ^ 2 = 14899600, value >> 9 = 29100
+        dw      29115   ; 3861 ^ 2 = 14907321, value >> 9 = 29115
+        dw      29130   ; 3862 ^ 2 = 14915044, value >> 9 = 29130
+        dw      29146   ; 3863 ^ 2 = 14922769, value >> 9 = 29146
+        dw      29161   ; 3864 ^ 2 = 14930496, value >> 9 = 29161
+        dw      29176   ; 3865 ^ 2 = 14938225, value >> 9 = 29176
+        dw      29191   ; 3866 ^ 2 = 14945956, value >> 9 = 29191
+        dw      29206   ; 3867 ^ 2 = 14953689, value >> 9 = 29206
+        dw      29221   ; 3868 ^ 2 = 14961424, value >> 9 = 29221
+        dw      29236   ; 3869 ^ 2 = 14969161, value >> 9 = 29236
+        dw      29251   ; 3870 ^ 2 = 14976900, value >> 9 = 29251
+        dw      29266   ; 3871 ^ 2 = 14984641, value >> 9 = 29266
+        dw      29282   ; 3872 ^ 2 = 14992384, value >> 9 = 29282
+        dw      29297   ; 3873 ^ 2 = 15000129, value >> 9 = 29297
+        dw      29312   ; 3874 ^ 2 = 15007876, value >> 9 = 29312
+        dw      29327   ; 3875 ^ 2 = 15015625, value >> 9 = 29327
+        dw      29342   ; 3876 ^ 2 = 15023376, value >> 9 = 29342
+        dw      29357   ; 3877 ^ 2 = 15031129, value >> 9 = 29357
+        dw      29372   ; 3878 ^ 2 = 15038884, value >> 9 = 29372
+        dw      29387   ; 3879 ^ 2 = 15046641, value >> 9 = 29387
+        dw      29403   ; 3880 ^ 2 = 15054400, value >> 9 = 29403
+        dw      29418   ; 3881 ^ 2 = 15062161, value >> 9 = 29418
+        dw      29433   ; 3882 ^ 2 = 15069924, value >> 9 = 29433
+        dw      29448   ; 3883 ^ 2 = 15077689, value >> 9 = 29448
+        dw      29463   ; 3884 ^ 2 = 15085456, value >> 9 = 29463
+        dw      29478   ; 3885 ^ 2 = 15093225, value >> 9 = 29478
+        dw      29494   ; 3886 ^ 2 = 15100996, value >> 9 = 29494
+        dw      29509   ; 3887 ^ 2 = 15108769, value >> 9 = 29509
+        dw      29524   ; 3888 ^ 2 = 15116544, value >> 9 = 29524
+        dw      29539   ; 3889 ^ 2 = 15124321, value >> 9 = 29539
+        dw      29554   ; 3890 ^ 2 = 15132100, value >> 9 = 29554
+        dw      29570   ; 3891 ^ 2 = 15139881, value >> 9 = 29570
+        dw      29585   ; 3892 ^ 2 = 15147664, value >> 9 = 29585
+        dw      29600   ; 3893 ^ 2 = 15155449, value >> 9 = 29600
+        dw      29615   ; 3894 ^ 2 = 15163236, value >> 9 = 29615
+        dw      29630   ; 3895 ^ 2 = 15171025, value >> 9 = 29630
+        dw      29646   ; 3896 ^ 2 = 15178816, value >> 9 = 29646
+        dw      29661   ; 3897 ^ 2 = 15186609, value >> 9 = 29661
+        dw      29676   ; 3898 ^ 2 = 15194404, value >> 9 = 29676
+        dw      29691   ; 3899 ^ 2 = 15202201, value >> 9 = 29691
+        dw      29707   ; 3900 ^ 2 = 15210000, value >> 9 = 29707
+        dw      29722   ; 3901 ^ 2 = 15217801, value >> 9 = 29722
+        dw      29737   ; 3902 ^ 2 = 15225604, value >> 9 = 29737
+        dw      29752   ; 3903 ^ 2 = 15233409, value >> 9 = 29752
+        dw      29768   ; 3904 ^ 2 = 15241216, value >> 9 = 29768
+        dw      29783   ; 3905 ^ 2 = 15249025, value >> 9 = 29783
+        dw      29798   ; 3906 ^ 2 = 15256836, value >> 9 = 29798
+        dw      29813   ; 3907 ^ 2 = 15264649, value >> 9 = 29813
+        dw      29829   ; 3908 ^ 2 = 15272464, value >> 9 = 29829
+        dw      29844   ; 3909 ^ 2 = 15280281, value >> 9 = 29844
+        dw      29859   ; 3910 ^ 2 = 15288100, value >> 9 = 29859
+        dw      29874   ; 3911 ^ 2 = 15295921, value >> 9 = 29874
+        dw      29890   ; 3912 ^ 2 = 15303744, value >> 9 = 29890
+        dw      29905   ; 3913 ^ 2 = 15311569, value >> 9 = 29905
+        dw      29920   ; 3914 ^ 2 = 15319396, value >> 9 = 29920
+        dw      29935   ; 3915 ^ 2 = 15327225, value >> 9 = 29935
+        dw      29951   ; 3916 ^ 2 = 15335056, value >> 9 = 29951
+        dw      29966   ; 3917 ^ 2 = 15342889, value >> 9 = 29966
+        dw      29981   ; 3918 ^ 2 = 15350724, value >> 9 = 29981
+        dw      29997   ; 3919 ^ 2 = 15358561, value >> 9 = 29997
+        dw      30012   ; 3920 ^ 2 = 15366400, value >> 9 = 30012
+        dw      30027   ; 3921 ^ 2 = 15374241, value >> 9 = 30027
+        dw      30043   ; 3922 ^ 2 = 15382084, value >> 9 = 30043
+        dw      30058   ; 3923 ^ 2 = 15389929, value >> 9 = 30058
+        dw      30073   ; 3924 ^ 2 = 15397776, value >> 9 = 30073
+        dw      30089   ; 3925 ^ 2 = 15405625, value >> 9 = 30089
+        dw      30104   ; 3926 ^ 2 = 15413476, value >> 9 = 30104
+        dw      30119   ; 3927 ^ 2 = 15421329, value >> 9 = 30119
+        dw      30135   ; 3928 ^ 2 = 15429184, value >> 9 = 30135
+        dw      30150   ; 3929 ^ 2 = 15437041, value >> 9 = 30150
+        dw      30165   ; 3930 ^ 2 = 15444900, value >> 9 = 30165
+        dw      30181   ; 3931 ^ 2 = 15452761, value >> 9 = 30181
+        dw      30196   ; 3932 ^ 2 = 15460624, value >> 9 = 30196
+        dw      30211   ; 3933 ^ 2 = 15468489, value >> 9 = 30211
+        dw      30227   ; 3934 ^ 2 = 15476356, value >> 9 = 30227
+        dw      30242   ; 3935 ^ 2 = 15484225, value >> 9 = 30242
+        dw      30258   ; 3936 ^ 2 = 15492096, value >> 9 = 30258
+        dw      30273   ; 3937 ^ 2 = 15499969, value >> 9 = 30273
+        dw      30288   ; 3938 ^ 2 = 15507844, value >> 9 = 30288
+        dw      30304   ; 3939 ^ 2 = 15515721, value >> 9 = 30304
+        dw      30319   ; 3940 ^ 2 = 15523600, value >> 9 = 30319
+        dw      30334   ; 3941 ^ 2 = 15531481, value >> 9 = 30334
+        dw      30350   ; 3942 ^ 2 = 15539364, value >> 9 = 30350
+        dw      30365   ; 3943 ^ 2 = 15547249, value >> 9 = 30365
+        dw      30381   ; 3944 ^ 2 = 15555136, value >> 9 = 30381
+        dw      30396   ; 3945 ^ 2 = 15563025, value >> 9 = 30396
+        dw      30411   ; 3946 ^ 2 = 15570916, value >> 9 = 30411
+        dw      30427   ; 3947 ^ 2 = 15578809, value >> 9 = 30427
+        dw      30442   ; 3948 ^ 2 = 15586704, value >> 9 = 30442
+        dw      30458   ; 3949 ^ 2 = 15594601, value >> 9 = 30458
+        dw      30473   ; 3950 ^ 2 = 15602500, value >> 9 = 30473
+        dw      30489   ; 3951 ^ 2 = 15610401, value >> 9 = 30489
+        dw      30504   ; 3952 ^ 2 = 15618304, value >> 9 = 30504
+        dw      30519   ; 3953 ^ 2 = 15626209, value >> 9 = 30519
+        dw      30535   ; 3954 ^ 2 = 15634116, value >> 9 = 30535
+        dw      30550   ; 3955 ^ 2 = 15642025, value >> 9 = 30550
+        dw      30566   ; 3956 ^ 2 = 15649936, value >> 9 = 30566
+        dw      30581   ; 3957 ^ 2 = 15657849, value >> 9 = 30581
+        dw      30597   ; 3958 ^ 2 = 15665764, value >> 9 = 30597
+        dw      30612   ; 3959 ^ 2 = 15673681, value >> 9 = 30612
+        dw      30628   ; 3960 ^ 2 = 15681600, value >> 9 = 30628
+        dw      30643   ; 3961 ^ 2 = 15689521, value >> 9 = 30643
+        dw      30659   ; 3962 ^ 2 = 15697444, value >> 9 = 30659
+        dw      30674   ; 3963 ^ 2 = 15705369, value >> 9 = 30674
+        dw      30690   ; 3964 ^ 2 = 15713296, value >> 9 = 30690
+        dw      30705   ; 3965 ^ 2 = 15721225, value >> 9 = 30705
+        dw      30721   ; 3966 ^ 2 = 15729156, value >> 9 = 30721
+        dw      30736   ; 3967 ^ 2 = 15737089, value >> 9 = 30736
+        dw      30752   ; 3968 ^ 2 = 15745024, value >> 9 = 30752
+        dw      30767   ; 3969 ^ 2 = 15752961, value >> 9 = 30767
+        dw      30783   ; 3970 ^ 2 = 15760900, value >> 9 = 30783
+        dw      30798   ; 3971 ^ 2 = 15768841, value >> 9 = 30798
+        dw      30814   ; 3972 ^ 2 = 15776784, value >> 9 = 30814
+        dw      30829   ; 3973 ^ 2 = 15784729, value >> 9 = 30829
+        dw      30845   ; 3974 ^ 2 = 15792676, value >> 9 = 30845
+        dw      30860   ; 3975 ^ 2 = 15800625, value >> 9 = 30860
+        dw      30876   ; 3976 ^ 2 = 15808576, value >> 9 = 30876
+        dw      30891   ; 3977 ^ 2 = 15816529, value >> 9 = 30891
+        dw      30907   ; 3978 ^ 2 = 15824484, value >> 9 = 30907
+        dw      30922   ; 3979 ^ 2 = 15832441, value >> 9 = 30922
+        dw      30938   ; 3980 ^ 2 = 15840400, value >> 9 = 30938
+        dw      30953   ; 3981 ^ 2 = 15848361, value >> 9 = 30953
+        dw      30969   ; 3982 ^ 2 = 15856324, value >> 9 = 30969
+        dw      30984   ; 3983 ^ 2 = 15864289, value >> 9 = 30984
+        dw      31000   ; 3984 ^ 2 = 15872256, value >> 9 = 31000
+        dw      31016   ; 3985 ^ 2 = 15880225, value >> 9 = 31016
+        dw      31031   ; 3986 ^ 2 = 15888196, value >> 9 = 31031
+        dw      31047   ; 3987 ^ 2 = 15896169, value >> 9 = 31047
+        dw      31062   ; 3988 ^ 2 = 15904144, value >> 9 = 31062
+        dw      31078   ; 3989 ^ 2 = 15912121, value >> 9 = 31078
+        dw      31093   ; 3990 ^ 2 = 15920100, value >> 9 = 31093
+        dw      31109   ; 3991 ^ 2 = 15928081, value >> 9 = 31109
+        dw      31125   ; 3992 ^ 2 = 15936064, value >> 9 = 31125
+        dw      31140   ; 3993 ^ 2 = 15944049, value >> 9 = 31140
+        dw      31156   ; 3994 ^ 2 = 15952036, value >> 9 = 31156
+        dw      31171   ; 3995 ^ 2 = 15960025, value >> 9 = 31171
+        dw      31187   ; 3996 ^ 2 = 15968016, value >> 9 = 31187
+        dw      31203   ; 3997 ^ 2 = 15976009, value >> 9 = 31203
+        dw      31218   ; 3998 ^ 2 = 15984004, value >> 9 = 31218
+        dw      31234   ; 3999 ^ 2 = 15992001, value >> 9 = 31234
+        dw      31250   ; 4000 ^ 2 = 16000000, value >> 9 = 31250
+        dw      31265   ; 4001 ^ 2 = 16008001, value >> 9 = 31265
+        dw      31281   ; 4002 ^ 2 = 16016004, value >> 9 = 31281
+        dw      31296   ; 4003 ^ 2 = 16024009, value >> 9 = 31296
+        dw      31312   ; 4004 ^ 2 = 16032016, value >> 9 = 31312
+        dw      31328   ; 4005 ^ 2 = 16040025, value >> 9 = 31328
+        dw      31343   ; 4006 ^ 2 = 16048036, value >> 9 = 31343
+        dw      31359   ; 4007 ^ 2 = 16056049, value >> 9 = 31359
+        dw      31375   ; 4008 ^ 2 = 16064064, value >> 9 = 31375
+        dw      31390   ; 4009 ^ 2 = 16072081, value >> 9 = 31390
+        dw      31406   ; 4010 ^ 2 = 16080100, value >> 9 = 31406
+        dw      31422   ; 4011 ^ 2 = 16088121, value >> 9 = 31422
+        dw      31437   ; 4012 ^ 2 = 16096144, value >> 9 = 31437
+        dw      31453   ; 4013 ^ 2 = 16104169, value >> 9 = 31453
+        dw      31469   ; 4014 ^ 2 = 16112196, value >> 9 = 31469
+        dw      31484   ; 4015 ^ 2 = 16120225, value >> 9 = 31484
+        dw      31500   ; 4016 ^ 2 = 16128256, value >> 9 = 31500
+        dw      31516   ; 4017 ^ 2 = 16136289, value >> 9 = 31516
+        dw      31531   ; 4018 ^ 2 = 16144324, value >> 9 = 31531
+        dw      31547   ; 4019 ^ 2 = 16152361, value >> 9 = 31547
+        dw      31563   ; 4020 ^ 2 = 16160400, value >> 9 = 31563
+        dw      31578   ; 4021 ^ 2 = 16168441, value >> 9 = 31578
+        dw      31594   ; 4022 ^ 2 = 16176484, value >> 9 = 31594
+        dw      31610   ; 4023 ^ 2 = 16184529, value >> 9 = 31610
+        dw      31626   ; 4024 ^ 2 = 16192576, value >> 9 = 31626
+        dw      31641   ; 4025 ^ 2 = 16200625, value >> 9 = 31641
+        dw      31657   ; 4026 ^ 2 = 16208676, value >> 9 = 31657
+        dw      31673   ; 4027 ^ 2 = 16216729, value >> 9 = 31673
+        dw      31689   ; 4028 ^ 2 = 16224784, value >> 9 = 31689
+        dw      31704   ; 4029 ^ 2 = 16232841, value >> 9 = 31704
+        dw      31720   ; 4030 ^ 2 = 16240900, value >> 9 = 31720
+        dw      31736   ; 4031 ^ 2 = 16248961, value >> 9 = 31736
+        dw      31752   ; 4032 ^ 2 = 16257024, value >> 9 = 31752
+        dw      31767   ; 4033 ^ 2 = 16265089, value >> 9 = 31767
+        dw      31783   ; 4034 ^ 2 = 16273156, value >> 9 = 31783
+        dw      31799   ; 4035 ^ 2 = 16281225, value >> 9 = 31799
+        dw      31815   ; 4036 ^ 2 = 16289296, value >> 9 = 31815
+        dw      31830   ; 4037 ^ 2 = 16297369, value >> 9 = 31830
+        dw      31846   ; 4038 ^ 2 = 16305444, value >> 9 = 31846
+        dw      31862   ; 4039 ^ 2 = 16313521, value >> 9 = 31862
+        dw      31878   ; 4040 ^ 2 = 16321600, value >> 9 = 31878
+        dw      31893   ; 4041 ^ 2 = 16329681, value >> 9 = 31893
+        dw      31909   ; 4042 ^ 2 = 16337764, value >> 9 = 31909
+        dw      31925   ; 4043 ^ 2 = 16345849, value >> 9 = 31925
+        dw      31941   ; 4044 ^ 2 = 16353936, value >> 9 = 31941
+        dw      31957   ; 4045 ^ 2 = 16362025, value >> 9 = 31957
+        dw      31972   ; 4046 ^ 2 = 16370116, value >> 9 = 31972
+        dw      31988   ; 4047 ^ 2 = 16378209, value >> 9 = 31988
+        dw      32004   ; 4048 ^ 2 = 16386304, value >> 9 = 32004
+        dw      32020   ; 4049 ^ 2 = 16394401, value >> 9 = 32020
+        dw      32036   ; 4050 ^ 2 = 16402500, value >> 9 = 32036
+        dw      32051   ; 4051 ^ 2 = 16410601, value >> 9 = 32051
+        dw      32067   ; 4052 ^ 2 = 16418704, value >> 9 = 32067
+        dw      32083   ; 4053 ^ 2 = 16426809, value >> 9 = 32083
+        dw      32099   ; 4054 ^ 2 = 16434916, value >> 9 = 32099
+        dw      32115   ; 4055 ^ 2 = 16443025, value >> 9 = 32115
+        dw      32131   ; 4056 ^ 2 = 16451136, value >> 9 = 32131
+        dw      32146   ; 4057 ^ 2 = 16459249, value >> 9 = 32146
+        dw      32162   ; 4058 ^ 2 = 16467364, value >> 9 = 32162
+        dw      32178   ; 4059 ^ 2 = 16475481, value >> 9 = 32178
+        dw      32194   ; 4060 ^ 2 = 16483600, value >> 9 = 32194
+        dw      32210   ; 4061 ^ 2 = 16491721, value >> 9 = 32210
+        dw      32226   ; 4062 ^ 2 = 16499844, value >> 9 = 32226
+        dw      32242   ; 4063 ^ 2 = 16507969, value >> 9 = 32242
+        dw      32258   ; 4064 ^ 2 = 16516096, value >> 9 = 32258
+        dw      32273   ; 4065 ^ 2 = 16524225, value >> 9 = 32273
+        dw      32289   ; 4066 ^ 2 = 16532356, value >> 9 = 32289
+        dw      32305   ; 4067 ^ 2 = 16540489, value >> 9 = 32305
+        dw      32321   ; 4068 ^ 2 = 16548624, value >> 9 = 32321
+        dw      32337   ; 4069 ^ 2 = 16556761, value >> 9 = 32337
+        dw      32353   ; 4070 ^ 2 = 16564900, value >> 9 = 32353
+        dw      32369   ; 4071 ^ 2 = 16573041, value >> 9 = 32369
+        dw      32385   ; 4072 ^ 2 = 16581184, value >> 9 = 32385
+        dw      32401   ; 4073 ^ 2 = 16589329, value >> 9 = 32401
+        dw      32416   ; 4074 ^ 2 = 16597476, value >> 9 = 32416
+        dw      32432   ; 4075 ^ 2 = 16605625, value >> 9 = 32432
+        dw      32448   ; 4076 ^ 2 = 16613776, value >> 9 = 32448
+        dw      32464   ; 4077 ^ 2 = 16621929, value >> 9 = 32464
+        dw      32480   ; 4078 ^ 2 = 16630084, value >> 9 = 32480
+        dw      32496   ; 4079 ^ 2 = 16638241, value >> 9 = 32496
+        dw      32512   ; 4080 ^ 2 = 16646400, value >> 9 = 32512
+        dw      32528   ; 4081 ^ 2 = 16654561, value >> 9 = 32528
+        dw      32544   ; 4082 ^ 2 = 16662724, value >> 9 = 32544
+        dw      32560   ; 4083 ^ 2 = 16670889, value >> 9 = 32560
+        dw      32576   ; 4084 ^ 2 = 16679056, value >> 9 = 32576
+        dw      32592   ; 4085 ^ 2 = 16687225, value >> 9 = 32592
+        dw      32608   ; 4086 ^ 2 = 16695396, value >> 9 = 32608
+        dw      32624   ; 4087 ^ 2 = 16703569, value >> 9 = 32624
+        dw      32640   ; 4088 ^ 2 = 16711744, value >> 9 = 32640
+        dw      32656   ; 4089 ^ 2 = 16719921, value >> 9 = 32656
+        dw      32672   ; 4090 ^ 2 = 16728100, value >> 9 = 32672
+        dw      32688   ; 4091 ^ 2 = 16736281, value >> 9 = 32688
+        dw      32704   ; 4092 ^ 2 = 16744464, value >> 9 = 32704
+        dw      32720   ; 4093 ^ 2 = 16752649, value >> 9 = 32720
+        dw      32736   ; 4094 ^ 2 = 16760836, value >> 9 = 32736
+        dw      32752   ; 4095 ^ 2 = 16769025, value >> 9 = 32752

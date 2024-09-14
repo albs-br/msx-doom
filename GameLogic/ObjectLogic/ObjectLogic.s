@@ -377,23 +377,24 @@ ObjectLogic:
     ld      b, d        ; BC = DE
     ld      c, e
 
-    ; calc Obj.distance_Y ^ 2
-    ld      hl, (Object_Temp.distance_X)
+
+    ; --- calc Obj.distance_Y ^ 2
+    ld      hl, (Object_Temp.distance_Y)
     call    .HL_ToPowerOf2
     ex      de, hl      ; HL = DE
 
     ; sum Obj.distance_X ^ 2 and Obj.distance_Y ^ 2
-    ; add     hl, bc ; caution: this value can be larger than 16 bits
-    xor     a
     add     hl, bc
-    adc     0 ; A = A + 0 + carry
-    ;   AHL contains result (17 bits)
+    ; xor     a
+    ; add     hl, bc
+    ; adc     0 ; A = A + 0 + carry
+    ; ;   AHL contains result (17 bits)
 
 
-    ; shift right AHL and save
-    srl     a   ; shift right, 0 --> bit 7, bit 0 --> carry
-    rr      h   ; rotate right, carry --> bit 7, bit 0 --> carry
-    rr      l   ; rotate right, carry --> bit 7, bit 0 --> carry
+    ; ; shift right AHL and save
+    ; srl     a   ; shift right, 0 --> bit 7, bit 0 --> carry
+    ; rr      h   ; rotate right, carry --> bit 7, bit 0 --> carry
+    ; rr      l   ; rotate right, carry --> bit 7, bit 0 --> carry
     ld      (Object_Temp.distanceToPlayer), hl
 
     ret
