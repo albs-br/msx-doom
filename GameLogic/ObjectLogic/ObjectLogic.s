@@ -390,12 +390,20 @@ ObjectLogic:
     ; adc     0 ; A = A + 0 + carry
     ; ;   AHL contains result (17 bits)
 
+    ; get high byte of the result and used it as index to SqRoot_LUT
+    ld      b, 0
+    ld      c, h
+    ld      hl, LUT_SqRoot
+    add     hl, bc
+    ld      a, (hl)
+
 
     ; ; shift right AHL and save
     ; srl     a   ; shift right, 0 --> bit 7, bit 0 --> carry
     ; rr      h   ; rotate right, carry --> bit 7, bit 0 --> carry
     ; rr      l   ; rotate right, carry --> bit 7, bit 0 --> carry
-    ld      (Object_Temp.distanceToPlayer), hl
+
+    ld      (Object_Temp.distanceToPlayer), a
 
     ret
 

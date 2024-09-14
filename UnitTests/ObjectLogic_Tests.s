@@ -45,7 +45,7 @@ ObjectLogic_Tests:
 
     ; distance tests
     call    .Distance_Test_0
-;    call    .Distance_Test_1
+    call    .Distance_Test_1
 
     ret
 
@@ -1191,7 +1191,7 @@ ObjectLogic_Tests:
 ; Object.angleToPlayer = 315
 ; Object.isVisible = true
 ; Object.posX_inside_FoV = 32
-; Object.distanceToPlayer = 65504
+; Object.distanceToPlayer = 255
 .Distance_Test_0:
     ; --- Arrange
     call    PlayerInit
@@ -1231,61 +1231,60 @@ ObjectLogic_Tests:
     call    UnitTests.check_A_equals_B
 
     ld      hl, (Object_0.distanceToPlayer)
-    ld      de, 65504
+    ld      de, 255
     call    UnitTests.check_HL_equals_DE
 
     ret
 
-; ; ---------------------------
+; ---------------------------
 
-; ; --- Test case:
-; ; Player.angle = 0
-; ; Object.angleToPlayer = 0
-; ; Object.isVisible = true
-; ; Object.posX_inside_FoV = 32
-; ; Object.distanceToPlayer = 65504
-; .Distance_Test_1:
-;     ; --- Arrange
-;     call    PlayerInit
-;     ld      hl, 0
-;     ld      (Player.angle), hl
-;     call    PlayerInit.updateCalcFields
+; --- Test case:
+; Player.angle = 0
+; Object.angleToPlayer = 0
+; Object.isVisible = true
+; Object.posX_inside_FoV = 32
+; Object.distanceToPlayer = 180
+.Distance_Test_1:
+    ; --- Arrange
+    call    PlayerInit
+    ld      hl, 0
+    ld      (Player.angle), hl
+    call    PlayerInit.updateCalcFields
 
-;     ld      hl, Object_0
-;     call    ObjectInit
-;     ld      hl, 32768 + 4096 - 1
-;     ld      (Object_0.X), hl
-;     ld      hl, 32768
-;     ld      (Object_0.Y), hl
-
-
-
-;     ; --- Act
-;     ld      hl, Object_0
-;     call    ObjectLogic
+    ld      hl, Object_0
+    call    ObjectInit
+    ld      hl, 32768 + 4096 - 1
+    ld      (Object_0.X), hl
+    ld      hl, 32768
+    ld      (Object_0.Y), hl
 
 
 
-;     ; --- Assert
-;     ld      hl, (Object_0.angleToPlayer)
-;     ld      de, 0
-;     call    UnitTests.check_HL_equals_DE
+    ; --- Act
+    ld      hl, Object_0
+    call    ObjectLogic
 
-;     ld      a, (Object_0.isVisible)
-;     call    UnitTests.check_A_is_true
 
-;     ld      a, (Object_0.quadrant)
-;     ld      b, 1
-;     call    UnitTests.check_A_equals_B
 
-;     ld      a, (Object_0.posX_inside_FoV)
-;     ld      b, 32
-;     call    UnitTests.check_A_equals_B
+    ; --- Assert
+    ld      hl, (Object_0.angleToPlayer)
+    ld      de, 0
+    call    UnitTests.check_HL_equals_DE
 
-;     ld      hl, (Object_0.distanceToPlayer)
-;     ld      de, ? ; 65504 / 1.41
-;     call    UnitTests.check_HL_equals_DE
+    ld      a, (Object_0.isVisible)
+    call    UnitTests.check_A_is_true
 
-; jp$
-;     ret
+    ld      a, (Object_0.quadrant)
+    ld      b, 1
+    call    UnitTests.check_A_equals_B
+
+    ld      a, (Object_0.posX_inside_FoV)
+    ld      b, 32
+    call    UnitTests.check_A_equals_B
+
+    ld      hl, (Object_0.distanceToPlayer)
+    ld      de, 180 ; 255 / 1.41 = 180
+    call    UnitTests.check_HL_equals_DE
+
+    ret
 
