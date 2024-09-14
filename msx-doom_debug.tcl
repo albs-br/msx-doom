@@ -16,6 +16,7 @@ ram_watch   add     0xc10c      -type byte       -desc O_0.quad             -for
 ram_watch   add     0xc10d      -type byte       -desc O_0.div_E            -format hex
 ram_watch   add     0xc10e      -type byte       -desc O_0.div_D            -format hex
 ram_watch   add     0xc10f      -type byte       -desc O_0.div_A            -format hex
+ram_watch   add     0xc110      -type word       -desc O_0.distToPlayer            -format dec
 
 ram_watch   add     0xd000      -type word       -desc O_T.X             -format dec
 ram_watch   add     0xd002      -type word       -desc O_T.Y             -format dec

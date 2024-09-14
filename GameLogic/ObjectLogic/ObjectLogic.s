@@ -201,8 +201,7 @@ ObjectLogic:
     ld      a, 1
     ld      (Object_Temp.isVisible), a
 
-    ; TODO:
-    ;call    .calcDistanceFromPlayer
+    call    .calcDistanceFromPlayer
 
     ; calc position of object center within player FoV
 
@@ -240,8 +239,7 @@ ObjectLogic:
     ld      a, 1
     ld      (Object_Temp.isVisible), a
 
-    ; TODO:
-    ;call    .calcDistanceFromPlayer
+    call    .calcDistanceFromPlayer
 
     ; calc position of object center within player FoV
     ; scr_X = 64 - (Object.angleToPlayer - Player.FoV_end)
@@ -353,51 +351,67 @@ ObjectLogic:
 
 ;---------------------------
 
-; .calcDistanceFromPlayer:
+.calcDistanceFromPlayer:
 
-;     ; set MegaROM page for LUT data
-;     ld      a, LUT_MEGAROM_PAGE
-;     ld	    (Seg_P8000_SW), a
-
-
-;     ; if (Obj.distance_X >= 4096 || Obj.distance_Y >= 4096) ret;
-
-;     ; --- calc Obj.distance_X ^ 2
-;     ld      hl, (Object_Temp.distance_X)
-;     call    .HL_ToPowerOf2
-;     ld      b, d        ; BC = DE
-;     ld      c, e
-
-;     ; calc Obj.distance_Y ^ 2
-;     ld      hl, (Object_Temp.distance_X)
-;     call    .HL_ToPowerOf2
-;     ex      de, hl      ; HL = DE
-
-;     ; sum Obj.distance_X ^ 2 and Obj.distance_Y ^ 2
-;     ; add     hl, bc ; caution: this value can be larger than 16 bits
-;     xor     a
-;     add     hl, bc
-;     adc     a
-;     ;   AHL contains result (17 bits)
+    ; set MegaROM page for LUT data
+    ld      a, LUT_MEGAROM_PAGE
+    ld	    (Seg_P8000_SW), a
 
 
-;     ret
+    ; if (Obj.distance_X >= 4096 || Obj.distance_Y >= 4096) ret;
+    ld      hl, (Object_Temp.distance_X)
+    ld      de, 4096
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    ; jp      nc, .calcDistanceFromPlayer_outOfView
+    ret     nc
+    ld      hl, (Object_Temp.distance_Y)
+    ld      de, 4096
+    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    ; jp      nc, .calcDistanceFromPlayer_outOfView
+    ret     nc
 
-; .HL_ToPowerOf2:
 
-;     ; HL = HL * 3
-;     ld      d, h
-;     ld      e, l
-;     add     hl, de
-;     add     hl, de
+    ; --- calc Obj.distance_X ^ 2
+    ld      hl, (Object_Temp.distance_X)
+    call    .HL_ToPowerOf2
+    ld      b, d        ; BC = DE
+    ld      c, e
 
-;     ex      de, hl ; DE = HL
+    ; calc Obj.distance_Y ^ 2
+    ld      hl, (Object_Temp.distance_X)
+    call    .HL_ToPowerOf2
+    ex      de, hl      ; HL = DE
 
-;     ld      hl, LUT_PowerOf2
-;     add     hl, de
+    ; sum Obj.distance_X ^ 2 and Obj.distance_Y ^ 2
+    ; add     hl, bc ; caution: this value can be larger than 16 bits
+    xor     a
+    add     hl, bc
+    adc     0 ; A = A + 0 + carry
+    ;   AHL contains result (17 bits)
 
-;     ld      e, (hl)
-;     inc     hl
-;     ld      d, (hl)     ; DE = 2 most significant bytes
 
-;     ret
+    ; shift right AHL and save
+    srl     a   ; shift right, 0 --> bit 7, bit 0 --> carry
+    rr      h   ; rotate right, carry --> bit 7, bit 0 --> carry
+    rr      l   ; rotate right, carry --> bit 7, bit 0 --> carry
+    ld      (Object_Temp.distanceToPlayer), hl
+
+    ret
+
+; Input: HL
+; Output: DE
+.HL_ToPowerOf2:
+
+    ; HL = HL * 2
+    add     hl, hl
+
+    ex      de, hl ; DE = HL
+
+    ld      hl, LUT_PowerOf2
+    add     hl, de
+
+    ld      e, (hl)
+    inc     hl
+    ld      d, (hl)     ; DE = 2 most significant bytes
+
+    ret
