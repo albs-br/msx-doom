@@ -1,7 +1,4 @@
-TestObjectData:
-    ; ------------- distance 0
-    db  32, 32          ; object width, height
-
+.dist_0_spr_0_data:
     ; --- sprite 0
     db -16, -16         ; X, Y offset from center 
 

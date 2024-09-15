@@ -24,6 +24,8 @@ DEBUG:          equ 255             ; defines debug mode, value is irrelevant (c
     INCLUDE "UpdateSPRATR.s"
     INCLUDE "UpdateSPRATR_Buffer.s"
     
+    INCLUDE "ObjectsData/TestObject/TestObject_Data.s"
+    
     INCLUDE "UnitTests/UnitTests.s"
     INCLUDE "UnitTests/Math_Tests.s"
     INCLUDE "UnitTests/PlayerLogic_Tests.s"

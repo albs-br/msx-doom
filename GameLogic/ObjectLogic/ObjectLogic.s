@@ -222,6 +222,9 @@ ObjectLogic:
     ld      a, l
     ld      (Object_Temp.posX_inside_FoV), a
 
+    ; TODO
+    ; call      .setSpritesOnScreen
+
     jp      .cont_100
 
 .less_than_FoV_start:
@@ -232,6 +235,9 @@ ObjectLogic:
     sbc     hl, de
     ld      a, l
     ld      (Object_Temp.posX_inside_FoV), a
+
+    ; TODO
+    ; call      .setSpritesOnScreen
 
     jp      .cont_100
 
@@ -253,6 +259,16 @@ ObjectLogic:
     sbc     hl, de
     ld      a, l
     ld      (Object_Temp.posX_inside_FoV), a
+
+    ; TODO
+    ; call      .setSpritesOnScreen
+
+    jp      .cont_100
+
+.setSpritesOnScreen:
+
+    ; TODO
+    ; Logic to put objects sprites on screen based on distanceToPlayer and posX_inside_FoV
 
 
     jp      .cont_100
