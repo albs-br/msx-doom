@@ -99,6 +99,10 @@ Execute:
 
     call    ClearVram_MSX2
 
+    call    SetSprites16x16
+
+    call    SetSpritesMagnified
+
     call    Set192Lines
 
     call    SetColor0ToNonTransparent

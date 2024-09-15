@@ -74,7 +74,7 @@ ReadInput:
     add     hl, de
     ld      (Player.Y), hl
 
-    ; TODO: check map limit
+    ; TODO: check map limits
 
     ; ---- X += DX
     ld      hl, (Player.X)
