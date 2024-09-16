@@ -758,6 +758,7 @@ Mult8: equ 04361h ; last def. pass 3
 BIOS_H_ERAF: equ 0FDB8h ; last def. pass 3
 BIOS_COMMSK: equ 0FB1Eh ; last def. pass 3
 SPRCOL_Data: equ 053F9h ; last def. pass 3
+TestObject_Data.distance_n_data: equ 0474Ah ; last def. pass 3
 BIOS_H_DEVN: equ 0FEC1h ; last def. pass 3
 RamStart: equ 0C000h ; last def. pass 3
 BIOS_CLIKFL: equ 0FBD9h ; last def. pass 3
