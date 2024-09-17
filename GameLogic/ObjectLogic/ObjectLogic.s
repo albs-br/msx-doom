@@ -2,8 +2,9 @@ PLAYER_FIELD_OF_VIEW: equ 64 ; it's important to be a power of two to make it ea
 
 DIVISION_DIST_Y_BY_DIST_X_MAX_VALUE: equ 4096
 
-SPRITE_PATTERN_0: equ 1 * 4 ; provisory
-
+SPRITE_SPRPAT_0: equ 1 ; provisory
+SPRITE_SPRATR_SPRCLR_0: equ 2 ; provisory
+EMPTY_SPRITE_PATTERN: equ 32 * 4 ; provisory
 ; Input:
 ;   HL: object addr in RAM
 ObjectLogic:
@@ -197,6 +198,10 @@ ObjectLogic:
 .outOfView:
     xor     a
     ld      (Object_Temp.isVisible), a
+
+
+    call    .setSpritesOnScreen_outOfView
+
     jp      .cont_100
 
 .FoVstart_isSmaller_isVisible:
@@ -224,8 +229,7 @@ ObjectLogic:
     ld      a, l
     ld      (Object_Temp.posX_inside_FoV), a
 
-    ; TODO
-    ; call      .setSpritesOnScreen
+    call      .setSpritesOnScreen
 
     jp      .cont_100
 
@@ -238,8 +242,7 @@ ObjectLogic:
     ld      a, l
     ld      (Object_Temp.posX_inside_FoV), a
 
-    ; TODO
-    ; call      .setSpritesOnScreen
+    call      .setSpritesOnScreen
 
     jp      .cont_100
 
@@ -262,8 +265,7 @@ ObjectLogic:
     ld      a, l
     ld      (Object_Temp.posX_inside_FoV), a
 
-    ; TODO
-    ; call      .setSpritesOnScreen
+    call      .setSpritesOnScreen
 
     jp      .cont_100
 
@@ -309,11 +311,11 @@ ObjectLogic:
     ld      b, (hl) ; get X offset
 
     ld      a, (Object_Temp.posX_inside_FoV) ; get posX on screen (0-63)
-    ; multply by 4
+    ; multiply by 4
     sla     a   ; shift left register
     sla     a   ; shift left register
-    sub     b
-    ld      (Sprites.sprite_0 + 1), a   ; set X
+    add     b
+    ld      (Sprites.sprite_0_X), a   ; set X
 
 
 
@@ -322,30 +324,51 @@ ObjectLogic:
     inc     hl
     ld      b, (hl) ; get Y offset
     ld      a, 64
-    sub     b
-    ld      (Sprites.sprite_0), a       ; set Y
+    add     b
+    ld      (Sprites.sprite_0_Y), a       ; set Y
 
 
     ; set sprite pattern
-    ld      a, SPRITE_PATTERN_0
-    ld      (Sprites.sprite_0 + 2), a   ; set pattern
+    ld      a, SPRITE_SPRPAT_0 * 4
+    ld      (Sprites.sprite_0_Pattern), a   ; set pattern
 
     ; set sprite distance (0-255)
     ld      a, (Object_Temp.distanceToPlayer) ; distance to player when visible (0-254), 0 is closer, 255 is out of sight
-    ld      (Sprites.sprite_0 + 3), a   ; set pattern
+    ld      (Sprites.sprite_0_Distance), a   ; set distance
 
 
     ; set SPRPAT
-    ; TODO
+    inc     hl ; go to sprite pattern data (32 bytes)
+    push    hl
+        ld      a, 0000 0000 b
+        ld      hl, SPRPAT + (SPRITE_SPRPAT_0 * 32)
+        call    SetVdp_Write
+    pop     hl
+    ld      c, PORT_0
+    outi outi outi outi outi outi outi outi 
+    outi outi outi outi outi outi outi outi 
+    outi outi outi outi outi outi outi outi 
+    outi outi outi outi outi outi outi outi 
 
     ; set SPRCOL
-    ; TODO
+    push    hl
+        ld      a, 0000 0000 b
+        ld      hl, SPRCOL + (SPRITE_SPRATR_SPRCLR_0 * 16)
+        call    SetVdp_Write
+    pop     hl
+    ld      c, PORT_0
+    outi outi outi outi outi outi outi outi 
+    outi outi outi outi outi outi outi outi 
 
 
     ret
 
 .setSpritesOnScreen_outOfView:
     ; TODO
+    ; set sprite pattern
+    ld      a, EMPTY_SPRITE_PATTERN
+    ld      (Sprites.sprite_0_Pattern), a   ; set pattern
+
     ret
 
 .cont_100:

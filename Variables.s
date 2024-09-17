@@ -50,4 +50,7 @@ ObjectAddress:  rw 1
 
 
 Sprites:
-    .sprite_0:  rb 4    ; Y, X, pattern, distance (0-255)
+    .sprite_0_Y:        rb 1    ; Y
+    .sprite_0_X:        rb 1    ; X
+    .sprite_0_Pattern:  rb 1    ; pattern
+    .sprite_0_Distance: rb 1    ; distance (0-255)

@@ -40,4 +40,22 @@ UpdateSPRATR_Buffer:
 
 
 
+    ; objs on screen
+    ld      hl, SPRATR_Buffer + 8
+    ld      a, (Sprites.sprite_0_Y)
+    ld      (hl), a
+
+    inc     hl
+    ld      a, (Sprites.sprite_0_X)
+    ld      (hl), a
+
+    inc     hl
+    ld      a, (Sprites.sprite_0_Pattern)
+    ld      (hl), a
+
+    inc     hl
+    xor     a
+    ld      (hl), a
+
+
     ret

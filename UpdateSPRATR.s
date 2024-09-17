@@ -6,7 +6,12 @@ UpdateSPRATR:
     call    SetVdp_Write
     ld      hl, SPRATR_Buffer
     ld      c, PORT_0
+    
+    ; 2 objs on map
     outi outi outi outi
-    outi outi outi outi ; update 2 sprites
+    outi outi outi outi
+
+    ; obj on screen
+    outi outi outi outi
 
     ret
