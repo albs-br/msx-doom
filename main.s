@@ -246,8 +246,8 @@ COLTBL_Data:
 .size:  equ $ - COLTBL_Data
 
 SPRPAT_Data:
-    db      11000000 b
-    db      11000000 b
+    db      10000000 b
+    db      00000000 b
     db      00000000 b
     db      00000000 b
     db      00000000 b
@@ -257,8 +257,8 @@ SPRPAT_Data:
 .size:  equ $ - SPRPAT_Data
 
 SPRCOL_Data:
-    db      0x08, 0x08, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db      0x04, 0x04, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db      0x08, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db      0x04, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 .size:  equ $ - SPRCOL_Data
 
 SPRATR_Data:
@@ -286,7 +286,8 @@ SPRATR_Data:
 LUT_MEGAROM_PAGE: equ 1
 
 MegaROM_Page_1:
-    INCLUDE "LookUpTables/LUT_Cos_Sin.s"
+    INCLUDE "LookUpTables/LUT_Cos.s"
+    INCLUDE "LookUpTables/LUT_Sin.s"
     INCLUDE "LookUpTables/LUT_Atan2.s"
     INCLUDE "LookUpTables/LUT_PowerOf2.s"
     INCLUDE "LookUpTables/LUT_SqRoot.s"

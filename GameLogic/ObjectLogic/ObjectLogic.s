@@ -310,6 +310,16 @@ ObjectLogic:
     ; X = (posX_inside_FoV * 4) - Xoffset
     ld      b, (hl) ; get X offset
 
+;     ; TODO: check if ((a + b) < 0) ; b is signed
+;     ld      a, b ; save B value
+;     sla     b   ; shift left register
+;     jp      c, .xOffSet_Is_Negative
+
+;     jp      .cont_300
+; .xOffSet_Is_Negative:
+
+
+.cont_300:
     ld      a, (Object_Temp.posX_inside_FoV) ; get posX on screen (0-63)
     ; multiply by 4
     sla     a   ; shift left register
