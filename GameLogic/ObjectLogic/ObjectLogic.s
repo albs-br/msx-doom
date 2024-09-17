@@ -2,6 +2,8 @@ PLAYER_FIELD_OF_VIEW: equ 64 ; it's important to be a power of two to make it ea
 
 DIVISION_DIST_Y_BY_DIST_X_MAX_VALUE: equ 4096
 
+SPRITE_PATTERN_0: equ 1 * 4 ; provisory
+
 ; Input:
 ;   HL: object addr in RAM
 ObjectLogic:
@@ -270,8 +272,81 @@ ObjectLogic:
     ; TODO
     ; Logic to put objects sprites on screen based on distanceToPlayer and posX_inside_FoV
 
+    ld      a, (Object_Temp.distanceToPlayer)
+    cp      255
+    jp      z, .setSpritesOnScreen_outOfView
 
-    jp      .cont_100
+    ; get high nibble of distance
+    srl     a                   ; shift right register
+    srl     a                   ;
+    srl     a                   ;
+    srl     a                   ;
+
+    ; get correct object data for distance
+    ld      hl, TestObject_Data.endOfHeader
+    ld      de, OBJECT_DATA_DISTANCE_SIZE
+    or      a
+.setSpritesOnScreen_loop:
+        jp      z, .setSpritesOnScreen_endLoop
+        add     hl, de
+        dec     a
+        jp      .setSpritesOnScreen_loop
+.setSpritesOnScreen_endLoop:
+
+    ; go to sprite 0 data
+    
+    inc     hl ; skip width
+    inc     hl ; skip height
+
+    ; HL = (HL)
+    ld      e, (hl)
+    inc     hl
+    ld      d, (hl)
+    ex      de, hl
+
+    ; -------- calc X of sprite
+    ; X = (posX_inside_FoV * 4) - Xoffset
+    ld      b, (hl) ; get X offset
+
+    ld      a, (Object_Temp.posX_inside_FoV) ; get posX on screen (0-63)
+    ; multply by 4
+    sla     a   ; shift left register
+    sla     a   ; shift left register
+    sub     b
+    ld      (Sprites.sprite_0 + 1), a   ; set X
+
+
+
+    ; -------- calc Y of sprite
+    ; X = 64 - yOffset
+    inc     hl
+    ld      b, (hl) ; get Y offset
+    ld      a, 64
+    sub     b
+    ld      (Sprites.sprite_0), a       ; set Y
+
+
+    ; set sprite pattern
+    ld      a, SPRITE_PATTERN_0
+    ld      (Sprites.sprite_0 + 2), a   ; set pattern
+
+    ; set sprite distance (0-255)
+    ld      a, (Object_Temp.distanceToPlayer) ; distance to player when visible (0-254), 0 is closer, 255 is out of sight
+    ld      (Sprites.sprite_0 + 3), a   ; set pattern
+
+
+    ; set SPRPAT
+    ; TODO
+
+    ; set SPRCOL
+    ; TODO
+
+
+    ret
+
+.setSpritesOnScreen_outOfView:
+    ; TODO
+    ret
 
 .cont_100:
 

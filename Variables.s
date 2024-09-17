@@ -24,7 +24,7 @@ Object_0:       ;rb Object_Temp.size
     .posX_inside_FoV:   rb 1 ; X coord of the object center inside player FoV, when visible (0-63)
     .quadrant:          rb 1 ; quadrant in relation to player pos on map (1-4)
     .Y_div_by_X:        rb 3 ; division result in 16.8 fixed point
-    .distanceToPlayer:  rb 1 ; distance to player when visible (0-255), 0 is closer, 255 is out of sight
+    .distanceToPlayer:  rb 1 ; distance to player when visible (0-254), 0 is closer, 255 is out of sight
     .objDataAddr:       rw 1 ; addr of object data (sprite patterns, colors, etc)
 
 ;     org     0xc200
@@ -41,8 +41,13 @@ Object_Temp:
     .posX_inside_FoV:   rb 1 ; X coord of the object center inside player FoV, when visible (0-63)
     .quadrant:          rb 1 ; quadrant in relation to player pos on map (1-4)
     .Y_div_by_X:        rb 3 ; division result in 16.8 fixed point
-    .distanceToPlayer:  rb 1 ; distance to player when visible (0-255), 0 is closer, 255 is out of sight
+    .distanceToPlayer:  rb 1 ; distance to player when visible (0-254), 0 is closer, 255 is out of sight
     .objDataAddr:       rw 1 ; addr of object data (sprite patterns, colors, etc)
 .size:          equ $ - Object_Temp
 
 ObjectAddress:  rw 1
+
+
+
+Sprites:
+    .sprite_0:  rb 4    ; Y, X, pattern, distance (0-255)
