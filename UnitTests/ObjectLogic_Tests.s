@@ -1295,7 +1295,7 @@ ObjectLogic_Tests:
 ; --- Test case:
 ; Object.isVisible = true
 ; Object.posX_inside_FoV = 32
-; Object.distanceToPlayer = 216
+; Object.distanceToPlayer = 201
 .Distance_Test_2:
     ; --- Arrange
     call    PlayerInit

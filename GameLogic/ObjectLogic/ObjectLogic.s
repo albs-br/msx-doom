@@ -2,9 +2,9 @@ PLAYER_FIELD_OF_VIEW: equ 64 ; it's important to be a power of two to make it ea
 
 DIVISION_DIST_Y_BY_DIST_X_MAX_VALUE: equ 4096
 
-SPRITE_SPRPAT_0: equ 1 ; provisory
-SPRITE_SPRATR_SPRCLR_0: equ 2 ; provisory
-EMPTY_SPRITE_PATTERN: equ 32 * 4 ; provisory
+SPRITE_SPRPAT_0: equ 1 ; TODO: provisory
+SPRITE_SPRATR_SPRCLR_0: equ 2 ; TODO: provisory
+EMPTY_SPRITE_PATTERN: equ 32 * 4 ; TODO: provisory
 ; Input:
 ;   HL: object addr in RAM
 ObjectLogic:
@@ -277,6 +277,8 @@ ObjectLogic:
     ld      a, (Object_Temp.distanceToPlayer)
     cp      255
     jp      z, .setSpritesOnScreen_outOfView
+    cp      48  ; TODO: provisory: avoid objects too close
+    jp      c, .setSpritesOnScreen_outOfView
 
     ; get high nibble of distance
     srl     a                   ; shift right register
@@ -319,7 +321,7 @@ ObjectLogic:
 ; .xOffSet_Is_Negative:
 
 
-.cont_300:
+;.cont_300:
     ld      a, (Object_Temp.posX_inside_FoV) ; get posX on screen (0-63)
     ; multiply by 4
     sla     a   ; shift left register
@@ -485,6 +487,7 @@ ObjectLogic:
     ; if (Obj.distance_X >= 4096 || Obj.distance_Y >= 4096) ret;
     ld      hl, (Object_Temp.distance_X)
     ld      de, 4096
+    ; TODO: change all "call DCOMPR" to "rst DCOMPR"
     call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .calcDistanceFromPlayer_outOfView
     ;ret     nc
