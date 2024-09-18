@@ -14,9 +14,9 @@
 ;   db      16 ; angle for value 16 = 4 degrees
 ;   db      17 ; angle for value 17 = 4 degrees
 ; (...)
-;   db    4096 ; angle for value 4096 = 90 degrees
+;   db      90 ; angle for value 4096 = 90 degrees
 ; (...)
-;   db   10000 ; angle for value 10000 = 90 degrees
+;   db      90 ; angle for value 10000 = 90 degrees ; not necessary, use -->  if (value > 4096) value = 4096
 
 LUT_Atan2:
     dw 0, 0
@@ -35,7 +35,6 @@ LUT_Atan2:
     dw 208, 39
     dw 224, 41
     dw 240, 43
-; .largerThan256:
     dw 256, 45
     ;dw 256, 45
     dw 273, 47
