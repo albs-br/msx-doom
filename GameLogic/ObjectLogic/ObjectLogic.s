@@ -308,6 +308,11 @@ ObjectLogic:
     ld      d, (hl)
     ex      de, hl
 
+    ; ; if (HL == NOT_USED) ret
+    ; ld      de, NOT_USED
+    ; rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    ; ret     z
+
     ; -------- calc X of sprite
     ; X = (posX_inside_FoV * 4) - Xoffset
     ld      b, (hl) ; get X offset
