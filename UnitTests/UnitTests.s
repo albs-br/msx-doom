@@ -47,18 +47,18 @@ UnitTests:
 
 .check_HL_equals_0:
     ld      de, 0
-    call    BIOS_DCOMPR
+    rst     BIOS_DCOMPR
     jp      nz, .testFailed
     jp      .testPassed
 
 .check_HL_not_equals_0:
     ld      de, 0
-    call    BIOS_DCOMPR
+    rst     BIOS_DCOMPR
     jp      z, .testFailed
     jp      .testPassed
 
 .check_HL_equals_DE:
-    call    BIOS_DCOMPR
+    rst     BIOS_DCOMPR
     jp      nz, .testFailed
     jp      .testPassed
 

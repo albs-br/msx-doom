@@ -121,13 +121,13 @@ ObjectLogic:
     ; if (Player.Y > Object.Y)
     ld      hl, (Player.Y)
     ld      de, (Object_Temp.Y)
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      c, .player_Y_isLessThan_object_Y
     
     ;       if (Player.X > Object.X) angle2ndQuadrant; else angle1stQuadrant
     ld      hl, (Player.X)
     ld      de, (Object_Temp.X)
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .angle2ndQuadrant
 
     jp      .angle1stQuadrant
@@ -137,7 +137,7 @@ ObjectLogic:
     ;       if (Player.X > Object.X) angle3rdQuadrant; else angle4thQuadrant;
     ld      hl, (Player.X)
     ld      de, (Object_Temp.X)
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .angle3rdQuadrant
     jp      .angle4thQuadrant
 
@@ -154,7 +154,7 @@ ObjectLogic:
     ; }
     ld      hl, (Player.FoV_start)
     ld      de, (Player.FoV_end)
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      c, .FoVstart_isSmaller
 
 ;FoVstart_isBigger
@@ -164,14 +164,14 @@ ObjectLogic:
     ; if (DE < HL) outOfView; else do other check
     ld      hl, (Object_Temp.angleToPlayer)
     ld      de, (Player.FoV_start)
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      z, .FoVstart_isBigger_isVisible
     jp      nc, .outOfView
 
     ; if (DE < HL) isVisible; else outOfView;
     ld      hl, (Object_Temp.angleToPlayer)
     ld      de, (Player.FoV_end)
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     ; jp      c, .outOfView
     ; jp      .FoVstart_isBigger_isVisible
     jp      z, .outOfView
@@ -185,13 +185,13 @@ ObjectLogic:
     ; if (DE > HL) isVisible; else do other check
     ld      de, (Object_Temp.angleToPlayer)
     ld      hl, (Player.FoV_end)
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      c, .FoVstart_isSmaller_isVisible
 
     ; if (DE < HL) isVisible; else outOfView;
     ld      de, (Object_Temp.angleToPlayer)
     ld      hl, (Player.FoV_start)
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .FoVstart_isSmaller_isVisible
     ; jp      .outOfView
 
@@ -215,7 +215,7 @@ ObjectLogic:
     ; if (obj.angle <= FoV_start) posX_inside_FoV = FoV_start - obj.angle;
     ld      hl, (Object_Temp.angleToPlayer)
     ld      de, (Player.FoV_start)
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      z, .less_than_FoV_start
     jp      c, .less_than_FoV_start
 
@@ -308,10 +308,10 @@ ObjectLogic:
     ld      d, (hl)
     ex      de, hl
 
-    ; ; if (HL == NOT_USED) ret
-    ; ld      de, NOT_USED
-    ; rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
-    ; ret     z
+    ; if (HL == NOT_USED) ret
+    ld      de, NOT_USED
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    ret     z
 
     ; -------- calc X of sprite
     ; X = (posX_inside_FoV * 4) - Xoffset
@@ -407,7 +407,7 @@ ObjectLogic:
     inc     hl
 
     ld      de, LUT_Atan2.end
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     
     ; if (HL >= LUT_Atan2.end) ret90degrees else loop
     jp      c, .loop
@@ -419,7 +419,7 @@ ObjectLogic:
 ; this method calc disntances X and Y ignoring signal (always positive value)
 .calcAbsoluteDistance:
     ; --- if (HL > DE) HL = HL - DE else HL = DE - HL
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      c, .DE_isBigger
     jp      .HL_isBiggerOrEqual
 .DE_isBigger:
@@ -493,12 +493,12 @@ ObjectLogic:
     ld      hl, (Object_Temp.distance_X)
     ld      de, 4096
     ; TODO: change all "call DCOMPR" to "rst DCOMPR"
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .calcDistanceFromPlayer_outOfView
     ;ret     nc
     ld      hl, (Object_Temp.distance_Y)
     ld      de, 4096
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .calcDistanceFromPlayer_outOfView
     ;ret     nc
 

@@ -31,7 +31,7 @@ ReadInput:
     ; if (Player.angle == 0) Player.angle = 359; else Player.angle--;
     ld      hl, (Player.angle)
     ld      de, 0
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jr      z, .rotateRight_set359
 
     dec     hl
@@ -47,7 +47,7 @@ ReadInput:
     ; if (Player.angle == 360) Player.angle = 0; else Player.angle++;
     ld      hl, (Player.angle)
     ld      de, 360-1
-    call    BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
+    rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jr      z, .rotateLeft_set0
 
     inc     hl
@@ -111,7 +111,7 @@ ReadInput:
 ;     ; if (Player.X == 0) ret; else Player.X--;
 ;     ld      hl, (Player.X)
 ;     ld      de, 0
-;     call    BIOS_DCOMPR
+;     rst     BIOS_DCOMPR
 ;     ret     z
 
 ;     ld      bc, -256
