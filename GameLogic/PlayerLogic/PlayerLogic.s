@@ -20,6 +20,11 @@ Update_walkDXandDY:
     inc     hl
     ld      d, (hl)
 
+    ; ; shift right to make player walking slower
+    ; push    hl
+    ;     call    ShiftRight_DE
+    ; pop     hl
+
     ld      (Player.walk_DX), de
     
 
@@ -50,6 +55,11 @@ Update_walkDXandDY:
     ; ld      d, a
 
     ; inc     de
+
+    ; ; shift right to make player walking slower
+    ; push    hl
+    ;     call    ShiftRight_DE
+    ; pop     hl
 
     ld      (Player.walk_DY), de
 

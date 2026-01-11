@@ -142,3 +142,12 @@ incE_2:
      ret nz
      inc a
      ret
+
+
+; Shift right DE (divide by 2)
+ShiftRight_DE:
+    ex      de, hl
+        srl     h
+        rr      l
+    ex      de, hl
+    ret
