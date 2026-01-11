@@ -1,5 +1,5 @@
 # msx-doom
-POC for a very crude version of Doom, done circa September 2024.
+POC (Proof of Concept) for a very crude version of Doom, done circa September 2024.
 There would be only objects (enemies, items, etc), not walls.
 Gameplay would be just killing loads and loads of monsters and collecting ammo/health items. Pretty fun, I believe.
 
@@ -9,3 +9,6 @@ The result was below the expectation, probably due to lack of precision on calcu
 Will try again someday with 8.16 fixed point numbers.
 The good news is that there is plenty of CPU available, as can be seen on the colored bg to watch CPU use of each part of the main loop.
 
+Video of Demo version: [https://youtu.be/tD6ok8pxDb4](https://youtu.be/tD6ok8pxDb4)
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/tD6ok8pxDb4/0.jpg)](http://www.youtube.com/watch?v=tD6ok8pxDb4 "MSX Doom")
