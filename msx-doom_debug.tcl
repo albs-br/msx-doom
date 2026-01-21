@@ -3,6 +3,8 @@ ram_watch   add     0xc083      -type word       -desc P.Y             -format d
 ram_watch   add     0xc085      -type word       -desc P.angle             -format dec
 ram_watch   add     0xc087      -type word       -desc P.FoV_start         -format dec
 ram_watch   add     0xc089      -type word       -desc P.FoV_end         -format dec
+ram_watch   add     0xc08b      -type word       -desc P.walk_X         -format dec
+ram_watch   add     0xc08d      -type word       -desc P.walk_Y         -format dec
 
 
 ram_watch   add     0xc100      -type word       -desc O_0.X             -format dec

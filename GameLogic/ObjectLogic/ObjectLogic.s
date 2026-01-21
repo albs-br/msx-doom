@@ -1,6 +1,6 @@
 PLAYER_FIELD_OF_VIEW: equ 64 ; it's important to be a power of two to make it easier to convert to screen width coordinate (0-255)
 
-DIVISION_DIST_Y_BY_DIST_X_MAX_VALUE: equ 25600
+DIVISION_DIST_Y_BY_DIST_X_MAX_VALUE: equ 12800
 
 SPRITE_SPRPAT_0: equ 1 ; TODO: provisory
 SPRITE_SPRATR_SPRCLR_0: equ 2 ; TODO: provisory
@@ -49,7 +49,7 @@ ObjectLogic:
         call    FPDE_Div_BC88 ; DE divided by BC (both 8.8 fixed point), result in ADE (16.8)
     ei
     
-    ; save division result (ADE)
+    ; save division result (ADE); not being used, just for debug purposes
     ld      (Object_Temp.Y_div_by_X), de            ; little endian: ADE turns EDA in memory
     ld      (Object_Temp.Y_div_by_X + 2), a
 

@@ -14,6 +14,8 @@ Math_Tests:
     call    .FPDE_Div_BC88_Test_6
     call    .FPDE_Div_BC88_Test_7
     call    .FPDE_Div_BC88_Test_8
+    ; call    .FPDE_Div_BC88_Test_9
+    ; call    .FPDE_Div_BC88_Test_10
 
     ret
 
@@ -241,6 +243,61 @@ Math_Tests:
 
     ; --- Assert
     call    UnitTests.check_A_equals_0
+    ld      hl, 0x0001
+    call    UnitTests.check_HL_equals_DE
+
+    ret
+
+; ---------------------------
+
+; some tests to help figure out the bug on the diference of object 
+; angles when player is approaching th object
+
+; --- Test case:
+; 3939 divided by 3760 = 1,0476063829787234042553191489362
+.FPDE_Div_BC88_Test_9:
+    ; --- Arrange
+    ld      de, 3939
+    ld      bc, 3760
+
+
+
+    ; --- Act
+    di
+        call    FPDE_Div_BC88 ; DE divided by BC (both 8.8 fixed point), result in ADE (16.8)
+    ei
+
+
+
+    ; --- Assert
+    ld      b, 1
+    call    UnitTests.check_A_equals_B
+    ld      hl, 0x0001
+    call    UnitTests.check_HL_equals_DE
+
+    ret
+
+; ---------------------------
+
+; --- Test case:
+; 3484 divided by 3310 = 1,0525679758308157099697885196375
+.FPDE_Div_BC88_Test_10:
+    ; --- Arrange
+    ld      de, 3484
+    ld      bc, 3310
+
+
+
+    ; --- Act
+    di
+        call    FPDE_Div_BC88 ; DE divided by BC (both 8.8 fixed point), result in ADE (16.8)
+    ei
+
+
+
+    ; --- Assert
+    ld      b, 1
+    call    UnitTests.check_A_equals_B
     ld      hl, 0x0001
     call    UnitTests.check_HL_equals_DE
 

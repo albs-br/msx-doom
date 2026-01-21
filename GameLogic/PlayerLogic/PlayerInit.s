@@ -2,13 +2,19 @@ PlayerInit:
 
     ; ld      hl, 32768 ; center of map
     
-    ld      hl, 45349
+
+    ;     ld      hl, 32768 + 16384
+    ; ld      (Object_Temp.X), hl ; X
+    ; ld      hl, 32768 - 16384
+    ; ld      (Object_Temp.Y), hl ; Y
+
+    ld      hl, 32768 + 16384 - 256
     ld      (Player.X), hl
     
-    ld      hl, 13528
+    ld      hl, 32768 - 16384 + 256
     ld      (Player.Y), hl
     
-    ld      hl, 322
+    ld      hl, 45
     ld      (Player.angle), hl
 
 .updateCalcFields:
