@@ -335,25 +335,41 @@ ObjectLogic:
     sla     a   ; shift left register
     add     b
     ld      (Sprites.sprite_0_X), a   ; set X
+    ld      (Sprites.sprite_1_X), a   ; set X
 
 
 
     ; -------- calc Y of sprite
-    ; X = 64 - yOffset
+    ; Y = 64 - yOffset
     inc     hl
     ld      b, (hl) ; get Y offset
     ld      a, 64
     add     b
     ld      (Sprites.sprite_0_Y), a       ; set Y
+    
+    ; Y1 = Y0 + ([Y_offset] * 2)
+    ld      c, a    ; save Y0
+    
+    ; TODO: get width and height data from Object data
+    ld      a, 255  ; A = -B            
+    sub     b
+
+    add     a       ; A * 2
+
+    add     c       ; A = Y0 + (Y_offset * 2) 
+
+    ld      (Sprites.sprite_1_Y), a       ; set Y
 
 
     ; set sprite pattern
     ld      a, SPRITE_SPRPAT_0 * 4
     ld      (Sprites.sprite_0_Pattern), a   ; set pattern
+    ld      (Sprites.sprite_1_Pattern), a   ; set pattern
 
     ; set sprite distance (0-255)
     ld      a, (Object_Temp.distanceToPlayer) ; distance to player when visible (0-254), 0 is closer, 255 is out of sight
     ld      (Sprites.sprite_0_Distance), a   ; set distance
+    ld      (Sprites.sprite_1_Distance), a   ; set distance
 
 
     ; set SPRPAT
@@ -376,9 +392,14 @@ ObjectLogic:
         call    SetVdp_Write
     pop     hl
     ld      c, PORT_0
-    outi outi outi outi outi outi outi outi 
-    outi outi outi outi outi outi outi outi 
 
+    push    hl
+        outi outi outi outi outi outi outi outi ; first sprite
+        outi outi outi outi outi outi outi outi 
+    pop     hl
+
+    outi outi outi outi outi outi outi outi ; second sprite
+    outi outi outi outi outi outi outi outi 
 
     ret
 
@@ -387,6 +408,7 @@ ObjectLogic:
     ; set sprite pattern
     ld      a, EMPTY_SPRITE_PATTERN
     ld      (Sprites.sprite_0_Pattern), a   ; set pattern
+    ld      (Sprites.sprite_1_Pattern), a   ; set pattern
 
     ret
 

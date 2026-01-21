@@ -54,3 +54,8 @@ Sprites:
     .sprite_0_X:        rb 1    ; X
     .sprite_0_Pattern:  rb 1    ; pattern
     .sprite_0_Distance: rb 1    ; distance (0-255)
+
+    .sprite_1_Y:        rb 1    ; Y
+    .sprite_1_X:        rb 1    ; X
+    .sprite_1_Pattern:  rb 1    ; pattern
+    .sprite_1_Distance: rb 1    ; distance (0-255)    

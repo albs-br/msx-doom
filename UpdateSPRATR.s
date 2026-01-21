@@ -11,7 +11,8 @@ UpdateSPRATR:
     outi outi outi outi
     outi outi outi outi
 
-    ; obj on screen
+    ; objs on screen
+    outi outi outi outi
     outi outi outi outi
 
     ret

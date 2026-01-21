@@ -2,6 +2,8 @@
     ; --- sprite 0
     db -16, -16         ; X, Y offset from center 
 
+    ; TODO: put width and height data here
+    
     ; sprite pattern
     db 11111111 b
     db 10001111 b
