@@ -1,6 +1,6 @@
 PLAYER_FIELD_OF_VIEW: equ 64 ; it's important to be a power of two to make it easier to convert to screen width coordinate (0-255)
 
-DIVISION_DIST_Y_BY_DIST_X_MAX_VALUE: equ 4096
+DIVISION_DIST_Y_BY_DIST_X_MAX_VALUE: equ 25600
 
 SPRITE_SPRPAT_0: equ 1 ; TODO: provisory
 SPRITE_SPRATR_SPRCLR_0: equ 2 ; TODO: provisory
@@ -277,8 +277,8 @@ ObjectLogic:
     ld      a, (Object_Temp.distanceToPlayer)
     cp      255
     jp      z, .setSpritesOnScreen_outOfView
-    cp      48  ; TODO: provisory: avoid objects too close
-    jp      c, .setSpritesOnScreen_outOfView
+    ; cp      48  ; TODO: provisory: avoid objects too close
+    ; jp      c, .setSpritesOnScreen_outOfView
 
     ; get high nibble of distance
     srl     a                   ; shift right register
@@ -316,6 +316,7 @@ ObjectLogic:
     ; -------- calc X of sprite
     ; X = (posX_inside_FoV * 4) - Xoffset
     ld      b, (hl) ; get X offset
+    ; ld      b, 0 ; [debug]
 
 ;     ; TODO: check if ((a + b) < 0) ; b is signed
 ;     ld      a, b ; save B value
@@ -328,6 +329,7 @@ ObjectLogic:
 
 ;.cont_300:
     ld      a, (Object_Temp.posX_inside_FoV) ; get posX on screen (0-63)
+    ; ld  a, 31 ; [debug]
     ; multiply by 4
     sla     a   ; shift left register
     sla     a   ; shift left register

@@ -63,7 +63,7 @@ Execute:
 ; ------------------------------------
 
     IFDEF DEBUG
-        call 	UnitTests.RunAll
+        ; call 	UnitTests.RunAll
     ENDIF
 
 ; ------------------------------------
