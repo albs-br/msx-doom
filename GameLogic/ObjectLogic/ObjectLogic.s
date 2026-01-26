@@ -2,6 +2,8 @@ PLAYER_FIELD_OF_VIEW: equ 64 ; it's important to be a power of two to make it ea
 
 DIVISION_DIST_Y_BY_DIST_X_MAX_VALUE: equ 12800
 
+MAX_DISTANCE_X_OR_Y: equ 4096
+
 SPRITE_SPRPAT_0: equ 1 ; TODO: provisory
 SPRITE_SPRATR_SPRCLR_0: equ 2 ; TODO: provisory
 EMPTY_SPRITE_PATTERN: equ 32 * 4 ; TODO: provisory
@@ -515,13 +517,13 @@ ObjectLogic:
 
     ; if (Obj.distance_X >= 4096 || Obj.distance_Y >= 4096) ret;
     ld      hl, (Object_Temp.distance_X)
-    ld      de, 4096
+    ld      de, MAX_DISTANCE_X_OR_Y
     ; TODO: change all "call DCOMPR" to "rst DCOMPR"
     rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .calcDistanceFromPlayer_outOfView
     ;ret     nc
     ld      hl, (Object_Temp.distance_Y)
-    ld      de, 4096
+    ld      de, MAX_DISTANCE_X_OR_Y
     rst     BIOS_DCOMPR         ; Compare Contents Of HL & DE, Set Z-Flag IF (HL == DE), Set CY-Flag IF (HL < DE)
     jp      nc, .calcDistanceFromPlayer_outOfView
     ;ret     nc

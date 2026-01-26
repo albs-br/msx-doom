@@ -370,6 +370,7 @@ BIOS_SWPTMP: equ 0F7BCh ; last def. pass 3
 BIOS_OLDSCR: equ 0FCB0h ; last def. pass 3
 BIOS_REPCNT: equ 0F3F7h ; last def. pass 3
 VDP_LOGIC_OPERATION_TAND: equ 09h ; last def. pass 3
+MAX_DISTANCE_X_OR_Y: equ 01000h ; last def. pass 3
 BIOS_SETWRT: equ 053h ; last def. pass 3
 REG10SAV: equ 0FFE9h ; last def. pass 3
 BIOS_KEYBUF: equ 0FBF0h ; last def. pass 3
